@@ -1,9 +1,10 @@
-// ipe() service worker — installable PWA + offline fallback
-const CACHE = 'ipe-v3';
+// idle() service worker — installable PWA + offline fallback
+const CACHE = 'idle-v4';
 const CORE = [
   '/', '/index.html',
   '/manifest.webmanifest',
   '/icon-192.png', '/icon-512.png', '/icon-180.png',
+  '/idle-app-icon.png',
   '/og-image.png'
 ];
 

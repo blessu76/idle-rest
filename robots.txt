@@ -1,5 +1,5 @@
-# ipe() — robots.txt
-# last updated: 2026-07-06
+# idle.ipe.rest — robots.txt
+# last updated: 2026-08-08
 # 일반 검색엔진: 전체 허용
 User-agent: *
 Allow: /
@@ -34,4 +34,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://ipe.rest/sitemap.xml
+Sitemap: https://idle.ipe.rest/sitemap.xml

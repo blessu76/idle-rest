@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ipe.rest/</loc>
-    <lastmod>2026-07-19</lastmod>
+    <loc>https://idle.ipe.rest/</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ipe.rest/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ipe.rest/?lang=ko"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ipe.rest/?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://ipe.rest/?lang=ja"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://ipe.rest/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ipe.rest/?lang=es"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://ipe.rest/?lang=fr"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://ipe.rest/?lang=de"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://ipe.rest/?lang=pt"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ipe.rest/?lang=ru"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://ipe.rest/?lang=ar"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://ipe.rest/?lang=hi"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://ipe.rest/?lang=id"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/?lang=ko"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/?lang=ja"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/?lang=pt"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/?lang=ru"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/?lang=ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/?lang=hi"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/?lang=id"/>
   </url>
 </urlset>
