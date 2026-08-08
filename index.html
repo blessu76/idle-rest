@@ -3,6 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<!-- Theme: set data-theme before first paint to avoid FOUC. Stored choice wins; else system. -->
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('idle-theme');
+    var theme = (stored === 'light' || stored === 'dark')
+      ? stored
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
 <title id="doc-title">idle() — AI lo-fi & healing music for tired developers · ipe(); // be still</title>
 
 <!-- ===== SEO ===== -->
@@ -154,6 +168,7 @@
      Only plumbing (i18n / GA4 / CF / /go routing / SEO) wired in by Paul.
      ============================================================ */
   :root {
+    /* ---- brand palette (unchanged) ---- */
     --navy: #0D1117;
     --navy-2: #111923;
     --navy-3: #17212c;
@@ -171,21 +186,71 @@
     --mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", "Noto Sans Mono CJK KR", monospace;
     --serif: "Iowan Old Style", "Noto Serif KR", Georgia, serif;
     --sans: -apple-system, BlinkMacSystemFont, "Pretendard", "Noto Sans KR", sans-serif;
+
+    /* ---- semantic surface tokens (DARK defaults = pixel-identical to before) ---- */
+    --bg: var(--navy);                        /* page background base */
+    --text: var(--cream);                     /* body text */
+    --glow-sage: rgba(143,175,143,.055);      /* hero glow 1 */
+    --glow-gold: rgba(201,168,76,.035);       /* hero glow 2 */
+    --surface: rgba(17,25,35,.76);            /* player / feature card top */
+    --surface-2: rgba(9,14,20,.62);           /* player card bottom */
+    --surface-3: rgba(11,17,24,.54);          /* feature card bottom */
+    --surface-mood: rgba(17,25,35,.46);       /* mood card */
+    --surface-mood-m: rgba(17,25,35,.44);     /* mood card (mobile) */
+    --surface-story: rgba(17,25,35,.36);      /* story card */
+    --cover-bg: #282016;                      /* cover placeholder bg */
+    --cover-tint: rgba(201,168,76,.20);       /* cover gradient tint */
+    --app-icon-bg: #10221f;                   /* app icon container bg */
+    --seek-track: rgba(245,240,232,.25);      /* seek bar track */
+    --shadow: rgba(0,0,0,.24);                /* player card shadow */
+    color-scheme: dark;
+  }
+
+  /* ============ LIGHT THEME ============
+     On-brand light: Cream page, Deep-Navy text, Gold/Sage accents.
+     Only surface/text tokens change; layout & palette accents stay. */
+  :root[data-theme="light"] {
+    --gold: #7d6410;             /* darker gold: AA (5.0 on cream / 5.7 on white) for small text/border */
+    --gold-bright: #b8942b;      /* gold fills; paired with navy text (6.6:1), used for large icons */
+    --sage: #4f6f4f;             /* darker sage for AA on cream */
+    --cream-muted: #4a463f;      /* was light-muted → now dark-muted body text */
+    --ink-muted: #6b675f;        /* secondary text on light */
+    --line: rgba(154,125,30,.34);
+    --line-soft: rgba(13,17,23,.14);
+    --panel: rgba(255,255,255,.70);
+
+    --bg: #F5F0E8;
+    --text: #0D1117;
+    --glow-sage: rgba(143,175,143,.14);
+    --glow-gold: rgba(201,168,76,.12);
+    --surface: rgba(255,255,255,.80);
+    --surface-2: rgba(247,243,235,.92);
+    --surface-3: rgba(247,243,235,.86);
+    --surface-mood: rgba(255,255,255,.72);
+    --surface-mood-m: rgba(255,255,255,.78);
+    --surface-story: rgba(255,255,255,.60);
+    --cover-bg: #e8e0d0;
+    --cover-tint: rgba(201,168,76,.16);
+    --app-icon-bg: #0D1117;      /* keep dark tile so the (i) mark reads on light cards */
+    --seek-track: rgba(13,17,23,.16);
+    --shadow: rgba(90,74,30,.14);
+    color-scheme: light;
   }
 
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; background: var(--navy); }
+  html { scroll-behavior: smooth; background: var(--bg); }
   body {
     margin: 0;
     min-width: 320px;
-    color: var(--cream);
+    color: var(--text);
     background:
-      radial-gradient(900px 500px at 75% 8%, rgba(143,175,143,.055), transparent 65%),
-      radial-gradient(700px 500px at 10% 90%, rgba(201,168,76,.035), transparent 70%),
-      var(--navy);
+      radial-gradient(900px 500px at 75% 8%, var(--glow-sage), transparent 65%),
+      radial-gradient(700px 500px at 10% 90%, var(--glow-gold), transparent 70%),
+      var(--bg);
     font-family: var(--sans);
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
+    transition: background-color .25s ease, color .25s ease;
   }
   a { color: inherit; text-decoration: none; }
   button { font: inherit; }
@@ -213,7 +278,7 @@
   }
   .brand {
     width: max-content;
-    color: var(--cream);
+    color: var(--text);
     font: 700 25px/1 var(--mono);
     letter-spacing: -.05em;
   }
@@ -246,8 +311,13 @@
     color: var(--gold);
     background: transparent;
     cursor: pointer;
+    transition: border-color .2s ease, color .2s ease;
   }
   .theme-button svg { width: 19px; height: 19px; }
+  /* icon swaps by theme: moon shown in dark, sun shown in light */
+  .theme-button .i-sun { display: none; }
+  :root[data-theme="light"] .theme-button .i-moon { display: none; }
+  :root[data-theme="light"] .theme-button .i-sun { display: block; }
   /* language selector wired onto GPT's .tools .locale slot */
   .locale { position: relative; display: inline-flex; align-items: center; }
   select.lang {
@@ -264,7 +334,7 @@
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><path d='M1 3l4 4 4-4' fill='none' stroke='%23cfc7ba' stroke-width='1.5'/></svg>");
     background-repeat: no-repeat; background-position: right 12px center;
   }
-  select.lang:hover { border-color: var(--gold); color: var(--cream); }
+  select.lang:hover { border-color: var(--gold); color: var(--text); }
   [dir="rtl"] select.lang { padding: 0 14px 0 30px; background-position: left 12px center; }
 
   main { padding-block: 36px 0; }
@@ -284,7 +354,7 @@
   .hero h1 {
     max-width: 570px;
     margin: 22px 0 18px;
-    color: var(--cream);
+    color: var(--text);
     font: 600 clamp(50px, 5vw, 72px)/1.20 var(--serif);
     letter-spacing: -.055em;
     word-break: keep-all;
@@ -308,7 +378,7 @@
     padding: 0 28px;
     border: 1px solid var(--line);
     border-radius: 999px;
-    color: var(--cream);
+    color: var(--text);
     background: transparent;
     font-size: 15px;
     cursor: pointer;
@@ -337,8 +407,8 @@
     padding: 28px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: linear-gradient(145deg, rgba(17,25,35,.76), rgba(9,14,20,.62));
-    box-shadow: 0 28px 70px rgba(0,0,0,.24);
+    background: linear-gradient(145deg, var(--surface), var(--surface-2));
+    box-shadow: 0 28px 70px var(--shadow);
   }
   .player-cover {
     position: relative;
@@ -346,10 +416,10 @@
     overflow: hidden;
     border-radius: 5px;
     background:
-      linear-gradient(135deg, rgba(201,168,76,.20), transparent 46%),
-      #282016;
+      linear-gradient(135deg, var(--cover-tint), transparent 46%),
+      var(--cover-bg);
   }
-  .player-cover img { background: #282016; }
+  .player-cover img { background: var(--cover-bg); }
   .player-info {
     display: flex;
     min-width: 0;
@@ -376,7 +446,7 @@
     width: 100%;
     height: 4px;
     border-radius: 999px;
-    background: rgba(245,240,232,.25);
+    background: var(--seek-track);
     overflow: hidden;
   }
   .seek span { display: block; width: 38%; height: 100%; background: var(--gold-bright); }
@@ -441,7 +511,7 @@
     padding: 14px 20px;
     border: 1px solid var(--line);
     border-radius: 9px;
-    background: rgba(17,25,35,.46);
+    background: var(--surface-mood);
     transition: border-color .2s ease, transform .2s ease;
     text-align: left;
     cursor: pointer;
@@ -471,7 +541,7 @@
     padding: 24px 26px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
-    background: linear-gradient(145deg, rgba(17,25,35,.76), rgba(11,17,24,.54));
+    background: linear-gradient(145deg, var(--surface), var(--surface-3));
   }
   .feature-label {
     margin: 0 0 18px;
@@ -488,7 +558,7 @@
     aspect-ratio: 1;
     overflow: hidden;
     border-radius: 4px;
-    background: #282016;
+    background: var(--cover-bg);
   }
   .album-feature h3,
   .app-feature h3 {
@@ -525,7 +595,7 @@
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 34px;
-    background: #10221f;
+    background: var(--app-icon-bg);
   }
   .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
   .badge {
@@ -549,9 +619,9 @@
     border: 1px solid var(--line-soft);
     border-radius: var(--radius);
     color: var(--cream-muted);
-    background: rgba(17,25,35,.36);
+    background: var(--surface-story);
   }
-  .story-copy h2 { margin: 0 0 13px; color: var(--cream); font: 600 26px/1.2 var(--serif); }
+  .story-copy h2 { margin: 0 0 13px; color: var(--text); font: 600 26px/1.2 var(--serif); }
   .story-copy p { margin: 0; max-width: 58ch; }
 
   footer {
@@ -610,7 +680,7 @@
     .section-heading h2 { font-size: 21px; }
     .section-heading .comment { max-width: 65%; font-size: 11px; }
     .mood-grid { grid-template-columns: 1fr; gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-    .mood { min-height: 70px; border: 0; border-bottom: 1px solid var(--line-soft); border-radius: 0; background: rgba(17,25,35,.44); }
+    .mood { min-height: 70px; border: 0; border-bottom: 1px solid var(--line-soft); border-radius: 0; background: var(--surface-mood-m); }
     .mood:last-child { border-bottom: 0; }
     .feature-grid { margin-top: 28px; }
     .feature-card { min-height: 0; padding: 20px; }
@@ -661,14 +731,18 @@
         <a href="#story" data-i18n="nav_story">story</a>
       </nav>
       <div class="tools">
-        <button class="theme-button" type="button" id="settingsBtn" data-i18n-aria="aria_settings" aria-label="Settings">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+        <button class="theme-button" type="button" id="themeBtn" data-i18n-aria="aria_theme_to_light" aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
             <path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/>
+          </svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/>
           </svg>
         </button>
         <label class="locale">
           <span class="visually-hidden" id="langlabel" data-i18n="aria_language">Language</span>
-          <select class="lang" id="lang" aria-labelledby="langlabel">
+          <select class="lang" id="lang" data-i18n-aria="aria_language" aria-label="Language" aria-labelledby="langlabel">
             <option value="en">EN</option>
             <option value="ko">KO</option>
             <option value="ja">JA</option>
@@ -828,10 +902,47 @@ if ('serviceWorker' in navigator) {
     e.preventDefault();
     window.location.href = goUrl(b.getAttribute('data-track'));
   });
-  var setBtn = document.getElementById('settingsBtn');
-  if (setBtn) setBtn.addEventListener('click', function () {
-    var s = document.getElementById('lang'); if (s && s.focus) s.focus();
+})();
+</script>
+
+<!-- ===== theme toggle (light/dark) — data-theme already primed in <head> ===== -->
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('themeBtn');
+  var meta = document.querySelector('meta[name="theme-color"]');
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+  var userChose = false; // true once the user manually toggles (or has a stored pref)
+  try { userChose = (localStorage.getItem('idle-theme') === 'light' || localStorage.getItem('idle-theme') === 'dark'); } catch (e) {}
+
+  function current() { return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark'; }
+
+  function apply(theme, persist) {
+    root.setAttribute('data-theme', theme);
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#F5F0E8' : '#0D1117');
+    if (btn) {
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+      // aria-label describes the action the button performs next
+      var next = theme === 'light' ? 'aria_theme_to_dark' : 'aria_theme_to_light';
+      btn.setAttribute('data-i18n-aria', next);
+      if (window.__applyAria) window.__applyAria(btn); // re-localize label if i18n ready
+    }
+    if (persist) { try { localStorage.setItem('idle-theme', theme); } catch (e) {} userChose = true; }
+  }
+
+  // sync button state to whatever <head> primed
+  apply(current(), false);
+
+  if (btn) btn.addEventListener('click', function () {
+    apply(current() === 'light' ? 'dark' : 'light', true);
   });
+
+  // follow system changes until the user makes a manual choice
+  if (mq) {
+    var onChange = function (e) { if (!userChose) apply(e.matches ? 'light' : 'dark', false); };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
 })();
 </script>
 
@@ -847,7 +958,7 @@ if ('serviceWorker' in navigator) {
     en: {
       meta_title: "idle() — AI lo-fi & healing music for tired developers · ipe(); // be still",
       meta_desc: "idle() is the music of ipe() — AI lo-fi & healing music for tired developers and late-night focus. 12 tracks on YouTube in English & Korean, including the debut album dear(you); vol.1.",
-      aria_language:"Language", aria_settings:"Settings",
+      aria_language:"Language", aria_settings:"Settings", aria_theme_to_light:"Switch to light theme", aria_theme_to_dark:"Switch to dark theme",
       aria_play_now:"Listen now — play dear you", aria_play_album:"Play dear you album", aria_play_album2:"Play dear you album",
       aria_shuffle:"Shuffle", aria_prev:"Previous track", aria_next:"Next track", aria_repeat:"Repeat",
       aria_mood_night:"Late night lo-fi", aria_mood_focus:"Focus music", aria_mood_rest:"Rest music", aria_mood_dawn:"Dawn music",
@@ -870,7 +981,7 @@ if ('serviceWorker' in navigator) {
     ko: {
       meta_title: "idle() — 지친 개발자를 위한 AI 로파이·힐링 음악 · ipe(); // be still",
       meta_desc: "idle()은 ipe()의 음악입니다 — 지친 개발자와 늦은 밤 집중을 위한 AI 로파이·힐링 음악. 데뷔 앨범 dear(you); vol.1을 포함해 12곡을 영어·한국어로 유튜브에 공개했습니다.",
-      aria_language:"언어", aria_settings:"설정",
+      aria_language:"언어", aria_settings:"설정", aria_theme_to_light:"라이트 테마로 전환", aria_theme_to_dark:"다크 테마로 전환",
       aria_play_now:"지금 듣기 — dear you 재생", aria_play_album:"dear you 앨범 재생", aria_play_album2:"dear you 앨범 재생",
       aria_shuffle:"셔플", aria_prev:"이전 곡", aria_next:"다음 곡", aria_repeat:"반복",
       aria_mood_night:"늦은 밤 로파이", aria_mood_focus:"집중 음악", aria_mood_rest:"쉼 음악", aria_mood_dawn:"새벽 음악",
@@ -893,7 +1004,7 @@ if ('serviceWorker' in navigator) {
     ja: {
       meta_title: "idle() — 疲れたエンジニアのためのAIローファイ&ヒーリング音楽 · ipe(); // be still",
       meta_desc: "idle()はipe()の音楽です — 疲れたエンジニアと深夜の集中のためのAIローファイ&ヒーリング音楽。デビューアルバム dear(you); vol.1 を含む12曲を英語・韓国語でYouTubeに公開。",
-      aria_language:"言語", aria_settings:"設定",
+      aria_language:"言語", aria_settings:"設定", aria_theme_to_light:"ライトテーマに切り替え", aria_theme_to_dark:"ダークテーマに切り替え",
       aria_play_now:"今すぐ聴く — dear you を再生", aria_play_album:"dear you アルバムを再生", aria_play_album2:"dear you アルバムを再生",
       aria_shuffle:"シャッフル", aria_prev:"前の曲", aria_next:"次の曲", aria_repeat:"リピート",
       aria_mood_night:"深夜ローファイ", aria_mood_focus:"集中音楽", aria_mood_rest:"休息音楽", aria_mood_dawn:"夜明け音楽",
@@ -915,7 +1026,7 @@ if ('serviceWorker' in navigator) {
     zh: {
       meta_title: "idle() — 为疲惫开发者打造的 AI Lo-Fi 与疗愈音乐 · ipe(); // be still",
       meta_desc: "idle() 是 ipe() 的音乐 — 为疲惫的开发者与深夜专注打造的 AI Lo-Fi 与疗愈音乐。已在 YouTube 发布 12 首英文与韩文曲目，包括首张专辑 dear(you); vol.1。",
-      aria_language:"语言", aria_settings:"设置",
+      aria_language:"语言", aria_settings:"设置", aria_theme_to_light:"切换到浅色主题", aria_theme_to_dark:"切换到深色主题",
       aria_play_now:"立即收听 — 播放 dear you", aria_play_album:"播放 dear you 专辑", aria_play_album2:"播放 dear you 专辑",
       aria_shuffle:"随机", aria_prev:"上一首", aria_next:"下一首", aria_repeat:"循环",
       aria_mood_night:"深夜 Lo-Fi", aria_mood_focus:"专注音乐", aria_mood_rest:"歇息音乐", aria_mood_dawn:"黎明音乐",
@@ -937,7 +1048,7 @@ if ('serviceWorker' in navigator) {
     es: {
       meta_title: "idle() — música AI lo-fi y de relajación para desarrolladores cansados · ipe(); // be still",
       meta_desc: "idle() es la música de ipe() — música AI lo-fi y de relajación para desarrolladores cansados y concentración nocturna. 12 pistas en YouTube en inglés y coreano, incluido el álbum debut dear(you); vol.1.",
-      aria_language:"Idioma", aria_settings:"Ajustes",
+      aria_language:"Idioma", aria_settings:"Ajustes", aria_theme_to_light:"Cambiar a tema claro", aria_theme_to_dark:"Cambiar a tema oscuro",
       aria_play_now:"Escuchar — reproducir dear you", aria_play_album:"Reproducir el álbum dear you", aria_play_album2:"Reproducir el álbum dear you",
       aria_shuffle:"Aleatorio", aria_prev:"Anterior", aria_next:"Siguiente", aria_repeat:"Repetir",
       aria_mood_night:"Lo-fi nocturno", aria_mood_focus:"Música para concentrarse", aria_mood_rest:"Música de descanso", aria_mood_dawn:"Música del amanecer",
@@ -959,7 +1070,7 @@ if ('serviceWorker' in navigator) {
     fr: {
       meta_title: "idle() — musique AI lo-fi et apaisante pour développeurs fatigués · ipe(); // be still",
       meta_desc: "idle() est la musique de ipe() — musique AI lo-fi et apaisante pour développeurs fatigués et concentration nocturne. 12 titres sur YouTube en anglais et coréen, dont l'album de début dear(you); vol.1.",
-      aria_language:"Langue", aria_settings:"Réglages",
+      aria_language:"Langue", aria_settings:"Réglages", aria_theme_to_light:"Passer au thème clair", aria_theme_to_dark:"Passer au thème sombre",
       aria_play_now:"Écouter — lire dear you", aria_play_album:"Lire l'album dear you", aria_play_album2:"Lire l'album dear you",
       aria_shuffle:"Aléatoire", aria_prev:"Précédent", aria_next:"Suivant", aria_repeat:"Répéter",
       aria_mood_night:"Lo-fi nocturne", aria_mood_focus:"Musique de concentration", aria_mood_rest:"Musique de repos", aria_mood_dawn:"Musique de l'aube",
@@ -981,7 +1092,7 @@ if ('serviceWorker' in navigator) {
     de: {
       meta_title: "idle() — AI-Lo-Fi- und Healing-Musik für erschöpfte Entwickler · ipe(); // be still",
       meta_desc: "idle() ist die Musik von ipe() — AI-Lo-Fi- und Healing-Musik für erschöpfte Entwickler und nächtliche Konzentration. 12 Tracks auf YouTube in Englisch und Koreanisch, inklusive des Debütalbums dear(you); vol.1.",
-      aria_language:"Sprache", aria_settings:"Einstellungen",
+      aria_language:"Sprache", aria_settings:"Einstellungen", aria_theme_to_light:"Zum hellen Design wechseln", aria_theme_to_dark:"Zum dunklen Design wechseln",
       aria_play_now:"Jetzt hören — dear you abspielen", aria_play_album:"dear you Album abspielen", aria_play_album2:"dear you Album abspielen",
       aria_shuffle:"Zufall", aria_prev:"Zurück", aria_next:"Weiter", aria_repeat:"Wiederholen",
       aria_mood_night:"Late-Night-Lo-Fi", aria_mood_focus:"Fokus-Musik", aria_mood_rest:"Ruhe-Musik", aria_mood_dawn:"Morgengrauen-Musik",
@@ -1003,7 +1114,7 @@ if ('serviceWorker' in navigator) {
     pt: {
       meta_title: "idle() — música AI lo-fi e relaxante para desenvolvedores cansados · ipe(); // be still",
       meta_desc: "idle() é a música de ipe() — música AI lo-fi e relaxante para desenvolvedores cansados e concentração noturna. 12 faixas no YouTube em inglês e coreano, incluindo o álbum de estreia dear(you); vol.1.",
-      aria_language:"Idioma", aria_settings:"Ajustes",
+      aria_language:"Idioma", aria_settings:"Ajustes", aria_theme_to_light:"Mudar para tema claro", aria_theme_to_dark:"Mudar para tema escuro",
       aria_play_now:"Ouvir — tocar dear you", aria_play_album:"Tocar o álbum dear you", aria_play_album2:"Tocar o álbum dear you",
       aria_shuffle:"Aleatório", aria_prev:"Anterior", aria_next:"Próxima", aria_repeat:"Repetir",
       aria_mood_night:"Lo-fi noturno", aria_mood_focus:"Música de foco", aria_mood_rest:"Música de descanso", aria_mood_dawn:"Música do amanhecer",
@@ -1025,7 +1136,7 @@ if ('serviceWorker' in navigator) {
     ru: {
       meta_title: "idle() — AI lo-fi и музыка для отдыха для уставших разработчиков · ipe(); // be still",
       meta_desc: "idle() — это музыка ipe() — AI lo-fi и музыка для отдыха для уставших разработчиков и ночной концентрации. 12 треков на YouTube на английском и корейском, включая дебютный альбом dear(you); vol.1.",
-      aria_language:"Язык", aria_settings:"Настройки",
+      aria_language:"Язык", aria_settings:"Настройки", aria_theme_to_light:"Переключить на светлую тему", aria_theme_to_dark:"Переключить на тёмную тему",
       aria_play_now:"Слушать — воспроизвести dear you", aria_play_album:"Воспроизвести альбом dear you", aria_play_album2:"Воспроизвести альбом dear you",
       aria_shuffle:"Перемешать", aria_prev:"Назад", aria_next:"Вперёд", aria_repeat:"Повтор",
       aria_mood_night:"Ночной lo-fi", aria_mood_focus:"Музыка для фокуса", aria_mood_rest:"Музыка покоя", aria_mood_dawn:"Музыка рассвета",
@@ -1047,7 +1158,7 @@ if ('serviceWorker' in navigator) {
     ar: {
       meta_title: "‏idle() — موسيقى لو-فاي واسترخاء بالذكاء الاصطناعي للمطوّرين المُنهَكين · ipe(); // be still",
       meta_desc: "‏idle() هي موسيقى ipe() — موسيقى لو-فاي واسترخاء بالذكاء الاصطناعي للمطوّرين المُنهَكين والتركيز الليلي. 12 مقطوعة على يوتيوب بالإنجليزية والكورية، منها ألبوم البداية dear(you); vol.1.",
-      aria_language:"اللغة", aria_settings:"الإعدادات",
+      aria_language:"اللغة", aria_settings:"الإعدادات", aria_theme_to_light:"التبديل إلى الوضع الفاتح", aria_theme_to_dark:"التبديل إلى الوضع الداكن",
       aria_play_now:"استمع الآن — تشغيل dear you", aria_play_album:"تشغيل ألبوم dear you", aria_play_album2:"تشغيل ألبوم dear you",
       aria_shuffle:"عشوائي", aria_prev:"السابق", aria_next:"التالي", aria_repeat:"تكرار",
       aria_mood_night:"لو-فاي ليلي", aria_mood_focus:"موسيقى التركيز", aria_mood_rest:"موسيقى الراحة", aria_mood_dawn:"موسيقى الفجر",
@@ -1069,7 +1180,7 @@ if ('serviceWorker' in navigator) {
     hi: {
       meta_title: "idle() — थके डेवलपर्स के लिए AI लो-फ़ाई और हीलिंग संगीत · ipe(); // be still",
       meta_desc: "idle() ipe() का संगीत है — थके डेवलपर्स और देर रात की एकाग्रता के लिए AI लो-फ़ाई और हीलिंग संगीत। YouTube पर अंग्रेज़ी और कोरियाई में 12 ट्रैक, जिसमें पहला एल्बम dear(you); vol.1 शामिल है।",
-      aria_language:"भाषा", aria_settings:"सेटिंग्स",
+      aria_language:"भाषा", aria_settings:"सेटिंग्स", aria_theme_to_light:"लाइट थीम पर स्विच करें", aria_theme_to_dark:"डार्क थीम पर स्विच करें",
       aria_play_now:"अभी सुनें — dear you चलाएँ", aria_play_album:"dear you एल्बम चलाएँ", aria_play_album2:"dear you एल्बम चलाएँ",
       aria_shuffle:"शफ़ल", aria_prev:"पिछला", aria_next:"अगला", aria_repeat:"दोहराएँ",
       aria_mood_night:"देर रात लो-फ़ाई", aria_mood_focus:"एकाग्रता संगीत", aria_mood_rest:"विश्राम संगीत", aria_mood_dawn:"भोर संगीत",
@@ -1091,7 +1202,7 @@ if ('serviceWorker' in navigator) {
     id: {
       meta_title: "idle() — musik AI lo-fi & penenang untuk developer yang lelah · ipe(); // be still",
       meta_desc: "idle() adalah musik ipe() — musik AI lo-fi & penenang untuk developer yang lelah dan fokus larut malam. 12 trek di YouTube dalam bahasa Inggris & Korea, termasuk album debut dear(you); vol.1.",
-      aria_language:"Bahasa", aria_settings:"Pengaturan",
+      aria_language:"Bahasa", aria_settings:"Pengaturan", aria_theme_to_light:"Beralih ke tema terang", aria_theme_to_dark:"Beralih ke tema gelap",
       aria_play_now:"Dengarkan — putar dear you", aria_play_album:"Putar album dear you", aria_play_album2:"Putar album dear you",
       aria_shuffle:"Acak", aria_prev:"Sebelumnya", aria_next:"Berikutnya", aria_repeat:"Ulang",
       aria_mood_night:"Lo-fi larut malam", aria_mood_focus:"Musik fokus", aria_mood_rest:"Musik rehat", aria_mood_dawn:"Musik fajar",
@@ -1113,6 +1224,16 @@ if ('serviceWorker' in navigator) {
   };
 
   function setMeta(sel, attr, val) { var el = document.querySelector(sel); if (el) el.setAttribute(attr, val); }
+
+  var CURRENT = null; // dict for the active language
+  function applyAria(el, dict) {
+    dict = dict || CURRENT || I18N.en;
+    var k = el.getAttribute('data-i18n-aria');
+    var v = (dict[k] != null) ? dict[k] : I18N.en[k];
+    if (v != null) el.setAttribute('aria-label', v);
+  }
+  // exposed so the theme toggle can re-localize the button's aria-label after switching
+  window.__applyAria = function (el) { applyAria(el, CURRENT); };
 
   // Time-of-day greeting: choose greeting + eyebrow status by local hour.
   function timeKeys() {
@@ -1143,12 +1264,9 @@ if ('serviceWorker' in navigator) {
       var val = (dict[key] != null) ? dict[key] : I18N.en[key];
       if (val != null) nodes[i].innerHTML = val;
     }
+    CURRENT = dict;
     var anodes = document.querySelectorAll('[data-i18n-aria]');
-    for (var j = 0; j < anodes.length; j++) {
-      var akey = anodes[j].getAttribute('data-i18n-aria');
-      var aval = (dict[akey] != null) ? dict[akey] : I18N.en[akey];
-      if (aval != null) anodes[j].setAttribute('aria-label', aval);
-    }
+    for (var j = 0; j < anodes.length; j++) applyAria(anodes[j], dict);
 
     if (dict.meta_title) { document.title = dict.meta_title; setMeta('#og-title','content',dict.meta_title); }
     if (dict.meta_desc) { setMeta('meta[name="description"]','content',dict.meta_desc); setMeta('#og-desc','content',dict.meta_desc); setMeta('meta[name="twitter:description"]','content',dict.meta_desc); }
