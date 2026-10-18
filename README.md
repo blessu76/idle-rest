@@ -3,14 +3,16 @@
 > AI 로파이 · 힐링 음악 브랜드 `ipe()` ("idle process")의 공식 홈페이지.
 > *when the process finally rests*
 
-단일 파일 정적 사이트입니다. 빌드 과정이 없고 `index.html` 하나로 동작합니다.
+빌드 과정이 없는 정적 사이트입니다(2026-10-18 디자인 v1: EN/KO 정적 페이지 + 공통 `site.css`/`site.js`).
 (이 폴더가 공개 GitHub Pages 저장소로 배포됩니다. 스튜디오 저장소 전체 개요는 루트 [`../README.md`](../README.md) 참고.)
 
 ## 파일 구성
 
 | 파일 | 역할 |
 |---|---|
-| `index.html` | 사이트 본체 (12개국어 i18n · SEO · GEO · GA4 · 쇼핑 섹션 모두 포함) |
+| `index.html` · `ko/index.html` | 홈(EN/KO) — SEO · GEO(JSON-LD) · GA4 · Cloudflare |
+| `journal/` · `about/` · `privacy/` · `terms/` · `contact/` (+ `ko/…`) | 정적 페이지. 저널 글 예시(`journal/ten-letters-one-album/`)는 시안용이라 noindex · sitemap 제외 |
+| `site.css` · `site.js` · `fonts/` | 공통 스타일·스크립트(테마 토글·서랍·언어) · 자체 호스팅 글꼴. 광고 자리는 `?adpreview=1` 일 때만 보임 |
 | `robots.txt` | 검색/AI 크롤러 허용 + 사이트맵 위치 |
 | `sitemap.xml` | 검색엔진용 사이트맵(언어별 hreflang 포함) |
 | `llms.txt` | AI/생성형 답변엔진이 읽고 인용하기 좋은 요약(GEO) |

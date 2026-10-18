@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<!--
+  TODO (placeholders to fill before launch): none
+  TODO: Journal cards on this page (and /journal/) are sample text from the design mockup. Replace with real posts.
+  TODO: Logo word ("idle" vs "ipe") and the "TestFlight soon" badge are pending Davy confirmation: both are controlled by BRAND in the generator (and .badge-testflight in site.css).
+  AdSense: ad slots (<aside class="ad">) are hidden (height 0) until live. To go live put <ins class="adsbygoogle"> inside .ad-box, remove .ad-ph and add class "is-live" to the <aside>. Add ?adpreview=1 to any URL to see the grey slots.
+  Generated from the idle.ipe.rest design mockup v1 (Grace) + Quill copy v1. See rooms note 'idle 구현 v1 결과'.
+-->
+<html lang="ko" dir="ltr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>(function(){var d=document.documentElement,t='light';try{if(localStorage.getItem('idle-theme')==='dark')t='dark'}catch(e){}d.setAttribute('data-theme',t);if(/[?&]adpreview=1/.test(location.search))d.className+=' adpreview'})();</script>
+<title>idle() — 지친 개발자를 위한 AI 로파이·힐링 음악 · ipe(); // be still</title>
+<meta name="description" content="idle()는 ipe()의 음악입니다. 지친 개발자와 늦은 밤의 집중을 위한 AI 로파이·힐링 음악. 데뷔 앨범 dear(you); vol.1 을 포함해 영어·한국어 12곡을 YouTube 에서 들을 수 있어요. when the process finally rests.">
+<meta name="author" content="ipe()">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#fbfaf4">
+<link rel="canonical" href="https://idle.ipe.rest/ko/">
+<link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/">
+<link rel="alternate" hreflang="en" href="https://idle.ipe.rest/">
+<link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/ko/">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="idle()">
+<meta property="og:type" content="music.album">
+<meta property="og:site_name" content="idle() · ipe()">
+<meta property="og:title" content="idle() — 지친 개발자를 위한 AI 로파이·힐링 음악">
+<meta property="og:description" content="ipe()의 음악. 데뷔 앨범 dear(you); vol.1 을 포함한 영어·한국어 로파이 12곡. when the process finally rests.">
+<meta property="og:url" content="https://idle.ipe.rest/ko/">
+<meta property="og:image" content="https://idle.ipe.rest/og-image.png">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="idle() — 지친 개발자를 위한 AI 로파이·힐링 음악">
+<meta name="twitter:description" content="ipe()의 음악. 데뷔 앨범 dear(you); vol.1 을 포함한 영어·한국어 로파이 12곡. when the process finally rests.">
+<meta name="twitter:image" content="https://idle.ipe.rest/og-image.png">
+<link rel="preload" href="/fonts/lora-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<!-- ===== GEO / structured data ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "idle() — the music of ipe()",
+  "url": "https://idle.ipe.rest/",
+  "inLanguage": ["en","ko"],
+  "publisher": { "@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ipe()",
+  "alternateName": ["ipe", "idle process", "아이프"],
+  "url": "https://ipe.rest/",
+  "logo": "https://idle.ipe.rest/icon-512.png",
+  "slogan": "when the process finally rests",
+  "description": "ipe() (short for 'idle process') is a small AI-native studio building quiet, developer-minded products. idle() is its music.",
+  "disambiguatingDescription": "ipe() is a software & music studio — not related to ipe (ipê) hardwood, lumber, or decking.",
+  "sameAs": [
+    "https://www.youtube.com/@ipe-rest",
+    "https://www.instagram.com/ipe.rest",
+    "https://www.tiktok.com/@ipe.rest",
+    "https://soundcloud.com/ipe-rest",
+    "https://x.com/ipe_rest",
+    "https://www.facebook.com/ipe.rest"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "ipe.rest",
+  "alternateName": "idle()",
+  "url": "https://idle.ipe.rest/",
+  "genre": ["lo-fi", "ambient", "chillhop", "healing"],
+  "description": "AI lo-fi & healing music for tired developers. Every track closes with the whispered signature 'ipe. be still.'",
+  "sameAs": [
+    "https://www.youtube.com/@ipe-rest",
+    "https://soundcloud.com/ipe-rest"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicAlbum",
+  "name": "dear(you); vol.1",
+  "alternateName": "dear you",
+  "url": "https://idle.ipe.rest/",
+  "byArtist": { "@type": "MusicGroup", "name": "ipe.rest", "alternateName": "idle()" },
+  "numTracks": 10,
+  "genre": ["lo-fi", "ambient", "healing"],
+  "description": "ipe()'s debut concept album: ten ambient lo-fi tracks — ten letters to the you who made it through another hard day.",
+  "track": [
+    { "@type": "MusicRecording", "name": "Hard Day Again, Wasn't It?", "url": "https://youtu.be/Y8pLkgO2HlQ", "position": 1 },
+    { "@type": "MusicRecording", "name": "It's Okay, Take Your Time.", "url": "https://youtu.be/vZ3OqCjTuio", "position": 2 },
+    { "@type": "MusicRecording", "name": "I Was Scared, Too.", "url": "https://youtu.be/rXwAwZ2cu2g", "position": 3 },
+    { "@type": "MusicRecording", "name": "You're Still Shining.", "url": "https://youtu.be/rOjN7tVcsrI", "position": 4 },
+    { "@type": "MusicRecording", "name": "It's Okay to Rest a While.", "url": "https://youtu.be/N7FVtphBmBg", "position": 5 },
+    { "@type": "MusicRecording", "name": "You're Not Alone.", "url": "https://youtu.be/-ubb0jO9j6A", "position": 6 },
+    { "@type": "MusicRecording", "name": "I'm Glad You're Here.", "url": "https://youtu.be/jQswl5-uS-c", "position": 7 },
+    { "@type": "MusicRecording", "name": "You Were Enough Today.", "url": "https://youtu.be/2xBFso_4jRs", "position": 8 },
+    { "@type": "MusicRecording", "name": "Let's Smile a Little Tomorrow.", "url": "https://youtu.be/81XXhmbA_JY", "position": 9 },
+    { "@type": "MusicRecording", "name": "You Did So Well Today.", "url": "https://youtu.be/lvyLfiBzMLg", "position": 10 }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "idle() — singles",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "item": { "@type": "MusicRecording", "name": "good morning, world", "url": "https://youtu.be/vI1tD6oak8U" } },
+    { "@type": "ListItem", "position": 2, "item": { "@type": "MusicRecording", "name": "still compiling", "url": "https://youtu.be/O0PkHQYi2PE" } }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "idle()",
+  "applicationCategory": "MusicApplication",
+  "operatingSystem": "iOS",
+  "url": "https://idle.ipe.rest/",
+  "description": "The idle() app — AI lo-fi & healing music for developer idle time, on iOS.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
+</script>
+
+
+<link rel="stylesheet" href="/site.css?v=20261018">
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
+<!-- End Cloudflare Web Analytics -->
+<script src="/site.js?v=20261018" defer></script>
+</head>
+<body>
+
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="hdr wrap">
+    <a class="logo ltr" href="/ko/" aria-label="idle() — 홈">idle<span>()</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/ko/#music" aria-current="page">음악</a>
+      <a href="/ko/journal/">저널</a>
+      <a href="/ko/about/">소개</a>
+      <a href="/ko/privacy/">개인정보</a>
+      <a href="/ko/terms/">이용약관</a>
+      <a href="/ko/contact/">연락처</a>
+    </nav>
+    <div class="hdr-right">
+      <button class="theme-btn" type="button" aria-pressed="false" aria-label="다크 테마로 전환" title="밤 테마">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+      </button>
+      <label class="language" title="Language / 언어">
+        <span class="sr-only">언어</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9S9.5 5.5 12 3z"/></svg>
+        <select class="lang" aria-label="Language / 언어" data-en="/" data-ko="/ko/"><option value="en">EN</option><option value="ko" selected>KO</option></select>
+      </label>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="메뉴 열기"><span class="bars"></span></button>
+    </div>
+  </div>
+</header>
+<div class="scrim" aria-hidden="true"></div>
+<aside class="drawer" id="drawer" aria-label="사이트 메뉴" aria-hidden="true" inert>
+  <div class="drawer-top">
+    <a class="logo ltr" href="/ko/" aria-label="idle() — 홈">idle<span>()</span></a>
+    <button class="drawer-close" type="button" aria-label="닫기">닫기 <span aria-hidden="true">✕</span></button>
+  </div>
+  <nav class="drawer-group" aria-label="사이트">
+    <h2>// idle</h2>
+    <ul>
+      <li><a href="/ko/#music">음악 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/ko/journal/">저널 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/ko/about/">소개 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/ko/contact/">연락처 <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+  <nav class="drawer-group small" aria-label="정책">
+    <h2>// policies</h2>
+    <ul>
+      <li><a href="/ko/privacy/">개인정보처리방침 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/ko/terms/">이용약관 <span aria-hidden="true">↗</span></a></li>
+      <li><a href="/sitemap.xml">사이트맵 <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </nav>
+  <div class="drawer-lang">
+    <h2>// language</h2>
+    <label class="language"><span class="sr-only">언어</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.8 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.8-3.8-9S9.5 5.5 12 3z"/></svg>
+      <select class="lang" aria-label="Language / 언어" data-en="/" data-ko="/ko/"><option value="en">English</option><option value="ko" selected>한국어</option></select>
+    </label>
+  </div>
+  <p class="drawer-foot ltr">ipe(); // be still<br>© 2026 ipe()</p>
+</aside>
+
+<main id="main">
+  <section class="hero" id="music" aria-labelledby="h1">
+    <div class="hero-copy">
+      <p class="eyebrow ltr"><i></i><span>// 로파이 &amp; 힐링 뮤직 · by ipe()</span></p>
+      <h1 id="h1">코드가 쉬어가는 <em>순간을 위한 음악.</em></h1>
+      <p class="ko" lang="en">Music for the moment the code rests</p>
+      <p class="purpose">idle()는 서울의 작은 스튜디오 ipe()가 만드는 로파이·힐링 음악입니다. 지친 개발자와, 하루가 끝나도 머릿속이 멈추지 않는 모든 사람을 위해 만들었어요.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#album"><span class="play-tri" aria-hidden="true"></span><span>지금 듣기</span></a>
+        <a class="btn" href="/ko/journal/"><span>저널 읽기</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="stage">
+      <article class="player" aria-label="대표 앨범: dear you">
+        <div class="player-cover"><img src="/assets/covers/dear-you.jpg" alt="dear you 앨범 커버: 거품 위에 하트가 그려진 라테를 든 손" width="1400" height="1400"></div>
+        <div class="player-info">
+          <p class="kicker ltr">dear(you); vol.1</p>
+          <h2 class="ltr">dear you</h2>
+          <p class="player-desc">오늘을 버텨 낸 당신에게 보내는 편지</p>
+          <div class="seek" aria-hidden="true"><span></span></div>
+          <div class="time" aria-hidden="true"><span>01:24</span><span>03:45</span></div>
+          <div class="controls">
+            <a class="control" href="/go/S1A1.10/?l=ko&amp;s=other" aria-label="이전 곡">‹</a>
+            <a class="control main" href="/go/S1A1.01/?l=ko&amp;s=other" aria-label="dear you 재생"><span class="play-tri"></span></a>
+            <a class="control" href="/go/S1A1.02/?l=ko&amp;s=other" aria-label="다음 곡">›</a>
+          </div>
+        </div>
+      </article>
+      <p class="stage-note ltr">// when the process<br>&nbsp;&nbsp;&nbsp;finally rests</p>
+    </div>
+  </section>
+
+  <section class="facts" aria-label="idle() 한눈에 보기">
+    <div class="wrap"><ul>
+      <li><span>발매</span><b>12곡</b></li>
+      <li><span>언어</span><b>영어 · 한국어</b></li>
+      <li><span>사운드</span><b>로파이 · 앰비언트</b></li>
+      <li><span>제작</span><b>AI, 투명하게 공개</b></li>
+    </ul></div>
+  </section>
+
+  <section class="section" aria-labelledby="mood-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow ltr"><i></i><span>// idle.enter(mood)</span></p><h2 id="mood-h">어떤 쉼이<br><em>필요하세요?</em></h2></div>
+        <p>마음의 네 시간대.<br>하나를 골라 재생하세요.</p>
+      </div>
+      <div class="mood-grid">
+        <a class="mood blue" href="/go/N-001/?l=ko&amp;s=other" aria-label="늦은 밤 로파이"><span class="m-icon" aria-hidden="true">☾</span><strong>늦은 밤</strong><code class="ltr">night.late()</code><span class="m-go"><span>재생</span><span aria-hidden="true">↗</span></span></a>
+        <a class="mood sage" href="/go/U-001/?l=ko&amp;s=other" aria-label="집중 음악"><span class="m-icon" aria-hidden="true">◎</span><strong>집중</strong><code class="ltr">focus.mode()</code><span class="m-go"><span>재생</span><span aria-hidden="true">↗</span></span></a>
+        <a class="mood peach" href="/go/S1A1.05/?l=ko&amp;s=other" aria-label="휴식 음악"><span class="m-icon" aria-hidden="true">◒</span><strong>휴식</strong><code class="ltr">rest.now()</code><span class="m-go"><span>재생</span><span aria-hidden="true">↗</span></span></a>
+        <a class="mood sun" href="/go/S1A1.10/?l=ko&amp;s=other" aria-label="새벽 음악"><span class="m-icon" aria-hidden="true">☼</span><strong>새벽</strong><code class="ltr">dawn.light()</code><span class="m-go"><span>재생</span><span aria-hidden="true">↗</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="album" aria-labelledby="album-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow ltr"><i></i><span>// featured album</span></p><h2 id="album-h">하루를 버텨 낸 당신에게<br><em>보내는 열 통의 편지.</em></h2></div>
+        <p>데뷔 앨범 완성.<br>곡을 누르면 YouTube 로 이어집니다.</p>
+      </div>
+      <div class="album-grid">
+        <article class="album-card">
+          <div class="cover"><img src="/assets/covers/dear-you.jpg" alt="dear you 앨범 커버" width="1400" height="1400" loading="lazy"></div>
+          <div>
+            <h3 class="ltr">dear(you); vol.1</h3>
+            <p>열 곡의 앰비언트 로파이. 공감에서 평온으로 이어지는 흐름, 힘든 하루를 보낸 밤을 위해.</p>
+            <p class="meta ltr">♫ 10곡 · EN / KR</p>
+          </div>
+        </article>
+        <div>
+          <ol class="tracklist">
+            <li><a href="/go/S1A1.01/?l=ko&amp;s=other"><span class="no ltr">01</span><span class="tt">오늘도 많이 힘들었지?</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.02/?l=ko&amp;s=other"><span class="no ltr">02</span><span class="tt">괜찮아, 천천히 말해봐.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.03/?l=ko&amp;s=other"><span class="no ltr">03</span><span class="tt">나도 무서웠어.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.04/?l=ko&amp;s=other"><span class="no ltr">04</span><span class="tt">너는 아직 빛나고 있어.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.05/?l=ko&amp;s=other"><span class="no ltr">05</span><span class="tt">잠깐 쉬어가도 돼.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.06/?l=ko&amp;s=other"><span class="no ltr">06</span><span class="tt">혼자가 아니야.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.07/?l=ko&amp;s=other"><span class="no ltr">07</span><span class="tt">네가 있어서 다행이야.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.08/?l=ko&amp;s=other"><span class="no ltr">08</span><span class="tt">오늘도 충분했어.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.09/?l=ko&amp;s=other"><span class="no ltr">09</span><span class="tt">내일은 조금 웃자.</span><span class="go">재생 ↗</span></a></li>
+            <li><a href="/go/S1A1.10/?l=ko&amp;s=other"><span class="no ltr">10</span><span class="tt">오늘도... 정말 고생했어.</span><span class="go">재생 ↗</span></a></li>
+          </ol>
+          <p class="singles ltr"><b>싱글</b> · <a href="/go/U-001/?l=ko&amp;s=other">good morning, world</a> · <a href="/go/N-001/?l=ko&amp;s=other">still compiling</a></p>
+        </div>
+      </div>
+
+      <div class="app-strip">
+        <img src="/assets/idle-app-icon-384.png" alt="idle() 앱 아이콘" width="192" height="192" loading="lazy">
+        <div class="txt"><p class="eyebrow ltr" style="margin:0 0 6px"><i></i><span>// idle() for iOS</span></p><h3>나만의 시간에 흐르는 로파이</h3><p>idle() 앱은 개발 중입니다.</p></div>
+        <span class="badge badge-testflight">TestFlight 곧 공개</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="notes" id="about-idle" aria-labelledby="notes-h">
+    <div class="wrap">
+      <div class="note-intro">
+        <div class="note-label"><p class="eyebrow ltr" style="margin:0"><i></i><span>// how it is made</span></p><span class="place ltr">Seoul · 2026</span></div>
+        <div class="note-copy">
+          <h2 id="notes-h" class="sr-only">idle()는 이렇게 만들어집니다</h2>
+          <p class="lead">우리는 조용한 틈을 만듭니다: <em>일이 잠시 멈추는 순간을 위한 음악.</em></p>
+          <p>idle()는 1인 스튜디오 ipe()의 음악입니다. 사운드는 AI 음악 도구의 도움으로 만들고, 그 사실을 밝힙니다. 가사를 쓰고, 테이크를 고르고, 앨범을 빚는 것은 사람입니다.</p>
+          <ul class="principles">
+            <li><h3>사람이 쓴 가사</h3><p>가사, 컨셉, 메시지는 손으로 쓰고 다듬습니다.</p></li>
+            <li><h3>AI, 투명하게</h3><p>사이트와 YouTube 에 AI 사용을 표시합니다. 숨기는 것은 없습니다.</p></li>
+            <li><h3>한 번의 작별 인사</h3><p>모든 곡은 속삭이는 “ipe. be still”로 끝납니다.</p></li>
+          </ul>
+          <p style="margin-top:28px"><a class="link-u" href="/ko/about/">idle() 더 알아보기</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<aside class="ad home" aria-label="광고" data-ad-slot="home-1">
+  <p class="ad-label">광고 / Advertisement</p>
+  <div class="ad-box"><div class="ad-ph"><b>Ad placeholder</b>slot · home-1<br>optional · horizontal responsive · max 970×250 · between content sections</div></div>
+</aside>
+  <section class="section" id="journal" aria-labelledby="j-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="eyebrow ltr"><i></i><span>// journal</span></p><h2 id="j-h">저널의<br><em>최신 글.</em></h2></div>
+        <a class="more ltr" href="/ko/journal/">모든 글 →</a>
+      </div>
+      <ul class="post-list"><li data-tag="제작기"><article class="post-card sun"><div class="bar"></div><div class="in"><p class="post-meta ltr"><span class="tag">제작기</span><time datetime="2026-10-12">2026-10-12</time><span>5분</span></p><h3><a href="/ko/journal/ten-letters-one-album/">열 통의 편지, 한 장의 앨범: dear(you); vol.1 제작기</a></h3><p>대부분의 앨범은 사운드를 중심으로 만들어집니다. 이 앨범은 한 사람을 중심으로 만들었어요. 힘든 하루를 또 견뎌 낸 바로 그 사람.</p><span class="more" aria-hidden="true">읽기</span></div></article></li><li data-tag="노트"><article class="post-card sage no-link"><div class="bar"></div><div class="in"><p class="post-meta ltr"><span class="tag">노트</span><time datetime="2026-09-30">2026-09-30</time><span>3분</span></p><h3>모든 곡이 “ipe. be still”로 끝나는 이유</h3><p>속삭이는 네 단어의 작별 인사, 코드 주석, 그리고 우리가 떠올린 가장 조용한 서명.</p></div></article></li><li data-tag="제작기"><article class="post-card sun no-link"><div class="bar"></div><div class="in"><p class="post-meta ltr"><span class="tag">제작기</span><time datetime="2026-09-18">2026-09-18</time><span>4분</span></p><h3>끝나지 않은 빌드를 위한 로파이</h3><p>still compiling 이야기. 빌드가 끝날 때까지 자리를 뜰 수 없던 밤을 위한 late_night.lofi 싱글.</p></div></article></li></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer ">
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="mark ltr" href="/ko/" aria-label="idle() — 홈">idle<span>()</span></a>
+        <p class="line ltr">ipe(); // be still</p>
+        <p>지친 마음을 위한 로파이·힐링 음악. idle()는 서울의 작은 스튜디오 <a href="https://ipe.rest" target="_blank" rel="noopener">ipe()</a>가 만드는 음악입니다.</p>
+      </div>
+      <nav class="f-col" aria-label="듣기">
+        <h2>듣기</h2>
+        <ul>
+          <li><a href="/ko/#music">음악</a></li>
+          <li><a href="/ko/journal/">저널</a></li>
+          <li><a href="https://www.youtube.com/@ipe-rest" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-label="스튜디오 링크">
+        <h2>스튜디오</h2>
+        <ul>
+          <li><a href="/ko/about/">소개</a></li>
+          <li><a href="/ko/contact/">연락처</a></li>
+          <li><a href="/sitemap.xml">사이트맵</a></li>
+        </ul>
+      </nav>
+      <nav class="f-col" aria-label="약관·정책">
+        <h2>약관·정책</h2>
+        <ul>
+          <li><a href="/ko/privacy/">개인정보처리방침</a></li>
+          <li><a href="/ko/terms/">이용약관</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="f-bottom">
+      <p class="f-ads">이 사이트에는 Google 이 제공하는 광고가 게재될 수 있습니다. 광고와 쿠키가 작동하는 방식은 <a href="/ko/privacy/">개인정보처리방침</a>에서 확인하세요.</p>
+      <p class="ltr">© 2026 ipe(). All rights reserved.</p>
+      <div class="socials ltr">
+        <a href="https://www.youtube.com/@ipe-rest" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/ipe.rest" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@ipe.rest" target="_blank" rel="noopener">TikTok</a><a href="https://soundcloud.com/ipe-rest" target="_blank" rel="noopener">SoundCloud</a><a href="https://x.com/ipe_rest" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Google Analytics (GA4) ===== -->
+<script>
+(function () {
+  var GA_MEASUREMENT_ID = 'G-XG4BH800J0';
+  if (GA_MEASUREMENT_ID.indexOf('XXXX') === -1) {
+    var s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_MEASUREMENT_ID);
+  }
+})();
+</script>
+
+<!-- ===== PWA service worker ===== -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  });
+}
+</script>
+</body>
+</html>

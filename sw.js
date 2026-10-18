@@ -1,7 +1,9 @@
 // idle() service worker — installable PWA + offline fallback
-const CACHE = 'idle-v4';
+const CACHE = 'idle-v5';
 const CORE = [
-  '/', '/index.html',
+  '/', '/index.html', '/ko/',
+  '/site.css?v=20261018', '/site.js?v=20261018',
+  '/fonts/lora-400.woff2', '/fonts/inter-400.woff2',
   '/manifest.webmanifest',
   '/icon-192.png', '/icon-512.png', '/icon-180.png',
   '/idle-app-icon.png',
