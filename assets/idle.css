@@ -2,8 +2,7 @@
    idle.ipe.rest — "The Quiet Frequency" (2026-10-20)
    Shared stylesheet for the home page and /journal/ pages.
    Light is the default (Davy, 10-18); dark via the header toggle.
-   Breakpoints follow _ipe/brand/design-system/RESPONSIVE_UI.md:
-   1100 / 760 / 420. Bump ?v= in every page when this file changes.
+   Breakpoints: 1100 / 760 / 420. Bump ?v= in every page when this file changes.
    ============================================================ */
 :root {
   --bg: #f6f8fa;
