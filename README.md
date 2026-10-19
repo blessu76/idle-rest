@@ -15,6 +15,7 @@
 | `assets/idle.css` · `assets/idle.js` | 홈·저널 공용 스타일 / 테마 토글·모바일 메뉴 (바꾸면 각 페이지의 `?v=` 와 `scripts/build_journal.py` 의 `ASSET_V` 를 같이 올림) |
 | `content/journal/*.md` | 저널 원고 (front matter + Markdown) |
 | `scripts/build_journal.py` | 저널 빌드 → `journal/` · `journal/feed.xml` · `sitemap.xml` · 홈 저널 카드 |
+| `scripts/build_pages.py` | 신뢰 페이지(소개·문의·개인정보처리방침, EN/KO) 빌드 → `about/` `contact/` `privacy/` `ko/…` (문구는 이 스크립트 안에서 고치고 다시 실행. `build_journal.py` 의 머리·꼬리를 공유) |
 | `journal/` | **생성물** — 손으로 고치지 않음 |
 | `robots.txt` | 검색/AI 크롤러 허용 + 사이트맵 위치 |
 | `sitemap.xml` | 검색엔진용 사이트맵(언어별 hreflang 포함) |

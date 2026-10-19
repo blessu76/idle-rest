@@ -158,7 +158,7 @@
 </script>
 
 <link rel="preload" as="image" href="/assets/covers/dear-you-titled.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/assets/idle.css?v=20261021">
+<link rel="stylesheet" href="/assets/idle.css?v=20261022">
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
@@ -403,6 +403,9 @@
     <ul class="footer-links">
       <li><a href="#story" data-i18n="nav_story">story</a></li>
       <li><a href="/journal/" data-i18n="nav_journal">journal</a></li>
+      <li><a href="/about/" data-en-href="/about/" data-ko-href="/ko/about/" data-i18n="nav_about">About</a></li>
+      <li><a href="/contact/" data-en-href="/contact/" data-ko-href="/ko/contact/" data-i18n="nav_contact">Contact</a></li>
+      <li><a href="/privacy/" data-en-href="/privacy/" data-ko-href="/ko/privacy/" data-i18n="nav_privacy">Privacy Policy</a></li>
       <li><a href="https://ipe.rest/" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
@@ -442,7 +445,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<script src="/assets/idle.js?v=20261021"></script>
+<script src="/assets/idle.js?v=20261022"></script>
 
 <!-- ===== player bar: track selection + EN/KR version; playback opens YouTube via /go/{track} ===== -->
 <script>
@@ -769,6 +772,7 @@ if ('serviceWorker' in navigator) {
   var EXTRA = {
     en: {
       skip:"Skip to content", nav_journal:"journal", aria_menu:"Menu",
+      nav_about:"About", nav_contact:"Contact", nav_privacy:"Privacy Policy",
       hero_h1:"lo-fi &amp; healing music<br>for tired developers",
       ver_label:"version", ver_en:"English version", ver_ko:"Korean version",
       listen_yt:"Listen on YouTube", aria_play_yt:"Play on YouTube:", ad_label:"Advertisement",
@@ -784,6 +788,7 @@ if ('serviceWorker' in navigator) {
     },
     ko: {
       skip:"본문으로 건너뛰기", nav_journal:"저널", aria_menu:"메뉴",
+      nav_about:"소개", nav_contact:"문의", nav_privacy:"개인정보처리방침",
       hero_h1:"지친 개발자를 위한<br>로파이 · 힐링 음악",
       ver_label:"버전", ver_en:"영어 버전", ver_ko:"한국어 버전",
       listen_yt:"YouTube에서 듣기", aria_play_yt:"YouTube에서 재생:", ad_label:"광고",
@@ -836,6 +841,8 @@ if ('serviceWorker' in navigator) {
       if (val != null && nodes[i].hasAttribute('data-i18n-inline')) val = String(val).replace(/\s*<br\s*\/?>\s*/g, (lang === 'ja' || lang === 'zh') ? '' : ' ');
       if (val != null) nodes[i].innerHTML = val;
     }
+    var hrefs = document.querySelectorAll('a[data-ko-href]');
+    for (var h = 0; h < hrefs.length; h++) hrefs[h].setAttribute('href', lang === 'ko' ? hrefs[h].getAttribute('data-ko-href') : hrefs[h].getAttribute('data-en-href'));
     CURRENT = dict;
     var anodes = document.querySelectorAll('[data-i18n-aria]');
     for (var j = 0; j < anodes.length; j++) applyAria(anodes[j], dict);

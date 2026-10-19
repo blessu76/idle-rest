@@ -34,7 +34,7 @@ import sys
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261021"  # keep equal to the ?v= in index.html
+ASSET_V = "20261022"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -48,12 +48,14 @@ UI = {
            "sub": "Behind the music, and other quiet updates.", "empty": "The first post is coming soon.",
            "read_more": "Read more", "rss": "RSS feed", "home": "Home", "music": "music", "albums": "albums",
            "story": "story", "menu": "Menu", "to_dark": "Switch to dark theme", "to_light": "Switch to light theme",
-           "skip": "Skip to content"},
+           "skip": "Skip to content", "about": "About", "contact": "Contact", "privacy": "Privacy Policy",
+           "alt_label": "한국어", "alt_name": "Korean"},
     "ko": {"journal": "저널", "back": "글 목록", "listen": "idle() 듣기", "ad": "광고",
            "sub": "음악 뒷이야기와 조용한 소식들.", "empty": "곧 첫 글이 올라옵니다.",
            "read_more": "더 읽기", "rss": "RSS 피드", "home": "홈", "music": "음악", "albums": "앨범",
            "story": "이야기", "menu": "메뉴", "to_dark": "다크 테마로 전환", "to_light": "라이트 테마로 전환",
-           "skip": "본문으로 건너뛰기"},
+           "skip": "본문으로 건너뛰기", "about": "소개", "contact": "문의", "privacy": "개인정보처리방침",
+           "alt_label": "EN", "alt_name": "English"},
 }
 
 
@@ -201,14 +203,14 @@ def fmt_date(d):
     return "%04d. %02d. %02d" % (d.year, d.month, d.day)
 
 
-def head(title, desc, canonical, lang, noindex, extra=""):
+def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild"):
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     return f"""<!DOCTYPE html>
 <html lang="{esc(lang)}" dir="ltr" data-theme="light" data-ads="{ADS_ATTR}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<!-- {GEN_MARK} — do not hand-edit; edit content/journal/*.md and rebuild -->
+<!-- {GEN_MARK} — do not hand-edit; {hint} -->
 <script>
 (function () {{
   var t = 'light';
@@ -241,8 +243,13 @@ def head(title, desc, canonical, lang, noindex, extra=""):
 """
 
 
-def header(lang):
+def header(lang, current="journal", alt=None):
+    """alt = (href, hreflang) of the same page in the other language -> small language link."""
     t = ui(lang)
+    cur = lambda k: ' aria-current="page"' if current == k else ""
+    alt_html = ""
+    if alt:
+        alt_html = '<a class="lang-link" href="%s" hreflang="%s" lang="%s" aria-label="%s">%s</a>\n        ' % (esc(alt[0]), esc(alt[1]), esc(alt[1]), esc(t["alt_name"]), esc(t["alt_label"]))
     return f"""<a class="skip-link" href="#main">{esc(t['skip'])}</a>
 <div class="band-plain">
   <header class="site-header">
@@ -254,11 +261,11 @@ def header(lang):
       <nav class="nav" id="primaryNav" aria-label="primary">
         <a href="/#music">{esc(t['music'])}</a>
         <a href="/#album">{esc(t['albums'])}</a>
-        <a href="/journal/" aria-current="page">{esc(t['journal'])}</a>
+        <a href="/journal/"{cur("journal")}>{esc(t['journal'])}</a>
         <a href="/#story">{esc(t['story'])}</a>
       </nav>
       <div class="tools">
-        <button class="theme-switch" type="button" id="themeBtn" aria-pressed="false" aria-label="{esc(t['to_dark'])}" data-label-dark="{esc(t['to_dark'])}" data-label-light="{esc(t['to_light'])}">
+        {alt_html}<button class="theme-switch" type="button" id="themeBtn" aria-pressed="false" aria-label="{esc(t['to_dark'])}" data-label-dark="{esc(t['to_dark'])}" data-label-light="{esc(t['to_light'])}">
           <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg>
           <span class="switch-track" aria-hidden="true"></span>
@@ -275,6 +282,7 @@ def header(lang):
 
 def footer(lang):
     t = ui(lang)
+    pre = "/ko" if lang == "ko" else ""
     return f"""<footer class="site-footer">
   <div class="shell footer-top">
     <div class="footer-brand">
@@ -285,6 +293,9 @@ def footer(lang):
       <li><a href="/">{esc(t['home'])}</a></li>
       <li><a href="/journal/">{esc(t['journal'])}</a></li>
       <li><a href="/journal/feed.xml">{esc(t['rss'])}</a></li>
+      <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
+      <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
+      <li><a href="{pre}/privacy/">{esc(t['privacy'])}</a></li>
       <li><a href="https://ipe.rest/" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
