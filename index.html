@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" data-theme="light">
+<html lang="en" dir="ltr" data-theme="light" data-ads="off">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -158,7 +158,7 @@
 </script>
 
 <link rel="preload" as="image" href="/assets/covers/dear-you-titled.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/assets/idle.css?v=20261020">
+<link rel="stylesheet" href="/assets/idle.css?v=20261021">
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
@@ -262,7 +262,8 @@
       </div>
     </section>
 
-    <!-- Ad slot (home-top): reserved space only. Put the AdSense unit inside after approval
+    <!-- Ad slots: hidden while <html data-ads="off"> (flip to "on" after AdSense approval — also ADS_ATTR source for scripts/build_journal.py).
+         Ad slot (home-top): reserved space only. Put the AdSense unit inside after approval
          and drop aria-hidden. min-height prevents layout shift (CLS). -->
     <div class="ad-slot" data-ad-slot="home-top" aria-hidden="true">
       <span class="ad-label" data-i18n="ad_label">Advertisement</span>
@@ -345,7 +346,7 @@
     <span class="ad-label" data-i18n="ad_label">Advertisement</span>
   </div>
 
-  <section class="section" id="journal" aria-labelledby="journal-title">
+  <section class="section" id="journal" aria-labelledby="journal-title" hidden>
     <div class="section-head">
       <div>
         <h2 id="journal-title" data-i18n="journal_h">Journal</h2>
@@ -441,7 +442,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<script src="/assets/idle.js?v=20261020"></script>
+<script src="/assets/idle.js?v=20261021"></script>
 
 <!-- ===== player bar: track selection + EN/KR version; playback opens YouTube via /go/{track} ===== -->
 <script>

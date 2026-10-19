@@ -191,6 +191,9 @@ select.lang option { color: #1f2933; background: #fff; }
 }
 .ad-label { position: absolute; top: 10px; inset-inline-start: 14px; color: var(--muted-2); font: 10px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; }
 .band .ad-slot { margin-bottom: 40px; }
+/* AdSense not approved yet: <html data-ads="off"> hides every slot (no empty gap). Set data-ads="on" to show them. */
+[data-ads="off"] .ad-slot { display: none !important; }
+[hidden] { display: none !important; }
 
 /* ---------- sections ---------- */
 .section { padding: 56px 0 0; }

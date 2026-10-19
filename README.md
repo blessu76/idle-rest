@@ -75,6 +75,8 @@
 - 미리보기(초안 포함): 사이트를 **복사한 폴더**에서 `python3 scripts/build_journal.py --root <복사본> --drafts` — 이 결과는 커밋하지 않는다.
 - 글이 0개면 목록은 「곧 첫 글이 올라옵니다」 + `noindex`, 사이트맵에서도 빠진다. 첫 글이 생기면 자동으로 색인 허용.
 - 글 페이지마다 광고 칸 자리(`data-ad-slot="journal-post"`)가 하나 있다(AdSense 승인 뒤 그 안에 광고 코드를 넣는다).
+- 광고 칸은 승인 전까지 숨김: `index.html`의 `<html data-ads="off">` 한 곳이 스위치다. 승인 뒤 `data-ads="on"`으로 바꾸고 `python3 scripts/build_journal.py`를 돌리면 홈·저널 글 모두 칸이 나타난다.
+- 홈의 Journal 섹션은 글이 0개면 `hidden`(메뉴의 Journal 링크는 유지), 1개 이상이면 최근 3개 카드로 자동 표시된다(`build_journal.py`).
 
 ## 언어 추가하는 법
 
