@@ -6,12 +6,12 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 21 Oct 2026 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 09:00:00 +0900</lastBuildDate>
     <item>
       <title>열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다</title>
       <link>https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/</link>
       <guid isPermaLink="true">https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/</guid>
-      <pubDate>Wed, 21 Oct 2026 09:00:00 +0900</pubDate>
+      <pubDate>Thu, 22 Oct 2026 09:00:00 +0900</pubDate>
       <category>behind-the-music</category>
       <description>dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.</description>
     </item>
@@ -19,7 +19,7 @@
       <title>Ten Letters, One Skeleton — The Lyric Structure of dear(you);</title>
       <link>https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/</link>
       <guid isPermaLink="true">https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/</guid>
-      <pubDate>Wed, 21 Oct 2026 09:00:00 +0900</pubDate>
+      <pubDate>Thu, 22 Oct 2026 09:00:00 +0900</pubDate>
       <category>behind-the-music</category>
       <description>The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song.</description>
     </item>
