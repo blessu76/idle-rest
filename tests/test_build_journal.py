@@ -354,6 +354,17 @@ class I18n(Site):
         self.assertEqual([v for v, sel in lst if sel], ["/journal/ko/"])
         self.assertEqual({v for v, _ in opts("journal/index.html")}, {"/journal/ko/", "/journal/en/", "/journal/ja/"})
 
+    def test_no_bottom_lang_list_but_select_and_hreflang_stay(self):
+        self.pair()
+        self.ai("ja")
+        self.build()
+        for rel in ("journal/ja/a/index.html", "journal/ko/a/index.html", "journal/ko/index.html", "journal/index.html"):
+            h = self.read(rel)
+            self.assertNotIn("lang-list", h, rel)
+            self.assertIn("<select", h, rel)
+            self.assertIn('<link rel="alternate" hreflang="x-default"', h, rel)
+            self.assertIn('<link rel="alternate" hreflang="en"', h, rel)
+
     def test_ai_translation_needs_translation_of(self):
         self.pair()
         self.post("a", "ja")

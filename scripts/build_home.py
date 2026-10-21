@@ -110,16 +110,13 @@ def render_page(tpl, strings, lang, root, posts):
     og = '<meta property="og:locale" content="%s">' % bj.LANGS[lang]["og"] + "".join(
         '\n<meta property="og:locale:alternate" content="%s">' % bj.LANGS[l]["og"] for l in bj.LANGS if l != lang)
     options = "\n".join('            <option value="%s"%s>%s</option>' % (l, " selected" if l == lang else "", l.upper()) for l in bj.LANGS)
-    langs_nav = '    <nav class="lang-list" aria-label="%s"><span>%s</span><ul>%s</ul></nav>' % (
-        esc(d["aria_language"]), esc(d["aria_language"]),
-        "".join('<li><a href="/%s/" hreflang="%s" lang="%s"%s>%s</a></li>' % (l, l, l, ' aria-current="page"' if l == lang else "", esc(bj.LANGS[l]["name"])) for l in bj.LANGS))
     page_dict = {k: d[k] for k in ("aria_play_yt", "aria_theme_to_dark", "aria_theme_to_light") if k in d}
     page_script = ("<script>window.__PAGE=%s;window.__applyAria=function(el){var v=window.__PAGE.dict[el.getAttribute('data-i18n-aria')];"
                    "if(v!=null)el.setAttribute('aria-label',v);};</script>" % json.dumps({"lang": lang, "dict": page_dict}, ensure_ascii=False))
     names = json.dumps({l: bj.LANGS[l]["name"] for l in bj.LANGS}, ensure_ascii=False)
     subs = {
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
-        "LANG_OPTIONS": options, "LANG_LIST": langs_nav, "JOURNAL_HREF": jl,
+        "LANG_OPTIONS": options, "JOURNAL_HREF": jl,
         "LEGACY_SCRIPT": LEGACY_JS % "|".join(bj.LANGS), "PAGE_SCRIPT": page_script,
         "LANG_HINT": '<div class="lang-hint" id="langHint" hidden></div>\n' if root else "",
         "NAV_SCRIPT": NAV_SCRIPT % (HINT_JS % names if root else ""),

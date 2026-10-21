@@ -50,7 +50,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261026"  # keep equal to the ?v= in index.html
+ASSET_V = "20261027"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -687,13 +687,6 @@ def alternates(p, grp):
     return "\n".join(rows) + "\n"
 
 
-def lang_list_html(lang, pairs, label):
-    """crawlable 'other languages' links (no JS). pairs = {lang: url}."""
-    items = "".join('<li><a href="%s" hreflang="%s" lang="%s">%s</a></li>' % (esc(urllib.parse.urlsplit(u).path), l, l, esc(LANGS[l]["name"]))
-                    for l, u in sorted(pairs.items(), key=lambda kv: list(LANGS).index(kv[0])) if l != lang)
-    return '    <nav class="lang-list" aria-label="%s"><span>%s</span><ul>%s</ul></nav>\n' % (esc(label), esc(label), items) if items else ""
-
-
 def render_post(p, grp=None):
     grp = grp or {}
     members = grp.get(id(p), [p])
@@ -761,7 +754,6 @@ def render_post(p, grp=None):
       <a class="more-link" href="{jhome(p['lang'])}"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
       <a class="more-link" href="/">{esc(t['listen'])} <span aria-hidden="true">→</span></a>
     </nav>
-{lang_list_html(p['lang'], pair, t['other_langs'])}
   </article>
 </main>
 """ + footer(p["lang"]))
@@ -812,7 +804,7 @@ def render_list(posts, lang=None, list_langs=("en",)):
     <p>{sub}</p>
   </div>
 {ai}{body}
-{lang_list_html(lang or '', pages, t['other_langs'])}  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
+  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
 </main>
 """ + footer(loc))
 

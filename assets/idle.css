@@ -418,10 +418,6 @@ html:lang(hi) body { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari",
 :lang(ar) .prose, :lang(hi) .prose { line-height: 1.85; }
 .ai-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 20px; padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: 10px; color: var(--text-2); font-size: 14px; }
 .ai-badge { padding: 1px 8px; border-radius: 999px; background: var(--accent); color: #fff; font: 600 12px/1.6 var(--sans); letter-spacing: .04em; }
-.lang-list { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; }
-.lang-list ul { display: flex; flex-wrap: wrap; gap: 4px 8px; margin: 0; padding: 0; list-style: none; }
-.lang-list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--text-2); }
-.lang-list a:hover { color: var(--accent); }
 [dir="rtl"] .article-foot .more-link span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }
 
 /* home language hint (root "/" only; suggests, never redirects) */

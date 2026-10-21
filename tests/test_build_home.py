@@ -72,6 +72,13 @@ class BuildHome(unittest.TestCase):
         self.assertNotIn("Skip to content", self.page("ko"))
         self.assertIn('<option value="ja" selected>JA</option>', self.page("ja"))
 
+    def test_no_bottom_lang_list_but_select_and_hreflang_stay(self):
+        for l in [None] + LANGS:
+            h = self.page(l)
+            self.assertNotIn("lang-list", h, l)
+            self.assertIn("<select", h, l)
+            self.assertIn('<link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/">', h, l)
+
     def test_root_is_x_default_without_forced_redirect(self):
         h = self.page()
         self.assertIn('<link rel="canonical" href="https://idle.ipe.rest/">', h)
