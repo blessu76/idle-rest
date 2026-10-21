@@ -6,6 +6,11 @@ lang: en
 description: A song that offers no advice and no solution, only a first question. The design intent behind dear(you); track 01, its 59-line structure, its whispers and its sound, read against the lyric draft.
 category: behind-the-music
 draft: false
+translation: check-in-before-you-fix-ko
+translation_of: check-in-before-you-fix-ko
+keywords: dear(you);, idle(), ipe(), Hard Day Again Wasn't It, lyric analysis, AI music, Suno, lo-fi
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ
 ---
 
 [한국어로 읽기 →](/journal/check-in-before-you-fix-ko/)
@@ -14,13 +19,13 @@ draft: false
 
 *The cover of S1A1.01, the first of ten letters on the album.*
 
-In [the previous post](/journal/ten-letters-one-skeleton-en/) we looked at the skeleton that all ten songs of *dear(you); vol.1* share. This time we stay with the song that sits on top of that skeleton first: track 01, "Hard Day Again, Wasn't It?" (Korean title: 오늘도 많이 힘들었지?). We want to follow the rule this song set for itself and see where that rule shows up in the lyric. As before, we are reading the lyric drafts, and what is actually sung on the recording can be shorter than the draft.
+In [the previous post](/journal/ten-letters-one-skeleton-en/) we looked at the skeleton that all ten songs of *dear(you); vol.1* share. This time we stay with the first song built on that skeleton: track 01, "Hard Day Again, Wasn't It?" (Korean title: 오늘도 많이 힘들었지?). We want to see what rule this song set for itself and where that rule shows up in the lyric. As before, we are reading the lyric drafts, and what is actually sung on the recording can be shorter than the draft.
 
-And as always, one thing first: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We would rather say so from the first line.
+And as always, one thing first. The music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We would rather say so from the first line.
 
 ## A song that decided not to advise
 
-The design document for this track opens with its theme: the first thing you say to someone who has made it through the day. The song does not offer a solution, and it does not give advice. It only asks, before anyone else does, whether today was hard. The mood field lists four words: warm, gentle, quiet, comforting. That is all the brief asks of the sound.
+The design document for this track opens with its theme: the first thing you say to someone who has made it through the day. The song does not offer a solution, and it does not give advice. It only asks, before anyone else does, whether today was hard. The mood field lists four words: warm, gentle, quiet, comforting. That is the whole brief for the mood.
 
 The rule is bigger than one song. The album plan defines all ten tracks as letters that do not force advice, solutions or resolutions on the reader. What the letters do is ask first, listen to the end, and admit the fear. So track 01 keeps the album's promise first and in its purest form. Holding back a solution is harder than it sounds, because the wish to help usually arrives in the shape of advice. This song slows that wish down by one beat and turns it into a question.
 
@@ -42,11 +47,11 @@ The first verse fills the scene with objects: a messenger that never stopped sin
 
 > Today, let me be the first to ask how you've been.
 
-The second verse raises the resolution of the scene. The coffee has gone cold, the sky outside has turned dark without being noticed, and the laptop has been opened again out of fear of falling behind. Then comes the most exact line in the song:
+The second verse brings the scene into sharper focus. The coffee has gone cold, the sky outside has turned dark without being noticed, and the laptop has been opened again out of fear of falling behind. Then comes the most exact line in the song:
 
 > More than the wish to rest, it was the sorry feeling that weighed a little heavier today.
 
-It is much more specific than "I'm tired." It says that tired people often cannot rest not because of their bodies but because of guilt. It also shows who the song is for: not someone who slacks off, but someone so conscientious that even resting feels like a debt.
+It is much more specific than "I'm tired." It suggests that a tired person may be unable to rest not because of the body but because of guilt. It also shows who the song is for: not someone who slacks off, but someone so conscientious that even resting feels like a debt.
 
 ## Fifty-nine lines
 
@@ -68,17 +73,17 @@ Every song on the album carries whispers. The English-main version has Korean wh
 
 ## An adaptation, not a translation
 
-Of the two versions, the Korean one is the original, and the English one is a natural adaptation. It starts with the title. A literal rendering of 오늘도 많이 힘들었지? would sound stiff, so the English title became "Hard Day Again, Wasn't It?" The Korean sentence ends in a particle that asks for agreement, and the English tag question "wasn't it" picks that tone up. What carried over was the way of speaking rather than the words. The first line of the English verse keeps the same voice: "It was hard again today, wasn't it?"
+Of the two versions, the Korean one is the original, and the English one is a natural adaptation. It starts with the title. A literal rendering of 오늘도 많이 힘들었지? would sound stiff, so the English title became "Hard Day Again, Wasn't It?" The Korean sentence ends in 지?, an ending that asks for agreement, and the English tag question "wasn't it" picks that tone up. What carried over was the way of speaking rather than the words. The first line of the English verse keeps the same voice: "It was hard again today, wasn't it?"
 
 ## The sound: a late, rainy evening
 
-The sound design is as restrained as the words. The genre is ambient lo-fi at 68 to 72 BPM. The design document lists soft piano, warm guitar and gentle pads, with vinyl noise and light rain ambience as texture. In the album's overall sound plan, tracks 01 and 02 carry the warmth of a late evening with rain and cafe ambience. The sound shifts a little with each track, passes through the quietest song, track 05, and reaches track 09, where morning birds come in very faintly. Track 01 is the point where that long night begins.
+The sound design is as restrained as the words. The genre is ambient lo-fi at 68 to 72 BPM. The design document lists soft piano, warm guitar and gentle pads, with vinyl noise and light rain ambience as texture. In the album's overall sound plan, tracks 01 and 02 carry the warmth of a late evening with rain and café ambience. The sound shifts a little with each track, passes through the quietest song, track 05, and reaches track 09, where morning birds come in very faintly. Track 01 is the point where that long night begins.
 
 The cover is in the same spirit. It shows a rainy window seen from a dark room, a crescent moon beyond it and a mug on the sill, and not much else. Under the album name sits a line written like a code comment: "// vol.1 · letter 01 of 10". Below, the track number S1A1.01 sits above the English title and the Korean one.
 
 ## What the song does not do
 
-To sum up, this song does three things it refuses to do: it gives no solution, it gives no advice and it never insists that you say you're fine. It does one thing instead, which is to ask first. In a way it does nothing at all, but reading the design document shows how carefully that "nothing" is kept. The verse acknowledges the situation, the Pre-Chorus promises to remember the endurance, the chorus lets you off from smiling and the Bridge lets you off from speaking. Every slot is built so that it asks nothing of the listener.
+To sum up, the song refuses three things: it gives no solution, it gives no advice and it never insists that you say you're fine. It does one thing instead, which is to ask first. In a way it does nothing at all, but reading the design document shows how carefully that "nothing" is kept. The verse acknowledges the situation, the Pre-Chorus promises to remember the endurance, the chorus lets you off from smiling and the Bridge lets you off from speaking. Every slot is built to ask almost nothing of the listener.
 
 That does not mean one letter settles everything. The first song is only the question. The answer is carried by track 02's listening, track 03's acknowledgment and the long road to the tenth letter. We also plan to write about track 03, "I Was Scared, Too.", a song that does not try to remove a developer's fear of the AI era but admits it first.
 
@@ -88,4 +93,4 @@ The song in this post is on YouTube. You may want to read the lyric alongside it
 
 - S1A1.01 Hard Day Again, Wasn't It? (오늘도 많이 힘들었지?) — [English version](https://youtu.be/Y8pLkgO2HlQ) · [Korean version](https://youtu.be/yGa2_hjw4ZI)
 
-Once more, plainly: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We don't hide that. Instead, we write down the thinking behind each song, like this. You can listen on the [idle() home page](/).
+Once more, plainly. The music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We don't hide that, and we write down the thinking behind each song, like this. You can listen on the [idle() home page](/).

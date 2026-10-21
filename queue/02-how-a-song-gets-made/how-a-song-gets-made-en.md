@@ -6,17 +6,21 @@ lang: en
 description: How one idle() song travels from lyric to music, visuals, review and release: who hands what to whom, where we stop to check, and how we say plainly that the music is made with AI.
 category: behind-the-music
 draft: false
+translation: how-a-song-gets-made-ko
+translation_of: how-a-song-gets-made-ko
+keywords: idle(), ipe(), dear(you);, music production, AI music, Suno, lo-fi
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
 [한국어로 읽기 →](/journal/how-a-song-gets-made-ko/)
 
 ![The album cover: a latte being poured, with the words dear(you); vol.1, dear you and a Korean line meaning to you who made it through today](/assets/journal/how-a-song-gets-made/cover-dear-you.jpg)
 
-*The cover of dear(you); vol.1. All ten songs on it followed the order described below.*
+*The cover of dear(you); vol.1. The ten songs on it were made following the order described below.*
 
 We are sometimes asked how an idle() song is made. The one-line answer is "with AI", but there are more hand-offs and checks inside that line than you might expect. This post walks through the production order we have set for ourselves, from the first lyric to the release. It describes a procedure we have written down, so it does not mean every song moved through it without a single deviation.
 
-First, the sentence that matters most: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. The rest of this post is really an explanation of what that sentence looks like as actual work.
+First, the sentence that matters most. The music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. The rest of this post is really an explanation of what that sentence looks like as actual work.
 
 ## Five hand-offs
 
@@ -24,13 +28,13 @@ First, the sentence that matters most: the music is produced with AI (Suno). Lyr
 
 *The five stages one song passes through. The fourth, review, is a gate that cannot be skipped.*
 
-A song passes through five stages: lyrics, music, visual, review and release. The next stage starts only when the previous one is done, and the person in charge changes at every step. We call each change a hand-off. A hand-off is made of files and statuses, not conversation. When the person in charge of lyrics finishes a song file and sets its status to "composition requested", the person in charge of music reads that file and starts work. Because who handed over which file in which state is always on record, context does not get lost on the way.
+A song passes through five stages: lyrics, music, visual, review and release. The next stage starts only when the previous one is done, and the person in charge changes at every step. We call each change a hand-off, and in this post we also count the planning that comes before the first lyric. A hand-off is made of files and statuses, not conversation. When the person in charge of lyrics finishes a song file and sets its status to "composition requested", the person in charge of music reads that file and starts work. Because who handed over which file in which state is always on record, context does not get lost on the way.
 
 The statuses a song moves through are fixed as well. A new lyric is a "draft". While its tone and emotional flow are being shaped it is "polishing". Handing it to music makes it "composition requested", producing the audio makes it "composing", and only after it passes review does it become "released". One look at this board tells you whose hands a song is in right now.
 
 ## Stage 0: planning, because the album comes before the song
 
-The first step is really about the album, not the song. The concept, the track order and the flow of feelings are drawn first. For *dear(you); vol.1*, a concept ("ten letters to the you who made it through another hard day") and an arc of ten feelings (empathy, understanding, fear, reassurance, rest, connection, gratitude, acknowledgment, hope, calm) were set first, and each song was handed its place on that arc before it reached the lyric stage. A song starts as one slot in an album rather than as a stand-alone piece, which is also why our songs resemble each other in structure.
+The first step is really about the album, not the song. The concept, the track order and the flow of feelings are drawn first. For *dear(you); vol.1*, a concept ("ten letters to the you who made it through another hard day") and an arc of ten feelings (empathy, understanding, fear, reassurance, rest, connection, gratitude, acknowledgment, hope, calm) were set first, and each song was handed its place on that arc before it reached the lyric stage. A song starts as one slot in an album rather than as a stand-alone piece, and we think that is part of why our songs resemble each other in structure.
 
 ## Stage 1: lyrics, one song in two versions
 
@@ -72,11 +76,11 @@ The release method is a hybrid from the start: singles go out one at a time to k
 
 ## Why we put "made with AI" up front
 
-The question we get most is, in the end, a single one: why show that it was not made by hand? Our answer is simple. There is nothing to hide, and not hiding is the approach that lasts. Producing the vocals with AI is written down as the default option in our working principles, and one reason is that it matches the brand idea of disclosing AI production openly. What people do is set the direction, then read, choose and refine the draft. What the AI does is produce drafts and sound quickly. We don't blur the two together. We write down what each one takes on, and that is our promise.
+The question we get most is, in the end, a single one: why show that it was not made by hand? Our answer is simple. There is nothing to hide, and not hiding is the approach that lasts. Producing the vocals with AI is written down as the default option in our working principles, and one reason is that it matches the brand idea of disclosing AI production openly. What people do is set the direction, then read, review and choose from the draft. What the AI does is produce drafts and sound quickly. We don't blur the two together. We write down what each one takes on, and that is our promise.
 
 ## Listen
 
-The ten songs of *dear(you); vol.1*, all made in the order described above. Each is on YouTube in an English version and a Korean version.
+The ten songs of *dear(you); vol.1*, made following the order described above. Each is on YouTube in an English version and a Korean version.
 
 - S1A1.01 Hard Day Again, Wasn't It? (오늘도 많이 힘들었지?) — [English version](https://youtu.be/Y8pLkgO2HlQ) · [Korean version](https://youtu.be/yGa2_hjw4ZI)
 - S1A1.02 It's Okay, Take Your Time. (괜찮아, 천천히 말해봐.) — [English version](https://youtu.be/vZ3OqCjTuio) · [Korean version](https://youtu.be/vrDUGKQpHpk)
@@ -91,4 +95,4 @@ The ten songs of *dear(you); vol.1*, all made in the order described above. Each
 
 The whole channel is at [YouTube ipe-rest](https://www.youtube.com/@ipe-rest).
 
-We hope the next time you listen to a song, you notice a little more. Behind the whispered line at the very end, there are five hand-offs and one gate between a lyric and a release. You can listen on the [idle() home page](/).
+We hope the next time you listen to a song, you notice a little more. Behind the whispered line at the very end, there are five stages and one gate that cannot be skipped between a lyric and a release. You can listen on the [idle() home page](/).
