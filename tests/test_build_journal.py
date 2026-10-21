@@ -104,7 +104,7 @@ MINIMAL = """---
 title: Min
 date: 2026-10-22
 slug: %(s)s
-lang: en
+lang: %(l)s
 description: Only the required fields.
 category: notes
 %(extra)s---
@@ -125,11 +125,13 @@ class Validation(unittest.TestCase):
     def tearDown(self):
         shutil.rmtree(self.tmp)
 
-    def post(self, slug, extra="", body=None, draft=False):
-        text = MINIMAL % dict(s=slug, extra=extra + ("draft: true\n" if draft else ""))
+    def post(self, slug, extra="", body=None, draft=False, lang="en", sub=None):
+        text = MINIMAL % dict(s=slug, l=lang, extra=extra + ("draft: true\n" if draft else ""))
         if body:
             text += "\n" + body
-        (self.tmp / "content/journal" / ("%s.md" % slug)).write_text(text, encoding="utf-8")
+        d = self.tmp / "content/journal" / (sub or "")
+        d.mkdir(parents=True, exist_ok=True)
+        (d / ("%s.md" % slug)).write_text(text, encoding="utf-8")
 
     def run_build(self, *flags):
         return subprocess.run([sys.executable, str(REPO / "scripts/build_journal.py"), "--root", str(self.tmp), *flags],
@@ -171,7 +173,7 @@ class Validation(unittest.TestCase):
 
     def test_translation_not_mutual_fails(self):
         self.post("a", extra="translation: b\n")
-        self.post("b")
+        self.post("b", lang="ko")
         self.assert_pair_fails("a.md: translation 'b' does not point back")
 
     def test_translation_self_reference_fails(self):
@@ -180,12 +182,12 @@ class Validation(unittest.TestCase):
 
     def test_translation_to_draft_fails(self):
         self.post("a", extra="translation: b\n")
-        self.post("b", extra="translation: a\n", draft=True)
+        self.post("b", extra="translation: a\n", draft=True, lang="ko")
         self.assert_pair_fails("a.md: translation refers to draft post 'b'")
 
     def test_translation_of_without_translation_fails(self):
         self.post("a", extra="translation_of: b\n")
-        self.post("b", extra="translation: a\n")
+        self.post("b", extra="translation: a\n", lang="ko")
         self.assert_pair_fails("a.md: translation_of 'b' needs `translation: b` too")
 
     def test_translation_unknown_slug_fails(self):
@@ -194,8 +196,120 @@ class Validation(unittest.TestCase):
 
     def test_valid_pair_ok(self):
         self.post("a", extra="translation: b\n")
-        self.post("b", extra="translation: a\ntranslation_of: a\n")
+        self.post("b", extra="translation: a\ntranslation_of: a\n", lang="ko")
         self.assertEqual(self.run_build("--check").returncode, 0)
+
+
+class I18n(Validation):
+    """12-language structure: ko/en originals at /journal/<slug>/, AI translations at /<lang>/journal/<slug>/."""
+
+    def pair(self):
+        self.post("a-ko", extra="translation: a-en\n", lang="ko")
+        self.post("a-en", extra="translation: a-ko\ntranslation_of: a-ko\n", lang="en")
+
+    def ai(self, lang, of="a-en", slug="a-en", sub=None, extra=""):
+        self.post(slug, extra="translation_of: %s\n%s" % (of, extra), lang=lang, sub=sub or lang)
+
+    def ld(self, rel):
+        h = (self.tmp / rel).read_text(encoding="utf-8")
+        return h, [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">\n(.*?)\n</script>', h, re.S)]
+
+    def test_translation_pages_urls_hreflang_jsonld(self):
+        self.pair()
+        self.ai("ja")
+        self.ai("ar")
+        r = self.run_build()
+        self.assertEqual(r.returncode, 0, r.stderr)
+        want = {"ko": "/journal/a-ko/", "en": "/journal/a-en/", "ja": "/ja/journal/a-en/", "ar": "/ar/journal/a-en/"}
+        for rel in ("journal/a-ko", "journal/a-en", "ja/journal/a-en", "ar/journal/a-en"):  # every member lists every member
+            h, blocks = self.ld(rel + "/index.html")
+            got = dict(re.findall(r'<link rel="alternate" hreflang="([\w-]+)" href="https://idle.ipe.rest([^"]+)"', h))
+            self.assertEqual(got, dict(want, **{"x-default": "/journal/a-en/"}), rel)
+        h, blocks = self.ld("ja/journal/a-en/index.html")
+        post = next(b for b in blocks if b["@type"] == "BlogPosting")
+        self.assertEqual(post["inLanguage"], "ja")
+        self.assertEqual(post["translationOfWork"]["url"], "https://idle.ipe.rest/journal/a-en/")
+        self.assertIn('<html lang="ja" dir="ltr"', h)
+        self.assertIn('class="ai-note"', h)
+        self.assertIn('og:locale" content="ja_JP"', h)
+        self.assertIn('og:locale:alternate" content="ar_AR"', h)
+        self.assertIn('<html lang="ar" dir="rtl"', (self.tmp / "ar/journal/a-en/index.html").read_text(encoding="utf-8"))
+        en = self.ld("journal/a-en/index.html")[1][0]
+        self.assertEqual({w["inLanguage"] for w in en["workTranslation"]}, {"ja", "ar"})
+        self.assertEqual(en["translationOfWork"]["inLanguage"], "ko")
+        self.assertNotIn("ai-note", (self.tmp / "journal/a-en/index.html").read_text(encoding="utf-8").split("</header>", 1)[1].split("</article>")[0])
+        lb = {b["@type"] for b in self.ld("ja/journal/index.html")[1]}
+        self.assertEqual(lb, {"Blog", "ItemList", "BreadcrumbList"})
+
+    def test_only_existing_languages_exported(self):
+        self.pair()
+        self.ai("ja")
+        self.assertEqual(self.run_build().returncode, 0)
+        self.assertFalse((self.tmp / "fr").exists())
+        sm = (self.tmp / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertIn("/ja/journal/a-en/", sm)
+        self.assertNotIn("/fr/journal", sm)
+        self.assertNotIn('hreflang="fr"', sm.split("journal:start")[1])
+        ET.parse(self.tmp / "sitemap.xml")
+        llms = (self.tmp / "llms.txt").read_text(encoding="utf-8")
+        self.assertIn("### Journal — 日本語 (ja)", llms)
+        self.assertNotIn("(fr)", llms)
+        feed = (self.tmp / "journal/feed.xml").read_text(encoding="utf-8")
+        self.assertNotIn("/ja/", feed)  # feed + main list stay ko/en
+        self.assertNotIn("/ja/journal/a-en/", (self.tmp / "journal/index.html").read_text(encoding="utf-8").split('class="j-list"')[1].split("</ol>")[0])
+
+    def test_removed_translation_is_swept(self):
+        self.pair()
+        self.ai("ja")
+        self.run_build()
+        (self.tmp / "content/journal/ja/a-en.md").unlink()
+        self.assertEqual(self.run_build().returncode, 0)
+        self.assertFalse((self.tmp / "ja/journal").exists() and any((self.tmp / "ja/journal").iterdir()))
+
+    def test_sitemap_hreflang_mutual(self):
+        self.pair()
+        self.ai("ja")
+        self.run_build()
+        root = ET.parse(self.tmp / "sitemap.xml").getroot()
+        ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml"}
+        sets = {}
+        for u in root.findall("s:url", ns):
+            loc = u.find("s:loc", ns).text
+            if "/journal/a-" in loc:
+                sets[loc] = {l.get("hreflang") for l in u.findall("x:link", ns)}
+        self.assertEqual(len(sets), 3)
+        self.assertTrue(all(v == {"ko", "en", "ja", "x-default"} for v in sets.values()), sets)
+
+    def test_errors(self):
+        self.pair()
+        for label, build, expect in (
+            ("no translation_of", lambda: self.post("a-en", extra="", lang="ja", sub="ja"), "AI translation: `translation_of"),
+            ("wrong dir", lambda: self.ai("ja", sub="fr"), "is in fr/ but lang is ja"),
+            ("flat file", lambda: self.ai("ja", sub="."), "belongs in content/journal/ja/"),
+            ("unknown source", lambda: self.ai("ja", of="ghost"), "refers to unknown slug 'ghost'"),
+            ("bad lang", lambda: self.post("x", lang="xx", sub="xx"), "lang must be one of"),
+            ("translation field", lambda: self.post("a-en", extra="translation: a-en\ntranslation_of: a-en\n", lang="ja", sub="ja"), "use `translation_of` only"),
+        ):
+            with self.subTest(label):
+                build()
+                r = self.run_build("--check")
+                self.assertEqual(r.returncode, 1, r.stdout)
+                self.assertIn(expect, r.stderr)
+                shutil.rmtree(self.tmp / "content/journal", ignore_errors=True)
+                self.pair()
+        self.ai("ja")
+        self.ai("fr", of="a-en", slug="a-en", sub="fr")
+        self.ai("ja", of="a-ko", slug="a-ko", sub="ja")  # second ja in the same group
+        r = self.run_build("--check")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("both lang ja in one translation group", r.stderr)
+
+    def test_translation_of_translation_fails(self):
+        self.pair()
+        self.ai("ja")
+        self.ai("fr", of="a-en", slug="fr-post")
+        (self.tmp / "content/journal/fr/fr-post.md").write_text((self.tmp / "content/journal/fr/fr-post.md").read_text().replace("translation_of: a-en", "translation_of: nonexistent"), encoding="utf-8")
+        self.assertEqual(self.run_build("--check").returncode, 1)
 
 
 if __name__ == "__main__":

@@ -27,7 +27,9 @@
   --radius: 10px;
   --max: 1120px;
   --gutter: 32px;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans", Roboto, sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans", Roboto,
+    "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "PingFang SC", "Noto Sans SC", "Microsoft YaHei",
+    "Geeza Pro", "Noto Sans Arabic", "Segoe UI", "Kohinoor Devanagari", "Noto Sans Devanagari", "Nirmala UI", sans-serif;
   --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, "Noto Sans Mono CJK KR", monospace;
   color-scheme: light;
 }
@@ -406,3 +408,18 @@ html[lang="ko"] p, html[lang="ko"] li, html[lang="ko"] .t-title { word-break: ke
 html[lang="ko"] .section-sub, html[lang="ja"] .section-sub, html[lang="zh"] .section-sub,
 html[lang="ko"] .seg-label, html[lang="ko"] .ad-label { font-family: var(--sans); letter-spacing: 0; }
 @media (max-width: 760px) { .footer-bottom { align-items: flex-start; } }
+
+/* journal i18n — CJK/Indic/Arabic glyph order per language (Han unification), AI-translation notice, language list */
+:lang(ja) { font-family: "Inter", -apple-system, "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif; }
+:lang(zh) { font-family: "Inter", -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+:lang(ar) { font-family: "Geeza Pro", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif; }
+:lang(hi) { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari", "Nirmala UI", "Mukta", sans-serif; }
+:lang(ja) :is(h1, h2, h3, p, li), :lang(zh) :is(h1, h2, h3, p, li) { line-break: strict; overflow-wrap: anywhere; }
+:lang(ar) .prose, :lang(hi) .prose { line-height: 1.85; }
+.ai-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 20px; padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: 10px; color: var(--text-2); font-size: 14px; }
+.ai-badge { padding: 1px 8px; border-radius: 999px; background: var(--accent); color: #fff; font: 600 12px/1.6 var(--sans); letter-spacing: .04em; }
+.lang-list { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; }
+.lang-list ul { display: flex; flex-wrap: wrap; gap: 4px 8px; margin: 0; padding: 0; list-style: none; }
+.lang-list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--text-2); }
+.lang-list a:hover { color: var(--accent); }
+[dir="rtl"] .article-foot .more-link span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }

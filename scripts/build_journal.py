@@ -46,7 +46,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261023"  # keep equal to the ?v= in index.html
+ASSET_V = "20261024"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -60,20 +60,77 @@ SOCIAL_HOSTS = ("youtube.com", "youtu.be", "instagram.com", "soundcloud.com", "t
                 "facebook.com", "ipe.rest")  # not "articles" -> never auto-cited
 ORG = {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"}
 
-UI = {
-    "en": {"journal": "Journal", "back": "All posts", "listen": "Listen to idle()", "ad": "Advertisement",
-           "sub": "Behind the music, and other quiet updates.", "empty": "The first post is coming soon.",
-           "read_more": "Read more", "rss": "RSS feed", "home": "Home", "music": "music", "albums": "albums",
-           "story": "story", "menu": "Menu", "to_dark": "Switch to dark theme", "to_light": "Switch to light theme",
-           "skip": "Skip to content", "about": "About", "contact": "Contact", "privacy": "Privacy Policy",
-           "alt_label": "한국어", "alt_name": "Korean"},
-    "ko": {"journal": "저널", "back": "글 목록", "listen": "idle() 듣기", "ad": "광고",
-           "sub": "음악 뒷이야기와 조용한 소식들.", "empty": "곧 첫 글이 올라옵니다.",
-           "read_more": "더 읽기", "rss": "RSS 피드", "home": "홈", "music": "음악", "albums": "앨범",
-           "story": "이야기", "menu": "메뉴", "to_dark": "다크 테마로 전환", "to_light": "라이트 테마로 전환",
-           "skip": "본문으로 건너뛰기", "about": "소개", "contact": "문의", "privacy": "개인정보처리방침",
-           "alt_label": "EN", "alt_name": "English"},
+# 12 languages. ko + en = human-reviewed originals (URL /journal/<slug>/, unchanged); the other 10 = AI translations
+# (URL /<lang>/journal/<slug>/). name = the language's own name (language switcher); og = og:locale.
+LANGS = {
+    "en": {"name": "English", "og": "en_US", "dir": "ltr"},
+    "ko": {"name": "한국어", "og": "ko_KR", "dir": "ltr"},
+    "ja": {"name": "日本語", "og": "ja_JP", "dir": "ltr"},
+    "zh": {"name": "简体中文", "og": "zh_CN", "dir": "ltr"},
+    "es": {"name": "Español", "og": "es_ES", "dir": "ltr"},
+    "fr": {"name": "Français", "og": "fr_FR", "dir": "ltr"},
+    "de": {"name": "Deutsch", "og": "de_DE", "dir": "ltr"},
+    "pt": {"name": "Português", "og": "pt_BR", "dir": "ltr"},
+    "ru": {"name": "Русский", "og": "ru_RU", "dir": "ltr"},
+    "ar": {"name": "العربية", "og": "ar_AR", "dir": "rtl"},
+    "hi": {"name": "हिन्दी", "og": "hi_IN", "dir": "ltr"},
+    "id": {"name": "Bahasa Indonesia", "og": "id_ID", "dir": "ltr"},
 }
+MAIN_LANGS = ("ko", "en")  # originals: flat URLs /journal/<slug>/ ; everything else is an AI translation under /<lang>/journal/
+_K = ("journal", "back", "listen", "ad", "sub", "empty", "read_more", "rss", "home", "music", "albums", "story", "menu",
+      "to_dark", "to_light", "skip", "about", "contact", "privacy", "ai_note", "ai_orig", "other_langs")
+_T = {
+    "en": ("Journal", "All posts", "Listen to idle()", "Advertisement", "Behind the music, and other quiet updates.",
+           "The first post is coming soon.", "Read more", "RSS feed", "Home", "music", "albums", "story", "Menu",
+           "Switch to dark theme", "Switch to light theme", "Skip to content", "About", "Contact", "Privacy Policy",
+           "This article was translated by AI.", "Read the original", "Read in other languages"),
+    "ko": ("저널", "글 목록", "idle() 듣기", "광고", "음악 뒷이야기와 조용한 소식들.", "곧 첫 글이 올라옵니다.", "더 읽기",
+           "RSS 피드", "홈", "음악", "앨범", "이야기", "메뉴", "다크 테마로 전환", "라이트 테마로 전환", "본문으로 건너뛰기",
+           "소개", "문의", "개인정보처리방침", "이 글은 AI가 번역했습니다.", "원문 보기", "다른 언어로 읽기"),
+    "ja": ("ジャーナル", "記事一覧", "idle() を聴く", "広告", "音楽の裏話と、静かなお知らせ。", "最初の記事は近日公開です。",
+           "続きを読む", "RSSフィード", "ホーム", "音楽", "アルバム", "ストーリー", "メニュー", "ダークテーマに切り替え",
+           "ライトテーマに切り替え", "本文へスキップ", "概要", "お問い合わせ", "プライバシーポリシー",
+           "この記事はAIによる翻訳です。", "原文を読む", "他の言語で読む"),
+    "zh": ("日志", "文章列表", "收听 idle()", "广告", "音乐背后的故事与安静的近况。", "第一篇文章即将发布。", "阅读更多",
+           "RSS 订阅", "首页", "音乐", "专辑", "故事", "菜单", "切换到深色主题", "切换到浅色主题", "跳到正文", "关于", "联系",
+           "隐私政策", "本文由 AI 翻译。", "阅读原文", "其他语言版本"),
+    "es": ("Diario", "Todas las entradas", "Escucha idle()", "Publicidad", "Historias detrás de la música y otras novedades tranquilas.",
+           "La primera entrada llegará pronto.", "Leer más", "Feed RSS", "Inicio", "Música", "Álbumes", "Historia", "Menú",
+           "Cambiar al tema oscuro", "Cambiar al tema claro", "Saltar al contenido", "Acerca de", "Contacto",
+           "Política de privacidad", "Este artículo es una traducción hecha con IA.", "Leer el original", "Leer en otros idiomas"),
+    "fr": ("Journal", "Tous les articles", "Écouter idle()", "Publicité", "Les coulisses de la musique et d'autres nouvelles tranquilles.",
+           "Le premier article arrive bientôt.", "Lire la suite", "Flux RSS", "Accueil", "Musique", "Albums", "Histoire", "Menu",
+           "Passer au thème sombre", "Passer au thème clair", "Aller au contenu", "À propos", "Contact",
+           "Politique de confidentialité", "Cet article est une traduction réalisée par IA.", "Lire l'original", "Lire dans d'autres langues"),
+    "de": ("Journal", "Alle Beiträge", "idle() hören", "Werbung", "Hintergründe zur Musik und andere leise Neuigkeiten.",
+           "Der erste Beitrag erscheint bald.", "Weiterlesen", "RSS-Feed", "Startseite", "Musik", "Alben", "Geschichte", "Menü",
+           "Zum dunklen Design wechseln", "Zum hellen Design wechseln", "Zum Inhalt springen", "Über uns", "Kontakt",
+           "Datenschutzerklärung", "Dieser Beitrag ist eine KI-Übersetzung.", "Original lesen", "In anderen Sprachen lesen"),
+    "pt": ("Diário", "Todas as publicações", "Ouça idle()", "Publicidade", "Os bastidores da música e outras novidades tranquilas.",
+           "A primeira publicação chega em breve.", "Ler mais", "Feed RSS", "Início", "Música", "Álbuns", "História", "Menu",
+           "Mudar para o tema escuro", "Mudar para o tema claro", "Pular para o conteúdo", "Sobre", "Contato",
+           "Política de Privacidade", "Este artigo é uma tradução feita por IA.", "Ler o original", "Ler em outros idiomas"),
+    "ru": ("Журнал", "Все записи", "Слушать idle()", "Реклама", "Закулисье музыки и другие тихие новости.",
+           "Первая запись скоро появится.", "Читать далее", "RSS-лента", "Главная", "Музыка", "Альбомы", "История", "Меню",
+           "Переключить на тёмную тему", "Переключить на светлую тему", "Перейти к содержимому", "О проекте", "Контакты",
+           "Политика конфиденциальности", "Эта статья переведена с помощью ИИ.", "Читать оригинал", "Читать на других языках"),
+    "ar": ("اليوميات", "كل المقالات", "استمع إلى idle()", "إعلان", "كواليس الموسيقى وأخبار هادئة أخرى.",
+           "المقال الأول قادم قريبًا.", "اقرأ المزيد", "خلاصة RSS", "الرئيسية", "الموسيقى", "الألبومات", "القصة", "القائمة",
+           "التبديل إلى المظهر الداكن", "التبديل إلى المظهر الفاتح", "تخطَّ إلى المحتوى", "حول", "اتصل بنا",
+           "سياسة الخصوصية", "تمت ترجمة هذا المقال بواسطة الذكاء الاصطناعي.", "اقرأ النص الأصلي", "اقرأ بلغات أخرى"),
+    "hi": ("जर्नल", "सभी लेख", "idle() सुनें", "विज्ञापन", "संगीत के पीछे की बातें और कुछ शांत ख़बरें।",
+           "पहला लेख जल्द आ रहा है।", "और पढ़ें", "RSS फ़ीड", "होम", "संगीत", "एल्बम", "कहानी", "मेन्यू",
+           "डार्क थीम पर जाएँ", "लाइट थीम पर जाएँ", "मुख्य सामग्री पर जाएँ", "परिचय", "संपर्क", "गोपनीयता नीति",
+           "यह लेख AI द्वारा अनुवादित है।", "मूल लेख पढ़ें", "अन्य भाषाओं में पढ़ें"),
+    "id": ("Jurnal", "Semua tulisan", "Dengarkan idle()", "Iklan", "Cerita di balik musik dan kabar tenang lainnya.",
+           "Tulisan pertama segera hadir.", "Baca selengkapnya", "Feed RSS", "Beranda", "Musik", "Album", "Cerita", "Menu",
+           "Beralih ke tema gelap", "Beralih ke tema terang", "Lewati ke konten", "Tentang", "Kontak", "Kebijakan Privasi",
+           "Artikel ini diterjemahkan oleh AI.", "Baca versi asli", "Baca dalam bahasa lain"),
+}
+assert set(_T) == set(LANGS) and all(len(v) == len(_K) for v in _T.values())
+UI = {l: dict(zip(_K, v)) for l, v in _T.items()}
+UI["en"].update(alt_label="한국어", alt_name="Korean")
+UI["ko"].update(alt_label="EN", alt_name="English")
 
 
 def ui(lang):
@@ -109,6 +166,13 @@ def parse_post(path):
         raise ValueError("missing front matter: " + ", ".join(missing))
     if not SLUG_RE.match(meta["slug"]):
         raise ValueError("slug must match [a-z0-9-]+: %r" % meta["slug"])
+    if meta["lang"] not in LANGS:
+        raise ValueError("lang must be one of %s: %r" % (" ".join(LANGS), meta["lang"]))
+    if meta["lang"] not in MAIN_LANGS:  # AI translation: pointer to the original only
+        if not meta.get("translation_of"):
+            raise ValueError("lang %s is an AI translation: `translation_of: <slug of the ko/en original>` is required" % meta["lang"])
+        if meta.get("translation"):
+            raise ValueError("AI translations use `translation_of` only (remove `translation`)")
     try:
         meta["_date"] = dt.date.fromisoformat(meta["date"])
     except ValueError:
@@ -309,11 +373,11 @@ def fmt_date(d):
     return "%04d. %02d. %02d" % (d.year, d.month, d.day)
 
 
-def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates=""):
+def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=()):
     image = image or SITE + "/og-image.png"
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     return f"""<!DOCTYPE html>
-<html lang="{esc(lang)}" dir="ltr" data-theme="light" data-ads="{ADS_ATTR}">
+<html lang="{esc(lang)}" dir="{LANGS[lang]["dir"]}" data-theme="light" data-ads="{ADS_ATTR}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -338,7 +402,8 @@ def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/jou
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{esc(canonical)}">
-<meta property="og:image" content="{esc(image)}">
+<meta property="og:locale" content="{LANGS[lang]["og"]}">
+{"".join('<meta property="og:locale:alternate" content="%s">' % LANGS[l]["og"] + chr(10) for l in locales if l != lang)}<meta property="og:image" content="{esc(image)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
@@ -368,7 +433,7 @@ def header(lang, current="journal", alt=None):
       <nav class="nav" id="primaryNav" aria-label="primary">
         <a href="/#music">{esc(t['music'])}</a>
         <a href="/#album">{esc(t['albums'])}</a>
-        <a href="/journal/"{cur("journal")}>{esc(t['journal'])}</a>
+        <a href="{lang_path(lang)}"{cur("journal")}>{esc(t['journal'])}</a>
         <a href="/#story">{esc(t['story'])}</a>
       </nav>
       <div class="tools">
@@ -398,7 +463,7 @@ def footer(lang):
     </div>
     <ul class="footer-links">
       <li><a href="/">{esc(t['home'])}</a></li>
-      <li><a href="/journal/">{esc(t['journal'])}</a></li>
+      <li><a href="{lang_path(lang)}">{esc(t['journal'])}</a></li>
       <li><a href="/journal/feed.xml">{esc(t['rss'])}</a></li>
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
@@ -441,8 +506,17 @@ def ld(obj):
     return '<script type="application/ld+json">\n%s\n</script>\n' % json.dumps(obj, ensure_ascii=False, indent=2).replace("</", "<\\/")
 
 
+def lang_path(lang):
+    """site path of a language's journal home: ko/en share /journal/, the others live in /<lang>/journal/."""
+    return "/journal/" if lang in MAIN_LANGS else "/%s/journal/" % lang
+
+
+def post_path(p):
+    return "%s%s/" % (lang_path(p["lang"]), p["slug"])
+
+
 def post_url(p):
-    return "%s/journal/%s/" % (SITE, p["slug"])
+    return SITE + post_path(p)
 
 
 # ---------------------------------------------------------------- pages
@@ -476,29 +550,60 @@ def check_post_images(p):
 
 
 def check_translations(posts, all_posts, drafts_ok):
-    """Errors for hreflang/translation pairs: target exists, not self, not a hidden draft, and mutual."""
+    """Errors for translation pairs/groups: target exists, not self, not a hidden draft, ko<->en mutual,
+    AI translations point at a ko/en original, one post per language in each group."""
     errs = []
     for p in posts:
         src, me = p["_src"], p["slug"]
         tr, of = p.get("translation"), p.get("translation_of")
-        if of and not tr:
-            errs.append("%s: translation_of %r needs `translation: %s` too (pairs are written on both posts)" % (src, of, of))
+        if of and not tr and p["lang"] in MAIN_LANGS:
+            errs.append("%s: translation_of %r needs `translation: %s` too (ko/en pairs are written on both posts)" % (src, of, of))
         if of and tr and of != tr:
             errs.append("%s: translation_of %r and translation %r must name the same post" % (src, of, tr))
         for k, v in (("translation", tr), ("translation_of", of)):
             if not v:
                 continue
-            if v == me:
+            other = all_posts.get(v)
+            if other is p:
                 errs.append("%s: %s points at the post itself (%r)" % (src, k, v))
                 continue
-            other = all_posts.get(v)
             if other is None:
-                errs.append("%s: %s refers to unknown slug %r" % (src, k, v))
+                errs.append("%s: %s refers to unknown slug %r (ko/en original slug)" % (src, k, v))
             elif other["draft"] and not drafts_ok:
                 errs.append("%s: %s refers to draft post %r (draft pages are not published)" % (src, k, v))
+            elif k == "translation_of" and other["lang"] not in MAIN_LANGS:
+                errs.append("%s: translation_of %r must be a ko/en original, not a %s translation" % (src, v, other["lang"]))
             elif k == "translation" and other.get("translation") != me:
                 errs.append("%s: translation %r does not point back (add `translation: %s` to %s)" % (src, v, me, other["_src"]))
+    uniq = {id(g): g for g in groups(posts).values()}
+    for g in uniq.values():
+        langs = {}
+        for m in g:
+            if m["lang"] in langs:
+                errs.append("%s and %s are both lang %s in one translation group (only one post per language)" % (m["_src"], langs[m["lang"]]["_src"], m["lang"]))
+            langs[m["lang"]] = m
     return errs
+
+
+def groups(posts):
+    """{id(post): [group members]} — translation groups = connected posts via translation / translation_of (published only)."""
+    by_slug = {p["slug"]: p for p in posts if p["lang"] in MAIN_LANGS}
+    parent = {id(p): id(p) for p in posts}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+    for p in posts:
+        for k in ("translation", "translation_of"):
+            o = by_slug.get(p.get(k) or "")
+            if o is not None and o is not p:
+                parent[find(id(p))] = find(id(o))
+    members = {}
+    for p in posts:
+        members.setdefault(find(id(p)), []).append(p)
+    return {id(p): members[find(id(p))] for p in posts}
 
 
 def image_obj(rel, caption=None):
@@ -543,25 +648,37 @@ def citations(p):
 
 def breadcrumb(lang, name, url):
     t = ui(lang)
-    items = [(t["home"], SITE + "/"), (t["journal"], SITE + "/journal/")] + ([(name, url)] if name else [])
+    items = [(t["home"], SITE + "/"), (t["journal"], SITE + lang_path(lang))] + ([(name, url)] if name else [])
     return {"@context": "https://schema.org", "@type": "BreadcrumbList",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
 
 
-def alternates(p, by_slug):
-    """hreflang <link>s: self + translation + x-default (English version if there is one, else self)."""
-    other = by_slug.get(p.get("translation") or "")
-    pair = {p["lang"]: post_url(p)}
-    if other:
-        pair.setdefault(other["lang"], post_url(other))
-    default = pair.get("en", post_url(p))
+def pair_urls(p, grp):
+    """{hreflang: url} of the whole translation group (published members only) + x-default (en, else the original)."""
+    pair = {m["lang"]: post_url(m) for m in grp.get(id(p), [p])}
+    pair.setdefault(p["lang"], post_url(p))
+    default = pair.get("en") or pair.get("ko") or post_url(p)
+    return pair, default
+
+
+def alternates(p, grp):
+    """hreflang <link>s: every language of the group (incl. self) + x-default. Same set on every member -> always mutual."""
+    pair, default = pair_urls(p, grp)
     rows = ['<link rel="alternate" hreflang="%s" href="%s">' % (esc(l), esc(u)) for l, u in sorted(pair.items())]
     rows.append('<link rel="alternate" hreflang="x-default" href="%s">' % esc(default))
     return "\n".join(rows) + "\n"
 
 
-def render_post(p, by_slug=None):
-    by_slug = by_slug or {}
+def lang_list_html(lang, pairs, label):
+    """crawlable 'other languages' links (no JS). pairs = {lang: url}."""
+    items = "".join('<li><a href="%s" hreflang="%s" lang="%s">%s</a></li>' % (esc(urllib.parse.urlsplit(u).path), l, l, esc(LANGS[l]["name"]))
+                    for l, u in sorted(pairs.items(), key=lambda kv: list(LANGS).index(kv[0])) if l != lang)
+    return '    <nav class="lang-list" aria-label="%s"><span>%s</span><ul>%s</ul></nav>\n' % (esc(label), esc(label), items) if items else ""
+
+
+def render_post(p, grp=None):
+    grp = grp or {}
+    members = grp.get(id(p), [p])
     t = ui(p["lang"])
     url = post_url(p)
     hero = hero_image(p)
@@ -585,13 +702,16 @@ def render_post(p, by_slug=None):
     cites = citations(p)
     if cites:
         data["citation"] = cites
-    tr = by_slug.get(p.get("translation") or "")
-    if tr:
-        ref = {"@type": "BlogPosting", "@id": post_url(tr), "url": post_url(tr), "headline": tr["title"], "inLanguage": tr["lang"]}
-        if p.get("translation_of") == tr["slug"]:
-            data["translationOfWork"] = ref
-        elif tr.get("translation_of") == p["slug"]:
-            data["workTranslation"] = ref
+    ref = lambda m: {"@type": "BlogPosting", "@id": post_url(m), "url": post_url(m), "headline": m["title"], "inLanguage": m["lang"]}
+    source = next((m for m in members if m["slug"] == p.get("translation_of") and m is not p), None)
+    if source:
+        data["translationOfWork"] = ref(source)
+    derived = [ref(m) for m in members if m is not p and m.get("translation_of") == p["slug"]]
+    if derived:
+        data["workTranslation"] = derived[0] if len(derived) == 1 else derived
+    ai = p["lang"] not in MAIN_LANGS
+    if ai:
+        data["translator"] = {"@type": "SoftwareApplication", "name": "AI translation"}
     extra = ('<meta property="og:type" content="article">\n'
              '<meta property="article:published_time" content="%s">\n'
              '<meta property="article:modified_time" content="%s">\n'
@@ -599,8 +719,14 @@ def render_post(p, by_slug=None):
              + "".join('<meta property="article:tag" content="%s">\n' % esc(k) for k in p["_keywords"])
              ) + ld(data) + ld(breadcrumb(p["lang"], p["title"], url))
     draft = '<span class="draft-flag">DRAFT</span>' if p["draft"] else ""
+    ai_note = ""
+    if ai:
+        ai_note = '    <p class="ai-note"><span class="ai-badge">AI</span> %s%s</p>\n' % (
+            esc(t["ai_note"]), (' <a href="%s" hreflang="%s" lang="%s">%s</a>' % (esc(post_path(source)), source["lang"], source["lang"], esc(t["ai_orig"] + " (" + LANGS[source["lang"]]["name"] + ")"))) if source else "")
+    pair, _ = pair_urls(p, grp)
     return (head("%s — idle() %s" % (p["title"], t["journal"]), p["description"], url, p["lang"], p["draft"], extra,
-                 image=abs_url(hero) if hero else None, alternates=alternates(p, by_slug))
+                 image=abs_url(hero) if hero else None, alternates=alternates(p, grp),
+                 locales=[m["lang"] for m in members])
             + header(p["lang"]) + f"""<main id="main" class="shell">
   <article class="article">
     <header class="article-head">
@@ -608,54 +734,70 @@ def render_post(p, by_slug=None):
       <h1>{esc(p['title'])}</h1>
       <p>{esc(p['description'])}</p>
     </header>
-    <div class="prose">
+{ai_note}    <div class="prose">
 {p['_html']}
     </div>
     <!-- Ad slot (journal-post): reserved space only — place the AdSense unit here after approval and drop aria-hidden. -->
     <div class="ad-slot" data-ad-slot="journal-post" aria-hidden="true"><span class="ad-label">{esc(t['ad'])}</span></div>
     <nav class="article-foot" aria-label="{esc(t['journal'])}">
-      <a class="more-link" href="/journal/"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
+      <a class="more-link" href="{lang_path(p['lang'])}"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
       <a class="more-link" href="/">{esc(t['listen'])} <span aria-hidden="true">→</span></a>
     </nav>
+{lang_list_html(p['lang'], pair, t['other_langs'])}
   </article>
 </main>
 """ + footer(p["lang"]))
 
 
-def render_list(posts):
-    en, ko = UI["en"], UI["ko"]
-    url = SITE + "/journal/"
-    data = {"@context": "https://schema.org", "@type": "Blog", "name": "idle() Journal", "url": url,
+def list_pairs(list_langs):
+    """{hreflang: url} of the journal list pages that exist: /journal/ (en; ko lives in the same list) + /<lang>/journal/."""
+    return {("en" if l == "en" else l): SITE + lang_path(l) for l in list_langs}
+
+
+def render_list(posts, lang=None, list_langs=("en",)):
+    """lang=None -> /journal/ (ko + en posts, as before). lang=xx -> /xx/journal/ (AI translations in that language only)."""
+    pages = list_pairs(list_langs)
+    loc = lang or "en"
+    en, ko, t = UI["en"], UI["ko"], UI[loc]
+    url = SITE + lang_path(loc)
+    langs_in = [lang] if lang else ["ko", "en"]
+    data = {"@context": "https://schema.org", "@type": "Blog", "name": "idle() %s" % t["journal"], "url": url,
             "publisher": {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"},
-            "inLanguage": ["ko", "en"],
+            "inLanguage": langs_in if not lang else lang,
             "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": post_url(p),
                           "datePublished": p["_date"].isoformat(), "inLanguage": p["lang"]} for p in posts]}
-    itemlist = {"@context": "https://schema.org", "@type": "ItemList", "name": "idle() Journal", "url": url,
+    itemlist = {"@context": "https://schema.org", "@type": "ItemList", "name": "idle() %s" % t["journal"], "url": url,
                 "numberOfItems": len(posts), "itemListOrder": "https://schema.org/ItemListOrderDescending",
                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": post_url(p), "name": p["title"]}
                                     for i, p in enumerate(posts)]}
     if posts:
         items = "\n".join(f"""      <li lang="{esc(p['lang'])}">
         <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time> · {esc(p['category'])}{' <span class="draft-flag">DRAFT</span>' if p['draft'] else ''}</p>
-        <h2><a href="/journal/{p['slug']}/">{esc(p['title'])}</a></h2>
+        <h2><a href="{post_path(p)}">{esc(p['title'])}</a></h2>
         <p>{esc(p['description'])}</p>
       </li>""" for p in posts)
         body = '    <ol class="j-list" reversed>\n%s\n    </ol>' % items
     else:
         body = (f'    <div class="empty-note"><strong>{esc(en["empty"])}</strong>'
                 f'<span lang="ko">{esc(ko["empty"])}</span></div>')
-    return (head("Journal — idle() · the music of ipe()",
-                 "Notes from idle(), the music of ipe(): behind the music, and other quiet updates.",
-                 url, "en", not posts, ld(data) + ld(itemlist) + ld(breadcrumb("en", None, url)))
-            + header("en") + f"""<main id="main" class="shell">
+    sub = (f"{esc(en['sub'])} <span lang=\"ko\">{esc(ko['sub'])}</span>" if not lang else esc(t["sub"]))
+    desc = ("Notes from idle(), the music of ipe(): behind the music, and other quiet updates." if not lang else "idle() · ipe() — " + t["sub"])
+    alts = ""
+    if len(pages) > 1:
+        alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, u) for l, u in sorted(pages.items()))
+        alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % pages["en"]
+    ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang else "")
+    return (head("%s — idle() · the music of ipe()" % t["journal"], desc, url, loc, not posts,
+                 ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url)), alternates=alts, locales=list(pages))
+            + header(loc) + f"""<main id="main" class="shell">
   <div class="page-head">
-    <h1>{esc(en['journal'])}</h1>
-    <p>{esc(en['sub'])} <span lang="ko">{esc(ko['sub'])}</span></p>
+    <h1>{esc(t['journal'])}</h1>
+    <p>{sub}</p>
   </div>
-{body}
-  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
+{ai}{body}
+{lang_list_html(loc, pages, t['other_langs'])}  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
 </main>
-""" + footer("en"))
+""" + footer(loc))
 
 
 def render_home_cards(posts):
@@ -700,19 +842,24 @@ def render_feed(posts):
 """
 
 
-def render_sitemap_block(posts):
+def render_sitemap_block(posts, grp, list_langs):
     if not posts:
         return ""
-    by_slug = {p["slug"]: p for p in posts}
-    rows = ["  <url>\n    <loc>%s/journal/</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.6</priority>\n  </url>"
-            % (SITE, max(p.get("updated") or p["_date"].isoformat() for p in posts))]
+    xl = lambda pairs, default: "".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n' % (l, u) for l, u in sorted(pairs.items())) \
+        + '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n' % default
+    pages = list_pairs(list_langs)
+    last = lambda ps: max(p.get("updated") or p["_date"].isoformat() for p in ps)
+    main = [p for p in posts if p["lang"] in MAIN_LANGS]
+    rows = ["  <url>\n    <loc>%s/journal/</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.6</priority>\n%s  </url>"
+            % (SITE, last(main or posts), xl(pages, pages["en"]) if len(pages) > 1 else "")]
+    for l in list_langs:  # only languages that have at least one post
+        if l != "en":
+            ps = [p for p in posts if p["lang"] == l]
+            rows.append("  <url>\n    <loc>%s%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>0.4</priority>\n%s  </url>"
+                        % (SITE, lang_path(l), last(ps), xl(pages, pages["en"])))
     for p in posts:
-        other = by_slug.get(p.get("translation") or "")
-        pair = {p["lang"]: post_url(p)}
-        if other:
-            pair.setdefault(other["lang"], post_url(other))
-        links = "".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n' % (l, u) for l, u in sorted(pair.items()))
-        links += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n' % pair.get("en", post_url(p))
+        pair, default = pair_urls(p, grp)
+        links = xl(pair, default)
         imgs = body_images(p) or ["/og-image.png"]
         imgs = "".join("    <image:image>\n      <image:loc>%s</image:loc>\n    </image:image>\n" % esc(abs_url(u)) for u in imgs)
         rows.append("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>0.5</priority>\n%s%s  </url>"
@@ -723,9 +870,15 @@ def render_sitemap_block(posts):
 def render_llms_block(posts):
     if not posts:
         return ""
+    main = [p for p in posts if p["lang"] in MAIN_LANGS]
     lines = ["## Journal", "Notes from idle(), the music of ipe(): behind the music, and other quiet updates. Feed: %s/journal/feed.xml · Index: %s/journal/" % (SITE, SITE), ""]
-    for p in posts:
+    for p in main:
         lines.append("- [%s](%s) — %s (%s, %s)" % (p["title"], post_url(p), p["description"], p["lang"], p["_date"].isoformat()))
+    for l in LANGS:  # one section per AI-translation language that has posts
+        ps = [p for p in posts if p["lang"] == l and l not in MAIN_LANGS]
+        if ps:
+            lines += ["", "### Journal — %s (%s) · AI translations of the ko/en originals · Index: %s%s" % (LANGS[l]["name"], l, SITE, lang_path(l)), ""]
+            lines += ["- [%s](%s) — %s (%s, %s, AI translation)" % (p["title"], post_url(p), p["description"], l, p["_date"].isoformat()) for p in ps]
     return "\n".join(lines) + "\n"
 
 
@@ -752,19 +905,28 @@ def main():
     ADS_ATTR = m.group(1) if m else "off"
 
     posts, errors, slugs, all_posts = [], [], {}, {}
-    for f in sorted(src.glob("*.md")) if src.is_dir() else []:
+    files = (sorted(src.glob("*.md")) + sorted(src.glob("*/*.md"))) if src.is_dir() else []
+    for f in files:
         if f.name.lower() == "readme.md":
             continue
+        name = str(f.relative_to(src))
         try:
             p = parse_post(f)
+            p["_src"] = name
+            if f.parent == src and p["lang"] not in MAIN_LANGS:
+                raise ValueError("lang %s belongs in content/journal/%s/" % (p["lang"], p["lang"]))
+            if f.parent != src and f.parent.name != p["lang"]:
+                raise ValueError("file is in %s/ but lang is %s" % (f.parent.name, p["lang"]))
         except ValueError as ex:
-            errors.append("%s: %s" % (f.name, ex))
+            errors.append("%s: %s" % (name, ex))
             continue
-        if p["slug"] in slugs:
-            errors.append("%s: slug %r already used by %s" % (f.name, p["slug"], slugs[p["slug"]]))
+        key = (p["lang"] if p["lang"] not in MAIN_LANGS else "main", p["slug"])  # = one URL
+        if key in slugs:
+            errors.append("%s: slug %r already used by %s (same URL)" % (name, p["slug"], slugs[key]))
             continue
-        slugs[p["slug"]] = f.name
-        all_posts[p["slug"]] = p
+        slugs[key] = name
+        if p["lang"] in MAIN_LANGS:  # translation / translation_of always name a ko/en original
+            all_posts[p["slug"]] = p
         if p["draft"] and not a.drafts:
             continue
         p["_html"] = markdown(p["_body"])
@@ -779,29 +941,46 @@ def main():
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1
     posts.sort(key=lambda p: (p["_date"], p["slug"]), reverse=True)
+    grp = groups(posts)
+    main_posts = [p for p in posts if p["lang"] in MAIN_LANGS]
+    list_langs = ["en"] + [l for l in LANGS if l not in MAIN_LANGS and any(p["lang"] == l for p in posts)]
     if a.check:
         print("journal: OK — %d post(s) ready%s" % (len(posts), " (incl. drafts)" if a.drafts else ""))
         return 0
 
     out = root / "journal"
     out.mkdir(exist_ok=True)
-    live = {p["slug"] for p in posts}
-    # remove pages this script generated earlier for posts that are gone / now draft
-    for d in out.iterdir():
-        if d.is_dir() and d.name not in live:
-            idx = d / "index.html"
-            if idx.exists() and GEN_MARK in idx.read_text(encoding="utf-8"):
-                shutil.rmtree(d)
-    by_slug = {p["slug"]: p for p in posts}
-    for p in posts:
+
+    def sweep(d, live_slugs):  # remove pages this script generated earlier for posts that are gone / now draft
+        for sub in (d.iterdir() if d.is_dir() else []):
+            idx = sub / "index.html"
+            if sub.is_dir() and sub.name not in live_slugs and idx.exists() and GEN_MARK in idx.read_text(encoding="utf-8"):
+                shutil.rmtree(sub)
+    sweep(out, {p["slug"] for p in main_posts})
+    for p in main_posts:
         (out / p["slug"]).mkdir(exist_ok=True)
-        (out / p["slug"] / "index.html").write_text(render_post(p, by_slug), encoding="utf-8")
-    (out / "index.html").write_text(render_list(posts), encoding="utf-8")
-    (out / "feed.xml").write_text(render_feed(posts), encoding="utf-8")
+        (out / p["slug"] / "index.html").write_text(render_post(p, grp), encoding="utf-8")
+    (out / "index.html").write_text(render_list(main_posts, None, list_langs), encoding="utf-8")
+    (out / "feed.xml").write_text(render_feed(main_posts), encoding="utf-8")
+    for l in LANGS:
+        if l in MAIN_LANGS:
+            continue
+        d = root / l / "journal"
+        ps = [p for p in posts if p["lang"] == l]
+        sweep(d, {p["slug"] for p in ps})
+        if not ps:
+            if (d / "index.html").exists() and GEN_MARK in (d / "index.html").read_text(encoding="utf-8"):
+                (d / "index.html").unlink()
+            continue
+        d.mkdir(parents=True, exist_ok=True)
+        for p in ps:
+            (d / p["slug"]).mkdir(exist_ok=True)
+            (d / p["slug"] / "index.html").write_text(render_post(p, grp), encoding="utf-8")
+        (d / "index.html").write_text(render_list(ps, l, list_langs), encoding="utf-8")
 
     sm = root / "sitemap.xml"
     sm_xml = replace_between(sm.read_text(encoding="utf-8"), r"<!-- journal:start[^>]*-->",
-                             "  <!-- journal:end -->", render_sitemap_block(posts), "sitemap.xml")
+                             "  <!-- journal:end -->", render_sitemap_block(posts, grp, list_langs), "sitemap.xml")
     if "xmlns:image=" not in sm_xml:
         sm_xml = sm_xml.replace("<urlset ", '<urlset xmlns:image="%s"\n        ' % IMG_NS, 1)
     sm.write_text(sm_xml, encoding="utf-8")
@@ -810,10 +989,10 @@ def main():
                                     "<!-- journal:llms:end -->", render_llms_block(posts), "llms.txt"), encoding="utf-8")
     home = root / "index.html"
     home_html = replace_between(home.read_text(encoding="utf-8"), r"<!-- journal:home:start[^>]*-->",
-                           "<!-- journal:home:end -->", render_home_cards(posts), "index.html")
+                           "<!-- journal:home:end -->", render_home_cards(main_posts), "index.html")
     # no posts -> hide the whole home Journal section (menu link stays); >=1 post -> show it. Idempotent.
     home_html, n = re.subn(r'(<section class="section" id="journal"[^>]*?)( hidden)?>',
-                      lambda m: m.group(1) + ("" if posts else " hidden") + ">", home_html, count=1)
+                      lambda m: m.group(1) + ("" if main_posts else " hidden") + ">", home_html, count=1)
     if n != 1:
         raise SystemExit('home <section id="journal"> not found in index.html')
     home.write_text(home_html, encoding="utf-8")
