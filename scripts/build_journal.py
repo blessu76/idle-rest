@@ -551,7 +551,7 @@ def check_post_images(p):
 
 def check_translations(posts, all_posts, drafts_ok):
     """Errors for translation pairs/groups: target exists, not self, not a hidden draft, ko<->en mutual,
-    AI translations point at a ko/en original, one post per language in each group."""
+    AI translations point at a ko/en original (all_posts holds ko/en only, so a translation of a translation is "unknown slug"), one post per language in each group."""
     errs = []
     for p in posts:
         src, me = p["_src"], p["slug"]
@@ -571,8 +571,6 @@ def check_translations(posts, all_posts, drafts_ok):
                 errs.append("%s: %s refers to unknown slug %r (ko/en original slug)" % (src, k, v))
             elif other["draft"] and not drafts_ok:
                 errs.append("%s: %s refers to draft post %r (draft pages are not published)" % (src, k, v))
-            elif k == "translation_of" and other["lang"] not in MAIN_LANGS:
-                errs.append("%s: translation_of %r must be a ko/en original, not a %s translation" % (src, v, other["lang"]))
             elif k == "translation" and other.get("translation") != me:
                 errs.append("%s: translation %r does not point back (add `translation: %s` to %s)" % (src, v, me, other["_src"]))
     uniq = {id(g): g for g in groups(posts).values()}
@@ -617,6 +615,13 @@ def image_obj(rel, caption=None):
     if caption:
         o["caption"] = caption
     return o
+
+
+def word_count(text, lang):
+    """words; ja/zh have no spaces between words -> count characters (excluding whitespace/punctuation) instead."""
+    if lang in ("ja", "zh"):
+        return len(re.findall(r"\w", text))
+    return len(text.split())
 
 
 def plain_text(html_body):
@@ -689,10 +694,10 @@ def render_post(p, grp=None):
         "inLanguage": p["lang"], "articleSection": p["category"],
         "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
         "image": image_obj(hero, p.get("image_alt")) if hero else SITE + "/og-image.png",
-        "wordCount": len(plain_text(p["_html"]).split()),
+        "wordCount": word_count(plain_text(p["_html"]), p["lang"]),
         "author": dict(ORG),
         "publisher": dict(ORG, logo={"@type": "ImageObject", "url": SITE + "/icon-512.png"}),
-        "isPartOf": {"@type": "Blog", "name": "idle() Journal", "url": SITE + "/journal/"},
+        "isPartOf": {"@type": "Blog", "name": "idle() Journal", "url": SITE + lang_path(p["lang"])},
     }
     if p["_keywords"]:
         data["keywords"] = ", ".join(p["_keywords"])
@@ -711,7 +716,7 @@ def render_post(p, grp=None):
         data["workTranslation"] = derived[0] if len(derived) == 1 else derived
     ai = p["lang"] not in MAIN_LANGS
     if ai:
-        data["translator"] = {"@type": "SoftwareApplication", "name": "AI translation"}
+        data["translator"] = dict(ORG, description="AI translation of the original post")
     extra = ('<meta property="og:type" content="article">\n'
              '<meta property="article:published_time" content="%s">\n'
              '<meta property="article:modified_time" content="%s">\n'

@@ -207,8 +207,8 @@ class I18n(Validation):
         self.post("a-ko", extra="translation: a-en\n", lang="ko")
         self.post("a-en", extra="translation: a-ko\ntranslation_of: a-ko\n", lang="en")
 
-    def ai(self, lang, of="a-en", slug="a-en", sub=None, extra=""):
-        self.post(slug, extra="translation_of: %s\n%s" % (of, extra), lang=lang, sub=sub or lang)
+    def ai(self, lang, of="a-en", slug="a-en", sub=None, extra="", body=None):
+        self.post(slug, extra="translation_of: %s\n%s" % (of, extra), lang=lang, sub=sub or lang, body=body)
 
     def ld(self, rel):
         h = (self.tmp / rel).read_text(encoding="utf-8")
@@ -306,10 +306,36 @@ class I18n(Validation):
 
     def test_translation_of_translation_fails(self):
         self.pair()
+        self.ai("ja", slug="ja-post")
+        self.ai("fr", of="ja-post", slug="fr-post")  # points at an AI translation, not a ko/en original
+        r = self.run_build("--check")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("fr/fr-post.md: translation_of refers to unknown slug 'ja-post'", r.stderr)
+
+    def test_draft_translation_does_not_leak(self):
+        self.pair()
         self.ai("ja")
-        self.ai("fr", of="a-en", slug="fr-post")
-        (self.tmp / "content/journal/fr/fr-post.md").write_text((self.tmp / "content/journal/fr/fr-post.md").read_text().replace("translation_of: a-en", "translation_of: nonexistent"), encoding="utf-8")
-        self.assertEqual(self.run_build("--check").returncode, 1)
+        self.ai("ar", slug="a-en", extra="draft: true\n")
+        self.assertEqual(self.run_build().returncode, 0)
+        self.assertFalse((self.tmp / "ar").exists())
+        for rel in ("sitemap.xml", "llms.txt", "journal/index.html", "journal/feed.xml", "journal/a-en/index.html",
+                    "journal/a-ko/index.html", "ja/journal/a-en/index.html", "ja/journal/index.html"):
+            t = (self.tmp / rel).read_text(encoding="utf-8")
+            if rel == "sitemap.xml":
+                t = t.split("journal:start")[1]  # the home entry's ?lang=ar is pre-existing, not journal
+            self.assertNotIn("/ar/", t, rel)
+            self.assertNotIn('hreflang="ar"', t, rel)
+            self.assertNotIn("ar_AR", t, rel)
+        self.assertNotIn("(ar)", (self.tmp / "llms.txt").read_text(encoding="utf-8"))
+
+    def test_jsonld_partof_translator_wordcount(self):
+        self.pair()
+        self.ai("ja", body="これは日本語の本文です。" * 5)
+        self.assertEqual(self.run_build().returncode, 0)
+        post = next(b for b in self.ld("ja/journal/a-en/index.html")[1] if b["@type"] == "BlogPosting")
+        self.assertEqual(post["isPartOf"]["url"], "https://idle.ipe.rest/ja/journal/")
+        self.assertEqual(post["translator"]["@type"], "Organization")
+        self.assertGreater(post["wordCount"], 40)
 
 
 if __name__ == "__main__":
