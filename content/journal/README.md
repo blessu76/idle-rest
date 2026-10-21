@@ -39,6 +39,11 @@ translation_of: ten-letters-one-skeleton-en   # ko/en 원문의 slug — 이것 
 
 양쪽 글에 `translation: <상대 slug>`, 번역본(보통 en)에는 `translation_of: <원문 slug>` 도 함께. 빌드가 비대칭·자기참조·없는 slug·draft 참조를 오류로 잡는다.
 
-## 게시 전 체크 (빌드가 대신 잡아 주는 것)
+## 게시 절차
 
-필수 칸 누락 · 폴더/`lang` 불일치 · 같은 URL 중복 · `translation_of` 없는 번역 · 없는 원문 · 같은 언어 중복 · 이미지 파일 없음. 샘플 `content/journal/ja/`·`ar/` 는 `draft: true` 구조 확인용 — 실제 번역으로 교체하거나 삭제한다.
+1. 원고(ko/en + `<lang>/`) 작성 → `python3 scripts/build_journal.py` (빌드가 형식 오류를 잡는다).
+2. **`python3 scripts/check_sitemap.py` 통과 필수** — sitemap.xml 유효 · 공개 저널 URL(목록·언어별 목록·글) 누락 0 · hreflang 상호참조+x-default. 실패하면 exit 1(게시 금지).
+3. `python3 -m unittest discover -s tests` 통과 → 커밋·push → 배포 후 `python3 scripts/check_sitemap.py --live`(모든 URL HTTP 200).
+
+빌드가 대신 잡아 주는 것: 필수 칸 누락 · 폴더/`lang` 불일치 · 같은 URL 중복 · `translation_of` 없는 번역 · 없는 원문 · 같은 언어 중복 · 이미지 파일 없음. `draft: true` 번역은 sitemap·llms·목록·hreflang·`/<lang>/` 폴더 어디에도 나오지 않는다(테스트로 보장).
+`content/`·`scripts/`·`tests/` 는 배포 산출물에서 제외된다(원고 .md 가 공개 URL 이 되지 않음).
