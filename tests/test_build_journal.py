@@ -100,5 +100,103 @@ class BuildJournal(unittest.TestCase):
         self.assertEqual(before, {p: p.read_bytes() for p in self.tmp.rglob("*") if p.is_file()})
 
 
+MINIMAL = """---
+title: Min
+date: 2026-10-22
+slug: %(s)s
+lang: en
+description: Only the required fields.
+category: notes
+%(extra)s---
+
+Plain body, no image, no link.
+"""
+
+
+class Validation(unittest.TestCase):
+    """Fresh site copy per test; write posts, then run the build / --check and inspect the result."""
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        for f in ("index.html", "sitemap.xml", "llms.txt"):
+            shutil.copy(REPO / f, self.tmp / f)
+        (self.tmp / "content/journal").mkdir(parents=True)
+
+    def tearDown(self):
+        shutil.rmtree(self.tmp)
+
+    def post(self, slug, extra="", body=None, draft=False):
+        text = MINIMAL % dict(s=slug, extra=extra + ("draft: true\n" if draft else ""))
+        if body:
+            text += "\n" + body
+        (self.tmp / "content/journal" / ("%s.md" % slug)).write_text(text, encoding="utf-8")
+
+    def run_build(self, *flags):
+        return subprocess.run([sys.executable, str(REPO / "scripts/build_journal.py"), "--root", str(self.tmp), *flags],
+                              capture_output=True, text=True)
+
+    def test_post_without_optional_fields(self):
+        self.post("plain")
+        self.assertEqual(self.run_build("--check").returncode, 0)
+        r = self.run_build()
+        self.assertEqual(r.returncode, 0, r.stderr)
+        h = (self.tmp / "journal/plain/index.html").read_text(encoding="utf-8")
+        blocks = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">\n(.*?)\n</script>', h, re.S)]
+        post = next(b for b in blocks if b["@type"] == "BlogPosting")
+        for k in ("keywords", "about", "citation", "translationOfWork", "workTranslation"):
+            self.assertNotIn(k, post)
+        self.assertEqual(post["image"], "https://idle.ipe.rest/og-image.png")
+        self.assertIn('hreflang="x-default" href="https://idle.ipe.rest/journal/plain/"', h)
+
+    def test_missing_image_fails(self):
+        self.post("front", extra="image: /assets/journal/front/nope.jpg\n")
+        self.post("inline", body="![x](/assets/journal/inline/nope.jpg)\n")
+        for flags in (("--check",), ()):
+            r = self.run_build(*flags)
+            self.assertEqual(r.returncode, 1, flags)
+            self.assertIn("front.md: image file not found: /assets/journal/front/nope.jpg", r.stderr)
+            self.assertIn("inline.md: image file not found: /assets/journal/inline/nope.jpg", r.stderr)
+        self.assertFalse((self.tmp / "journal").exists())  # nothing half-written
+
+    def test_existing_image_ok_and_external_image_skipped(self):
+        (self.tmp / "assets/journal/ok").mkdir(parents=True)
+        (self.tmp / "assets/journal/ok/c.png").write_bytes(png(4, 4))
+        self.post("ok", extra="image: https://example.com/c.png\n", body="![x](/assets/journal/ok/c.png)\n")
+        self.assertEqual(self.run_build("--check").returncode, 0)
+
+    def assert_pair_fails(self, expect):
+        r = self.run_build("--check")
+        self.assertEqual(r.returncode, 1, r.stdout)
+        self.assertIn(expect, r.stderr)
+
+    def test_translation_not_mutual_fails(self):
+        self.post("a", extra="translation: b\n")
+        self.post("b")
+        self.assert_pair_fails("a.md: translation 'b' does not point back")
+
+    def test_translation_self_reference_fails(self):
+        self.post("a", extra="translation: a\ntranslation_of: a\n")
+        self.assert_pair_fails("a.md: translation points at the post itself")
+
+    def test_translation_to_draft_fails(self):
+        self.post("a", extra="translation: b\n")
+        self.post("b", extra="translation: a\n", draft=True)
+        self.assert_pair_fails("a.md: translation refers to draft post 'b'")
+
+    def test_translation_of_without_translation_fails(self):
+        self.post("a", extra="translation_of: b\n")
+        self.post("b", extra="translation: a\n")
+        self.assert_pair_fails("a.md: translation_of 'b' needs `translation: b` too")
+
+    def test_translation_unknown_slug_fails(self):
+        self.post("a", extra="translation: ghost\n")
+        self.assert_pair_fails("a.md: translation refers to unknown slug 'ghost'")
+
+    def test_valid_pair_ok(self):
+        self.post("a", extra="translation: b\n")
+        self.post("b", extra="translation: a\ntranslation_of: a\n")
+        self.assertEqual(self.run_build("--check").returncode, 0)
+
+
 if __name__ == "__main__":
     unittest.main()

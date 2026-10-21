@@ -42,6 +42,7 @@ import json
 import re
 import shutil
 import sys
+import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
@@ -462,6 +463,44 @@ def body_images(p):
     return out
 
 
+def check_post_images(p):
+    """Errors for local images (front matter `image` + body `![](/assets/...)`) that are not real files."""
+    errs = []
+    for u in body_images(p):
+        if not u.startswith("/"):
+            continue  # external URL — not ours to check
+        f = (ROOT / urllib.parse.unquote(re.split(r"[?#]", u, 1)[0]).lstrip("/")).resolve()
+        if ROOT not in f.parents or not f.is_file():
+            errs.append("%s: image file not found: %s" % (p["_src"], u))
+    return errs
+
+
+def check_translations(posts, all_posts, drafts_ok):
+    """Errors for hreflang/translation pairs: target exists, not self, not a hidden draft, and mutual."""
+    errs = []
+    for p in posts:
+        src, me = p["_src"], p["slug"]
+        tr, of = p.get("translation"), p.get("translation_of")
+        if of and not tr:
+            errs.append("%s: translation_of %r needs `translation: %s` too (pairs are written on both posts)" % (src, of, of))
+        if of and tr and of != tr:
+            errs.append("%s: translation_of %r and translation %r must name the same post" % (src, of, tr))
+        for k, v in (("translation", tr), ("translation_of", of)):
+            if not v:
+                continue
+            if v == me:
+                errs.append("%s: %s points at the post itself (%r)" % (src, k, v))
+                continue
+            other = all_posts.get(v)
+            if other is None:
+                errs.append("%s: %s refers to unknown slug %r" % (src, k, v))
+            elif other["draft"] and not drafts_ok:
+                errs.append("%s: %s refers to draft post %r (draft pages are not published)" % (src, k, v))
+            elif k == "translation" and other.get("translation") != me:
+                errs.append("%s: translation %r does not point back (add `translation: %s` to %s)" % (src, v, me, other["_src"]))
+    return errs
+
+
 def image_obj(rel, caption=None):
     url = abs_url(rel)
     wh = image_size(rel)
@@ -712,7 +751,7 @@ def main():
     m = re.search(r'<html[^>]*\sdata-ads="(on|off)"', (root / "index.html").read_text(encoding="utf-8"))
     ADS_ATTR = m.group(1) if m else "off"
 
-    posts, errors, slugs = [], [], {}
+    posts, errors, slugs, all_posts = [], [], {}, {}
     for f in sorted(src.glob("*.md")) if src.is_dir() else []:
         if f.name.lower() == "readme.md":
             continue
@@ -725,6 +764,7 @@ def main():
             errors.append("%s: slug %r already used by %s" % (f.name, p["slug"], slugs[p["slug"]]))
             continue
         slugs[p["slug"]] = f.name
+        all_posts[p["slug"]] = p
         if p["draft"] and not a.drafts:
             continue
         p["_html"] = markdown(p["_body"])
@@ -732,10 +772,9 @@ def main():
     if errors:
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1
+    errors += check_translations(posts, all_posts, a.drafts)
     for p in posts:
-        for k in ("translation", "translation_of"):
-            if p.get(k) and p[k] not in slugs:
-                errors.append("%s: %s refers to unknown slug %r" % (p["_src"], k, p[k]))
+        errors += check_post_images(p)
     if errors:
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1

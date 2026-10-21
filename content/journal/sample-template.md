@@ -12,7 +12,7 @@ draft: true
 # image_alt: 대표 이미지 설명
 # keywords: dear(you);, idle(), 로파이        # 쉼표로 구분
 # translation: sample-template-en          # 다른 언어판 slug (hreflang 쌍 · 양쪽 글에 서로 적는다)
-# translation_of: sample-template-ko       # 이 글이 번역본일 때만, 원문 slug (원문 글에는 적지 않는다)
+# translation_of: sample-template-ko       # 이 글이 번역본일 때만, 원문 slug (translation 에도 같은 slug 를 함께 적는다. 원문 글에는 적지 않는다)
 # album: dear(you); vol.1 @ https://idle.ipe.rest/#album        # 제목 @ 주소 (주소 생략 가능)
 # songs: Hard Day Again, Wasn't It? @ https://youtu.be/yGa2_hjw4ZI | It's Okay, Take Your Time.   # 항목은 | 로 구분, 곡마다 @ 스트리밍 주소
 # citations: 기사 제목 @ https://example.com/article | 다른 글 @ https://example.com/b   # 본문의 외부 링크(유튜브·SNS 제외)는 자동으로 citation 에 들어간다
@@ -36,4 +36,4 @@ ipe(); // be still
 
 이미지는 `/assets/journal/<slug>/파일.jpg` 에 두고, 한 줄에 이미지만 쓰면 `<figure>` 로 나옵니다. 따옴표 안은 캡션입니다. 가로·세로는 빌드가 파일에서 읽어 레이아웃 밀림을 막습니다.
 
-![앨범 커버 — 어두운 방의 모니터 불빛](/assets/journal/sample-template/cover.jpg "캡션은 선택")
+(실제 글에서는 이미지 파일을 먼저 `assets/journal/<slug>/` 에 넣어야 합니다. 파일이 없으면 빌드와 `--check` 가 실패합니다. 그래서 이 샘플에는 이미지를 넣지 않았습니다.)
