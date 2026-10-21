@@ -423,3 +423,9 @@ html:lang(hi) body { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari",
 .lang-list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; color: var(--text-2); }
 .lang-list a:hover { color: var(--accent); }
 [dir="rtl"] .article-foot .more-link span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }
+
+/* home language hint (root "/" only; suggests, never redirects) */
+.lang-hint { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; background: var(--accent); color: #fff; font-size: 14px; }
+.lang-hint[hidden] { display: none; }
+.lang-hint a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; }
+.lang-hint button { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: #fff; font-size: 20px; cursor: pointer; }

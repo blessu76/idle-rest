@@ -9,8 +9,7 @@ Writes  journal/index.html                 x-default hub (language links + ko/en
         journal/feed.xml                   RSS 2.0 (ko + en originals)
         sitemap.xml                        between <!-- journal:start --> / <!-- journal:end -->
         llms.txt                           "Journal" section between <!-- journal:llms:start --> / <!-- journal:llms:end -->
-        index.html                         home "Journal" cards between
-                                           <!-- journal:home:start ... --> / <!-- journal:home:end -->
+        index.html + <lang>/index.html     home page, 12 static language pages (scripts/build_home.py)
 
 All language versions of a post share ONE slug (that is what groups them for hreflang / translationOfWork).
 
@@ -51,7 +50,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261024"  # keep equal to the ?v= in index.html
+ASSET_V = "20261025"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -944,7 +943,8 @@ def main():
     src = root / "content" / "journal"
     global ADS_ATTR, ROOT
     ROOT = root
-    m = re.search(r'<html[^>]*\sdata-ads="(on|off)"', (root / "index.html").read_text(encoding="utf-8"))
+    tpl = root / "content" / "home" / "template.html"
+    m = re.search(r'<html[^>]*\sdata-ads="(on|off)"', (tpl if tpl.exists() else root / "index.html").read_text(encoding="utf-8"))
     ADS_ATTR = m.group(1) if m else "off"
 
     posts, errors, slugs, all_posts = [], [], {}, {}
@@ -1020,15 +1020,8 @@ def main():
     llms = root / "llms.txt"
     llms.write_text(replace_between(llms.read_text(encoding="utf-8"), r"<!-- journal:llms:start[^>]*-->",
                                     "<!-- journal:llms:end -->", render_llms_block(posts), "llms.txt"), encoding="utf-8")
-    home = root / "index.html"
-    home_html = replace_between(home.read_text(encoding="utf-8"), r"<!-- journal:home:start[^>]*-->",
-                           "<!-- journal:home:end -->", render_home_cards(main_posts), "index.html")
-    # no posts -> hide the whole home Journal section (menu link stays); >=1 post -> show it. Idempotent.
-    home_html, n = re.subn(r'(<section class="section" id="journal"[^>]*?)( hidden)?>',
-                      lambda m: m.group(1) + ("" if main_posts else " hidden") + ">", home_html, count=1)
-    if n != 1:
-        raise SystemExit('home <section id="journal"> not found in index.html')
-    home.write_text(home_html, encoding="utf-8")
+    import build_home  # home page: 12 static language pages + their sitemap/llms blocks
+    build_home.build(root, posts, list_langs)
     print("journal: built %d post(s)%s → %s" % (len(posts), " (incl. drafts)" if a.drafts else "", out))
     return 0
 

@@ -46,6 +46,7 @@ class Site(unittest.TestCase):
         self.tmp = Path(tempfile.mkdtemp())
         for f in ("index.html", "sitemap.xml", "llms.txt"):
             shutil.copy(REPO / f, self.tmp / f)
+        shutil.copytree(REPO / "content/home", self.tmp / "content/home")
         (self.tmp / "content/journal").mkdir(parents=True)
 
     def tearDown(self):
@@ -314,7 +315,8 @@ class I18n(Site):
         (self.tmp / "content/journal/ja/a.md").unlink()
         self.build()
         self.assertFalse((self.tmp / "journal/ja").exists())
-        self.assertFalse((self.tmp / "ja").exists())
+        self.assertFalse((self.tmp / "ja/journal").exists())
+        self.assertTrue((self.tmp / "ja/index.html").exists())  # the home page of /ja/ stays
 
     def test_sitemap_hreflang_mutual(self):
         self.pair()

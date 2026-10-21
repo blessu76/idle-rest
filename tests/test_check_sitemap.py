@@ -25,6 +25,7 @@ class CheckSitemap(unittest.TestCase):
         self.tmp = Path(tempfile.mkdtemp())
         for f in ("index.html", "sitemap.xml", "llms.txt"):
             shutil.copy(REPO / f, self.tmp / f)
+        shutil.copytree(REPO / "content/home", self.tmp / "content/home")
         for lang, extra in (("ko", ""), ("en", "translation_of: ko\n"), ("ja", "translation_of: en\n")):
             d = self.tmp / "content/journal" / lang
             d.mkdir(parents=True)
