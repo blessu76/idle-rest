@@ -1,18 +1,18 @@
 ---
 title: Ten Letters, One Skeleton — The Lyric Structure of dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: en
 description: The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song.
 category: behind-the-music
 draft: false
-translation: ten-letters-one-skeleton-ko
-translation_of: ten-letters-one-skeleton-ko
+translation_of: ko
+aliases: /journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), lyric structure, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-[한국어로 읽기 →](/journal/ten-letters-one-skeleton-ko/)
+[한국어로 읽기 →](/journal/ko/ten-letters-one-skeleton/)
 
 *dear(you); vol.1* is idle()'s first album, ten songs long. Open the lyric drafts one after another and the same shape keeps coming back. This post walks through that skeleton by track number, going by the drafts. What is actually sung on the recordings can be shorter than the draft.
 

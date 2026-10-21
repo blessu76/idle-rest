@@ -1,30 +1,35 @@
 #!/usr/bin/env python3
 """Build the idle.ipe.rest Journal — no dependencies (Python 3.8+ stdlib only).
 
-Reads   content/journal/*.md   (front matter + Markdown)
-Writes  journal/index.html                 list page
-        journal/<slug>/index.html          one page per post
-        journal/feed.xml                   RSS 2.0
+Reads   content/journal/<lang>/<slug>.md   (front matter + Markdown; one folder per language, ko and en included)
+Writes  journal/index.html                 x-default hub (language links + ko/en originals)
+        journal/<lang>/index.html          one list page per language that has posts
+        journal/<lang>/<slug>/index.html   one page per post and language  (12 languages: en ko ja zh es fr de pt ru ar hi id)
+        <old alias path>/index.html        static redirect stubs (front matter `aliases`) — not in the sitemap
+        journal/feed.xml                   RSS 2.0 (ko + en originals)
         sitemap.xml                        between <!-- journal:start --> / <!-- journal:end -->
         llms.txt                           "Journal" section between <!-- journal:llms:start --> / <!-- journal:llms:end -->
         index.html                         home "Journal" cards between
                                            <!-- journal:home:start ... --> / <!-- journal:home:end -->
 
+All language versions of a post share ONE slug (that is what groups them for hreflang / translationOfWork).
+
 Front matter (between two `---` lines):
     title:       required
     date:        required, YYYY-MM-DD (publication date, KST)
-    slug:        required, [a-z0-9-]+ → /journal/<slug>/
-    lang:        required, e.g. ko | en
+    slug:        required, [a-z0-9-]+ (= file name), same in every language; not a language code, not "feed"
+    lang:        required, one of en ko ja zh es fr de pt ru ar hi id (= folder name)
     description: required, one sentence (meta description, cards, RSS)
     category:    required, e.g. notes | behind-the-music
     draft:       optional, true → skipped everywhere (output, list, home, sitemap, feed)
-  Optional GEO fields (omitted → simply not emitted; see content/journal/sample-template.md):
+    translation_of: ko | en — the original language this version was translated from. Required for the 10 AI-translation
+                    languages (→ "AI translation" notice + translationOfWork); optional on en/ko (en: `translation_of: ko`).
+    aliases:     optional, comma separated old site paths (/journal/old-slug/) → static redirect stubs to this page
+  Optional GEO fields (omitted → simply not emitted; see content/journal/ko/sample-template.md):
     updated:        YYYY-MM-DD, dateModified / sitemap lastmod
     image:          hero image, /assets/journal/<slug>/x.jpg (or https URL); default = first body image, else og-image
     image_alt:      alt text of the hero image (ImageObject.caption)
     keywords:       comma separated
-    translation:    slug of the same post in the other language (hreflang pair)
-    translation_of: slug this post is a translation of (this post = translation; the other = original)
     album:          "Title @ url"  → about: MusicAlbum
     songs:          "Title @ url | Title @ url"  → about: MusicRecording (url optional; off-site url → sameAs)
     citations:      "Title @ url | Title @ url"  → citation (external links in the body are added automatically)
@@ -166,13 +171,17 @@ def parse_post(path):
         raise ValueError("missing front matter: " + ", ".join(missing))
     if not SLUG_RE.match(meta["slug"]):
         raise ValueError("slug must match [a-z0-9-]+: %r" % meta["slug"])
+    if meta["slug"] in LANGS or meta["slug"] == "feed":
+        raise ValueError("slug %r is reserved (language codes and 'feed' are URL segments)" % meta["slug"])
     if meta["lang"] not in LANGS:
         raise ValueError("lang must be one of %s: %r" % (" ".join(LANGS), meta["lang"]))
-    if meta["lang"] not in MAIN_LANGS:  # AI translation: pointer to the original only
-        if not meta.get("translation_of"):
-            raise ValueError("lang %s is an AI translation: `translation_of: <slug of the ko/en original>` is required" % meta["lang"])
-        if meta.get("translation"):
-            raise ValueError("AI translations use `translation_of` only (remove `translation`)")
+    if meta.get("translation"):
+        raise ValueError("`translation:` was removed — all language versions of a post share the same slug; use `translation_of: <ko|en>` on the translated version")
+    of = meta.get("translation_of")
+    if meta["lang"] not in MAIN_LANGS and not of:
+        raise ValueError("lang %s is an AI translation: `translation_of: en` (or ko) is required" % meta["lang"])
+    if of and (of not in MAIN_LANGS or of == meta["lang"]):
+        raise ValueError("translation_of must be the language code of the ko/en original (ko or en, not this post's own language): %r" % of)
     try:
         meta["_date"] = dt.date.fromisoformat(meta["date"])
     except ValueError:
@@ -183,9 +192,11 @@ def parse_post(path):
             dt.date.fromisoformat(meta["updated"])
         except ValueError:
             raise ValueError("updated must be YYYY-MM-DD: %r" % meta["updated"])
-    for k in ("translation", "translation_of"):
-        if meta.get(k) and not SLUG_RE.match(meta[k]):
-            raise ValueError("%s must be a slug: %r" % (k, meta[k]))
+    meta["_aliases"] = []
+    for a in [x.strip() for x in meta.get("aliases", "").split(",") if x.strip()]:
+        if not re.match(r"^/(?:journal|[a-z]{2}/journal)/[a-z0-9/-]*$", a):
+            raise ValueError("alias must be a site path like /journal/old-slug/ : %r" % a)
+        meta["_aliases"].append(a if a.endswith("/") else a + "/")
     meta["_keywords"] = [x.strip() for x in meta.get("keywords", "").split(",") if x.strip()]
     meta["_album"] = (parse_entries(meta["album"]) or [None])[0] if meta.get("album") else None
     meta["_songs"] = parse_entries(meta.get("songs", ""))
@@ -433,7 +444,7 @@ def header(lang, current="journal", alt=None):
       <nav class="nav" id="primaryNav" aria-label="primary">
         <a href="/#music">{esc(t['music'])}</a>
         <a href="/#album">{esc(t['albums'])}</a>
-        <a href="{lang_path(lang)}"{cur("journal")}>{esc(t['journal'])}</a>
+        <a href="{jhome(lang)}"{cur("journal")}>{esc(t['journal'])}</a>
         <a href="/#story">{esc(t['story'])}</a>
       </nav>
       <div class="tools">
@@ -463,7 +474,7 @@ def footer(lang):
     </div>
     <ul class="footer-links">
       <li><a href="/">{esc(t['home'])}</a></li>
-      <li><a href="{lang_path(lang)}">{esc(t['journal'])}</a></li>
+      <li><a href="{jhome(lang)}">{esc(t['journal'])}</a></li>
       <li><a href="/journal/feed.xml">{esc(t['rss'])}</a></li>
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
@@ -507,8 +518,16 @@ def ld(obj):
 
 
 def lang_path(lang):
-    """site path of a language's journal home: ko/en share /journal/, the others live in /<lang>/journal/."""
-    return "/journal/" if lang in MAIN_LANGS else "/%s/journal/" % lang
+    """site path of a language's journal list: /journal/<lang>/ (all 12 languages; /journal/ itself is the x-default hub)."""
+    return "/journal/%s/" % lang
+
+
+LIST_LANGS = None  # set by main(): languages that have a list page; None = assume all (other scripts importing this module)
+
+
+def jhome(lang):
+    """where a page in `lang` sends its 'Journal' link: that language's list if it exists, else the x-default hub."""
+    return lang_path(lang) if LIST_LANGS is None or lang in LIST_LANGS else "/journal/"
 
 
 def post_path(p):
@@ -550,58 +569,42 @@ def check_post_images(p):
 
 
 def check_translations(posts, all_posts, drafts_ok):
-    """Errors for translation pairs/groups: target exists, not self, not a hidden draft, ko<->en mutual,
-    AI translations point at a ko/en original (all_posts holds ko/en only, so a translation of a translation is "unknown slug"), one post per language in each group."""
+    """Errors for translation groups (= posts sharing a slug): one post per language; `translation_of: <lang>` names a
+    ko/en version of the same slug that is published (not missing, not a hidden draft). Alias paths must be unique."""
     errs = []
-    for p in posts:
-        src, me = p["_src"], p["slug"]
-        tr, of = p.get("translation"), p.get("translation_of")
-        if of and not tr and p["lang"] in MAIN_LANGS:
-            errs.append("%s: translation_of %r needs `translation: %s` too (ko/en pairs are written on both posts)" % (src, of, of))
-        if of and tr and of != tr:
-            errs.append("%s: translation_of %r and translation %r must name the same post" % (src, of, tr))
-        for k, v in (("translation", tr), ("translation_of", of)):
-            if not v:
-                continue
-            other = all_posts.get(v)
-            if other is p:
-                errs.append("%s: %s points at the post itself (%r)" % (src, k, v))
-                continue
-            if other is None:
-                errs.append("%s: %s refers to unknown slug %r (ko/en original slug)" % (src, k, v))
-            elif other["draft"] and not drafts_ok:
-                errs.append("%s: %s refers to draft post %r (draft pages are not published)" % (src, k, v))
-            elif k == "translation" and other.get("translation") != me:
-                errs.append("%s: translation %r does not point back (add `translation: %s` to %s)" % (src, v, me, other["_src"]))
-    uniq = {id(g): g for g in groups(posts).values()}
-    for g in uniq.values():
+    for g in {id(g): g for g in groups(posts).values()}.values():
         langs = {}
         for m in g:
             if m["lang"] in langs:
-                errs.append("%s and %s are both lang %s in one translation group (only one post per language)" % (m["_src"], langs[m["lang"]]["_src"], m["lang"]))
+                errs.append("%s and %s are both lang %s of slug %r (one post per language)" % (m["_src"], langs[m["lang"]]["_src"], m["lang"], m["slug"]))
             langs[m["lang"]] = m
+    for p in posts:
+        of = p.get("translation_of")
+        if not of:
+            continue
+        other = all_posts.get((p["slug"], of))
+        if other is None:
+            errs.append("%s: translation_of %s but there is no %s post with slug %r (content/journal/%s/%s.md)" % (p["_src"], of, of, p["slug"], of, p["slug"]))
+        elif other["draft"] and not drafts_ok:
+            errs.append("%s: translation_of %s refers to a draft (%s) — draft pages are not published" % (p["_src"], of, other["_src"]))
+    pages = {post_path(p) for p in posts} | {lang_path(l) for l in LANGS} | {"/journal/"}
+    seen = {}
+    for p in posts:
+        for al in p["_aliases"]:
+            if al in pages:
+                errs.append("%s: alias %s is a real page" % (p["_src"], al))
+            elif al in seen:
+                errs.append("%s: alias %s already used by %s" % (p["_src"], al, seen[al]))
+            seen[al] = p["_src"]
     return errs
 
 
 def groups(posts):
-    """{id(post): [group members]} — translation groups = connected posts via translation / translation_of (published only)."""
-    by_slug = {p["slug"]: p for p in posts if p["lang"] in MAIN_LANGS}
-    parent = {id(p): id(p) for p in posts}
-
-    def find(x):
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]
-            x = parent[x]
-        return x
+    """{id(post): [published posts with the same slug]} — one post in every language it exists in."""
+    by = {}
     for p in posts:
-        for k in ("translation", "translation_of"):
-            o = by_slug.get(p.get(k) or "")
-            if o is not None and o is not p:
-                parent[find(id(p))] = find(id(o))
-    members = {}
-    for p in posts:
-        members.setdefault(find(id(p)), []).append(p)
-    return {id(p): members[find(id(p))] for p in posts}
+        by.setdefault(p["slug"], []).append(p)
+    return {id(p): by[p["slug"]] for p in posts}
 
 
 def image_obj(rel, caption=None):
@@ -651,9 +654,9 @@ def citations(p):
     return out
 
 
-def breadcrumb(lang, name, url):
+def breadcrumb(lang, name, url, jurl=None):
     t = ui(lang)
-    items = [(t["home"], SITE + "/"), (t["journal"], SITE + lang_path(lang))] + ([(name, url)] if name else [])
+    items = [(t["home"], SITE + "/"), (t["journal"], jurl or SITE + lang_path(lang))] + ([(name, url)] if name else [])
     return {"@context": "https://schema.org", "@type": "BreadcrumbList",
             "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(items)]}
 
@@ -708,10 +711,10 @@ def render_post(p, grp=None):
     if cites:
         data["citation"] = cites
     ref = lambda m: {"@type": "BlogPosting", "@id": post_url(m), "url": post_url(m), "headline": m["title"], "inLanguage": m["lang"]}
-    source = next((m for m in members if m["slug"] == p.get("translation_of") and m is not p), None)
+    source = next((m for m in members if m["lang"] == p.get("translation_of")), None)
     if source:
         data["translationOfWork"] = ref(source)
-    derived = [ref(m) for m in members if m is not p and m.get("translation_of") == p["slug"]]
+    derived = [ref(m) for m in members if m is not p and m.get("translation_of") == p["lang"]]
     if derived:
         data["workTranslation"] = derived[0] if len(derived) == 1 else derived
     ai = p["lang"] not in MAIN_LANGS
@@ -745,7 +748,7 @@ def render_post(p, grp=None):
     <!-- Ad slot (journal-post): reserved space only — place the AdSense unit here after approval and drop aria-hidden. -->
     <div class="ad-slot" data-ad-slot="journal-post" aria-hidden="true"><span class="ad-label">{esc(t['ad'])}</span></div>
     <nav class="article-foot" aria-label="{esc(t['journal'])}">
-      <a class="more-link" href="{lang_path(p['lang'])}"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
+      <a class="more-link" href="{jhome(p['lang'])}"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
       <a class="more-link" href="/">{esc(t['listen'])} <span aria-hidden="true">→</span></a>
     </nav>
 {lang_list_html(p['lang'], pair, t['other_langs'])}
@@ -755,16 +758,16 @@ def render_post(p, grp=None):
 
 
 def list_pairs(list_langs):
-    """{hreflang: url} of the journal list pages that exist: /journal/ (en; ko lives in the same list) + /<lang>/journal/."""
-    return {("en" if l == "en" else l): SITE + lang_path(l) for l in list_langs}
+    """{hreflang: url} of the journal list pages that exist: /journal/<lang>/ for every language with a post."""
+    return {l: SITE + lang_path(l) for l in list_langs}
 
 
 def render_list(posts, lang=None, list_langs=("en",)):
-    """lang=None -> /journal/ (ko + en posts, as before). lang=xx -> /xx/journal/ (AI translations in that language only)."""
+    """lang=None -> /journal/ (x-default hub: language links + the ko/en originals). lang=xx -> /journal/xx/ (that language only)."""
     pages = list_pairs(list_langs)
     loc = lang or "en"
     en, ko, t = UI["en"], UI["ko"], UI[loc]
-    url = SITE + lang_path(loc)
+    url = SITE + (lang_path(lang) if lang else "/journal/")
     langs_in = [lang] if lang else ["ko", "en"]
     data = {"@context": "https://schema.org", "@type": "Blog", "name": "idle() %s" % t["journal"], "url": url,
             "publisher": {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"},
@@ -788,19 +791,18 @@ def render_list(posts, lang=None, list_langs=("en",)):
     sub = (f"{esc(en['sub'])} <span lang=\"ko\">{esc(ko['sub'])}</span>" if not lang else esc(t["sub"]))
     desc = ("Notes from idle(), the music of ipe(): behind the music, and other quiet updates." if not lang else "idle() · ipe() — " + t["sub"])
     alts = ""
-    if len(pages) > 1:
-        alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, u) for l, u in sorted(pages.items()))
-        alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % pages["en"]
-    ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang else "")
+    alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, u) for l, u in sorted(pages.items()))
+    alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % (SITE + "/journal/")
+    ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang and lang not in MAIN_LANGS else "")
     return (head("%s — idle() · the music of ipe()" % t["journal"], desc, url, loc, not posts,
-                 ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url)), alternates=alts, locales=list(pages))
+                 ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url, SITE + "/journal/" if not lang else None)), alternates=alts, locales=list(pages))
             + header(loc) + f"""<main id="main" class="shell">
   <div class="page-head">
     <h1>{esc(t['journal'])}</h1>
     <p>{sub}</p>
   </div>
 {ai}{body}
-{lang_list_html(loc, pages, t['other_langs'])}  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
+{lang_list_html(lang or '', pages, t['other_langs'])}  <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
 </main>
 """ + footer(loc))
 
@@ -811,11 +813,50 @@ def render_home_cards(posts):
     cards = "\n".join(f"""      <article class="j-card" lang="{esc(p['lang'])}">
         <div class="j-art" aria-hidden="true"></div>
         <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time></p>
-        <h3><a href="/journal/{p['slug']}/">{esc(p['title'])}</a></h3>
+        <h3><a href="{post_path(p)}">{esc(p['title'])}</a></h3>
         <p>{esc(p['description'])}</p>
-        <a class="more-link" href="/journal/{p['slug']}/" aria-label="{esc(ui(p['lang'])['read_more'])}: {esc(p['title'])}"><span>{esc(ui(p['lang'])['read_more'])}</span> <span aria-hidden="true">→</span></a>
+        <a class="more-link" href="{post_path(p)}" aria-label="{esc(ui(p['lang'])['read_more'])}: {esc(p['title'])}"><span>{esc(ui(p['lang'])['read_more'])}</span> <span aria-hidden="true">→</span></a>
       </article>""" for p in posts[:3])
     return '    <div class="journal-grid">\n%s\n    </div>' % cards
+
+
+def render_redirect(new_url):
+    """static redirect stub for a moved URL: canonical + meta refresh + visible link (no JS, no ?lang=)."""
+    u = esc(new_url)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- {GEN_MARK} — redirect stub for a moved page -->
+<title>Moved — idle()</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="{u}">
+<meta http-equiv="refresh" content="0; url={u}">
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+<p><a href="{u}">{u}</a></p>
+</body>
+</html>
+"""
+
+
+def sweep_generated(root, written):
+    """delete pages this script generated earlier (posts that are gone / now draft, dropped aliases) and empty dirs."""
+    bases = [root / "journal"] + [root / l / "journal" for l in LANGS]
+    for base in bases:
+        if not base.is_dir():
+            continue
+        for idx in sorted(base.rglob("index.html")):
+            if idx not in written and GEN_MARK in idx.read_text(encoding="utf-8"):
+                idx.unlink()
+        for d in sorted((x for x in base.rglob("*") if x.is_dir()), key=lambda x: len(x.parts), reverse=True):
+            if not any(d.iterdir()):
+                d.rmdir()
+        if base != root / "journal" and not any(base.iterdir()):
+            base.rmdir()
+            if not any(base.parent.iterdir()):  # /<lang>/ that only held the old journal pages
+                base.parent.rmdir()
 
 
 def rfc822(d):
@@ -853,15 +894,14 @@ def render_sitemap_block(posts, grp, list_langs):
     xl = lambda pairs, default: "".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n' % (l, u) for l, u in sorted(pairs.items())) \
         + '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n' % default
     pages = list_pairs(list_langs)
+    hub = SITE + "/journal/"
     last = lambda ps: max(p.get("updated") or p["_date"].isoformat() for p in ps)
-    main = [p for p in posts if p["lang"] in MAIN_LANGS]
-    rows = ["  <url>\n    <loc>%s/journal/</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.6</priority>\n%s  </url>"
-            % (SITE, last(main or posts), xl(pages, pages["en"]) if len(pages) > 1 else "")]
+    rows = ["  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.6</priority>\n%s  </url>"
+            % (hub, last(posts), xl(pages, hub))]
     for l in list_langs:  # only languages that have at least one post
-        if l != "en":
-            ps = [p for p in posts if p["lang"] == l]
-            rows.append("  <url>\n    <loc>%s%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>0.4</priority>\n%s  </url>"
-                        % (SITE, lang_path(l), last(ps), xl(pages, pages["en"])))
+        ps = [p for p in posts if p["lang"] == l]
+        rows.append("  <url>\n    <loc>%s%s</loc>\n    <lastmod>%s</lastmod>\n    <priority>0.4</priority>\n%s  </url>"
+                    % (SITE, lang_path(l), last(ps), xl(pages, hub)))
     for p in posts:
         pair, default = pair_urls(p, grp)
         links = xl(pair, default)
@@ -875,15 +915,13 @@ def render_sitemap_block(posts, grp, list_langs):
 def render_llms_block(posts):
     if not posts:
         return ""
-    main = [p for p in posts if p["lang"] in MAIN_LANGS]
-    lines = ["## Journal", "Notes from idle(), the music of ipe(): behind the music, and other quiet updates. Feed: %s/journal/feed.xml · Index: %s/journal/" % (SITE, SITE), ""]
-    for p in main:
-        lines.append("- [%s](%s) — %s (%s, %s)" % (p["title"], post_url(p), p["description"], p["lang"], p["_date"].isoformat()))
-    for l in LANGS:  # one section per AI-translation language that has posts
-        ps = [p for p in posts if p["lang"] == l and l not in MAIN_LANGS]
+    lines = ["## Journal", "Notes from idle(), the music of ipe(): behind the music, and other quiet updates. Feed: %s/journal/feed.xml · Index: %s/journal/ · Every post exists at /journal/<lang>/<slug>/ in each language listed below." % (SITE, SITE)]
+    for l in LANGS:  # one section per language that has posts (ko/en = human-reviewed originals, the rest AI translations)
+        ps = [p for p in posts if p["lang"] == l]
         if ps:
-            lines += ["", "### Journal — %s (%s) · AI translations of the ko/en originals · Index: %s%s" % (LANGS[l]["name"], l, SITE, lang_path(l)), ""]
-            lines += ["- [%s](%s) — %s (%s, %s, AI translation)" % (p["title"], post_url(p), p["description"], l, p["_date"].isoformat()) for p in ps]
+            kind = "originals" if l in MAIN_LANGS else "AI translations of the originals"
+            lines += ["", "### Journal — %s (%s) · %s · Index: %s%s" % (LANGS[l]["name"], l, kind, SITE, lang_path(l)), ""]
+            lines += ["- [%s](%s) — %s (%s, %s%s)" % (p["title"], post_url(p), p["description"], l, p["_date"].isoformat(), "" if l in MAIN_LANGS else ", AI translation") for p in ps]
     return "\n".join(lines) + "\n"
 
 
@@ -910,7 +948,10 @@ def main():
     ADS_ATTR = m.group(1) if m else "off"
 
     posts, errors, slugs, all_posts = [], [], {}, {}
-    files = (sorted(src.glob("*.md")) + sorted(src.glob("*/*.md"))) if src.is_dir() else []
+    files = sorted(src.glob("*/*.md")) if src.is_dir() else []
+    for f in (sorted(src.glob("*.md")) if src.is_dir() else []):
+        if f.name.lower() != "readme.md":
+            errors.append("%s: move to content/journal/<lang>/%s (one folder per language, ko and en included)" % (f.name, f.name))
     for f in files:
         if f.name.lower() == "readme.md":
             continue
@@ -918,20 +959,14 @@ def main():
         try:
             p = parse_post(f)
             p["_src"] = name
-            if f.parent == src and p["lang"] not in MAIN_LANGS:
-                raise ValueError("lang %s belongs in content/journal/%s/" % (p["lang"], p["lang"]))
-            if f.parent != src and f.parent.name != p["lang"]:
+            if f.parent.name != p["lang"]:
                 raise ValueError("file is in %s/ but lang is %s" % (f.parent.name, p["lang"]))
+            if f.stem != p["slug"]:
+                raise ValueError("file name must be <slug>.md (slug is %r)" % p["slug"])
         except ValueError as ex:
             errors.append("%s: %s" % (name, ex))
             continue
-        key = (p["lang"] if p["lang"] not in MAIN_LANGS else "main", p["slug"])  # = one URL
-        if key in slugs:
-            errors.append("%s: slug %r already used by %s (same URL)" % (name, p["slug"], slugs[key]))
-            continue
-        slugs[key] = name
-        if p["lang"] in MAIN_LANGS:  # translation / translation_of always name a ko/en original
-            all_posts[p["slug"]] = p
+        all_posts[(p["slug"], p["lang"])] = p
         if p["draft"] and not a.drafts:
             continue
         p["_html"] = markdown(p["_body"])
@@ -945,43 +980,36 @@ def main():
     if errors:
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1
-    posts.sort(key=lambda p: (p["_date"], p["slug"]), reverse=True)
+    posts.sort(key=lambda p: (p["_date"], p["slug"], p["lang"]), reverse=True)
     grp = groups(posts)
     main_posts = [p for p in posts if p["lang"] in MAIN_LANGS]
-    list_langs = ["en"] + [l for l in LANGS if l not in MAIN_LANGS and any(p["lang"] == l for p in posts)]
+    list_langs = [l for l in LANGS if any(p["lang"] == l for p in posts)]
+    global LIST_LANGS
+    LIST_LANGS = set(list_langs)
     if a.check:
         print("journal: OK — %d post(s) ready%s" % (len(posts), " (incl. drafts)" if a.drafts else ""))
         return 0
 
     out = root / "journal"
     out.mkdir(exist_ok=True)
+    written = set()
 
-    def sweep(d, live_slugs):  # remove pages this script generated earlier for posts that are gone / now draft
-        for sub in (d.iterdir() if d.is_dir() else []):
-            idx = sub / "index.html"
-            if sub.is_dir() and sub.name not in live_slugs and idx.exists() and GEN_MARK in idx.read_text(encoding="utf-8"):
-                shutil.rmtree(sub)
-    sweep(out, {p["slug"] for p in main_posts})
-    for p in main_posts:
-        (out / p["slug"]).mkdir(exist_ok=True)
-        (out / p["slug"] / "index.html").write_text(render_post(p, grp), encoding="utf-8")
-    (out / "index.html").write_text(render_list(main_posts, None, list_langs), encoding="utf-8")
+    def write(path, text):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+        written.add(path)
+
+    for p in posts:
+        write(root / post_path(p).strip("/") / "index.html", render_post(p, grp))
+        for al in p["_aliases"]:  # old URL -> static redirect stub to the new address
+            write(root / al.strip("/") / "index.html", render_redirect(post_url(p)))
+    write(out / "index.html", render_list(main_posts, None, list_langs))
+    for l in list_langs:
+        write(root / lang_path(l).strip("/") / "index.html", render_list([p for p in posts if p["lang"] == l], l, list_langs))
+        if l not in MAIN_LANGS:  # previous layout: /<lang>/journal/ (home /<lang>/ is a different page)
+            write(root / l / "journal" / "index.html", render_redirect(SITE + lang_path(l)))
     (out / "feed.xml").write_text(render_feed(main_posts), encoding="utf-8")
-    for l in LANGS:
-        if l in MAIN_LANGS:
-            continue
-        d = root / l / "journal"
-        ps = [p for p in posts if p["lang"] == l]
-        sweep(d, {p["slug"] for p in ps})
-        if not ps:
-            if (d / "index.html").exists() and GEN_MARK in (d / "index.html").read_text(encoding="utf-8"):
-                (d / "index.html").unlink()
-            continue
-        d.mkdir(parents=True, exist_ok=True)
-        for p in ps:
-            (d / p["slug"]).mkdir(exist_ok=True)
-            (d / p["slug"] / "index.html").write_text(render_post(p, grp), encoding="utf-8")
-        (d / "index.html").write_text(render_list(ps, l, list_langs), encoding="utf-8")
+    sweep_generated(root, written)
 
     sm = root / "sitemap.xml"
     sm_xml = replace_between(sm.read_text(encoding="utf-8"), r"<!-- journal:start[^>]*-->",

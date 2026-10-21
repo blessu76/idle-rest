@@ -1,12 +1,13 @@
 ---
 title: Diez cartas, un solo esqueleto: la estructura lírica de dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: es
 description: El esqueleto lírico que comparten las diez canciones de dear(you); vol.1: seis espacios, el punto donde aparece un séptimo, las versiones gemelas en inglés y coreano, y la línea susurrada que cierra cada canción.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /es/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), estructura lírica, música con IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

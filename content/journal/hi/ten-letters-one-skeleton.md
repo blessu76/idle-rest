@@ -1,12 +1,13 @@
 ---
 title: दस चिट्ठियाँ, एक ढाँचा — dear(you); के बोलों की बनावट
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: hi
 description: dear(you); vol.1 के दस गीतों का साझा ढाँचा — छह खाने, वह जगह जहाँ सातवाँ आता है, अंग्रेज़ी और कोरियाई जुड़वाँ संस्करण, और हर गीत को समाप्त करने वाली फुसफुसाई पंक्ति।
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /hi/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), गीत की बनावट, AI संगीत, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

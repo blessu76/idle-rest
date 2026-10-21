@@ -1,12 +1,13 @@
 ---
 title: 10通の手紙、ひとつの骨格 — dear(you); の歌詞構造
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: ja
 description: dear(you); vol.1 の10曲に共通する歌詞の骨格 — 6つの枠、7つ目が現れる場所、英語版と韓国語版の双子、そしてすべての曲を締めくくるささやきの一行。
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /ja/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), 歌詞構造, AI音楽, Suno, ローファイ
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

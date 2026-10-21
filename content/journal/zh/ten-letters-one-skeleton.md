@@ -1,12 +1,13 @@
 ---
 title: 十封信，一副骨架 — dear(you); 的歌词结构
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: zh
 description: dear(you); vol.1 十首歌共用的歌词骨架 — 六个位置、第七个位置出现的地方、英语版与韩语版的双生设计，以及结束每一首歌的那句低语。
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /zh/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), 歌词结构, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

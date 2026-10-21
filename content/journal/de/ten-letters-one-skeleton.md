@@ -1,12 +1,13 @@
 ---
 title: Zehn Briefe, ein Skelett — die Textstruktur von dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: de
 description: Das gemeinsame Text-Skelett der zehn Songs auf dear(you); vol.1: sechs Plätze, die Stelle, an der ein siebter hinzukommt, die englischen und koreanischen Zwillingsfassungen und die geflüsterte Zeile, die jeden Song beschließt.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /de/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), Textstruktur, KI-Musik, Suno, Lo-Fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

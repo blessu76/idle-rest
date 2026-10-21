@@ -1,12 +1,13 @@
 ---
 title: Sepuluh Surat, Satu Kerangka — Struktur Lirik dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: id
 description: Kerangka lirik yang dipakai bersama oleh sepuluh lagu di dear(you); vol.1: enam slot, tempat slot ketujuh muncul, versi kembar bahasa Inggris dan Korea, serta baris bisikan yang menutup setiap lagu.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /id/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), struktur lirik, musik AI, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

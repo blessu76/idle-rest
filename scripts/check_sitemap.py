@@ -6,8 +6,9 @@
 
 Offline checks:
   1. sitemap.xml is valid XML.
-  2. Every published (non-draft) journal URL is listed: /journal/, /<lang>/journal/ for each language that has a post,
-     and every post page (content/journal/**/*.md). Nothing journal-ish is listed that is not published.
+  2. Every published (non-draft) journal URL is listed: /journal/ (hub), /journal/<lang>/ for each language that has a post,
+     and every post page (content/journal/<lang>/<slug>.md). Nothing journal-ish is listed that is not published
+     (redirect stubs for old URLs must NOT be listed).
   3. hreflang: each journal <url> lists itself + x-default; every hreflang target is itself a <loc> in the sitemap;
      references are reciprocal (if A lists B under lang L, B lists A under A's lang).
 """
@@ -26,7 +27,7 @@ NS = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.or
 def published_posts(root):
     posts = []
     src = root / "content" / "journal"
-    for f in (sorted(src.glob("*.md")) + sorted(src.glob("*/*.md"))) if src.is_dir() else []:
+    for f in sorted(src.glob("*/*.md")) if src.is_dir() else []:
         if f.name.lower() == "readme.md":
             continue
         p = bj.parse_post(f)
@@ -66,7 +67,7 @@ def check(root):
         if "x-default" not in langs:
             errs.append("%s: no x-default" % loc)
         mine = [l for l, h in links if h == loc and l != "x-default"]
-        if not mine:
+        if not mine and loc != bj.SITE + "/journal/":  # the hub is only the x-default of the list pages
             errs.append("%s: does not list itself in hreflang" % loc)
         for lang, href in links:
             if href not in urls:

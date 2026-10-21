@@ -7,17 +7,16 @@ import unittest
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-JA = """---
-title: JA
+POST = """---
+title: T
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
-lang: ja
-description: ja
+slug: ten-letters
+lang: %s
+description: d
 category: behind-the-music
-translation_of: ten-letters-one-skeleton-en
----
+%s---
 
-本文
+body
 """
 
 
@@ -26,12 +25,10 @@ class CheckSitemap(unittest.TestCase):
         self.tmp = Path(tempfile.mkdtemp())
         for f in ("index.html", "sitemap.xml", "llms.txt"):
             shutil.copy(REPO / f, self.tmp / f)
-        (self.tmp / "content/journal").mkdir(parents=True)
-        for f in ("ten-letters-one-skeleton-ko.md", "ten-letters-one-skeleton-en.md"):  # ko/en originals only; ja is added below
-            shutil.copy(REPO / "content/journal" / f, self.tmp / "content/journal" / f)
-        shutil.copytree(REPO / "assets", self.tmp / "assets")
-        (self.tmp / "content/journal/ja").mkdir()
-        (self.tmp / "content/journal/ja/ten-letters-one-skeleton-en.md").write_text(JA, encoding="utf-8")
+        for lang, extra in (("ko", ""), ("en", "translation_of: ko\n"), ("ja", "translation_of: en\n")):
+            d = self.tmp / "content/journal" / lang
+            d.mkdir(parents=True)
+            (d / "ten-letters.md").write_text(POST % (lang, extra), encoding="utf-8")
         self.sh("build_journal.py")
 
     def tearDown(self):
@@ -52,25 +49,25 @@ class CheckSitemap(unittest.TestCase):
 
     def test_missing_post_url(self):
         def drop(t):
-            a = t.index("  <url>\n    <loc>https://idle.ipe.rest/ja/journal/ten-letters")
+            a = t.index("  <url>\n    <loc>https://idle.ipe.rest/journal/ja/ten-letters")
             return t[:a] + t[t.index("</url>", a) + 7:]
         r = self.sitemap(drop)
         self.assertEqual(r.returncode, 1)
-        self.assertIn("missing from sitemap: https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/", r.stderr)
+        self.assertIn("missing from sitemap: https://idle.ipe.rest/journal/ja/ten-letters/", r.stderr)
 
     def test_missing_language_list(self):
-        r = self.sitemap(lambda t: t.replace("<loc>https://idle.ipe.rest/ja/journal/</loc>", "<loc>https://idle.ipe.rest/zz/</loc>"))
+        r = self.sitemap(lambda t: t.replace("<loc>https://idle.ipe.rest/journal/ja/</loc>", "<loc>https://idle.ipe.rest/zz/</loc>"))
         self.assertEqual(r.returncode, 1)
-        self.assertIn("missing from sitemap: https://idle.ipe.rest/ja/journal/", r.stderr)
+        self.assertIn("missing from sitemap: https://idle.ipe.rest/journal/ja/", r.stderr)
 
     def test_stale_and_hreflang_problems(self):
-        r = self.sitemap(lambda t: t.replace('<xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>', '<xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ghost/"/>', 1))
+        r = self.sitemap(lambda t: t.replace('<xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/ten-letters/"/>', '<xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ghost/"/>', 1))
         self.assertEqual(r.returncode, 1)
         self.assertIn("is not in the sitemap", r.stderr)
 
     def test_not_reciprocal(self):
         def cut(t):  # remove the ko entry from the ja page's alternates only
-            a = t.index("<loc>https://idle.ipe.rest/ja/journal/ten-letters")
+            a = t.index("<loc>https://idle.ipe.rest/journal/ja/ten-letters")
             b = t.index("</url>", a)
             seg = t[a:b]
             seg = "\n".join(l for l in seg.split("\n") if 'hreflang="ko"' not in l)
@@ -80,8 +77,8 @@ class CheckSitemap(unittest.TestCase):
         self.assertIn("not reciprocal", r.stderr)
 
     def test_draft_translation_not_required(self):
-        f = self.tmp / "content/journal/ja/ten-letters-one-skeleton-en.md"
-        f.write_text(JA.replace("category:", "draft: true\ncategory:"), encoding="utf-8")
+        f = self.tmp / "content/journal/ja/ten-letters.md"
+        f.write_text(POST % ("ja", "translation_of: en\ndraft: true\n"), encoding="utf-8")
         self.sh("build_journal.py")
         self.assertEqual(self.sh("check_sitemap.py").returncode, 0)
 

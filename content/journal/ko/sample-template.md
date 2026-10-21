@@ -11,8 +11,8 @@ draft: true
 # image: /assets/journal/sample-template/cover.jpg   # 대표 이미지. 없으면 본문 첫 /assets/journal/ 이미지, 그것도 없으면 og-image
 # image_alt: 대표 이미지 설명
 # keywords: dear(you);, idle(), 로파이        # 쉼표로 구분
-# translation: sample-template-en          # 다른 언어판 slug (hreflang 쌍 · 양쪽 글에 서로 적는다)
-# translation_of: sample-template-ko       # 이 글이 번역본일 때만, 원문 slug (translation 에도 같은 slug 를 함께 적는다. 원문 글에는 적지 않는다)
+# translation_of: en                        # 번역본일 때만: 원문 언어(ko|en). 10개 AI 번역은 필수. 언어판은 slug 가 같으면 자동으로 한 묶음(hreflang)
+# aliases: /journal/old-slug/                # 옛 주소(쉼표로 여러 개) — 새 주소로 가는 정적 리다이렉트가 생기고 사이트맵에서는 빠진다
 # album: dear(you); vol.1 @ https://idle.ipe.rest/#album        # 제목 @ 주소 (주소 생략 가능)
 # songs: Hard Day Again, Wasn't It? @ https://youtu.be/yGa2_hjw4ZI | It's Okay, Take Your Time.   # 항목은 | 로 구분, 곡마다 @ 스트리밍 주소
 # citations: 기사 제목 @ https://example.com/article | 다른 글 @ https://example.com/b   # 본문의 외부 링크(유튜브·SNS 제외)는 자동으로 citation 에 들어간다

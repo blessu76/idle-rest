@@ -1,12 +1,13 @@
 ---
 title: عشر رسائل بهيكل واحد — بنية كلمات dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: ar
 description: الهيكل المشترك لكلمات الأغاني العشر في dear(you); vol.1: ست خانات، والموضع الذي تظهر فيه خانة سابعة، والنسختان التوأم بالإنجليزية والكورية، والسطر الهامس الذي تُختتم به كل أغنية.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /ar/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), بنية الكلمات, موسيقى بالذكاء الاصطناعي, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

@@ -1,12 +1,13 @@
 ---
 title: Десять писем, один скелет — структура текстов dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: ru
 description: Общий скелет текстов десяти песен dear(you); vol.1: шесть позиций, место, где появляется седьмая, английские и корейские версии-близнецы и шёпотом произнесённая строка, которой заканчивается каждая песня.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /ru/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), структура текста, ИИ-музыка, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---

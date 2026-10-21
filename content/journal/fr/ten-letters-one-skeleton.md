@@ -1,12 +1,13 @@
 ---
 title: Dix lettres, un seul squelette — la structure des paroles de dear(you);
 date: 2026-10-21
-slug: ten-letters-one-skeleton-en
+slug: ten-letters-one-skeleton
 lang: fr
 description: Le squelette commun aux dix chansons de dear(you); vol.1 : six emplacements, l'endroit où un septième apparaît, les versions jumelles en anglais et en coréen, et la phrase chuchotée qui clôt chaque chanson.
 category: behind-the-music
 draft: false
-translation_of: ten-letters-one-skeleton-en
+translation_of: en
+aliases: /fr/journal/ten-letters-one-skeleton-en/
 keywords: dear(you);, idle(), ipe(), structure des paroles, musique IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
