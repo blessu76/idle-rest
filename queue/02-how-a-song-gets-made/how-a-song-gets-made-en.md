@@ -72,7 +72,7 @@ A few items are hard stops. Is "ipe. be still" at the very end? Is the language 
 
 After review, the music side uploads to YouTube and, for songs that need it, handles distribution to streaming services. The upload step includes checking the label that says the content was made with AI. Then the song's status becomes "released", the YouTube links are written on the song board, and the release card on this site and the summary documents are updated. A song can look finished and still have one job left: checking that its links agree in every place they appear.
 
-The release method is a hybrid from the start: singles go out one at a time to keep the channel moving, and once a series has enough songs they are gathered into an album. All ten songs of *dear(you); vol.1* are on YouTube in an English version and a Korean version. A long full-album video and album-level streaming distribution were still at the preparation stage in the records at the time of writing, so this post does not describe them as done.
+The release method is a hybrid from the start: singles go out one at a time to keep the channel moving, and once a series has enough songs they are gathered into an album. All ten songs of *dear(you); vol.1* are on YouTube in an English version and a Korean version. A long full-album video, for listening to the whole album in one sitting, is also on YouTube.
 
 ## Why we put "made with AI" up front
 
