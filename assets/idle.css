@@ -306,6 +306,8 @@ select.lang option { color: #1f2933; background: #fff; }
 .prose pre code { padding: 0; background: none; }
 .prose ul, .prose ol { padding-inline-start: 1.4em; }
 .prose img { border-radius: 6px; }
+.prose figure { margin: 1.6em 0; }
+.prose figcaption { margin-top: 8px; color: var(--muted-2); font-size: 14px; line-height: 1.5; }
 .prose hr { border: 0; border-top: 1px solid var(--line); }
 .doc { max-width: 760px; margin-inline: auto; padding-bottom: 8px; }
 .doc .prose { padding-top: 8px; }

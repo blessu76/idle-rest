@@ -6,6 +6,9 @@ lang: ko
 description: dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.
 category: behind-the-music
 draft: false
+translation: ten-letters-one-skeleton-en
+keywords: dear(you);, idle(), ipe(), 가사 구조, AI 음악, Suno, 로파이
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
 [Read this in English →](/journal/ten-letters-one-skeleton-en/)

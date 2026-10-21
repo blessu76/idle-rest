@@ -6,6 +6,10 @@ lang: en
 description: The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song.
 category: behind-the-music
 draft: false
+translation: ten-letters-one-skeleton-ko
+translation_of: ten-letters-one-skeleton-ko
+keywords: dear(you);, idle(), ipe(), lyric structure, AI music, Suno, lo-fi
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
 [한국어로 읽기 →](/journal/ten-letters-one-skeleton-ko/)
