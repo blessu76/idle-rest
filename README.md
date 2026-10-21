@@ -72,6 +72,7 @@
    ```
    `journal/<slug>/index.html`, `journal/index.html`, `journal/feed.xml`, `sitemap.xml`(journal 구간), `index.html`(홈 저널 카드 최근 3개)이 다시 만들어진다. 여러 번 돌려도 결과가 같다.
 3. `git add content/journal journal sitemap.xml index.html && git commit -m "journal: <제목>"` → main push 시 자동 배포.
+4. 게시(배포) 뒤 새 URL 알림: `python3 scripts/indexnow.py` (IndexNow → Bing·Naver·Yandex 등; 인자로 URL 을 주면 그것만, `--dry-run` 이면 보낼 내용만 출력. 키 파일 `6019dffdad7120477c856b129df2a84d.txt` 가 사이트에 올라간 뒤에 쓴다.)
 
 - 미리보기(초안 포함): 사이트를 **복사한 폴더**에서 `python3 scripts/build_journal.py --root <복사본> --drafts` — 이 결과는 커밋하지 않는다.
 - 글이 0개면 목록은 「곧 첫 글이 올라옵니다」 + `noindex`, 사이트맵에서도 빠진다. 첫 글이 생기면 자동으로 색인 허용.
