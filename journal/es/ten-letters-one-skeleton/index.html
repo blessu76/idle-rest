@@ -155,7 +155,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261025">
+<link rel="stylesheet" href="/assets/idle.css?v=20261026">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -179,6 +179,23 @@
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg>
           <span class="switch-track" aria-hidden="true"></span>
         </button>
+        <label class="locale">
+          <span class="visually-hidden" id="langlabel">Leer en otros idiomas</span>
+          <select class="lang" id="lang" aria-labelledby="langlabel" data-nav>
+            <option value="/journal/en/ten-letters-one-skeleton/">EN</option>
+            <option value="/journal/ko/ten-letters-one-skeleton/">KO</option>
+            <option value="/journal/ja/ten-letters-one-skeleton/">JA</option>
+            <option value="/journal/zh/ten-letters-one-skeleton/">ZH</option>
+            <option value="/journal/es/ten-letters-one-skeleton/" selected>ES</option>
+            <option value="/journal/fr/ten-letters-one-skeleton/">FR</option>
+            <option value="/journal/de/ten-letters-one-skeleton/">DE</option>
+            <option value="/journal/pt/ten-letters-one-skeleton/">PT</option>
+            <option value="/journal/ru/ten-letters-one-skeleton/">RU</option>
+            <option value="/journal/ar/ten-letters-one-skeleton/">AR</option>
+            <option value="/journal/hi/ten-letters-one-skeleton/">HI</option>
+            <option value="/journal/id/ten-letters-one-skeleton/">ID</option>
+          </select>
+        </label>
         <button class="menu-btn" type="button" id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Menú">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -259,6 +276,6 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261025"></script>
+<script src="/assets/idle.js?v=20261026"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261025"  # keep equal to the ?v= in index.html
+ASSET_V = "20261026"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -425,13 +425,24 @@ def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/jou
 """
 
 
-def header(lang, current="journal", alt=None):
-    """alt = (href, hreflang) of the same page in the other language -> small language link."""
+def lang_select(lang, targets):
+    """the home page's language <select> (same markup/CSS), option value = site path of the same page in that language.
+    targets = {lang: path}; only languages that really have this page. idle.js navigates on change ([data-nav])."""
+    opts = "\n".join('            <option value="%s"%s>%s</option>' % (esc(targets[l]), " selected" if l == lang else "", l.upper())
+                     for l in LANGS if l in targets)
+    return f"""<label class="locale">
+          <span class="visually-hidden" id="langlabel">{esc(ui(lang)['other_langs'])}</span>
+          <select class="lang" id="lang" aria-labelledby="langlabel" data-nav>
+{opts}
+          </select>
+        </label>
+        """
+
+
+def header(lang, current="journal", targets=None):
     t = ui(lang)
     cur = lambda k: ' aria-current="page"' if current == k else ""
-    alt_html = ""
-    if alt:
-        alt_html = '<a class="lang-link" href="%s" hreflang="%s" lang="%s" aria-label="%s">%s</a>\n        ' % (esc(alt[0]), esc(alt[1]), esc(alt[1]), esc(t["alt_name"]), esc(t["alt_label"]))
+    alt_html = lang_select(lang, targets) if targets else ""
     return f"""<a class="skip-link" href="#main">{esc(t['skip'])}</a>
 <div class="band-plain">
   <header class="site-header">
@@ -447,12 +458,12 @@ def header(lang, current="journal", alt=None):
         <a href="/#story">{esc(t['story'])}</a>
       </nav>
       <div class="tools">
-        {alt_html}<button class="theme-switch" type="button" id="themeBtn" aria-pressed="false" aria-label="{esc(t['to_dark'])}" data-label-dark="{esc(t['to_dark'])}" data-label-light="{esc(t['to_light'])}">
+        <button class="theme-switch" type="button" id="themeBtn" aria-pressed="false" aria-label="{esc(t['to_dark'])}" data-label-dark="{esc(t['to_dark'])}" data-label-light="{esc(t['to_light'])}">
           <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg>
           <span class="switch-track" aria-hidden="true"></span>
         </button>
-        <button class="menu-btn" type="button" id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="{esc(t['menu'])}">
+        {alt_html}<button class="menu-btn" type="button" id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="{esc(t['menu'])}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
@@ -734,7 +745,7 @@ def render_post(p, grp=None):
     return (head("%s — idle() %s" % (p["title"], t["journal"]), p["description"], url, p["lang"], p["draft"], extra,
                  image=abs_url(hero) if hero else None, alternates=alternates(p, grp),
                  locales=[m["lang"] for m in members])
-            + header(p["lang"]) + f"""<main id="main" class="shell">
+            + header(p["lang"], targets={l: urllib.parse.urlsplit(u).path for l, u in pair.items()}) + f"""<main id="main" class="shell">
   <article class="article">
     <header class="article-head">
       <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time><span>·</span><span>{esc(p['category'])}</span>{draft}</p>
@@ -795,7 +806,7 @@ def render_list(posts, lang=None, list_langs=("en",)):
     ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang and lang not in MAIN_LANGS else "")
     return (head("%s — idle() · the music of ipe()" % t["journal"], desc, url, loc, not posts,
                  ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url, SITE + "/journal/" if not lang else None)), alternates=alts, locales=list(pages))
-            + header(loc) + f"""<main id="main" class="shell">
+            + header(loc, targets={l: lang_path(l) for l in pages}) + f"""<main id="main" class="shell">
   <div class="page-head">
     <h1>{esc(t['journal'])}</h1>
     <p>{sub}</p>

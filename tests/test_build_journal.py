@@ -339,6 +339,21 @@ class I18n(Site):
         h = self.read("ja/journal/index.html")
         self.assertIn('rel="canonical" href="https://idle.ipe.rest/journal/ja/"', h)
 
+    def test_language_select_points_only_at_existing_pages(self):
+        self.pair()
+        self.ai("ja")
+        self.build()
+        opts = lambda rel: re.findall(r'<option value="([^"]+)"( selected)?>', self.read(rel).split("</select>")[0])
+        post = opts("journal/ja/a/index.html")
+        self.assertEqual({v for v, _ in post}, {"/journal/ko/a/", "/journal/en/a/", "/journal/ja/a/"})
+        self.assertEqual([v for v, sel in post if sel], ["/journal/ja/a/"])
+        for v, _ in post:
+            self.assertTrue((self.tmp / v.strip("/") / "index.html").exists(), v)
+        lst = opts("journal/ko/index.html")
+        self.assertEqual({v for v, _ in lst}, {"/journal/ko/", "/journal/en/", "/journal/ja/"})
+        self.assertEqual([v for v, sel in lst if sel], ["/journal/ko/"])
+        self.assertEqual({v for v, _ in opts("journal/index.html")}, {"/journal/ko/", "/journal/en/", "/journal/ja/"})
+
     def test_ai_translation_needs_translation_of(self):
         self.pair()
         self.post("a", "ja")

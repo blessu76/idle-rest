@@ -115,7 +115,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261025">
+<link rel="stylesheet" href="/assets/idle.css?v=20261026">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -139,6 +139,23 @@
           <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5 8.5 8.5 0 1 0 20.5 14.3Z"/></svg>
           <span class="switch-track" aria-hidden="true"></span>
         </button>
+        <label class="locale">
+          <span class="visually-hidden" id="langlabel">In anderen Sprachen lesen</span>
+          <select class="lang" id="lang" aria-labelledby="langlabel" data-nav>
+            <option value="/journal/en/">EN</option>
+            <option value="/journal/ko/">KO</option>
+            <option value="/journal/ja/">JA</option>
+            <option value="/journal/zh/">ZH</option>
+            <option value="/journal/es/">ES</option>
+            <option value="/journal/fr/">FR</option>
+            <option value="/journal/de/" selected>DE</option>
+            <option value="/journal/pt/">PT</option>
+            <option value="/journal/ru/">RU</option>
+            <option value="/journal/ar/">AR</option>
+            <option value="/journal/hi/">HI</option>
+            <option value="/journal/id/">ID</option>
+          </select>
+        </label>
         <button class="menu-btn" type="button" id="menuBtn" aria-controls="primaryNav" aria-expanded="false" aria-label="Menü">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
@@ -203,6 +220,6 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261025"></script>
+<script src="/assets/idle.js?v=20261026"></script>
 </body>
 </html>
