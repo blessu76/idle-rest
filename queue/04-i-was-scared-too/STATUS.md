@@ -9,3 +9,23 @@
 - 지어내지 않은 것: 가사를 고친 과정(일지 없음). Final Chorus 가 3번부터 생긴 이유는 "기록에 없다"고 명시.
 - 유튜브: S1A1.03 EN rXwAwZ2cu2g / KR tAzst5cWLKI (llms.txt 값, oEmbed 로 제목 일치 확인).
 - 렌더(file://, 320/375/768/1280): 가로 넘침 0, 이미지 깨짐 0.
+
+---
+
+## 카피 검수 (Iris · 2026-10-22 01:12 KST)
+
+- 대조: 가사 원고 S1A1.03(Theme·Mood·Story·Version A/B 전문·Suno Style·속삭임) · 앨범 기획서(§2 정서 중심, §3 아크, §4 사운드, §6 브릿지 리프레인) · S1A1.01·02·04·07 원고(Pre-Chorus 8줄·Final Chorus 유무·4/7번 Bridge 문장) · llms.txt(곡명·유튜브 링크). 인용 가사·섹션별 줄 수(14/15/7/13/13/11/9=82, KO도 82)·BPM 72·악기·속삭임 6개·제목(KO/EN)·유튜브 2개 모두 일치(스크립트 재집계).
+- Stack Overflow 링크: https://survey.stackoverflow.co/2025/ai — 열어서 제목(「AI | 2025 Stack Overflow Developer Survey」)·사용 현황·신뢰/호감 항목 존재 확인. 본문에 수치 인용 0건, 링크는 출처로만 둠(그대로 통과).
+- 금지어 grep 0건(Matt·Paul·Jin·Davy·이메일·내부 경로·결정 번호·시편·S1A2~4 코드·사람이 고친 과정). 상투구 0건. AI 공개 문장 KO·EN 모두 있음(서두 + 맺음). 분량 KO 4,100자(공백 제외) · EN 1,760단어. 이미지 alt 3개 KO·EN 모두 있음.
+- 고친 것:
+  ① 「AI라는 단어를 처음으로 정면에서 부른다」(Bridge) — 1절 첫 줄에 이미 「새로운 AI」가 나와 사실과 다름 → 「두려움의 이름이던 AI를 정면으로 마주한다」(KO·EN).
+  ② 「후렴은 곡의 제목을 말하면서 시작」 — 실제 후렴은 속삭임(걱정 마… / Don't worry...)이 먼저 → 「속삭임 한마디 뒤에 제목을 말하며 시작」(KO·EN).
+  ③ 「이 모순을 오히려 이 곡의 출발점으로 삼았다」 — 기록에 없는 제작 의도 → 「이 아이러니를 숨기지 않습니다」(KO·EN).
+  ④ 설계 문서를 그대로 옮긴 문장 두 곳에 「」 인용 표시(KO).
+  ⑤ frontmatter 를 첫 글 형식에 맞춤(translation·translation_of·keywords·album 추가, date: TBD 유지).
+- ⚠️ **dear-you 커버 사용 — 라이선스 확인 전이면 게시 때 뺀다.** `images/cover-dear-you-titled.jpg`(레포 assets/covers/dear-you-titled.jpg 와 동일, 스톡 사진 기반·라이선스 미확인). 지우지 않고 둠. 뺄 때는 두 md 의 맨 위 이미지 + 캡션(KO「*dear(you); vol.1의 커버…*」·EN「*The cover of dear(you); vol.1…*」) 4줄을 같이 삭제하면 된다(다른 본문은 커버를 참조하지 않음).
+- 남은 것 / 제안:
+  - 「곡 설계 문서」「앨범 기획서」 표현은 일반 명사로 쓰였고 내부 경로·파일명 노출은 없음. 게시 전 거슬리면 「가사 원고」로 통일.
+  - 앨범 사운드 아크(3·4번 잔잔한 스트링)는 기획서 기준 — 음원 청취로 [미검증].
+
+카피 검수 통과 — Iris · 2026-10-22 01:12 KST

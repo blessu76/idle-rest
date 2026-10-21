@@ -6,6 +6,10 @@ lang: en
 description: A song that does not try to remove a developer's fear of the AI era but admits it first. The design intent of dear(you); track 03, the turn in its lyric, and the place where a seventh slot first appears, read against the lyric draft.
 category: behind-the-music
 draft: false
+translation: i-was-scared-too-ko
+translation_of: i-was-scared-too-ko
+keywords: I Was Scared Too, 나도 무서웠어, dear(you);, idle(), ipe(), developer anxiety, AI era, lyric analysis, AI music, Suno, lo-fi
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
 [한국어로 읽기 →](/journal/i-was-scared-too-ko/)
@@ -62,13 +66,13 @@ It rereads anxiety as a sign of care instead of a weakness. A person who is afra
 
 ## The chorus: I was scared too, so take it slowly
 
-The chorus opens by saying the title. In the English version it is "I was scared too." It is a confession from the one who comforts, who says they walked through the same fear. The voice that holds the chorus belongs not to someone who knows the answer but to someone who has walked the same road. The lines that follow: so it's okay to come slowly. For the one who walks to the very end lasts longer than the one who runs the fastest. You, still learning today, are doing more than enough. And the chorus closes on a single line: I believe in who you are today.
+The chorus opens with a whisper and then says the title. In the English version it is "I was scared too." It is a confession from the one who comforts, who says they walked through the same fear. The voice that holds the chorus belongs not to someone who knows the answer but to someone who has walked the same road. The lines that follow: so it's okay to come slowly. For the one who walks to the very end lasts longer than the one who runs the fastest. You, still learning today, are doing more than enough. And the chorus closes on a single line: I believe in who you are today.
 
 The word to notice is "lasts longer". The chorus has turned from a story about speed into one about staying power. If the cause of the fear is speed, then comfort has to offer a standard other than speed, and the chorus offers walking to the end.
 
 ## The Bridge: what only a person can do
 
-In the Bridge the song says the word AI head-on for the first time. AI can make answers fast, it says, but the heart that understands someone still begins with a person. Two examples follow: smiling at a colleague who failed and telling them it's okay, and leaving one more review late at night. Both come from a developer's everyday life. They point not to the skill of writing code but to the skill of caring for the person next to you.
+In the Bridge the song faces AI, the name of the fear, head-on. AI can make answers fast, it says, but the heart that understands someone still begins with a person. Two examples follow: smiling at a colleague who failed and telling them it's okay, and leaving one more review late at night. Both come from a developer's everyday life. They point not to the skill of writing code but to the skill of caring for the person next to you.
 
 This Bridge is also where a theme that repeats across the album starts. The Bridges of tracks 04 and 07 return to one sentence saying that AI can make good answers, but the one who makes a good day was always a person. Track 03 hands over the first sketch of that thought before the sentence itself appears.
 
@@ -98,4 +102,4 @@ You can hear the song on YouTube.
 
 Stack Overflow publishes a large yearly survey on how developers use AI tools and how they feel about them. As material that touches this song's subject we point to [the AI section of the 2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/ai). This post quotes none of its figures; the link is here as a source only.
 
-Once more, plainly: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We don't hide the irony of using an AI-made song to talk about the fear of the AI era; we made it the starting point of the song. You can also listen on the [idle() home page](/).
+Once more, plainly: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We don't hide the irony of talking about the fear of the AI era in a song made with AI. You can also listen on the [idle() home page](/).

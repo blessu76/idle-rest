@@ -6,6 +6,10 @@ lang: en
 description: idle() songs are grouped into six series, from late_night.lofi to night_mode // not_alone. How to read the names, how song codes work, and how singles become an album.
 category: behind-the-music
 draft: false
+translation: six-series-of-idle-ko
+translation_of: six-series-of-idle-ko
+keywords: idle(), ipe(), music series, song codes, late_night.lofi, dear(you);, AI music, Suno, lo-fi
+album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
 [한국어로 읽기 →](/journal/six-series-of-idle-ko/)
@@ -35,15 +39,15 @@ Songs have come out of two of them so far. `late_night.lofi` released the single
 
 The six names share one trait: they all resemble the syntax of a programming language. Here is one way to read each of them, so that you don't need to be a developer to follow along. This is a way of reading, not proof of what the names were meant to say.
 
-`late_night.lofi` looks like a file name. After the dot comes an extension, and the extension is the genre. You can read it as opening a file called late night and finding lo-fi inside. The site's summary describes its first single, "still compiling", as lo-fi for the night you couldn't leave before the build finished.
+`late_night.lofi` looks like a file name. After the dot comes an extension, and the extension is the genre. You can read it as opening a file called late night and finding lo-fi inside. The site's summary describes the single "still compiling" as lo-fi for the night you couldn't leave before the build finished.
 
 `be still;` is a single line that ends with a semicolon. In many languages a semicolon marks the end of a statement. The instruction to be still ends right there, with nothing to add. The theme is stillness.
 
 `rest() { chill(); }` is a function. Inside the body of a function called rest, another function called chill is called. It reads as saying that resting is not doing nothing but a job of its own, and that the job is being at ease. That sits close to its theme: you've done enough today.
 
-`grace_in_the_loop` calls up a loop. In code, a loop repeats the same work, and a developer's day is easily filled with repetition. The theme is that grace is found inside that repetition. The ambient genre suits it: ambient music speaks through space and texture more than melody, and similar sounds tend to continue for a long time.
+`grace_in_the_loop` brings a loop to mind. In code, a loop repeats the same work, and a developer's day is easily filled with repetition. The theme is that grace is found inside that repetition. The ambient genre suits it: ambient music speaks through space and texture more than melody, and similar sounds tend to continue for a long time.
 
-`undefined → known` is instantly readable to anyone who has used JavaScript. Undefined is the state of a value that has not been set, and the arrow marks the moment it turns into something known. The theme is the moment the unknown becomes known. The site describes the series' first single, "good morning, world", as bright and hopeful lo-fi, and the title echoes the "Hello, world" that many people print on screen when they first learn to program.
+`undefined → known` is instantly readable to anyone who has used JavaScript. Undefined is the state of a value that has not been set, and the arrow marks the moment it turns into something known. The theme is the moment the unknown becomes known. The site describes the series' single "good morning, world" as bright and hopeful lo-fi, and the title echoes the "Hello, world" that many people print on screen when they first learn to program.
 
 `night_mode // not_alone` has two parts. The first is the name of a setting that darkens a screen. The second, `//`, starts a comment in many languages: a quiet note written beside the code. You can picture a screen switched to night mode, with a note next to it saying you are not alone.
 
@@ -61,13 +65,13 @@ A single that has not yet been gathered into an album takes the first letter of 
 
 ## How singles become an album
 
-![A diagram of several singles being gathered into an album named dear(you); vol.1. The album's name is made from the series name and a vol number](/assets/journal/six-series-of-idle/singles-to-album.jpg)
+![A diagram of five singles joined by an arrow into the album dear(you); vol.1, the first album of Season 1, whose ten tracks run from S1A1.01 to S1A1.10](/assets/journal/six-series-of-idle/singles-to-album.jpg)
 
-*The direction we set: release singles one at a time, and once a series has enough songs, gather them into an album.*
+*The direction we set: release singles one at a time, and once there are enough songs, gather them into an album.*
 
-The release direction we have set is to put out singles one by one and, once a series has built up enough songs, gather them into an album. An album is named from its series name plus a number. *dear(you); vol.1* is the first album named that way. All ten of its songs are out in an English version and a Korean version, and their codes run from S1A1.01 to S1A1.10.
+The release direction we have set is to put out singles one by one and, once there are enough songs, gather them into an album. *dear(you); vol.1* is the first album gathered that way. All ten of its songs are out in an English version and a Korean version, and their codes run from S1A1.01 to S1A1.10.
 
-Once a song is on an album it has an address, and that address is tied to the time of day as well. Season 1 divides a developer's day into four albums: night, dawn, morning and evening. The first album, *dear(you); vol.1*, takes the night before sleep. So even under one series name, a new album number moves you to another hour of the day.
+Once a song is on an album it has an address, and that address is tied to the time of day as well. Season 1 divides a developer's day into four albums: night, dawn, morning and evening. The first album, *dear(you); vol.1*, takes the night before sleep. So when the album number changes, you move to another hour of the day.
 
 ## What these names are for
 
