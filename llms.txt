@@ -72,6 +72,46 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 - [열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다](https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/) — dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지. (ko, 2026-10-21)
 - [Ten Letters, One Skeleton — The Lyric Structure of dear(you);](https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/) — The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song. (en, 2026-10-21)
+
+### Journal — 日本語 (ja) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/ja/journal/
+
+- [10通の手紙、ひとつの骨格 — dear(you); の歌詞構造](https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/) — dear(you); vol.1 の10曲に共通する歌詞の骨格 — 6つの枠、7つ目が現れる場所、英語版と韓国語版の双子、そしてすべての曲を締めくくるささやきの一行。 (ja, 2026-10-21, AI translation)
+
+### Journal — 简体中文 (zh) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/zh/journal/
+
+- [十封信，一副骨架 — dear(you); 的歌词结构](https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/) — dear(you); vol.1 十首歌共用的歌词骨架 — 六个位置、第七个位置出现的地方、英语版与韩语版的双生设计，以及结束每一首歌的那句低语。 (zh, 2026-10-21, AI translation)
+
+### Journal — Español (es) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/es/journal/
+
+- [Diez cartas, un solo esqueleto: la estructura lírica de dear(you);](https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/) — El esqueleto lírico que comparten las diez canciones de dear(you); vol.1: seis espacios, el punto donde aparece un séptimo, las versiones gemelas en inglés y coreano, y la línea susurrada que cierra cada canción. (es, 2026-10-21, AI translation)
+
+### Journal — Français (fr) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/fr/journal/
+
+- [Dix lettres, un seul squelette — la structure des paroles de dear(you);](https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/) — Le squelette commun aux dix chansons de dear(you); vol.1 : six emplacements, l'endroit où un septième apparaît, les versions jumelles en anglais et en coréen, et la phrase chuchotée qui clôt chaque chanson. (fr, 2026-10-21, AI translation)
+
+### Journal — Deutsch (de) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/de/journal/
+
+- [Zehn Briefe, ein Skelett — die Textstruktur von dear(you);](https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/) — Das gemeinsame Text-Skelett der zehn Songs auf dear(you); vol.1: sechs Plätze, die Stelle, an der ein siebter hinzukommt, die englischen und koreanischen Zwillingsfassungen und die geflüsterte Zeile, die jeden Song beschließt. (de, 2026-10-21, AI translation)
+
+### Journal — Português (pt) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/pt/journal/
+
+- [Dez cartas, um só esqueleto — a estrutura das letras de dear(you);](https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/) — O esqueleto de letra compartilhado pelas dez músicas de dear(you); vol.1: seis espaços, o ponto em que surge um sétimo, as versões gêmeas em inglês e coreano e a linha sussurrada que encerra cada música. (pt, 2026-10-21, AI translation)
+
+### Journal — Русский (ru) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/ru/journal/
+
+- [Десять писем, один скелет — структура текстов dear(you);](https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/) — Общий скелет текстов десяти песен dear(you); vol.1: шесть позиций, место, где появляется седьмая, английские и корейские версии-близнецы и шёпотом произнесённая строка, которой заканчивается каждая песня. (ru, 2026-10-21, AI translation)
+
+### Journal — العربية (ar) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/ar/journal/
+
+- [عشر رسائل بهيكل واحد — بنية كلمات dear(you);](https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/) — الهيكل المشترك لكلمات الأغاني العشر في dear(you); vol.1: ست خانات، والموضع الذي تظهر فيه خانة سابعة، والنسختان التوأم بالإنجليزية والكورية، والسطر الهامس الذي تُختتم به كل أغنية. (ar, 2026-10-21, AI translation)
+
+### Journal — हिन्दी (hi) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/hi/journal/
+
+- [दस चिट्ठियाँ, एक ढाँचा — dear(you); के बोलों की बनावट](https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/) — dear(you); vol.1 के दस गीतों का साझा ढाँचा — छह खाने, वह जगह जहाँ सातवाँ आता है, अंग्रेज़ी और कोरियाई जुड़वाँ संस्करण, और हर गीत को समाप्त करने वाली फुसफुसाई पंक्ति। (hi, 2026-10-21, AI translation)
+
+### Journal — Bahasa Indonesia (id) · AI translations of the ko/en originals · Index: https://idle.ipe.rest/id/journal/
+
+- [Sepuluh Surat, Satu Kerangka — Struktur Lirik dear(you);](https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/) — Kerangka lirik yang dipakai bersama oleh sepuluh lagu di dear(you); vol.1: enam slot, tempat slot ketujuh muncul, versi kembar bahasa Inggris dan Korea, serta baris bisikan yang menutup setiap lagu. (id, 2026-10-21, AI translation)
 <!-- journal:llms:end -->
 
 ## Usage

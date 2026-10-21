@@ -81,13 +81,205 @@
     <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ja/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/zh/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/es/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/fr/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/de/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/pt/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ru/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ar/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/hi/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/id/journal/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
     <image:image>
       <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
@@ -97,8 +289,228 @@
     <loc>https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/</loc>
     <lastmod>2026-10-21</lastmod>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/ar/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/de/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/es/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/fr/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/hi/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/id/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/ja/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-ko/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/pt/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/ru/journal/ten-letters-one-skeleton-en/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/zh/journal/ten-letters-one-skeleton-en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/ten-letters-one-skeleton-en/"/>
     <image:image>
       <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
