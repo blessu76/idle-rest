@@ -8,6 +8,22 @@
     <language>en</language>
     <lastBuildDate>Thu, 22 Oct 2026 09:00:00 +0900</lastBuildDate>
     <item>
+      <title>한 곡이 나오기까지 — 가사에서 발매까지 다섯 번의 인계</title>
+      <link>https://idle.ipe.rest/journal/ko/how-a-song-gets-made/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/how-a-song-gets-made/</guid>
+      <pubDate>Thu, 22 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>idle()의 곡 한 편이 가사, 음악, 비주얼, 검수, 발매를 거쳐 나오는 과정. 누가 무엇을 넘기고 어디서 멈춰 확인하는지, AI로 만든다는 사실을 어떻게 밝히는지 정리했습니다.</description>
+    </item>
+    <item>
+      <title>How a Song Gets Made — Five Hand-Offs From Lyric to Release</title>
+      <link>https://idle.ipe.rest/journal/en/how-a-song-gets-made/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/how-a-song-gets-made/</guid>
+      <pubDate>Thu, 22 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>How one idle() song travels from lyric to music, visuals, review and release: who hands what to whom, where we stop to check, and how we say plainly that the music is made with AI.</description>
+    </item>
+    <item>
       <title>해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다</title>
       <link>https://idle.ipe.rest/journal/ko/check-in-before-you-fix/</link>
       <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/check-in-before-you-fix/</guid>
