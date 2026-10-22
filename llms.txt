@@ -88,50 +88,62 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Check In Before You Fix — How We Designed "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/en/check-in-before-you-fix/) — A song that offers no advice and no solution, only a first question. The design intent behind dear(you); track 01, its 59-line structure, its whispers and its sound, read against the lyric draft. (en, 2026-10-22)
 - [Ten Letters, One Skeleton — The Lyric Structure of dear(you);](https://idle.ipe.rest/journal/en/ten-letters-one-skeleton/) — The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song. (en, 2026-10-21)
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다](https://idle.ipe.rest/journal/ko/check-in-before-you-fix/) — 조언도 해결책도 없이 먼저 안부를 묻는 곡. dear(you); 첫 트랙의 설계 의도와 가사 장면, 59줄의 짜임, 속삭임과 소리의 결을 가사 원고를 기준으로 풀어 봅니다. (ko, 2026-10-22)
 - [열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다](https://idle.ipe.rest/journal/ko/ten-letters-one-skeleton/) — dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지. (ko, 2026-10-21)
 
 ### Journal — 日本語 (ja) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ja/
 
+- [解決策より先に、まず安否を — "Hard Day Again, Wasn't It?" をどう設計したか](https://idle.ipe.rest/journal/ja/check-in-before-you-fix/) — アドバイスも解決策もなく、ただ最初の問いだけを差し出す歌。dear(you); 1曲目の設計意図、59行の構造、ささやき、サウンドを、歌詞の下書きをもとに読み解きます。 (ja, 2026-10-22, AI translation)
 - [10通の手紙、ひとつの骨格 — dear(you); の歌詞構造](https://idle.ipe.rest/journal/ja/ten-letters-one-skeleton/) — dear(you); vol.1 の10曲に共通する歌詞の骨格 — 6つの枠、7つ目が現れる場所、英語版と韓国語版の双子、そしてすべての曲を締めくくるささやきの一行。 (ja, 2026-10-21, AI translation)
 
 ### Journal — 简体中文 (zh) · AI translations of the originals · Index: https://idle.ipe.rest/journal/zh/
 
+- [先问一声安好，再谈解决办法 — 我们如何设计《Hard Day Again, Wasn't It?》](https://idle.ipe.rest/journal/zh/check-in-before-you-fix/) — 一首不给建议、不给解决办法，只先问一句话的歌。对照歌词草稿，解读 dear(you); 第 1 首的设计意图、59 行的结构、低语与声音。 (zh, 2026-10-22, AI translation)
 - [十封信，一副骨架 — dear(you); 的歌词结构](https://idle.ipe.rest/journal/zh/ten-letters-one-skeleton/) — dear(you); vol.1 十首歌共用的歌词骨架 — 六个位置、第七个位置出现的地方、英语版与韩语版的双生设计，以及结束每一首歌的那句低语。 (zh, 2026-10-21, AI translation)
 
 ### Journal — Español (es) · AI translations of the originals · Index: https://idle.ipe.rest/journal/es/
 
+- [Pregunta cómo estás antes de arreglar nada — Cómo diseñamos "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/es/check-in-before-you-fix/) — Una canción que no ofrece consejos ni soluciones, solo una primera pregunta. La intención de diseño de la pista 01 de dear(you);, su estructura de 59 líneas, sus susurros y su sonido, leídos a partir del borrador de la letra. (es, 2026-10-22, AI translation)
 - [Diez cartas, un solo esqueleto: la estructura lírica de dear(you);](https://idle.ipe.rest/journal/es/ten-letters-one-skeleton/) — El esqueleto lírico que comparten las diez canciones de dear(you); vol.1: seis espacios, el punto donde aparece un séptimo, las versiones gemelas en inglés y coreano, y la línea susurrada que cierra cada canción. (es, 2026-10-21, AI translation)
 
 ### Journal — Français (fr) · AI translations of the originals · Index: https://idle.ipe.rest/journal/fr/
 
+- [Prendre des nouvelles avant de réparer — Comment nous avons conçu "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/fr/check-in-before-you-fix/) — Une chanson qui n'offre ni conseil ni solution, seulement une première question. L'intention de conception derrière la piste 01 de dear(you);, sa structure de 59 lignes, ses chuchotements et son son, lus à partir du brouillon des paroles. (fr, 2026-10-22, AI translation)
 - [Dix lettres, un seul squelette — la structure des paroles de dear(you);](https://idle.ipe.rest/journal/fr/ten-letters-one-skeleton/) — Le squelette commun aux dix chansons de dear(you); vol.1 : six emplacements, l'endroit où un septième apparaît, les versions jumelles en anglais et en coréen, et la phrase chuchotée qui clôt chaque chanson. (fr, 2026-10-21, AI translation)
 
 ### Journal — Deutsch (de) · AI translations of the originals · Index: https://idle.ipe.rest/journal/de/
 
+- [Erst nachfragen, dann reparieren — Wie wir "Hard Day Again, Wasn't It?" entworfen haben](https://idle.ipe.rest/journal/de/check-in-before-you-fix/) — Ein Lied, das keinen Rat und keine Lösung anbietet, nur eine erste Frage. Die Entwurfsidee hinter Track 01 von dear(you);, seine Struktur aus 59 Zeilen, seine Flüstersätze und sein Klang, gelesen anhand des Textentwurfs. (de, 2026-10-22, AI translation)
 - [Zehn Briefe, ein Skelett — die Textstruktur von dear(you);](https://idle.ipe.rest/journal/de/ten-letters-one-skeleton/) — Das gemeinsame Text-Skelett der zehn Songs auf dear(you); vol.1: sechs Plätze, die Stelle, an der ein siebter hinzukommt, die englischen und koreanischen Zwillingsfassungen und die geflüsterte Zeile, die jeden Song beschließt. (de, 2026-10-21, AI translation)
 
 ### Journal — Português (pt) · AI translations of the originals · Index: https://idle.ipe.rest/journal/pt/
 
+- [Pergunte como você está antes de consertar — Como projetamos "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/pt/check-in-before-you-fix/) — Uma música que não oferece conselho nem solução, apenas uma primeira pergunta. A intenção de design por trás da faixa 01 de dear(you);, sua estrutura de 59 linhas, seus sussurros e seu som, lidos a partir do rascunho da letra. (pt, 2026-10-22, AI translation)
 - [Dez cartas, um só esqueleto — a estrutura das letras de dear(you);](https://idle.ipe.rest/journal/pt/ten-letters-one-skeleton/) — O esqueleto de letra compartilhado pelas dez músicas de dear(you); vol.1: seis espaços, o ponto em que surge um sétimo, as versões gêmeas em inglês e coreano e a linha sussurrada que encerra cada música. (pt, 2026-10-21, AI translation)
 
 ### Journal — Русский (ru) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ru/
 
+- [Сначала спросить, как ты, а потом чинить — Как мы создавали "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/ru/check-in-before-you-fix/) — Песня, которая не даёт ни советов, ни решений, а только задаёт первый вопрос. Замысел трека 01 из dear(you);, его структура из 59 строк, шёпоты и звук — по черновику текста. (ru, 2026-10-22, AI translation)
 - [Десять писем, один скелет — структура текстов dear(you);](https://idle.ipe.rest/journal/ru/ten-letters-one-skeleton/) — Общий скелет текстов десяти песен dear(you); vol.1: шесть позиций, место, где появляется седьмая, английские и корейские версии-близнецы и шёпотом произнесённая строка, которой заканчивается каждая песня. (ru, 2026-10-21, AI translation)
 
 ### Journal — العربية (ar) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ar/
 
+- [اسأل عن حاله قبل أن تصلح شيئًا — كيف صمّمنا "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/ar/check-in-before-you-fix/) — أغنية لا تقدّم نصيحة ولا حلًا، بل سؤالًا أول فقط. فكرة التصميم وراء المقطوعة 01 من dear(you);، وبنيتها المؤلفة من 59 سطرًا، وهمساتها وصوتها، مقروءةً على مسودة الكلمات. (ar, 2026-10-22, AI translation)
 - [عشر رسائل بهيكل واحد — بنية كلمات dear(you);](https://idle.ipe.rest/journal/ar/ten-letters-one-skeleton/) — الهيكل المشترك لكلمات الأغاني العشر في dear(you); vol.1: ست خانات، والموضع الذي تظهر فيه خانة سابعة، والنسختان التوأم بالإنجليزية والكورية، والسطر الهامس الذي تُختتم به كل أغنية. (ar, 2026-10-21, AI translation)
 
 ### Journal — हिन्दी (hi) · AI translations of the originals · Index: https://idle.ipe.rest/journal/hi/
 
+- [हल से पहले हाल पूछिए — हमने "Hard Day Again, Wasn't It?" को कैसे रचा](https://idle.ipe.rest/journal/hi/check-in-before-you-fix/) — एक ऐसा गीत जो न सलाह देता है, न कोई हल, बस एक पहला सवाल पूछता है। dear(you); के ट्रैक 01 के पीछे की डिज़ाइन-मंशा, उसकी 59 पंक्तियों की बनावट, उसकी फुसफुसाहटें और उसकी ध्वनि, बोलों के मसौदे के आधार पर। (hi, 2026-10-22, AI translation)
 - [दस चिट्ठियाँ, एक ढाँचा — dear(you); के बोलों की बनावट](https://idle.ipe.rest/journal/hi/ten-letters-one-skeleton/) — dear(you); vol.1 के दस गीतों का साझा ढाँचा — छह खाने, वह जगह जहाँ सातवाँ आता है, अंग्रेज़ी और कोरियाई जुड़वाँ संस्करण, और हर गीत को समाप्त करने वाली फुसफुसाई पंक्ति। (hi, 2026-10-21, AI translation)
 
 ### Journal — Bahasa Indonesia (id) · AI translations of the originals · Index: https://idle.ipe.rest/journal/id/
 
+- [Tanyakan Kabar Sebelum Memperbaiki — Cara Kami Merancang "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/id/check-in-before-you-fix/) — Sebuah lagu yang tidak menawarkan nasihat maupun solusi, hanya pertanyaan pertama. Maksud rancangan di balik trek 01 dear(you);, struktur 59 barisnya, bisikannya, dan suaranya, dibaca berdasarkan draf liriknya. (id, 2026-10-22, AI translation)
 - [Sepuluh Surat, Satu Kerangka — Struktur Lirik dear(you);](https://idle.ipe.rest/journal/id/ten-letters-one-skeleton/) — Kerangka lirik yang dipakai bersama oleh sepuluh lagu di dear(you); vol.1: enam slot, tempat slot ketujuh muncul, versi kembar bahasa Inggris dan Korea, serta baris bisikan yang menutup setiap lagu. (id, 2026-10-21, AI translation)
 <!-- journal:llms:end -->
 
