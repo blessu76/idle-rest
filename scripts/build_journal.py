@@ -383,7 +383,7 @@ def fmt_date(d):
     return "%04d. %02d. %02d" % (d.year, d.month, d.day)
 
 
-def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=()):
+def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):
     image = image or SITE + "/og-image.png"
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     return f"""<!DOCTYPE html>
@@ -391,7 +391,7 @@ def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/jou
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<!-- {GEN_MARK} — do not hand-edit; {hint} -->
+<!-- {gen} — do not hand-edit; {hint} -->
 <script>
 (function () {{
   var t = 'light';
