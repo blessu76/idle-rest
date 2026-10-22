@@ -50,7 +50,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261027"  # keep equal to the ?v= in index.html
+ASSET_V = "20261028"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -473,9 +473,11 @@ def header(lang, current="journal", targets=None):
 """
 
 
-def footer(lang):
+def footer(lang, default=False):
+    """default=True: the page is an x-default (root-level) page -> About/Contact/Privacy link to the x-default /about/ etc.;
+    otherwise they link to the page's own language: /<lang>/about/."""
     t = ui(lang)
-    pre = "/ko" if lang == "ko" else ""
+    pre = "" if default else "/" + lang
     return f"""<footer class="site-footer">
   <div class="shell footer-top">
     <div class="footer-brand">
@@ -806,7 +808,7 @@ def render_list(posts, lang=None, list_langs=("en",)):
 {ai}{body}
   <p class="section-sub" style="margin-top:20px"><a class="more-link" href="/journal/feed.xml">RSS</a></p>
 </main>
-""" + footer(loc))
+""" + footer(loc, default=lang is None))
 
 
 def render_home_cards(posts):
@@ -978,6 +980,8 @@ def main():
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1
     errors += check_translations(posts, all_posts, a.drafts)
+    import build_pages  # About / Contact / Privacy sources (content/pages) are validated with the posts
+    errors += build_pages.load(root)[1]
     for p in posts:
         errors += check_post_images(p)
     if errors:
@@ -1025,9 +1029,11 @@ def main():
                                     "<!-- journal:llms:end -->", render_llms_block(posts), "llms.txt"), encoding="utf-8")
     import build_home  # home page: 12 static language pages + their sitemap/llms blocks
     build_home.build(root, posts, list_langs)
+    build_pages.build(root, list_langs)  # About / Contact / Privacy: 36 language pages + 3 x-default pages
     print("journal: built %d post(s)%s → %s" % (len(posts), " (incl. drafts)" if a.drafts else "", out))
     return 0
 
 
 if __name__ == "__main__":
+    sys.modules["build_journal"] = sys.modules["__main__"]  # build_home / build_pages `import build_journal`: same module, shared state
     sys.exit(main())

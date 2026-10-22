@@ -10,7 +10,9 @@ Offline checks:
      and every post page (content/journal/<lang>/<slug>.md). Nothing journal-ish is listed that is not published
      (redirect stubs for old URLs must NOT be listed).
   3. Home: / (x-default) and /<lang>/ for all 12 languages are listed (static pages, no ?lang=).
-  4. hreflang (every <url> that has alternates): lists itself + x-default; every hreflang target is itself a <loc> in the sitemap;
+  4. Pages: /about/ /contact/ /privacy/ (x-default) and /<lang>/<slug>/ for all 12 languages are listed (3 x 13 = 39 URLs).
+  5. Every <loc> maps to a file on disk (index.html of that path).
+  6. hreflang (every <url> that has alternates): lists itself + x-default; every hreflang target is itself a <loc> in the sitemap;
      references are reciprocal (if A lists B under lang L, B lists A under A's lang).
 """
 import argparse
@@ -21,6 +23,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_journal as bj  # noqa: E402
+import build_pages as bp  # noqa: E402
 
 NS = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml"}
 
@@ -54,11 +57,18 @@ def check(root):
     want = {bj.SITE + "/journal/"} if posts else set()
     want.add(bj.SITE + "/")  # home: x-default + one static page per language
     want.update("%s/%s/" % (bj.SITE, l) for l in bj.LANGS)
+    for slug in bp.SLUGS:  # trust pages: x-default + one per language
+        want.update(bp.page_url(l, slug) for l in (None,) + tuple(bj.LANGS))
     for p in posts:
         want.add(bj.post_url(p))
         want.add(bj.SITE + bj.lang_path(p["lang"]))
     for u in sorted(want - set(urls)):
         errs.append("missing from sitemap: %s" % u)
+    for u in sorted(urls):
+        if not u.startswith(bj.SITE + "/"):
+            errs.append("not an idle.ipe.rest URL: %s" % u)
+        elif not (root / u[len(bj.SITE) + 1:] / "index.html").is_file():
+            errs.append("no file for sitemap URL (expected %sindex.html): %s" % (u[len(bj.SITE) + 1:], u))
     for u in sorted(u for u in urls if "/journal/" in u and u not in want):
         errs.append("in sitemap but not a published journal page: %s" % u)
     for loc, links in urls.items():
@@ -70,7 +80,8 @@ def check(root):
         if "x-default" not in langs:
             errs.append("%s: no x-default" % loc)
         mine = [l for l, h in links if h == loc and l != "x-default"]
-        if not mine and loc not in (bj.SITE + "/journal/", bj.SITE + "/"):  # hub and root are only the x-default of their language pages
+        defaults = (bj.SITE + "/journal/", bj.SITE + "/") + tuple(bp.page_url(None, s) for s in bp.SLUGS)
+        if not mine and loc not in defaults:  # hub, root and the x-default trust pages are only the x-default of their language pages
             errs.append("%s: does not list itself in hreflang" % loc)
         for lang, href in links:
             if href not in urls:

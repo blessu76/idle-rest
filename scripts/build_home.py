@@ -26,7 +26,6 @@ TEMPLATE = Path("content") / "home" / "template.html"
 STRINGS = Path("content") / "home" / "i18n.json"
 LANG_ATTR = re.compile(r'(<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\sdata-i18n="(?P<key>[^"]+)"[^>]*)>)(?P<inner>.*?)(</(?P=tag)>)', re.S)
 ARIA_ATTR = re.compile(r'<[a-zA-Z0-9]+[^>]*?\sdata-i18n-aria="([^"]+)"[^>]*>')
-KO_HREF = re.compile(r'(<a\b[^>]*?)\shref="[^"]*"([^>]*?)\sdata-en-href="([^"]*)"\s+data-ko-href="([^"]*)"([^>]*>)')
 NAV_SCRIPT = """<script>
 (function () {
   var sel = document.getElementById('lang');
@@ -93,8 +92,6 @@ def render_page(tpl, strings, lang, root, posts):
             return re.sub(r'aria-label="[^"]*"', lambda _: 'aria-label="%s"' % esc(v), tag, count=1)
         return tag[:-1] + ' aria-label="%s">' % esc(v)
     out = ARIA_ATTR.sub(aria, out)
-    out = KO_HREF.sub(lambda m: '%s href="%s"%s data-en-href="%s" data-ko-href="%s"%s' % (
-        m.group(1), m.group(4) if lang == "ko" else m.group(3), m.group(2), m.group(3), m.group(4), m.group(5)), out)
 
     cards = card_posts(lang, posts)
     jl = bj.jhome(lang)
@@ -117,6 +114,7 @@ def render_page(tpl, strings, lang, root, posts):
     subs = {
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
         "LANG_OPTIONS": options, "JOURNAL_HREF": jl,
+        **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT", "PRIVACY")},
         "LEGACY_SCRIPT": LEGACY_JS % "|".join(bj.LANGS), "PAGE_SCRIPT": page_script,
         "LANG_HINT": '<div class="lang-hint" id="langHint" hidden></div>\n' if root else "",
         "NAV_SCRIPT": NAV_SCRIPT % (HINT_JS % names if root else ""),

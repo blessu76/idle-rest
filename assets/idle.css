@@ -425,3 +425,10 @@ html:lang(hi) body { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari",
 .lang-hint[hidden] { display: none; }
 .lang-hint a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; }
 .lang-hint button { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: #fff; font-size: 20px; cursor: pointer; }
+
+/* About / Contact / Privacy x-default page: no-JS list of the 12 language pages */
+.lang-pick { margin: 4px 0 8px; padding: 18px 0 6px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.lang-pick-label { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+.lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; margin: 0 0 14px; padding: 0; list-style: none; }
+.lang-card { display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 15px; }
+.lang-card:hover, .lang-card:focus-visible { border-color: var(--accent); color: var(--accent); }

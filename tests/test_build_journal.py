@@ -47,6 +47,7 @@ class Site(unittest.TestCase):
         for f in ("index.html", "sitemap.xml", "llms.txt"):
             shutil.copy(REPO / f, self.tmp / f)
         shutil.copytree(REPO / "content/home", self.tmp / "content/home")
+        shutil.copytree(REPO / "content/pages", self.tmp / "content/pages")
         (self.tmp / "content/journal").mkdir(parents=True)
 
     def tearDown(self):

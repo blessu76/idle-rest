@@ -47,7 +47,8 @@
   // journal pages: the language <select> holds site paths (same page in that language) -> go there
   var navSel = document.querySelector('select.lang[data-nav]');
   if (navSel) navSel.addEventListener('change', function () {
-    try { localStorage.setItem('ipe_lang', this.value.split('/')[2] || ''); } catch (e) {}
+    // option text is the language code (EN, KO …); the value is a site path whose shape differs per page type
+    try { localStorage.setItem('ipe_lang', (this.options[this.selectedIndex].text || '').toLowerCase()); } catch (e) {}
     location.href = this.value;
   });
 })();
