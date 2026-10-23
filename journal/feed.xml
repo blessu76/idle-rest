@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Oct 2026 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 09:00:00 +0900</lastBuildDate>
+    <item>
+      <title>두려움을 없애지 않고 인정하기 — 「나도 무서웠어.」를 이렇게 설계했다</title>
+      <link>https://idle.ipe.rest/journal/ko/i-was-scared-too/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/i-was-scared-too/</guid>
+      <pubDate>Fri, 23 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>AI 시대를 사는 개발자의 두려움을 없애려 하지 않고 먼저 인정해 주는 곡. dear(you); 세 번째 편지의 설계 의도, 가사의 전환점, 앨범에서 처음 일곱 번째 칸이 생기는 자리를 가사 원고로 읽어 봅니다.</description>
+    </item>
+    <item>
+      <title>Admitting Fear Instead of Fixing It — How We Designed &quot;I Was Scared, Too.&quot;</title>
+      <link>https://idle.ipe.rest/journal/en/i-was-scared-too/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/i-was-scared-too/</guid>
+      <pubDate>Fri, 23 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>A song that does not try to remove a developer&#x27;s fear of the AI era but admits it first. The design intent of dear(you); track 03, the turn in its lyric, and the place where a seventh slot first appears, read against the lyric draft.</description>
+    </item>
     <item>
       <title>한 곡이 나오기까지 — 가사에서 발매까지 다섯 번의 인계</title>
       <link>https://idle.ipe.rest/journal/ko/how-a-song-gets-made/</link>
