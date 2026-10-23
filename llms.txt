@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [The Six Series of idle() — How to Read Names That Look Like Code](https://idle.ipe.rest/journal/en/six-series-of-idle/) — idle() songs are grouped into six series, from late_night.lofi to night_mode // not_alone. How to read the names, how song codes work, and how singles become an album. (en, 2026-10-23)
 - [Admitting Fear Instead of Fixing It — How We Designed "I Was Scared, Too."](https://idle.ipe.rest/journal/en/i-was-scared-too/) — A song that does not try to remove a developer's fear of the AI era but admits it first. The design intent of dear(you); track 03, the turn in its lyric, and the place where a seventh slot first appears, read against the lyric draft. (en, 2026-10-23)
 - [How a Song Gets Made — Five Hand-Offs From Lyric to Release](https://idle.ipe.rest/journal/en/how-a-song-gets-made/) — How one idle() song travels from lyric to music, visuals, review and release: who hands what to whom, where we stop to check, and how we say plainly that the music is made with AI. (en, 2026-10-22)
 - [Check In Before You Fix — How We Designed "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/en/check-in-before-you-fix/) — A song that offers no advice and no solution, only a first question. The design intent behind dear(you); track 01, its 59-line structure, its whispers and its sound, read against the lyric draft. (en, 2026-10-22)
@@ -97,6 +98,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [idle()의 여섯 시리즈 — 이름에 코드를 넣은 이유를 읽는 법](https://idle.ipe.rest/journal/ko/six-series-of-idle/) — idle()의 곡은 여섯 개의 시리즈로 나뉩니다. late_night.lofi부터 night_mode // not_alone까지 이름을 읽는 법, 곡 번호의 규칙, 싱글이 앨범이 되는 과정을 정리했습니다. (ko, 2026-10-23)
 - [두려움을 없애지 않고 인정하기 — 「나도 무서웠어.」를 이렇게 설계했다](https://idle.ipe.rest/journal/ko/i-was-scared-too/) — AI 시대를 사는 개발자의 두려움을 없애려 하지 않고 먼저 인정해 주는 곡. dear(you); 세 번째 편지의 설계 의도, 가사의 전환점, 앨범에서 처음 일곱 번째 칸이 생기는 자리를 가사 원고로 읽어 봅니다. (ko, 2026-10-23)
 - [한 곡이 나오기까지 — 가사에서 발매까지 다섯 번의 인계](https://idle.ipe.rest/journal/ko/how-a-song-gets-made/) — idle()의 곡 한 편이 가사, 음악, 비주얼, 검수, 발매를 거쳐 나오는 과정. 누가 무엇을 넘기고 어디서 멈춰 확인하는지, AI로 만든다는 사실을 어떻게 밝히는지 정리했습니다. (ko, 2026-10-22)
 - [해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다](https://idle.ipe.rest/journal/ko/check-in-before-you-fix/) — 조언도 해결책도 없이 먼저 안부를 묻는 곡. dear(you); 첫 트랙의 설계 의도와 가사 장면, 59줄의 짜임, 속삭임과 소리의 결을 가사 원고를 기준으로 풀어 봅니다. (ko, 2026-10-22)
@@ -104,6 +106,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 日本語 (ja) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ja/
 
+- [idle() の6つのシリーズ — コードのように見える名前の読み方](https://idle.ipe.rest/journal/ja/six-series-of-idle/) — idle() の曲は late_night.lofi から night_mode // not_alone まで6つのシリーズに分かれています。名前の読み方、曲コードの仕組み、シングルがアルバムになるまでを紹介します。 (ja, 2026-10-23, AI translation)
 - [怖さを直さず、まず認める — "I Was Scared, Too." をどう設計したか](https://idle.ipe.rest/journal/ja/i-was-scared-too/) — AI 時代の開発者の怖さを取り除こうとはせず、まず認める歌。dear(you); 3曲目の設計意図、歌詞のなかの転換点、そして7つ目の枠が初めて現れる場所を、歌詞の下書きをもとに読み解きます。 (ja, 2026-10-23, AI translation)
 - [一曲ができるまで — 歌詞からリリースまで、5回の引き継ぎ](https://idle.ipe.rest/journal/ja/how-a-song-gets-made/) — idle() の曲が、歌詞、音楽、ビジュアル、レビュー、リリースを経てできるまで。誰が誰に何を渡し、どこで立ち止まって確かめるのか、そして音楽が AI で作られていることをどうはっきり伝えるのかを紹介します。 (ja, 2026-10-22, AI translation)
 - [解決策より先に、まず安否を — "Hard Day Again, Wasn't It?" をどう設計したか](https://idle.ipe.rest/journal/ja/check-in-before-you-fix/) — アドバイスも解決策もなく、ただ最初の問いだけを差し出す歌。dear(you); 1曲目の設計意図、59行の構造、ささやき、サウンドを、歌詞の下書きをもとに読み解きます。 (ja, 2026-10-22, AI translation)
@@ -111,6 +114,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 简体中文 (zh) · AI translations of the originals · Index: https://idle.ipe.rest/journal/zh/
 
+- [idle() 的六个系列 — 如何解读看起来像代码的名字](https://idle.ipe.rest/journal/zh/six-series-of-idle/) — idle() 的歌曲分为六个系列，从 late_night.lofi 到 night_mode // not_alone。本文介绍名字的读法、歌曲编号的规则，以及单曲如何汇集成专辑。 (zh, 2026-10-23, AI translation)
 - [不去化解恐惧，而是先承认它 — 我们是如何设计 "I Was Scared, Too." 的](https://idle.ipe.rest/journal/zh/i-was-scared-too/) — 一首不试图消除开发者在 AI 时代的恐惧，而是先承认它的歌。结合歌词草稿，解读 dear(you); 第 3 首的设计意图、歌词中的转折，以及第七个段落首次出现的位置。 (zh, 2026-10-23, AI translation)
 - [一首歌是怎样诞生的 — 从歌词到发行的五次交接](https://idle.ipe.rest/journal/zh/how-a-song-gets-made/) — idle() 的一首歌如何经由歌词、音乐、视觉、审核走到发行：谁把什么交给谁，在哪里停下来检查，以及我们如何坦率地说明音乐是用 AI 制作的。 (zh, 2026-10-22, AI translation)
 - [先问一声安好，再谈解决办法 — 我们如何设计《Hard Day Again, Wasn't It?》](https://idle.ipe.rest/journal/zh/check-in-before-you-fix/) — 一首不给建议、不给解决办法，只先问一句话的歌。对照歌词草稿，解读 dear(you); 第 1 首的设计意图、59 行的结构、低语与声音。 (zh, 2026-10-22, AI translation)
@@ -118,6 +122,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Español (es) · AI translations of the originals · Index: https://idle.ipe.rest/journal/es/
 
+- [Las seis series de idle() — Cómo leer nombres que parecen código](https://idle.ipe.rest/journal/es/six-series-of-idle/) — Las canciones de idle() se agrupan en seis series, de late_night.lofi a night_mode // not_alone. Cómo leer los nombres, cómo funcionan los códigos de canción y cómo los sencillos se convierten en un álbum. (es, 2026-10-23, AI translation)
 - [Admitir el miedo en lugar de arreglarlo — Cómo diseñamos "I Was Scared, Too."](https://idle.ipe.rest/journal/es/i-was-scared-too/) — Una canción que no intenta quitar el miedo de un desarrollador en la era de la IA, sino que primero lo admite. La intención de diseño de dear(you); pista 03, el giro de su letra y el lugar donde aparece por primera vez un séptimo apartado, leídos sobre el borrador de la letra. (es, 2026-10-23, AI translation)
 - [Cómo se hace una canción — Cinco traspasos de la letra al lanzamiento](https://idle.ipe.rest/journal/es/how-a-song-gets-made/) — Cómo viaja una canción de idle() desde la letra hasta la música, lo visual, la revisión y el lanzamiento: quién le pasa qué a quién, dónde nos detenemos a comprobar y cómo decimos con claridad que la música se hace con IA. (es, 2026-10-22, AI translation)
 - [Pregunta cómo estás antes de arreglar nada — Cómo diseñamos "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/es/check-in-before-you-fix/) — Una canción que no ofrece consejos ni soluciones, solo una primera pregunta. La intención de diseño de la pista 01 de dear(you);, su estructura de 59 líneas, sus susurros y su sonido, leídos a partir del borrador de la letra. (es, 2026-10-22, AI translation)
@@ -125,6 +130,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Français (fr) · AI translations of the originals · Index: https://idle.ipe.rest/journal/fr/
 
+- [Les six séries d'idle() — comment lire des noms qui ressemblent à du code](https://idle.ipe.rest/journal/fr/six-series-of-idle/) — Les morceaux d'idle() sont regroupés en six séries, de late_night.lofi à night_mode // not_alone. Comment lire ces noms, comment fonctionnent les codes des morceaux et comment les singles deviennent un album. (fr, 2026-10-23, AI translation)
 - [Admettre la peur plutôt que la réparer — Comment nous avons conçu "I Was Scared, Too."](https://idle.ipe.rest/journal/fr/i-was-scared-too/) — Une chanson qui n'essaie pas de supprimer la peur d'un développeur à l'ère de l'IA, mais commence par l'admettre. L'intention de conception de la piste 03 de dear(you);, le tournant de ses paroles et l'endroit où apparaît pour la première fois un septième emplacement, lus à partir du brouillon des paroles. (fr, 2026-10-23, AI translation)
 - [Comment naît une chanson — Cinq passages de relais, des paroles à la sortie](https://idle.ipe.rest/journal/fr/how-a-song-gets-made/) — Le parcours d'une chanson d'idle() des paroles à la musique, à l'image, à la relecture puis à la sortie : qui transmet quoi à qui, où nous nous arrêtons pour vérifier, et comment nous disons clairement que la musique est faite avec l'IA. (fr, 2026-10-22, AI translation)
 - [Prendre des nouvelles avant de réparer — Comment nous avons conçu "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/fr/check-in-before-you-fix/) — Une chanson qui n'offre ni conseil ni solution, seulement une première question. L'intention de conception derrière la piste 01 de dear(you);, sa structure de 59 lignes, ses chuchotements et son son, lus à partir du brouillon des paroles. (fr, 2026-10-22, AI translation)
@@ -132,6 +138,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Deutsch (de) · AI translations of the originals · Index: https://idle.ipe.rest/journal/de/
 
+- [Die sechs Serien von idle() — Wie man Namen liest, die wie Code aussehen](https://idle.ipe.rest/journal/de/six-series-of-idle/) — Die Songs von idle() sind in sechs Serien gegliedert, von late_night.lofi bis night_mode // not_alone. Wie man die Namen liest, wie Song-Codes funktionieren und wie aus Singles ein Album wird. (de, 2026-10-23, AI translation)
 - [Angst zugeben, statt sie zu beheben — Wie wir "I Was Scared, Too." gestaltet haben](https://idle.ipe.rest/journal/de/i-was-scared-too/) — Ein Lied, das die Angst eines Entwicklers im KI-Zeitalter nicht beseitigen will, sondern sie zuerst zugibt. Die Gestaltungsabsicht von Track 03 aus dear(you);, die Wendung im Text und die Stelle, an der zum ersten Mal ein siebter Platz erscheint, gelesen anhand des Textentwurfs. (de, 2026-10-23, AI translation)
 - [Wie ein Song entsteht — Fünf Übergaben vom Text bis zur Veröffentlichung](https://idle.ipe.rest/journal/de/how-a-song-gets-made/) — Wie ein idle()-Song vom Text über Musik, Visuals und Prüfung bis zur Veröffentlichung wandert: wer was an wen übergibt, wo wir innehalten, um zu prüfen, und wie wir offen sagen, dass die Musik mit KI gemacht ist. (de, 2026-10-22, AI translation)
 - [Erst nachfragen, dann reparieren — Wie wir "Hard Day Again, Wasn't It?" entworfen haben](https://idle.ipe.rest/journal/de/check-in-before-you-fix/) — Ein Lied, das keinen Rat und keine Lösung anbietet, nur eine erste Frage. Die Entwurfsidee hinter Track 01 von dear(you);, seine Struktur aus 59 Zeilen, seine Flüstersätze und sein Klang, gelesen anhand des Textentwurfs. (de, 2026-10-22, AI translation)
@@ -139,6 +146,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Português (pt) · AI translations of the originals · Index: https://idle.ipe.rest/journal/pt/
 
+- [As seis séries do idle() — como ler nomes que parecem código](https://idle.ipe.rest/journal/pt/six-series-of-idle/) — As músicas do idle() são agrupadas em seis séries, de late_night.lofi a night_mode // not_alone. Como ler os nomes, como funcionam os códigos das músicas e como os singles viram um álbum. (pt, 2026-10-23, AI translation)
 - [Admitir o medo em vez de consertá-lo — Como projetamos "I Was Scared, Too."](https://idle.ipe.rest/journal/pt/i-was-scared-too/) — Uma canção que não tenta remover o medo de um desenvolvedor na era da IA, mas o admite primeiro. A intenção de design da faixa 03 de dear(you);, a virada na letra e o lugar onde um sétimo espaço aparece pela primeira vez, lidos a partir do rascunho da letra. (pt, 2026-10-23, AI translation)
 - [Como uma música é feita — Cinco passagens de bastão, da letra ao lançamento](https://idle.ipe.rest/journal/pt/how-a-song-gets-made/) — O caminho de uma música do idle() da letra à música, ao visual, à revisão e ao lançamento: quem entrega o quê a quem, onde paramos para conferir e como dizemos com clareza que a música é feita com IA. (pt, 2026-10-22, AI translation)
 - [Pergunte como você está antes de consertar — Como projetamos "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/pt/check-in-before-you-fix/) — Uma música que não oferece conselho nem solução, apenas uma primeira pergunta. A intenção de design por trás da faixa 01 de dear(you);, sua estrutura de 59 linhas, seus sussurros e seu som, lidos a partir do rascunho da letra. (pt, 2026-10-22, AI translation)
@@ -146,6 +154,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Русский (ru) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ru/
 
+- [Шесть серий idle() — как читать названия, похожие на код](https://idle.ipe.rest/journal/ru/six-series-of-idle/) — Песни idle() объединены в шесть серий — от late_night.lofi до night_mode // not_alone. Как читать названия, как устроены коды песен и как синглы становятся альбомом. (ru, 2026-10-23, AI translation)
 - [Признать страх, а не чинить его — как мы задумали "I Was Scared, Too."](https://idle.ipe.rest/journal/ru/i-was-scared-too/) — Песня, которая не пытается убрать страх разработчика в эпоху ИИ, а сначала признаёт его. Замысел трека 03 из dear(you);, поворот в тексте и место, где впервые появляется седьмой раздел, — по черновику текста. (ru, 2026-10-23, AI translation)
 - [Как создаётся песня — пять передач эстафеты от текста до релиза](https://idle.ipe.rest/journal/ru/how-a-song-gets-made/) — Путь одной песни idle() от текста к музыке, визуалу, проверке и релизу: кто что кому передаёт, где мы останавливаемся, чтобы всё проверить, и как мы прямо говорим, что музыка сделана с помощью ИИ. (ru, 2026-10-22, AI translation)
 - [Сначала спросить, как ты, а потом чинить — Как мы создавали "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/ru/check-in-before-you-fix/) — Песня, которая не даёт ни советов, ни решений, а только задаёт первый вопрос. Замысел трека 01 из dear(you);, его структура из 59 строк, шёпоты и звук — по черновику текста. (ru, 2026-10-22, AI translation)
@@ -153,6 +162,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — العربية (ar) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ar/
 
+- [السلاسل الست في idle() — كيف نقرأ أسماءً تبدو كأنها شيفرة](https://idle.ipe.rest/journal/ar/six-series-of-idle/) — تُجمَع أغاني idle() في ست سلاسل، من late_night.lofi إلى night_mode // not_alone. كيف نقرأ الأسماء، وكيف تعمل رموز الأغاني، وكيف تتحول الأغاني المنفردة إلى ألبوم. (ar, 2026-10-23, AI translation)
 - [الاعتراف بالخوف بدل إصلاحه — كيف صمّمنا "I Was Scared, Too."](https://idle.ipe.rest/journal/ar/i-was-scared-too/) — أغنية لا تحاول إزالة خوف المطوّر في عصر الذكاء الاصطناعي، بل تعترف به أولًا. فكرة التصميم وراء المقطوعة 03 من dear(you);، والمنعطف في كلماتها، والموضع الذي يظهر فيه المقطع السابع لأول مرة، مقروءةً على مسودة الكلمات. (ar, 2026-10-23, AI translation)
 - [كيف تُصنع الأغنية — خمس محطات تسليم من الكلمات إلى الإصدار](https://idle.ipe.rest/journal/ar/how-a-song-gets-made/) — رحلة أغنية واحدة من idle() من الكلمات إلى الموسيقى ثم الصورة والمراجعة والإصدار: من يسلّم ماذا لمن، وأين نتوقف للتحقق، وكيف نقول بوضوح إن الموسيقى مصنوعة بالذكاء الاصطناعي. (ar, 2026-10-22, AI translation)
 - [اسأل عن حاله قبل أن تصلح شيئًا — كيف صمّمنا "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/ar/check-in-before-you-fix/) — أغنية لا تقدّم نصيحة ولا حلًا، بل سؤالًا أول فقط. فكرة التصميم وراء المقطوعة 01 من dear(you);، وبنيتها المؤلفة من 59 سطرًا، وهمساتها وصوتها، مقروءةً على مسودة الكلمات. (ar, 2026-10-22, AI translation)
@@ -160,6 +170,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — हिन्दी (hi) · AI translations of the originals · Index: https://idle.ipe.rest/journal/hi/
 
+- [idle() की छह सीरीज़ — कोड जैसे दिखने वाले नामों को कैसे पढ़ें](https://idle.ipe.rest/journal/hi/six-series-of-idle/) — idle() के गाने छह सीरीज़ में बँटे हैं, late_night.lofi से लेकर night_mode // not_alone तक। इन नामों को कैसे पढ़ें, गानों के कोड कैसे काम करते हैं, और सिंगल्स कैसे एक एल्बम बनते हैं। (hi, 2026-10-23, AI translation)
 - [डर को ठीक करने की जगह उसे स्वीकारना — हमने "I Was Scared, Too." को कैसे रचा](https://idle.ipe.rest/journal/hi/i-was-scared-too/) — एक ऐसा गीत जो AI युग में एक डेवलपर के डर को मिटाने की कोशिश नहीं करता, बल्कि पहले उसे स्वीकार करता है। dear(you); के ट्रैक 03 के पीछे की डिज़ाइन-मंशा, उसके बोलों का मोड़, और वह जगह जहाँ सातवाँ खंड पहली बार आता है, बोलों के मसौदे के आधार पर। (hi, 2026-10-23, AI translation)
 - [एक गीत कैसे बनता है — बोलों से रिलीज़ तक पाँच हैंड-ऑफ़](https://idle.ipe.rest/journal/hi/how-a-song-gets-made/) — idle() का एक गीत बोलों से संगीत, विज़ुअल, समीक्षा और रिलीज़ तक कैसे पहुँचता है: कौन किसे क्या सौंपता है, हम जाँच के लिए कहाँ रुकते हैं, और हम साफ़ शब्दों में कैसे बताते हैं कि संगीत AI से बना है। (hi, 2026-10-22, AI translation)
 - [हल से पहले हाल पूछिए — हमने "Hard Day Again, Wasn't It?" को कैसे रचा](https://idle.ipe.rest/journal/hi/check-in-before-you-fix/) — एक ऐसा गीत जो न सलाह देता है, न कोई हल, बस एक पहला सवाल पूछता है। dear(you); के ट्रैक 01 के पीछे की डिज़ाइन-मंशा, उसकी 59 पंक्तियों की बनावट, उसकी फुसफुसाहटें और उसकी ध्वनि, बोलों के मसौदे के आधार पर। (hi, 2026-10-22, AI translation)
@@ -167,6 +178,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Bahasa Indonesia (id) · AI translations of the originals · Index: https://idle.ipe.rest/journal/id/
 
+- [Enam Seri idle() — Cara Membaca Nama yang Tampak Seperti Kode](https://idle.ipe.rest/journal/id/six-series-of-idle/) — Lagu-lagu idle() dikelompokkan ke dalam enam seri, dari late_night.lofi hingga night_mode // not_alone. Cara membaca namanya, cara kerja kode lagu, dan bagaimana single menjadi sebuah album. (id, 2026-10-23, AI translation)
 - [Mengakui Rasa Takut, Bukan Memperbaikinya — Bagaimana Kami Merancang "I Was Scared, Too."](https://idle.ipe.rest/journal/id/i-was-scared-too/) — Sebuah lagu yang tidak berusaha menghilangkan rasa takut seorang pengembang di era AI, melainkan mengakuinya lebih dulu. Maksud rancangan trek 03 dari dear(you);, titik balik dalam liriknya, dan tempat slot ketujuh pertama kali muncul, dibaca berdasarkan draf lirik. (id, 2026-10-23, AI translation)
 - [Bagaimana Sebuah Lagu Dibuat — Lima Serah Terima dari Lirik hingga Rilis](https://idle.ipe.rest/journal/id/how-a-song-gets-made/) — Perjalanan satu lagu idle() dari lirik ke musik, visual, peninjauan, dan rilis: siapa menyerahkan apa kepada siapa, di mana kami berhenti untuk memeriksa, dan bagaimana kami mengatakan dengan jelas bahwa musiknya dibuat dengan AI. (id, 2026-10-22, AI translation)
 - [Tanyakan Kabar Sebelum Memperbaiki — Cara Kami Merancang "Hard Day Again, Wasn't It?"](https://idle.ipe.rest/journal/id/check-in-before-you-fix/) — Sebuah lagu yang tidak menawarkan nasihat maupun solusi, hanya pertanyaan pertama. Maksud rancangan di balik trek 01 dear(you);, struktur 59 barisnya, bisikannya, dan suaranya, dibaca berdasarkan draf liriknya. (id, 2026-10-22, AI translation)
