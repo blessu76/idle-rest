@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Oct 2026 09:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 09:00:00 +0900</lastBuildDate>
+    <item>
+      <title>속삭임은 반대 언어로 — dear(you); vol.1의 이중 버전을 이렇게 설계했다</title>
+      <link>https://idle.ipe.rest/journal/ko/whispers-in-the-other-language/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/whispers-in-the-other-language/</guid>
+      <pubDate>Sat, 24 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 열 곡은 영어 메인 버전과 한국어 메인 버전으로 만들어지고, 각 버전의 속삭임 줄은 메인과 반대 언어로 들어갑니다. 가사 원고에서 속삭임 29개를 세어 위치·말·짝을 읽어 봅니다.</description>
+    </item>
+    <item>
+      <title>Whispers in the Other Language — How dear(you); vol.1 Pairs Its Two Versions</title>
+      <link>https://idle.ipe.rest/journal/en/whispers-in-the-other-language/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/whispers-in-the-other-language/</guid>
+      <pubDate>Sat, 24 Oct 2026 09:00:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Every song on dear(you); vol.1 exists in an English-main and a Korean-main version, and the whispered lines in each go in the opposite language. We counted all 29 whispers in the lyric drafts and read where they sit, what they say and how the two versions pair up.</description>
+    </item>
     <item>
       <title>idle()의 여섯 시리즈 — 이름에 코드를 넣은 이유를 읽는 법</title>
       <link>https://idle.ipe.rest/journal/ko/six-series-of-idle/</link>
