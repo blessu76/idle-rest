@@ -7,6 +7,7 @@ description: 빌드 결과(제목·날짜·본문·광고 칸)를 확인하기 �
 category: notes
 draft: true
 # --- 선택 칸 (GEO: JSON-LD·hreflang·사이트맵·llms.txt). 없으면 그냥 빠진다. ---
+# time: "09:09"                            # 게시 시각(KST, HH:MM 24시간). 있으면 날짜 옆에 표시, datePublished 는 +09:00 시각. 없으면 날짜만(지어내지 않는다)
 # updated: 2026-10-23                      # 수정일 (dateModified·lastmod)
 # image: /assets/journal/sample-template/cover.jpg   # 대표 이미지. 없으면 본문 첫 /assets/journal/ 이미지, 그것도 없으면 og-image
 # image_alt: 대표 이미지 설명

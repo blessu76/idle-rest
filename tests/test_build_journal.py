@@ -203,8 +203,32 @@ class PostTime(Site):
         self.assertEqual(post["dateModified"], "2026-10-22")
         self.assertNotIn("T00:00", h)
 
+    def test_same_day_order_feed_and_modified(self):
+        for slug, tm in (("zz", "08:00"), ("aa", "12:30"), ("mm", "10:15")):
+            self.post(slug, "en", extra='time: "%s"\nupdated: 2026-10-22\n' % tm)
+        self.build()
+        lst = self.read("journal/en/index.html")
+        order = [lst.index('/journal/en/%s/' % s) for s in ("aa", "mm", "zz")]
+        self.assertEqual(order, sorted(order))  # newest time first, not slug order
+        feed = self.read("journal/feed.xml")
+        self.assertIn("<pubDate>Thu, 22 Oct 2026 12:30:00 +0900</pubDate>", feed)
+        h, blocks = self.ld("journal/en/aa/index.html")
+        post = next(b for b in blocks if b["@type"] == "BlogPosting")
+        self.assertEqual(post["dateModified"], post["datePublished"])  # date-only updated on publish day
+        self.assertIn('article:modified_time" content="2026-10-22T12:30:00+09:00"', h)
+        self.post("aa", "en", extra='time: "12:30"\nupdated: 2026-10-25\n')
+        self.build()
+        post = next(b for b in self.ld("journal/en/aa/index.html")[1] if b["@type"] == "BlogPosting")
+        self.assertEqual(post["dateModified"], "2026-10-25")
+
+    def test_dates_wrap_in_units_and_ltr(self):
+        self.post("t", "en", extra='time: "09:09"\n')
+        self.build()
+        self.assertIn('<span class="j-cat">· notes</span>', self.read("journal/en/t/index.html"))
+        self.assertIn(".j-date time { direction: ltr; unicode-bidi: isolate; }", (REPO / "assets/idle.css").read_text())
+
     def test_bad_time_fails(self):
-        for bad in ("9:09", "24:00", "09:09:00", "noon"):
+        for bad in ("9:09", "24:00", "09:09:00", "noon", "09:60", "9:9", " 09:09 "):
             self.post("b", "en", extra='time: "%s"\n' % bad)
             self.fails("time must be HH:MM")
 

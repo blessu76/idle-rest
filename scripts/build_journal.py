@@ -52,7 +52,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261028"  # keep equal to the ?v= in index.html
+ASSET_V = "20261029"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -188,8 +188,7 @@ def parse_post(path):
     except ValueError:
         raise ValueError("date must be YYYY-MM-DD: %r" % meta["date"])
     if meta.get("time"):
-        m = re.match(r"^([01]\d|2[0-3]):([0-5]\d)$", meta["time"])
-        if not m:
+        if not re.match(r"^(?:[01]\d|2[0-3]):[0-5]\d$", meta["time"]):
             raise ValueError("time must be HH:MM (24h, KST): %r" % meta["time"])
         meta["_pub"] = "%sT%s:00+09:00" % (meta["date"], meta["time"])
     else:
@@ -200,6 +199,8 @@ def parse_post(path):
             dt.date.fromisoformat(meta["updated"])
         except ValueError:
             raise ValueError("updated must be YYYY-MM-DD: %r" % meta["updated"])
+    # dateModified: a date-only `updated` on the publish day must not precede the timed datePublished
+    meta["_mod"] = meta["_pub"] if meta.get("updated") in (None, "", meta["date"]) else meta["updated"]
     meta["_aliases"] = []
     for a in [x.strip() for x in meta.get("aliases", "").split(",") if x.strip()]:
         if not re.match(r"^/(?:journal|[a-z]{2}/journal)/[a-z0-9/-]*$", a):
@@ -713,7 +714,7 @@ def render_post(p, grp=None):
     data = {
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": p["title"], "description": p["description"],
-        "datePublished": p["_pub"], "dateModified": p.get("updated") or p["_pub"],
+        "datePublished": p["_pub"], "dateModified": p["_mod"],
         "inLanguage": p["lang"], "articleSection": p["category"],
         "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
         "image": image_obj(hero, p.get("image_alt")) if hero else SITE + "/og-image.png",
@@ -743,7 +744,7 @@ def render_post(p, grp=None):
     extra = ('<meta property="og:type" content="article">\n'
              '<meta property="article:published_time" content="%s">\n'
              '<meta property="article:modified_time" content="%s">\n'
-             '<meta property="article:section" content="%s">\n' % (p["_pub"], p.get("updated") or p["_pub"], esc(p["category"]))
+             '<meta property="article:section" content="%s">\n' % (p["_pub"], p["_mod"], esc(p["category"]))
              + "".join('<meta property="article:tag" content="%s">\n' % esc(k) for k in p["_keywords"])
              ) + ld(data) + ld(breadcrumb(p["lang"], p["title"], url))
     draft = '<span class="draft-flag">DRAFT</span>' if p["draft"] else ""
@@ -758,7 +759,7 @@ def render_post(p, grp=None):
             + header(p["lang"], targets={l: urllib.parse.urlsplit(u).path for l, u in pair.items()}) + f"""<main id="main" class="shell">
   <article class="article">
     <header class="article-head">
-      <p class="j-date">{time_html(p)}<span>·</span><span>{esc(p['category'])}</span>{draft}</p>
+      <p class="j-date">{time_html(p)}<span class="j-cat">· {esc(p['category'])}</span>{draft}</p>
       <h1>{esc(p['title'])}</h1>
       <p>{esc(p['description'])}</p>
     </header>
@@ -799,7 +800,7 @@ def render_list(posts, lang=None, list_langs=("en",)):
                                     for i, p in enumerate(posts)]}
     if posts:
         items = "\n".join(f"""      <li lang="{esc(p['lang'])}">
-        <p class="j-date">{time_html(p)} · {esc(p['category'])}{' <span class="draft-flag">DRAFT</span>' if p['draft'] else ''}</p>
+        <p class="j-date">{time_html(p)} <span class="j-cat">· {esc(p['category'])}</span>{' <span class="draft-flag">DRAFT</span>' if p['draft'] else ''}</p>
         <h2><a href="{post_path(p)}">{esc(p['title'])}</a></h2>
         <p>{esc(p['description'])}</p>
       </li>""" for p in posts)
@@ -878,8 +879,8 @@ def sweep_generated(root, written):
                 base.parent.rmdir()
 
 
-def rfc822(d):
-    return dt.datetime(d.year, d.month, d.day, 9, 0, tzinfo=KST).strftime("%a, %d %b %Y %H:%M:%S +0900")
+def rfc822(d, hm="09:00"):
+    return dt.datetime(d.year, d.month, d.day, int(hm[:2]), int(hm[3:]), tzinfo=KST).strftime("%a, %d %b %Y %H:%M:%S +0900")
 
 
 def render_feed(posts):
@@ -887,11 +888,11 @@ def render_feed(posts):
       <title>{esc(p['title'])}</title>
       <link>{post_url(p)}</link>
       <guid isPermaLink="true">{post_url(p)}</guid>
-      <pubDate>{rfc822(p['_date'])}</pubDate>
+      <pubDate>{rfc822(p['_date'], p.get('time') or '09:00')}</pubDate>
       <category>{esc(p['category'])}</category>
       <description>{esc(p['description'])}</description>
     </item>""" for p in posts)
-    last = rfc822(posts[0]["_date"]) if posts else rfc822(dt.date(2026, 10, 20))
+    last = rfc822(posts[0]["_date"], posts[0].get("time") or "09:00") if posts else rfc822(dt.date(2026, 10, 20))
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -1002,7 +1003,7 @@ def main():
     if errors:
         print("journal: errors\n  " + "\n  ".join(errors), file=sys.stderr)
         return 1
-    posts.sort(key=lambda p: (p["_date"], p["slug"], p["lang"]), reverse=True)
+    posts.sort(key=lambda p: (p["_date"], p.get("time") or "", p["slug"], p["lang"]), reverse=True)
     grp = groups(posts)
     main_posts = [p for p in posts if p["lang"] in MAIN_LANGS]
     list_langs = [l for l in LANGS if any(p["lang"] == l for p in posts)]
