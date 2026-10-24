@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 24 Oct 2026 08:23:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 08:52:00 +0900</lastBuildDate>
+    <item>
+      <title>같은 문장이 두 곡에 — 4번과 7번의 Bridge에서 되풀이되는 한 줄 읽기</title>
+      <link>https://idle.ipe.rest/journal/ko/same-sentence-in-two-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/same-sentence-in-two-songs/</guid>
+      <pubDate>Sun, 25 Oct 2026 08:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 4번과 7번 Bridge에는 「AI는 좋은 답을 만들 수 있어. 하지만 좋은 하루를 만드는 건 언제나 사람이더라.」가 글자 그대로 되풀이됩니다. 같은 문장이 어디서 갈라지는지, 가사 원고로 나란히 읽어 봅니다.</description>
+    </item>
+    <item>
+      <title>The Same Sentence in Two Songs — Reading the Bridge Refrain of Tracks 04 and 07</title>
+      <link>https://idle.ipe.rest/journal/en/same-sentence-in-two-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/same-sentence-in-two-songs/</guid>
+      <pubDate>Sun, 25 Oct 2026 08:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In dear(you); vol.1, the Bridges of tracks 04 and 07 repeat one sentence word for word: &quot;AI can make good answers. But the one who makes a good day was always a person.&quot; Where the two songs split after it, read against the lyric drafts.</description>
+    </item>
     <item>
       <title>물음으로 열고 위로로 닫는다 — 첫 곡과 마지막 곡을 한 쌍으로 읽기</title>
       <link>https://idle.ipe.rest/journal/ko/open-with-a-question-close-with-comfort/</link>
