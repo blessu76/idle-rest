@@ -1,6 +1,7 @@
 ---
 title: Tanyakan Kabar Sebelum Memperbaiki — Cara Kami Merancang "Hard Day Again, Wasn't It?"
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: id
 description: Sebuah lagu yang tidak menawarkan nasihat maupun solusi, hanya pertanyaan pertama. Maksud rancangan di balik trek 01 dear(you);, struktur 59 barisnya, bisikannya, dan suaranya, dibaca berdasarkan draf liriknya.

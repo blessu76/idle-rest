@@ -1,6 +1,7 @@
 ---
 title: Bagaimana Sebuah Lagu Dibuat — Lima Serah Terima dari Lirik hingga Rilis
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: id
 description: Perjalanan satu lagu idle() dari lirik ke musik, visual, peninjauan, dan rilis: siapa menyerahkan apa kepada siapa, di mana kami berhenti untuk memeriksa, dan bagaimana kami mengatakan dengan jelas bahwa musiknya dibuat dengan AI.

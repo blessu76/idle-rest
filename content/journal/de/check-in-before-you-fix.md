@@ -1,6 +1,7 @@
 ---
 title: Erst nachfragen, dann reparieren — Wie wir "Hard Day Again, Wasn't It?" entworfen haben
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: de
 description: Ein Lied, das keinen Rat und keine Lösung anbietet, nur eine erste Frage. Die Entwurfsidee hinter Track 01 von dear(you);, seine Struktur aus 59 Zeilen, seine Flüstersätze und sein Klang, gelesen anhand des Textentwurfs.

@@ -1,6 +1,7 @@
 ---
 title: Como uma música é feita — Cinco passagens de bastão, da letra ao lançamento
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: pt
 description: O caminho de uma música do idle() da letra à música, ao visual, à revisão e ao lançamento: quem entrega o quê a quem, onde paramos para conferir e como dizemos com clareza que a música é feita com IA.

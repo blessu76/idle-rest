@@ -1,6 +1,7 @@
 ---
 title: Prendre des nouvelles avant de réparer — Comment nous avons conçu "Hard Day Again, Wasn't It?"
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: fr
 description: Une chanson qui n'offre ni conseil ni solution, seulement une première question. L'intention de conception derrière la piste 01 de dear(you);, sa structure de 59 lignes, ses chuchotements et son son, lus à partir du brouillon des paroles.

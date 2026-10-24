@@ -1,6 +1,7 @@
 ---
 title: How a Song Gets Made — Five Hand-Offs From Lyric to Release
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: en
 description: How one idle() song travels from lyric to music, visuals, review and release: who hands what to whom, where we stop to check, and how we say plainly that the music is made with AI.

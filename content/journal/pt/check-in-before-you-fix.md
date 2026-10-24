@@ -1,6 +1,7 @@
 ---
 title: Pergunte como você está antes de consertar — Como projetamos "Hard Day Again, Wasn't It?"
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: pt
 description: Uma música que não oferece conselho nem solução, apenas uma primeira pergunta. A intenção de design por trás da faixa 01 de dear(you);, sua estrutura de 59 linhas, seus sussurros e seu som, lidos a partir do rascunho da letra.

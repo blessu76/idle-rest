@@ -25,6 +25,8 @@ Front matter (between two `---` lines):
                     languages (→ "AI translation" notice + translationOfWork); optional on en/ko (en: `translation_of: ko`).
     aliases:     optional, comma separated old site paths (/journal/old-slug/) → static redirect stubs to this page
   Optional GEO fields (omitted → simply not emitted; see content/journal/ko/sample-template.md):
+    time:           HH:MM (24h, KST) shown next to the date; datetime / datePublished become YYYY-MM-DDTHH:MM:00+09:00.
+                    Omitted → date only (never invent a time)
     updated:        YYYY-MM-DD, dateModified / sitemap lastmod
     image:          hero image, /assets/journal/<slug>/x.jpg (or https URL); default = first body image, else og-image
     image_alt:      alt text of the hero image (ImageObject.caption)
@@ -185,6 +187,13 @@ def parse_post(path):
         meta["_date"] = dt.date.fromisoformat(meta["date"])
     except ValueError:
         raise ValueError("date must be YYYY-MM-DD: %r" % meta["date"])
+    if meta.get("time"):
+        m = re.match(r"^([01]\d|2[0-3]):([0-5]\d)$", meta["time"])
+        if not m:
+            raise ValueError("time must be HH:MM (24h, KST): %r" % meta["time"])
+        meta["_pub"] = "%sT%s:00+09:00" % (meta["date"], meta["time"])
+    else:
+        meta["_pub"] = meta["_date"].isoformat()
     meta["draft"] = str(meta.get("draft", "false")).lower() in ("true", "yes", "1")
     if meta.get("updated"):
         try:
@@ -381,6 +390,12 @@ def markdown(src):
 # ---------------------------------------------------------------- page chrome
 def fmt_date(d):
     return "%04d. %02d. %02d" % (d.year, d.month, d.day)
+
+
+def time_html(p):
+    """<time> for a post: date (+ ' HH:MM' KST when the post has `time:`); datetime carries +09:00."""
+    t = " " + p["time"] if p.get("time") else ""
+    return '<time datetime="%s">%s%s</time>' % (p["_pub"], fmt_date(p["_date"]), t)
 
 
 def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):
@@ -698,7 +713,7 @@ def render_post(p, grp=None):
     data = {
         "@context": "https://schema.org", "@type": "BlogPosting",
         "headline": p["title"], "description": p["description"],
-        "datePublished": p["_date"].isoformat(), "dateModified": p.get("updated") or p["_date"].isoformat(),
+        "datePublished": p["_pub"], "dateModified": p.get("updated") or p["_pub"],
         "inLanguage": p["lang"], "articleSection": p["category"],
         "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
         "image": image_obj(hero, p.get("image_alt")) if hero else SITE + "/og-image.png",
@@ -728,7 +743,7 @@ def render_post(p, grp=None):
     extra = ('<meta property="og:type" content="article">\n'
              '<meta property="article:published_time" content="%s">\n'
              '<meta property="article:modified_time" content="%s">\n'
-             '<meta property="article:section" content="%s">\n' % (p["_date"].isoformat(), p.get("updated") or p["_date"].isoformat(), esc(p["category"]))
+             '<meta property="article:section" content="%s">\n' % (p["_pub"], p.get("updated") or p["_pub"], esc(p["category"]))
              + "".join('<meta property="article:tag" content="%s">\n' % esc(k) for k in p["_keywords"])
              ) + ld(data) + ld(breadcrumb(p["lang"], p["title"], url))
     draft = '<span class="draft-flag">DRAFT</span>' if p["draft"] else ""
@@ -743,7 +758,7 @@ def render_post(p, grp=None):
             + header(p["lang"], targets={l: urllib.parse.urlsplit(u).path for l, u in pair.items()}) + f"""<main id="main" class="shell">
   <article class="article">
     <header class="article-head">
-      <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time><span>·</span><span>{esc(p['category'])}</span>{draft}</p>
+      <p class="j-date">{time_html(p)}<span>·</span><span>{esc(p['category'])}</span>{draft}</p>
       <h1>{esc(p['title'])}</h1>
       <p>{esc(p['description'])}</p>
     </header>
@@ -777,14 +792,14 @@ def render_list(posts, lang=None, list_langs=("en",)):
             "publisher": {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"},
             "inLanguage": langs_in if not lang else lang,
             "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": post_url(p),
-                          "datePublished": p["_date"].isoformat(), "inLanguage": p["lang"]} for p in posts]}
+                          "datePublished": p["_pub"], "inLanguage": p["lang"]} for p in posts]}
     itemlist = {"@context": "https://schema.org", "@type": "ItemList", "name": "idle() %s" % t["journal"], "url": url,
                 "numberOfItems": len(posts), "itemListOrder": "https://schema.org/ItemListOrderDescending",
                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": post_url(p), "name": p["title"]}
                                     for i, p in enumerate(posts)]}
     if posts:
         items = "\n".join(f"""      <li lang="{esc(p['lang'])}">
-        <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time> · {esc(p['category'])}{' <span class="draft-flag">DRAFT</span>' if p['draft'] else ''}</p>
+        <p class="j-date">{time_html(p)} · {esc(p['category'])}{' <span class="draft-flag">DRAFT</span>' if p['draft'] else ''}</p>
         <h2><a href="{post_path(p)}">{esc(p['title'])}</a></h2>
         <p>{esc(p['description'])}</p>
       </li>""" for p in posts)
@@ -816,7 +831,7 @@ def render_home_cards(posts):
         return '    <div class="empty-note"><strong data-i18n="journal_empty">The first post is coming soon.</strong></div>'
     cards = "\n".join(f"""      <article class="j-card" lang="{esc(p['lang'])}">
         <div class="j-art" aria-hidden="true"></div>
-        <p class="j-date"><time datetime="{p['_date'].isoformat()}">{fmt_date(p['_date'])}</time></p>
+        <p class="j-date">{time_html(p)}</p>
         <h3><a href="{post_path(p)}">{esc(p['title'])}</a></h3>
         <p>{esc(p['description'])}</p>
         <a class="more-link" href="{post_path(p)}" aria-label="{esc(ui(p['lang'])['read_more'])}: {esc(p['title'])}"><span>{esc(ui(p['lang'])['read_more'])}</span> <span aria-hidden="true">→</span></a>

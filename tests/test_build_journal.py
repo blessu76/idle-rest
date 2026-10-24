@@ -178,6 +178,37 @@ class BuildJournal(Site):
         self.assertEqual(before, {p: p.read_bytes() for p in self.tmp.rglob("*") if p.is_file()})
 
 
+class PostTime(Site):
+    def test_time_shown_and_machine_values(self):
+        self.post("t", "en", extra='time: "09:09"\n')
+        self.post("n", "en")
+        self.build()
+        h, blocks = self.ld("journal/en/t/index.html")
+        post = next(b for b in blocks if b["@type"] == "BlogPosting")
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00">2026. 10. 22 09:09</time>', h)
+        self.assertEqual(post["datePublished"], "2026-10-22T09:09:00+09:00")
+        self.assertEqual(post["dateModified"], "2026-10-22T09:09:00+09:00")
+        self.assertIn('article:published_time" content="2026-10-22T09:09:00+09:00"', h)
+        lst = self.read("journal/en/index.html")
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00">2026. 10. 22 09:09</time>', lst)
+        self.assertIn('<time datetime="2026-10-22">2026. 10. 22</time>', lst)  # post without time
+
+    def test_no_time_stays_date_only(self):
+        self.post("n", "en")
+        self.build()
+        h, blocks = self.ld("journal/en/n/index.html")
+        post = next(b for b in blocks if b["@type"] == "BlogPosting")
+        self.assertIn('<time datetime="2026-10-22">2026. 10. 22</time>', h)
+        self.assertEqual(post["datePublished"], "2026-10-22")
+        self.assertEqual(post["dateModified"], "2026-10-22")
+        self.assertNotIn("T00:00", h)
+
+    def test_bad_time_fails(self):
+        for bad in ("9:09", "24:00", "09:09:00", "noon"):
+            self.post("b", "en", extra='time: "%s"\n' % bad)
+            self.fails("time must be HH:MM")
+
+
 class Validation(Site):
     def test_post_without_optional_fields(self):
         self.post("plain")

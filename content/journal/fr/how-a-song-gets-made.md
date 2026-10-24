@@ -1,6 +1,7 @@
 ---
 title: Comment naît une chanson — Cinq passages de relais, des paroles à la sortie
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: fr
 description: Le parcours d'une chanson d'idle() des paroles à la musique, à l'image, à la relecture puis à la sortie : qui transmet quoi à qui, où nous nous arrêtons pour vérifier, et comment nous disons clairement que la musique est faite avec l'IA.

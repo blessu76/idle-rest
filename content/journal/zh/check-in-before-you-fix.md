@@ -1,6 +1,7 @@
 ---
 title: 先问一声安好，再谈解决办法 — 我们如何设计《Hard Day Again, Wasn't It?》
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: zh
 description: 一首不给建议、不给解决办法，只先问一句话的歌。对照歌词草稿，解读 dear(you); 第 1 首的设计意图、59 行的结构、低语与声音。

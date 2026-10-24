@@ -1,6 +1,7 @@
 ---
 title: Check In Before You Fix — How We Designed "Hard Day Again, Wasn't It?"
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: en
 description: A song that offers no advice and no solution, only a first question. The design intent behind dear(you); track 01, its 59-line structure, its whispers and its sound, read against the lyric draft.

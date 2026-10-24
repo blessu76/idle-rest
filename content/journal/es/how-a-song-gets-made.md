@@ -1,6 +1,7 @@
 ---
 title: Cómo se hace una canción — Cinco traspasos de la letra al lanzamiento
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: es
 description: Cómo viaja una canción de idle() desde la letra hasta la música, lo visual, la revisión y el lanzamiento: quién le pasa qué a quién, dónde nos detenemos a comprobar y cómo decimos con claridad que la música se hace con IA.

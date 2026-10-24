@@ -1,6 +1,7 @@
 ---
 title: 解決策より先に、まず安否を — "Hard Day Again, Wasn't It?" をどう設計したか
 date: 2026-10-22
+time: "09:03"
 slug: check-in-before-you-fix
 lang: ja
 description: アドバイスも解決策もなく、ただ最初の問いだけを差し出す歌。dear(you); 1曲目の設計意図、59行の構造、ささやき、サウンドを、歌詞の下書きをもとに読み解きます。

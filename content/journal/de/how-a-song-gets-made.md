@@ -1,6 +1,7 @@
 ---
 title: Wie ein Song entsteht — Fünf Übergaben vom Text bis zur Veröffentlichung
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: de
 description: Wie ein idle()-Song vom Text über Musik, Visuals und Prüfung bis zur Veröffentlichung wandert: wer was an wen übergibt, wo wir innehalten, um zu prüfen, und wie wir offen sagen, dass die Musik mit KI gemacht ist.

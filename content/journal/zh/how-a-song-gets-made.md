@@ -1,6 +1,7 @@
 ---
 title: 一首歌是怎样诞生的 — 从歌词到发行的五次交接
 date: 2026-10-22
+time: "13:05"
 slug: how-a-song-gets-made
 lang: zh
 description: idle() 的一首歌如何经由歌词、音乐、视觉、审核走到发行：谁把什么交给谁，在哪里停下来检查，以及我们如何坦率地说明音乐是用 AI 制作的。
