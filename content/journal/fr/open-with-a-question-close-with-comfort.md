@@ -1,6 +1,7 @@
 ---
 title: Ouvrir sur une question, fermer sur du réconfort — lire le premier et le dernier morceau comme un duo
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: fr
 description: dear(you); vol.1 s'ouvre sur « Hard Day Again, Wasn't It? » et se ferme sur « You Did So Well Today. » Comment le premier et le dernier morceau s'apparient, où le point d'interrogation disparaît et où la forme d'une phrase se retourne, lu à travers les premiers jets de paroles.

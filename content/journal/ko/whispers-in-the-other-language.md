@@ -1,6 +1,7 @@
 ---
 title: 속삭임은 반대 언어로 — dear(you); vol.1의 이중 버전을 이렇게 설계했다
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: ko
 description: dear(you); vol.1의 열 곡은 영어 메인 버전과 한국어 메인 버전으로 만들어지고, 각 버전의 속삭임 줄은 메인과 반대 언어로 들어갑니다. 가사 원고에서 속삭임 29개를 세어 위치·말·짝을 읽어 봅니다.

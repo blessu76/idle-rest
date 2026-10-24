@@ -1,6 +1,7 @@
 ---
 title: Whispers in the Other Language — How dear(you); vol.1 Pairs Its Two Versions
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: en
 description: Every song on dear(you); vol.1 exists in an English-main and a Korean-main version, and the whispered lines in each go in the opposite language. We counted all 29 whispers in the lyric drafts and read where they sit, what they say and how the two versions pair up.

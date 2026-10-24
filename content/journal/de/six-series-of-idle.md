@@ -1,6 +1,7 @@
 ---
 title: Die sechs Serien von idle() — Wie man Namen liest, die wie Code aussehen
 date: 2026-10-23
+time: "13:38"
 slug: six-series-of-idle
 lang: de
 description: Die Songs von idle() sind in sechs Serien gegliedert, von late_night.lofi bis night_mode // not_alone. Wie man die Namen liest, wie Song-Codes funktionieren und wie aus Singles ein Album wird.

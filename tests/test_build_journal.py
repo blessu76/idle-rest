@@ -203,6 +203,15 @@ class PostTime(Site):
         self.assertEqual(post["dateModified"], "2026-10-22")
         self.assertNotIn("T00:00", h)
 
+    def test_time_required_from_oct_23(self):
+        self.post("late", "en")
+        f = self.tmp / "content/journal/en/late.md"
+        f.write_text(f.read_text().replace("date: 2026-10-22", "date: 2026-10-23"))
+        self.fails("en/late.md: time: HH:MM (KST) is required")
+        f.write_text(f.read_text().replace("category: notes\n", 'category: notes\ntime: "13:34"\n'))
+        self.build()
+        self.assertIn('<time datetime="2026-10-23T13:34:00+09:00">2026. 10. 23 13:34</time>', self.read("journal/en/late/index.html"))
+
     def test_same_day_order_feed_and_modified(self):
         for slug, tm in (("zz", "08:00"), ("aa", "12:30"), ("mm", "10:15")):
             self.post(slug, "en", extra='time: "%s"\nupdated: 2026-10-22\n' % tm)

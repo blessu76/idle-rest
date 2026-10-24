@@ -1,6 +1,7 @@
 ---
 title: Admettre la peur plutôt que la réparer — Comment nous avons conçu "I Was Scared, Too."
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: fr
 description: Une chanson qui n'essaie pas de supprimer la peur d'un développeur à l'ère de l'IA, mais commence par l'admettre. L'intention de conception de la piste 03 de dear(you);, le tournant de ses paroles et l'endroit où apparaît pour la première fois un septième emplacement, lus à partir du brouillon des paroles.
