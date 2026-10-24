@@ -125,7 +125,7 @@ El Final Chorus aparece por primera vez en la pista 03, así que no es exclusivo
 
 ## Sonido, según lo especificado
 
-En los documentos de diseño de las canciones, la pista 01 es Ambient Lo-fi a 68-72 BPM, con Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise y Light Rain Ambience. La pista 10 es Ambient Piano y Sleep Lo-fi a 64 BPM, con Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain y Very Soft Night Ambience. El arco de sonido del plan del álbum enumera las pistas 01 y 02 como ambiente de lluvia y de café, la calidez de una final de la tarde, y la pista 10 como la más lenta de las diez a 64 BPM, un piano ambient minimalista que cierra el álbum en silencio. Las notas de estilo de la pista 10 piden además una armonía del género opuesto en el Final Chorus.
+En los documentos de diseño de las canciones, la pista 01 es Ambient Lo-fi a 68-72 BPM, con Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise y Light Rain Ambience. La pista 10 es Ambient Piano y Sleep Lo-fi a 64 BPM, con Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain y Very Soft Night Ambience. El arco de sonido del plan del álbum enumera las pistas 01 y 02 como ambiente de lluvia y de café, la calidez del final de la tarde, y la pista 10 como la más lenta de las diez a 64 BPM, un piano ambient minimalista que cierra el álbum en silencio. Las notas de estilo de la pista 10 piden además una armonía del género opuesto en el Final Chorus.
 
 Solo sobre el papel, el tempo baja a 64, la guitarra no figura en la lista de la pista 10 y la lluvia aparece en ambas. Pero son valores escritos en el plan y en los documentos de diseño; cómo suena esa diferencia en las grabaciones no es algo que esta entrada afirme.
 
