@@ -1,6 +1,7 @@
 ---
 title: Mengakui Rasa Takut, Bukan Memperbaikinya — Bagaimana Kami Merancang "I Was Scared, Too."
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: id
 description: Sebuah lagu yang tidak berusaha menghilangkan rasa takut seorang pengembang di era AI, melainkan mengakuinya lebih dulu. Maksud rancangan trek 03 dari dear(you);, titik balik dalam liriknya, dan tempat slot ketujuh pertama kali muncul, dibaca berdasarkan draf lirik.

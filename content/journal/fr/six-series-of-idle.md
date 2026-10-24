@@ -1,6 +1,7 @@
 ---
 title: Les six séries d'idle() — comment lire des noms qui ressemblent à du code
 date: 2026-10-23
+time: "13:38"
 slug: six-series-of-idle
 lang: fr
 description: Les morceaux d'idle() sont regroupés en six séries, de late_night.lofi à night_mode // not_alone. Comment lire ces noms, comment fonctionnent les codes des morceaux et comment les singles deviennent un album.

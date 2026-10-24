@@ -1,6 +1,7 @@
 ---
 title: 另一种语言里的低语 — dear(you); vol.1 如何让两个版本成对
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: zh
 description: dear(you); vol.1 的每首歌都有英文主打版和韩文主打版，各自的低语都使用相反的语言。我们数遍了歌词草稿中全部 29 处低语，读它们出现在哪里、说了什么，以及两个版本如何成对。

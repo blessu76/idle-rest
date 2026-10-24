@@ -1,6 +1,7 @@
 ---
 title: Abrir com uma pergunta, fechar com conforto — lendo a primeira e a última música como um par
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: pt
 description: dear(you); vol.1 abre com "Hard Day Again, Wasn't It?" e fecha com "You Did So Well Today." Como a primeira e a última música formam um par, onde o ponto de interrogação desaparece e a forma de uma frase se inverte, lido a partir dos rascunhos das letras.

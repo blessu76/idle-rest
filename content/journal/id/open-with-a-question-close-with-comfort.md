@@ -1,6 +1,7 @@
 ---
 title: Buka dengan Pertanyaan, Tutup dengan Penghiburan — Membaca Lagu Pertama dan Terakhir sebagai Sepasang
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: id
 description: dear(you); vol.1 dibuka dengan "Hard Day Again, Wasn't It?" dan ditutup dengan "You Did So Well Today." Bagaimana lagu pertama dan terakhir berpasangan, di mana tanda tanya menghilang dan bentuk kalimat berbalik, dibaca lewat draf lirik.

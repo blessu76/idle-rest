@@ -1,6 +1,7 @@
 ---
 title: Angst zugeben, statt sie zu beheben — Wie wir "I Was Scared, Too." gestaltet haben
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: de
 description: Ein Lied, das die Angst eines Entwicklers im KI-Zeitalter nicht beseitigen will, sondern sie zuerst zugibt. Die Gestaltungsabsicht von Track 03 aus dear(you);, die Wendung im Text und die Stelle, an der zum ersten Mal ein siebter Platz erscheint, gelesen anhand des Textentwurfs.

@@ -1,6 +1,7 @@
 ---
 title: 怖さを直さず、まず認める — "I Was Scared, Too." をどう設計したか
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: ja
 description: AI 時代の開発者の怖さを取り除こうとはせず、まず認める歌。dear(you); 3曲目の設計意図、歌詞のなかの転換点、そして7つ目の枠が初めて現れる場所を、歌詞の下書きをもとに読み解きます。

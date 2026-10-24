@@ -1,6 +1,7 @@
 ---
 title: Sussurros na outra língua — como dear(you); vol.1 emparelha suas duas versões
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: pt
 description: Toda música de dear(you); vol.1 existe em uma versão com inglês como língua principal e outra com coreano como língua principal, e as linhas sussurradas de cada uma vão na língua oposta. Contamos todos os 29 sussurros nos rascunhos das letras e lemos onde eles ficam, o que dizem e como as duas versões se emparelham.

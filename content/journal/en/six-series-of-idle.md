@@ -1,6 +1,7 @@
 ---
 title: The Six Series of idle() — How to Read Names That Look Like Code
 date: 2026-10-23
+time: "13:38"
 slug: six-series-of-idle
 lang: en
 description: idle() songs are grouped into six series, from late_night.lofi to night_mode // not_alone. How to read the names, how song codes work, and how singles become an album.

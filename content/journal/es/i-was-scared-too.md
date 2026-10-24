@@ -1,6 +1,7 @@
 ---
 title: Admitir el miedo en lugar de arreglarlo — Cómo diseñamos "I Was Scared, Too."
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: es
 description: Una canción que no intenta quitar el miedo de un desarrollador en la era de la IA, sino que primero lo admite. La intención de diseño de dear(you); pista 03, el giro de su letra y el lugar donde aparece por primera vez un séptimo apartado, leídos sobre el borrador de la letra.

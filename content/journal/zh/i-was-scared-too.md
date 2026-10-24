@@ -1,6 +1,7 @@
 ---
 title: 不去化解恐惧，而是先承认它 — 我们是如何设计 "I Was Scared, Too." 的
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: zh
 description: 一首不试图消除开发者在 AI 时代的恐惧，而是先承认它的歌。结合歌词草稿，解读 dear(you); 第 3 首的设计意图、歌词中的转折，以及第七个段落首次出现的位置。

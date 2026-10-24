@@ -1,6 +1,7 @@
 ---
 title: Open with a Question, Close with Comfort — Reading the First and Last Songs as a Pair
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: en
 description: dear(you); vol.1 opens with "Hard Day Again, Wasn't It?" and closes with "You Did So Well Today." How the first and last songs pair up, where the question mark disappears and a sentence shape flips, read against the lyric drafts.

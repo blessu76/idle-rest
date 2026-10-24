@@ -1,6 +1,7 @@
 ---
 title: Admitting Fear Instead of Fixing It — How We Designed "I Was Scared, Too."
 date: 2026-10-23
+time: "13:34"
 slug: i-was-scared-too
 lang: en
 description: A song that does not try to remove a developer's fear of the AI era but admits it first. The design intent of dear(you); track 03, the turn in its lyric, and the place where a seventh slot first appears, read against the lyric draft.

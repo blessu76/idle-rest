@@ -1,6 +1,7 @@
 ---
 title: Murmures dans l'autre langue — comment dear(you); vol.1 associe ses deux versions
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: fr
 description: Chaque morceau de dear(you); vol.1 existe en une version à dominante anglaise et une version à dominante coréenne, et les lignes murmurées de chacune sont dans la langue opposée. Nous avons compté les 29 murmures des premiers jets de paroles et lu où ils se placent, ce qu'ils disent et comment les deux versions s'apparient.

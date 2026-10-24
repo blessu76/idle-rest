@@ -1,6 +1,7 @@
 ---
 title: 問いかけで始まり、慰めで終わる — 最初の曲と最後の曲を対として読む
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: ja
 description: dear(you); vol.1 は "Hard Day Again, Wasn't It?" で始まり、"You Did So Well Today." で終わります。最初の曲と最後の曲がどう対になっているか、疑問符がどこで消え、文の形がどこで反転するかを、歌詞の下書きと照らして読みました。

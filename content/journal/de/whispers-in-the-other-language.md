@@ -1,6 +1,7 @@
 ---
 title: Flüstern in der anderen Sprache — Wie dear(you); vol.1 seine zwei Versionen paart
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: de
 description: Jeder Song auf dear(you); vol.1 existiert in einer Version mit Englisch als Hauptsprache und einer mit Koreanisch als Hauptsprache, und die geflüsterten Zeilen stehen jeweils in der entgegengesetzten Sprache. Wir haben alle 29 Flüsterstellen in den Textentwürfen gezählt und gelesen, wo sie stehen, was sie sagen und wie sich die beiden Versionen paaren.

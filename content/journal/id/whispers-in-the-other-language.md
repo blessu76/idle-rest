@@ -1,6 +1,7 @@
 ---
 title: Bisikan dalam Bahasa Lain — Cara dear(you); vol.1 Memasangkan Dua Versinya
 date: 2026-10-24
+time: "08:19"
 slug: whispers-in-the-other-language
 lang: id
 description: Setiap lagu di dear(you); vol.1 ada dalam versi utama Inggris dan versi utama Korea, dan baris yang dibisikkan di tiap versi memakai bahasa sebaliknya. Kami menghitung seluruh 29 bisikan dalam draf lirik dan membaca letaknya, isinya, serta bagaimana kedua versi berpasangan.

@@ -1,6 +1,7 @@
 ---
 title: 물음으로 열고 위로로 닫는다 — 첫 곡과 마지막 곡을 한 쌍으로 읽기
 date: 2026-10-24
+time: "08:23"
 slug: open-with-a-question-close-with-comfort
 lang: ko
 description: dear(you); vol.1은 「오늘도 많이 힘들었지?」로 열고 「오늘도... 정말 고생했어.」로 닫습니다. 앨범의 처음과 끝이 어떻게 짝을 이루는지, 물음표가 사라지고 같은 문형이 뒤집히는 자리를 가사 원고로 대조해 봅니다.
