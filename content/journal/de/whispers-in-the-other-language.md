@@ -3,7 +3,7 @@ title: Flüstern in der anderen Sprache — Wie dear(you); vol.1 seine zwei Vers
 date: 2026-10-24
 slug: whispers-in-the-other-language
 lang: de
-description: Jeder Song auf dear(you); vol.1 existiert in einer Version mit Englisch als Hauptsprache und einer mit Koreanisch als Hauptsprache, und die geflüsterten Zeilen stehen jeweils in der entgegengesetzten Sprache. Wir haben alle 29 Flüstern in den Textentwürfen gezählt und gelesen, wo sie stehen, was sie sagen und wie sich die beiden Versionen paaren.
+description: Jeder Song auf dear(you); vol.1 existiert in einer Version mit Englisch als Hauptsprache und einer mit Koreanisch als Hauptsprache, und die geflüsterten Zeilen stehen jeweils in der entgegengesetzten Sprache. Wir haben alle 29 Flüsterstellen in den Textentwürfen gezählt und gelesen, wo sie stehen, was sie sagen und wie sich die beiden Versionen paaren.
 category: behind-the-music
 draft: false
 translation_of: en
@@ -11,7 +11,7 @@ keywords: Flüstern, zweisprachige Texte, Englisch als Hauptsprache, Koreanisch 
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-Alle zehn Songs von *dear(you); vol.1* entstehen in zwei Versionen. Laut Albumplan hat die englische Hauptversion einen süßen weiblichen Gesang und die koreanische Hauptversion einen sanften männlichen. Beide Versionen folgen derselben Regel: Was nicht die Hauptsprache ist, kommt als Flüstern hinein. In der englischen Version sind die Flüstern koreanisch, in der koreanischen Version englisch. Dieser Beitrag verfolgt diese Regel durch die Textentwürfe und zählt die Flüstern aller zehn Songs einzeln.
+Alle zehn Songs von *dear(you); vol.1* entstehen in zwei Versionen. Laut Albumplan hat die englische Hauptversion einen süßen weiblichen Gesang und die koreanische Hauptversion einen sanften männlichen. Beide Versionen folgen derselben Regel: Was nicht die Hauptsprache ist, kommt als Flüstern hinein. In der englischen Version sind die Flüsterstellen koreanisch, in der koreanischen Version englisch. Dieser Beitrag verfolgt diese Regel durch die Textentwürfe und zählt die Flüsterstellen aller zehn Songs einzeln.
 
 Zuerst eine Anmerkung zum Umfang. Was wir gelesen haben, ist der Textentwurf, und was auf einer Aufnahme tatsächlich gesungen wird, kann vom Entwurf abweichen. Wie leise jedes Flüstern auf der Aufnahme ist und auf welchem Schlag es landet, liegt außerhalb dessen, was dieser Beitrag geprüft hat.
 
@@ -36,11 +36,11 @@ Jede Version lässt sich für sich lesen, weil jeder vollständige Satz in der H
 
 ## Ein Song als Spiegel: „I Was Scared, Too.“
 
-![Ein Diagramm der drei Flüstern von S1A1.03 in beiden Versionen. Die englische Hauptversion flüstert 괜찮아, 걱정 마 und 천천히; die koreanische Hauptversion flüstert It's okay, Don't worry und Take your time, an denselben drei Stellen: Strophe 1, Refrain und letzter Refrain. Die Zeile in der Hauptsprache, die direkt nach jedem Flüstern gesungen wird, steht in kleiner Schrift](/assets/journal/whispers-in-the-other-language/whisper-mirror-track03.jpg)
+![Ein Diagramm der drei Flüsterstellen von S1A1.03 in beiden Versionen. Die englische Hauptversion flüstert 괜찮아, 걱정 마 und 천천히; die koreanische Hauptversion flüstert It's okay, Don't worry und Take your time, an denselben drei Stellen: Strophe 1, Refrain und letzter Refrain. Die Zeile in der Hauptsprache, die direkt nach jedem Flüstern gesungen wird, steht in kleiner Schrift](/assets/journal/whispers-in-the-other-language/whisper-mirror-track03.jpg)
 
-*Die drei Flüstern von S1A1.03. Die große Schrift ist das Flüstern; die kleine Schrift ist die Zeile, die ihm in der Hauptsprache folgt.*
+*Die drei Flüsterstellen von S1A1.03. Die große Schrift ist das Flüstern; die kleine Schrift ist die Zeile, die ihm in der Hauptsprache folgt.*
 
-Nehmen wir den dritten Song, „I Was Scared, Too.“ (koreanischer Titel: 나도 무서웠어.), und stellen ihn vor einen Spiegel. Er hat drei Flüstern. In der englischen Version lauten sie:
+Nehmen wir den dritten Song, „I Was Scared, Too.“ (koreanischer Titel: 나도 무서웠어.), und stellen ihn vor einen Spiegel. Er hat drei Flüsterstellen. In der englischen Version lauten sie:
 
 > 괜찮아…  (Verse 1, „es ist okay“)
 > 걱정 마…  (Chorus, „keine Sorge“)
@@ -58,31 +58,31 @@ Die erste Strophe hat dieselbe Form. In der englischen Version steht 괜찮아�
 
 ## Eine Karte aller zehn Songs
 
-![Eine Tabelle, wo die Flüstern stehen. Die Zeilen sind S1A1.01 bis 10; die Spalten sind Strophe 1, Strophe 2, Refrain, Bridge, letzter Refrain und Outro. Jeder Song hat ein Flüstern in Strophe 1 und im Refrain; sechs Songs haben eines im letzten Refrain, nur Song 01 hat eines in Strophe 2, und die Songs 01 und 05 haben eines in der Bridge. Jedes Outro enthält dieselbe feste englische Zeile, ipe. be still](/assets/journal/whispers-in-the-other-language/whisper-map-ten-letters.jpg)
+![Eine Tabelle, wo die Flüsterstellen stehen. Die Zeilen sind S1A1.01 bis 10; die Spalten sind Strophe 1, Strophe 2, Refrain, Bridge, letzter Refrain und Outro. Jeder Song hat ein Flüstern in Strophe 1 und im Refrain; sechs Songs haben eines im letzten Refrain, nur Song 01 hat eines in Strophe 2, und die Songs 01 und 05 haben eines in der Bridge. Jedes Outro enthält dieselbe feste englische Zeile, ipe. be still](/assets/journal/whispers-in-the-other-language/whisper-map-ten-letters.jpg)
 
-*Wo die 29 Flüstern über die zehn Songs verteilt stehen. Die obere Zeile ist das Koreanisch im Entwurf der englischen Version; die untere Zeile ist das Englisch im Entwurf der koreanischen Version.*
+*Wo die 29 Flüsterstellen über die zehn Songs verteilt stehen. Die obere Zeile ist das Koreanisch im Entwurf der englischen Version; die untere Zeile ist das Englisch im Entwurf der koreanischen Version.*
 
-Nun alle zehn Songs. Die englische Version hat 29 Flüstern und die koreanische Version hat 29. In jedem der zehn Songs stehen die Flüstern der beiden Versionen im selben Abschnitt, ohne eine einzige Abweichung.
+Nun alle zehn Songs. Die englische Version hat 29 Flüsterstellen und die koreanische Version hat 29. In jedem der zehn Songs stehen die Flüsterstellen der beiden Versionen im selben Abschnitt, ohne eine einzige Abweichung.
 
 Die Positionen folgen einem Muster:
 
 - Verse 1 und Chorus: alle zehn Songs.
-- Final Chorus: sechs Songs, 03, 04, 07, 08, 09 und 10. Die Songs 05 und 06 haben einen Final-Chorus-Abschnitt ohne Flüstern darin, und die Songs 01 und 02 haben gar keinen Final-Chorus-Abschnitt.
+- Final Chorus: sechs Songs, 03, 04, 07, 08, 09 und 10. Die Songs 05 und 06 haben einen Final-Chorus-Abschnitt ohne Flüsterstellen darin, und die Songs 01 und 02 haben gar keinen Final-Chorus-Abschnitt.
 - Verse 2: nur Song 01.
 - Bridge: die Songs 01 und 05.
 - Pre-Chorus: keiner der zehn.
 
-Nach Songs sind das vier Flüstern in Track 01, je zwei in den Tracks 02 und 06 und je drei in den anderen sieben: 4 + 2 + 2 + 7×3 = 29. Die Grundlinie ist eines in der ersten Strophe und eines im Refrain, je nach Song mit bis zu zwei weiteren. Warum allein Track 01 Flüstern sowohl in Verse 2 als auch in der Bridge hat, ist nicht festgehalten.
+Nach Songs sind das vier Flüsterstellen in Track 01, je zwei in den Tracks 02 und 06 und je drei in den anderen sieben: 4 + 2 + 2 + 7×3 = 29. Die Grundlinie ist eines in der ersten Strophe und eines im Refrain, je nach Song mit bis zu zwei weiteren. Warum allein Track 01 Flüsterstellen sowohl in Verse 2 als auch in der Bridge hat, ist nicht festgehalten.
 
 ## Die am häufigsten geflüsterten Wörter
 
-![Ein Balkendiagramm der 29 Flüstern nach Wendung. 괜찮아 kommt 7-mal vor, 천천히 5-mal und 같이 있어 4-mal; die übrigen dreizehn Wendungen kommen je einmal vor. Rechts von jedem Balken steht das englische Gegenstück, das in der koreanischen Hauptversion verwendet wird](/assets/journal/whispers-in-the-other-language/whisper-vocabulary.jpg)
+![Ein Balkendiagramm der 29 Flüsterstellen nach Wendung. 괜찮아 kommt 7-mal vor, 천천히 5-mal und 같이 있어 4-mal; die übrigen dreizehn Wendungen kommen je einmal vor. Rechts von jedem Balken steht das englische Gegenstück, das in der koreanischen Hauptversion verwendet wird](/assets/journal/whispers-in-the-other-language/whisper-vocabulary.jpg)
 
-*Die koreanischen Flüstern der englischen Version, nach Wendung gezählt. Rechts das Englisch, das in der koreanischen Version an derselben Stelle steht.*
+*Die koreanischen Flüsterstellen der englischen Version, nach Wendung gezählt. Rechts das Englisch, das in der koreanischen Version an derselben Stelle steht.*
 
-Die 29 Flüstern bestehen aus 16 verschiedenen Wendungen. Am häufigsten ist 괜찮아… („es ist okay“) mit sieben, dann 천천히… („langsam“) mit fünf und 같이 있어… („bleib bei mir“) mit vier. Diese drei Wendungen machen 16 der 29 aus; die anderen dreizehn kommen je einmal vor.
+Die 29 Flüsterstellen bestehen aus 16 verschiedenen Wendungen. Am häufigsten ist 괜찮아… („es ist okay“) mit sieben, dann 천천히… („langsam“) mit fünf und 같이 있어… („bleib bei mir“) mit vier. Diese drei Wendungen machen 16 der 29 aus; die anderen dreizehn kommen je einmal vor.
 
-Alle sieben 괜찮아…-Flüstern stehen in Verse 1: Die Tracks 01, 02, 03, 04, 06, 08 und 09 beginnen ihr Flüstern mit diesem Wort. Die anderen drei Songs beginnen anders. Track 05 beginnt mit 천천히…, Track 07 mit 고마워… („danke“) und Track 10 mit 좋은 저녁이야… („guten Abend“). Der Albumplan führt einen gemeinsamen Wortschatz auf, der den tröstenden Ton des Albums festlegen soll: 괜찮아 / 천천히 / 충분해 / 고마워 / 푹 쉬어. Drei der fünf, 괜찮아, 천천히 und 고마워, tauchen wörtlich als Flüstern auf. Dasselbe Register wie 충분해 („genug“) erscheint als 넌 충분히 했어… in Track 10. 푹 쉬어 („ruh dich gut aus“) ist gar kein Flüstern; es ist eine Zeile des Haupttexts, 푹 쉬어., im Outro der koreanischen Version von Track 01.
+Alle sieben 괜찮아…-Flüsterstellen stehen in Verse 1: Die Tracks 01, 02, 03, 04, 06, 08 und 09 beginnen ihr Flüstern mit diesem Wort. Die anderen drei Songs beginnen anders. Track 05 beginnt mit 천천히…, Track 07 mit 고마워… („danke“) und Track 10 mit 좋은 저녁이야… („guten Abend“). Der Albumplan führt einen gemeinsamen Wortschatz auf, der den tröstenden Ton des Albums festlegen soll: 괜찮아 / 천천히 / 충분해 / 고마워 / 푹 쉬어. Drei der fünf, 괜찮아, 천천히 und 고마워, tauchen wörtlich als Flüstern auf. Dasselbe Register wie 충분해 („genug“) erscheint als 넌 충분히 했어… in Track 10. 푹 쉬어 („ruh dich gut aus“) ist gar kein Flüstern; es ist eine Zeile des Haupttexts, 푹 쉬어., im Outro der koreanischen Version von Track 01.
 
 Die englischen Gegenstücke sind nicht Wort für Wort. Von den fünf 천천히… sind vier mit „Take your time...“ gepaart, und nur das in Verse 1 von Track 05 ist mit „Slow down...“ gepaart. Innerhalb von Track 05 erscheint 천천히… zweimal, in Verse 1 und im Refrain, und die englische Seite verwendet zwei verschiedene Wendungen. 숨 쉬어… ist mit „Breathe...“ gepaart und 그냥 숨 쉬어… mit „Just breathe...“. Die koreanische Seite hat also 16 Wendungen und die englische 17. Das Englisch folgt eher dem Sinn der Stelle als einem Wörterbuch.
 
@@ -108,9 +108,9 @@ In der zweiten Beziehung bietet das Flüstern etwas an, das die Zeile davor nich
 
 und in der koreanischen Version folgt auf 이 말, 누군가는 und 꼭 해줬으면 했잖아. das „You did enough...“. Direkt nachdem die Zeilen auf Worte zeigen, die jemand zu hören gehofft hatte, wird eine Wendung dieser Art im Flüstern der anderen Sprache übergeben. Der Entwurf sagt das nicht; es ist die Deutung der Lesenden.
 
-## Nur die Flüstern lesen
+## Nur die Flüsterstellen lesen
 
-In Reihenfolge gelesen, ergeben die Flüstern eines einzelnen Songs einen sehr kurzen Brief. Track 09 ergibt:
+In Reihenfolge gelesen, ergeben die Flüsterstellen eines einzelnen Songs einen sehr kurzen Brief. Track 09 ergibt:
 
 > 괜찮아… / 조금만 더 웃어… / 내일은 올 거야…
 
@@ -118,7 +118,7 @@ In der koreanischen Version stehen an denselben drei Stellen „It's okay...“,
 
 > 좋은 저녁이야… / 넌 충분히 했어… / 잘 자…
 
-mit „Good evening...“, „You did enough...“ und „Sleep well...“ in der koreanischen Version. Er beginnt mit einem Abendgruß, geht durch den Satz, dass du genug getan hast, und endet bei gute Nacht. Im letzten Song des Albums lesen sich die Flüstern wie eine kurze Routine, um den Tag wegzulegen.
+mit „Good evening...“, „You did enough...“ und „Sleep well...“ in der koreanischen Version. Er beginnt mit einem Abendgruß, geht durch den Satz, dass du genug getan hast, und endet bei gute Nacht. Im letzten Song des Albums lesen sich die Flüsterstellen wie eine kurze Routine, um den Tag wegzulegen.
 
 Kein Flüstern hier ist lang genug, um ein Ratschlag zu sein, und die meisten helfen einfach, wieder zu Atem zu kommen. Der Konzeptabsatz des Albumplans sagt, das Album dränge niemandem Ratschläge, Lösungen oder Vorsätze auf („조언도, 해결책도, 다짐도 강요하지 않는다“). Dasselbe Register lässt sich hier im kleinsten Maßstab lesen.
 
@@ -128,15 +128,15 @@ Die Regel hat eine Ausnahme. Die letzte Zeile jedes Songs, „ipe. be still“, 
 
 Noch etwas ist festzuhalten. Im Outro der koreanischen Version von Track 10 ist die Zeile direkt vor „ipe. be still“ das englische „Good night.“, ohne Flüstermarkierung geschrieben; in der englischen Version ist es die Hauptsprache. Das fällt aus der Regel heraus, dass die entgegengesetzte Sprache als Flüstern hineinkommt, und wird deshalb nicht zu den 29 oben gezählt.
 
-Die eigene Beschreibung der Website sagt, dass seit dem Album dear(you); jeder Track mit dieser geflüsterten Zeile endet. Die zwei außerhalb des Albums veröffentlichten Songs, „good morning, world“ (U-001) und „still compiling“ (N-001), haben in ihren Textentwürfen überhaupt keine Flüstermarkierungen. Das Flüstern in der entgegengesetzten Sprache ist ein Entwurf, den wir für die zehn Songs dieses Albums bestätigen können.
+Die eigene Beschreibung der Website sagt, dass seit dem Album dear(you); jeder Track mit dieser geflüsterten Zeile endet. Die zwei außerhalb des Albums veröffentlichten Songs, „good morning, world“ (U-001) und „still compiling“ (N-001), haben in ihren Textentwürfen überhaupt keine Flüstermarkierungen. Das Flüstern in der entgegengesetzten Sprache ist ein Gestaltungsprinzip, das wir für die zehn Songs dieses Albums bestätigen können.
 
 ## Was nicht festgehalten ist
 
 - Warum die entgegengesetzte Sprache gewählt wurde statt derselben.
 - Nach welchen Kriterien und in welcher Reihenfolge die Flüsterwendungen ausgewählt wurden.
-- Wie laut und wie lang die Flüstern auf den Aufnahmen sind und wie die Harmonie des anderen Geschlechts klingt.
+- Wie laut und wie lang die Flüsterstellen auf den Aufnahmen sind und wie die Harmonie des anderen Geschlechts klingt.
 
-Dieser Beitrag schreibt keinen dieser drei Punkte so, als wäre er festgehalten. Bestätigt wurden die 29 Flüstern in den Entwürfen, die Stellen, an denen sie stehen, und die Tatsache, dass die beiden Versionen dieselbe Bedeutung an dieselbe Stelle setzen.
+Dieser Beitrag schreibt keinen dieser drei Punkte so, als wäre er festgehalten. Bestätigt wurden die 29 Flüsterstellen in den Entwürfen, die Stellen, an denen sie stehen, und die Tatsache, dass die beiden Versionen dieselbe Bedeutung an dieselbe Stelle setzen.
 
 ## Anhören
 

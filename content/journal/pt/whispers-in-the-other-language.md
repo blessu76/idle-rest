@@ -11,7 +11,7 @@ keywords: sussurro, letras bilíngues, inglês como língua principal, coreano c
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-As dez músicas de *dear(you); vol.1* são feitas em duas versões. Segundo o plano do álbum, a versão principal em inglês tem um vocal feminino doce e a versão principal em coreano tem um vocal masculino suave. As duas versões seguem a mesma regra: tudo o que não é a língua principal entra como sussurro. Na versão em inglês os sussurros são em coreano, e na versão em coreano são em inglês. Este texto acompanha essa regra pelos rascunhos das letras, contando um a um os sussurros das dez músicas.
+As dez músicas de *dear(you); vol.1* são feitas em duas versões. Segundo o plano do álbum, a versão principal em inglês tem um vocal feminino doce e a versão principal em coreano tem um vocal masculino suave. As duas versões seguem a mesma regra: a língua que não é a principal entra como sussurro. Na versão em inglês os sussurros são em coreano, e na versão em coreano são em inglês. Este texto acompanha essa regra pelos rascunhos das letras, contando um a um os sussurros das dez músicas.
 
 Primeiro, uma observação sobre o alcance. O que lemos é o rascunho da letra, e o que é de fato cantado numa gravação pode ser diferente do rascunho. O quão baixo é cada sussurro na gravação, e em que tempo ele cai, está fora do que este texto verificou.
 
@@ -114,7 +114,7 @@ Lidos em ordem, os sussurros de uma única música formam uma carta muito curta.
 
 > 괜찮아… / 조금만 더 웃어… / 내일은 올 거야…
 
-Na versão em coreano, os mesmos três lugares guardam "It's okay...", "One more smile..." e "Tomorrow will come...". Parte de está tudo bem, passa por mais um sorriso e chega a o amanhã vem, em sete palavras coreanas. A faixa 10 vai assim:
+Na versão em coreano, os mesmos três lugares guardam "It's okay...", "One more smile..." e "Tomorrow will come...". Parte de "está tudo bem", passa por "mais um sorriso" e chega a "amanhã vai chegar", em sete palavras coreanas. A faixa 10 vai assim:
 
 > 좋은 저녁이야… / 넌 충분히 했어… / 잘 자…
 
@@ -128,7 +128,7 @@ A regra tem uma exceção. A última linha de toda música, "ipe. be still", é 
 
 Mais uma coisa a registrar. No Outro da versão em coreano da faixa 10, a linha logo antes de "ipe. be still" é o inglês "Good night.", escrito sem marca de sussurro; na versão em inglês, essa é a língua principal. Ela fica fora da regra de que a língua oposta entra como sussurro, por isso não é contada entre os 29 acima.
 
-A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum, "good morning, world" (U-001) e "still compiling" (N-001), não têm nenhuma marca de sussurro em seus rascunhos de letra. O sussurro na língua oposta é um desenho que podemos confirmar para as dez músicas deste álbum.
+A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum, "good morning, world" (U-001) e "still compiling" (N-001), não têm nenhuma marca de sussurro em seus rascunhos de letra. O sussurro na língua oposta é uma escolha de projeto que podemos confirmar para as dez músicas deste álbum.
 
 ## O que não está registrado
 
