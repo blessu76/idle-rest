@@ -113,7 +113,7 @@ Konstruksi yang sama muncul di trek 08. Final Chorus bahasa Inggrisnya berakhir 
 
 ## Bisikan: urutan salam
 
-Setiap lagu membawa bisikan dalam bahasa sebaliknya. Trek 01 memiliki empat (dalam versi Korea: *It's okay*, *Take your time*, *Breathe*, *I'm here*). Trek 10 memiliki tiga. Versi Korea membawa *Good evening*, *You did enough*, dan *Sleep well*; versi Inggris membawa 좋은 저녁이야 ("selamat malam" saat petang), 넌 충분히 했어 ("kamu sudah cukup berusaha"), dan 잘 자 ("tidur nyenyak").
+Setiap lagu membawa bisikan dalam bahasa sebaliknya. Trek 01 memiliki empat (dalam versi Korea: *It's okay*, *Take your time*, *Breathe*, *I'm here*). Trek 10 memiliki tiga. Versi Korea membawa *Good evening*, *You did enough*, dan *Sleep well*; versi Inggris membawa 좋은 저녁이야 ("selamat petang"), 넌 충분히 했어 ("kamu sudah cukup berusaha"), dan 잘 자 ("tidur nyenyak").
 
 Bisikan trek 01 semuanya diucapkan kepada saat ini: tidak apa-apa, pelan-pelan, bernapaslah, aku di sini. Bisikan trek 10 mengikuti urutan waktu. Salam untuk petang membukanya, lalu putusan atas hari itu (dalam kala lampau), lalu salam untuk tidur. Di Outro, tanpa tanda bisikan dalam draf, datang "Good night," yang polos, lalu tanda tangan. Peralihan dari petang ke malam dituliskan berurutan dalam satu lagu. Jika trek 01 duduk di samping orang yang kelelahan, trek 10 terbaca seperti mengantar orang itu sampai ke pintu kamar tidur.
 
@@ -125,7 +125,7 @@ Final Chorus pertama kali muncul di trek 03, jadi ia bukan milik khas trek 10. N
 
 ## Bunyi, sebagaimana dispesifikasikan
 
-Di dokumen desain lagu, trek 01 adalah Ambient Lo-fi pada 68 sampai 72 BPM, dengan Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise, dan Light Rain Ambience. Trek 10 adalah Ambient Piano dan Sleep Lo-fi pada 64 BPM, dengan Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain, dan Very Soft Night Ambience. Lengkung bunyi dalam rencana album mencantumkan trek 01 dan 02 sebagai suasana hujan dan kafe, kehangatan petang yang larut, dan trek 10 sebagai yang paling lambat dari kesepuluhnya pada 64 BPM, piano ambient minimal yang menutup album dengan tenang. Catatan gaya trek 10 juga meminta harmoni gender sebaliknya pada Final Chorus.
+Di dokumen desain lagu, trek 01 adalah Ambient Lo-fi pada 68 sampai 72 BPM, dengan Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise, dan Light Rain Ambience. Trek 10 adalah Ambient Piano dan Sleep Lo-fi pada 64 BPM, dengan Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain, dan Very Soft Night Ambience. Lengkung bunyi dalam rencana album mencantumkan trek 01 dan 02 sebagai suasana hujan dan kafe, kehangatan malam yang mulai larut, dan trek 10 sebagai yang paling lambat dari kesepuluhnya pada 64 BPM, piano ambient minimal yang menutup album dengan tenang. Catatan gaya trek 10 juga meminta harmoni gender sebaliknya pada Final Chorus.
 
 Di atas kertas saja, tempo turun menjadi 64, gitar tidak ada dalam daftar trek 10, dan hujan tercantum di keduanya. Tetapi ini adalah nilai yang tertulis dalam rencana dan dokumen desain; bagaimana perbedaan itu terdengar di rekaman bukan sesuatu yang ditegaskan tulisan ini.
 

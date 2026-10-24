@@ -1,5 +1,5 @@
 // idle() service worker — installable PWA + offline fallback
-const CACHE = 'idle-v23';
+const CACHE = 'idle-v24';
 const CORE = [
   '/', '/index.html',
   '/manifest.webmanifest',

@@ -51,7 +51,7 @@ Quem fala promete lembrar. "I will remember" é futuro. O Pre-Chorus da faixa 10
 
 > You, today, have walked far enough. You held on harder than anyone else.
 
-"Have walked" e "held on" são coisas já concluídas. A perseverança que a faixa 01 prometeu lembrar é, na faixa 10, enunciada como fato estabelecido. Nada nos registros diz que a ligação foi planejada, então a oferecemos apenas como o jeito em que os dois slots se leem lado a lado. O que os rascunhos confirmam é que os dois slots compartilham tamanho, posição e assunto (a perseverança), e diferem no tempo verbal.
+"Have walked" e "held on" são coisas já concluídas. A perseverança que a faixa 01 prometeu lembrar é, na faixa 10, enunciada como fato estabelecido. Nada nos registros diz que a ligação foi planejada, então a oferecemos apenas como o jeito como os dois slots se leem lado a lado. O que os rascunhos confirmam é que os dois slots compartilham tamanho, posição e assunto (a perseverança), e diferem no tempo verbal.
 
 Uma mudança na mesma direção está no fim de cada Chorus. O Chorus da faixa 01 fecha assim.
 
@@ -113,13 +113,13 @@ A mesma construção aparece na faixa 08. Seu Final Chorus em inglês termina co
 
 ## Sussurros: uma ordem de cumprimentos
 
-Cada música traz sussurros na língua oposta. A faixa 01 tem quatro (na versão em coreano: *It's okay*, *Take your time*, *Breathe*, *I'm here*). A faixa 10 tem três. A versão em coreano traz *Good evening*, *You did enough* e *Sleep well*; a versão em inglês traz 좋은 저녁이야 ("bom entardecer"), 넌 충분히 했어 ("você fez o bastante") e 잘 자 ("durma bem").
+Cada música traz sussurros na língua oposta. A faixa 01 tem quatro (na versão em coreano: *It's okay*, *Take your time*, *Breathe*, *I'm here*). A faixa 10 tem três. A versão em coreano traz *Good evening*, *You did enough* e *Sleep well*; a versão em inglês traz 좋은 저녁이야 ("boa tarde", como saudação de fim de tarde), 넌 충분히 했어 ("você fez o bastante") e 잘 자 ("durma bem").
 
 Os sussurros da faixa 01 são todos ditos ao momento presente: está tudo bem, devagar, respire, estou aqui. Os sussurros da faixa 10 seguem a ordem do tempo. Um cumprimento para o entardecer abre, depois um veredito sobre o dia (no passado), depois um cumprimento para dormir. No Outro, sem marca de sussurro no rascunho, vem um simples "Good night," e então a assinatura. A passagem do entardecer à noite é enunciada em ordem dentro de uma única música. Se a faixa 01 se senta ao lado de uma pessoa exausta, a faixa 10 parece acompanhá-la até a porta do quarto.
 
 ## Slots e linhas: por que um foi acrescentado não está registrado
 
-A faixa 01 tem seis slots e 59 linhas, tanto na versão em inglês quanto na em coreano. Não tem Final Chorus; em vez de cantar o refrão mais uma vez, vai direto à despedida. A faixa 10 tem sete slots, com um Final Chorus entre a Bridge e o Outro. A versão em coreano tem 14, 12, 8, 10, 11, 10 e 9 linhas, 74 no total, e a versão em inglês tem 73, porque seu Verse 2 é uma linha mais curto. (A contagem deixa de fora o título e as linhas em branco e inclui os sussurros e a assinatura final.)
+A faixa 01 tem seis slots e 59 linhas, tanto na versão em inglês quanto na em coreano. Não tem Final Chorus; em vez de cantar o refrão mais uma vez, vai direto à despedida. A faixa 10 tem sete slots, com um Final Chorus entre a Bridge e o Outro. A versão em coreano tem 14, 12, 8, 10, 11, 10 e 9 linhas, 74 no total, e a versão em inglês tem 73, porque seu Verse 2 é uma linha mais curta. (A contagem deixa de fora o título e as linhas em branco e inclui os sussurros e a assinatura final.)
 
 O Final Chorus aparece primeiro na faixa 03, então não é exclusivo da faixa 10. O que há dentro desse slot aqui ainda merece nota. Ele enuncia o reconhecimento mais uma vez e guarda o agradecimento: "Thank you. For living this day all the way through." A faixa 01 tinha guardado o seu agradecimento num Outro curto. Por que os slots foram divididos assim não está escrito em lugar nenhum, então relatamos apenas o que a estrutura mostra.
 
@@ -127,7 +127,7 @@ O Final Chorus aparece primeiro na faixa 03, então não é exclusivo da faixa 1
 
 Nos documentos de design, a faixa 01 é Ambient Lo-fi a 68 a 72 BPM, com Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise e Light Rain Ambience. A faixa 10 é Ambient Piano e Sleep Lo-fi a 64 BPM, com Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain e Very Soft Night Ambience. O arco sonoro do plano do álbum lista as faixas 01 e 02 como ambiência de chuva e café, o calor de um fim de tarde, e a faixa 10 como a mais lenta das dez, a 64 BPM, um piano ambiente minimalista que fecha o álbum em silêncio. As notas de estilo da faixa 10 também pedem uma harmonia do gênero oposto no Final Chorus.
 
-Só no papel, o andamento cai para 64, o violão está ausente da lista da faixa 10, e a chuva consta nas duas. Mas esses são valores escritos no plano e nos documentos de design; como essa diferença soa nas gravações não é algo que este texto afirma.
+Só no papel, o andamento cai para 64, a guitarra está ausente da lista da faixa 10, e a chuva consta nas duas. Mas esses são valores escritos no plano e nos documentos de design; como essa diferença soa nas gravações não é algo que este texto afirma.
 
 ## A mesma última linha, uma frase diferente antes dela
 

@@ -119,13 +119,13 @@ Los susurros de la pista 01 se dicen todos al momento presente: no pasa nada, de
 
 ## Slots y líneas: por qué se añadió uno no consta
 
-La pista 01 tiene seis slots y 59 líneas tanto en la versión en inglés como en la coreana. No tiene Final Chorus; en lugar de cantar el estribillo una vez más, va directa a su despedida. La pista 10 tiene siete slots, con un Final Chorus entre el Bridge y el Outro. La versión coreana tiene 14, 12, 8, 10, 11, 10 y 9 líneas, 74 en total, y la versión en inglés tiene 73, porque su Verse 2 es una línea más corto. (El recuento no incluye el título ni las líneas en blanco, e incluye los susurros y la firma final.)
+La pista 01 tiene seis slots y 59 líneas tanto en la versión en inglés como en la coreana. No tiene Final Chorus; en lugar de cantar el estribillo una vez más, va directa a su despedida. La pista 10 tiene siete slots, con un Final Chorus entre el Bridge y el Outro. La versión coreana tiene 14, 12, 8, 10, 11, 10 y 9 líneas, 74 en total, y la versión en inglés tiene 73, porque su Verse 2 es una línea más corta. (El recuento no incluye el título ni las líneas en blanco, e incluye los susurros y la firma final.)
 
 El Final Chorus aparece por primera vez en la pista 03, así que no es exclusivo de la pista 10. Aun así, merece la pena fijarse en lo que hay dentro de ese slot aquí. Vuelve a enunciar el reconocimiento y guarda el agradecimiento: "Thank you. For living this day all the way through." La pista 01 metió su agradecimiento en un Outro breve. Por qué se dividieron los slots de este modo no está escrito en ninguna parte, así que contamos solo lo que muestra la estructura.
 
 ## Sonido, según lo especificado
 
-En los documentos de diseño de las canciones, la pista 01 es Ambient Lo-fi a 68-72 BPM, con Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise y Light Rain Ambience. La pista 10 es Ambient Piano y Sleep Lo-fi a 64 BPM, con Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain y Very Soft Night Ambience. El arco de sonido del plan del álbum enumera las pistas 01 y 02 como ambiente de lluvia y de café, la calidez de una tarde-noche tardía, y la pista 10 como la más lenta de las diez a 64 BPM, un piano ambient minimalista que cierra el álbum en silencio. Las notas de estilo de la pista 10 piden además una armonía del género opuesto en el Final Chorus.
+En los documentos de diseño de las canciones, la pista 01 es Ambient Lo-fi a 68-72 BPM, con Soft Piano, Warm Guitar, Gentle Pads, Vinyl Noise y Light Rain Ambience. La pista 10 es Ambient Piano y Sleep Lo-fi a 64 BPM, con Felt Piano, Warm Pads, Soft Ambient Strings, Vinyl Crackle, Light Rain y Very Soft Night Ambience. El arco de sonido del plan del álbum enumera las pistas 01 y 02 como ambiente de lluvia y de café, la calidez de una final de la tarde, y la pista 10 como la más lenta de las diez a 64 BPM, un piano ambient minimalista que cierra el álbum en silencio. Las notas de estilo de la pista 10 piden además una armonía del género opuesto en el Final Chorus.
 
 Solo sobre el papel, el tempo baja a 64, la guitarra no figura en la lista de la pista 10 y la lluvia aparece en ambas. Pero son valores escritos en el plan y en los documentos de diseño; cómo suena esa diferencia en las grabaciones no es algo que esta entrada afirme.
 
@@ -133,11 +133,11 @@ Solo sobre el papel, el tempo baja a 64, la guitarra no figura en la lista de la
 
 Los dos borradores terminan con las mismas palabras: la firma susurrada en inglés "ipe. be still", que cierra todas las pistas del álbum. Está alineada con el eslogan de la marca `ipe(); // be still`. La nota del documento de diseño sobre la pista 10 describe esta línea como el último sonido de la última canción, el punto final de todo el álbum.
 
-La misma línea puede leerse de manera distinta al principio y al final por lo que hay delante de ella. Antes de la firma de la pista 01 hay el permiso que sigue a una pregunta: descansa bien, y mañana puedes venir despacio. Antes de la firma de la pista 10 hay esto.
+La misma línea puede leerse de manera distinta al principio y al final por lo que hay delante de ella. Antes de la firma de la pista 01 está el permiso que sigue a una pregunta: descansa bien, y mañana puedes venir despacio. Antes de la firma de la pista 10 hay esto.
 
 > Leave today's worries with today, and let's meet tomorrow's hope tomorrow.
 
-Luego "Good night," y después el mismo susurro. La línea va después del permiso para descansar en la primera canción, y después de una despedida que deja el día en el suelo en la última. La frase es la misma, y su lugar es distinto.
+Luego "Good night," y después el mismo susurro. La línea va después del permiso para descansar en la primera canción, y después de una despedida que deja el día a un lado en la última. La frase es la misma, y su lugar es distinto.
 
 ## Las ocho canciones intermedias
 

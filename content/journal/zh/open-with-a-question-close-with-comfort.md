@@ -87,7 +87,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 > and you didn't even notice when the sky outside had turned dark.
 
-这一行包含了这样一个事实：一整天里，都没有余裕环顾四周。到了 Bridge，连拂过窗子的风，今晚也显得温柔了一点。在曲目 10 里，窗外的景色在第一段 verse 之内就回来了。
+这一行包含了这样一个事实：一整天里，都没有余地环顾四周。到了 Bridge，连拂过窗子的风，今晚也显得温柔了一点。在曲目 10 里，窗外的景色在第一段 verse 之内就回来了。
 
 > The lights outside the window, one by one, are slowly falling asleep,
 

@@ -61,7 +61,7 @@ Il y a une condition dedans : jusqu'ici. Le Chorus de la piste 10 se ferme sans 
 
 > Because who you are today was already more than enough.
 
-« Enough » apparaît dans les deux morceaux. Dans le 01, il marque jusqu'où cela suffit ; dans le 10, il dit que tu étais déjà suffisant. Un mot qui posait une limite est devenu un mot qui rend un verdict.
+« Enough » apparaît dans les deux morceaux. Dans le 01, il marque jusqu'où cela suffit ; dans le 10, il dit que tu en faisais déjà assez. Un mot qui posait une limite est devenu un mot qui rend un verdict.
 
 ## La balance penche sur « un peu plus »
 
@@ -73,7 +73,7 @@ Le Bridge de la piste 10 a la même forme. Cette fois, le repos est le sujet, et
 
 > Tomorrow, too, the world will be busy. But for right now, more than all of that, your rest matters a little more.
 
-Les deux phrases pèsent une chose contre une autre avec « more than » et se terminent sur « a little » plus un comparatif, et la paire coréenne est plus proche encore : « A보다 B가 조금 더 » dans les deux. Dans le 01, le sentiment de désolation pesait un peu plus que l'envie de se reposer, et dans le 10, le repos pèse un peu plus que tout le reste. C'est la même balance, penchée de l'autre côté. La ligne de la piste 01 était le récit le plus précis de la raison pour laquelle une personne fatiguée ne se repose pas, et celle de la piste 10 retourne directement cette raison. Pour qui a entendu les dix morceaux dans l'ordre, cette ligne peut se lire comme l'endroit où arrive un album qui n'offrait aucune solution.
+Les deux phrases pèsent une chose contre une autre avec « more than » et se terminent sur « a little » plus un comparatif, et la paire coréenne est plus proche encore : « A보다 B가 조금 더 » dans les deux. Dans le 01, le sentiment de devoir s'excuser pesait un peu plus que l'envie de se reposer, et dans le 10, le repos pèse un peu plus que tout le reste. C'est la même balance, penchée de l'autre côté. La ligne de la piste 01 était le récit le plus précis de la raison pour laquelle une personne fatiguée ne se repose pas, et celle de la piste 10 retourne directement cette raison. Pour qui a entendu les dix morceaux dans l'ordre, cette ligne peut se lire comme l'endroit où arrive un album qui n'offrait aucune solution.
 
 La prémisse du monde affairé est reprise dans la piste 09. Son Verse 2 dit que le monde ira de nouveau vite demain, puis demande : « Would it be so bad to smile a little slowly? » Elle se termine sur une question. La piste 10 reprend la même prémisse (demain, le monde est affairé) et répond par une affirmation.
 
@@ -121,7 +121,7 @@ Les murmures de la piste 01 sont tous adressés au moment présent : ça va alle
 
 La piste 01 compte six slots et 59 lignes dans les versions anglaise et coréenne. Elle n'a pas de Final Chorus ; au lieu de chanter le refrain une fois de plus, elle va droit à son au revoir. La piste 10 compte sept slots, avec un Final Chorus entre le Bridge et l'Outro. La version coréenne compte 14, 12, 8, 10, 11, 10 et 9 lignes, soit 74 au total, et la version anglaise 73, parce que son Verse 2 est plus court d'une ligne. (Les décomptes omettent le titre et les lignes vides, et incluent les murmures et la signature finale.)
 
-Le Final Chorus apparaît pour la première fois dans la piste 03 ; il n'est donc pas propre à la piste 10. Ce que contient ce slot ici mérite pourtant d'être noté. Il énonce encore une fois la reconnaissance et porte le remerciement : « Thank you. For living this day all the way through. » La piste 01 avait glissé son remerciement dans un court Outro. Pourquoi les slots ont été divisés ainsi n'est écrit nulle part, nous ne rapportons donc que ce que la structure montre.
+Le Final Chorus apparaît pour la première fois dans la piste 03 ; il n'est donc pas propre à la piste 10. Ce que contient ce slot ici mérite pourtant d'être noté. Il énonce encore une fois le constat que la journée est accomplie et porte le remerciement : « Thank you. For living this day all the way through. » La piste 01 avait glissé son remerciement dans un court Outro. Pourquoi les slots ont été divisés ainsi n'est écrit nulle part, nous ne rapportons donc que ce que la structure montre.
 
 ## Le son, tel que spécifié
 

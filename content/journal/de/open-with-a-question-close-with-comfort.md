@@ -111,15 +111,15 @@ Nach unserer Zählung in den Entwürfen hat die englische Version von Track 01 k
 
 Dieselbe Konstruktion steht in Track 08. Sein englischer Final Chorus endet mit „Because tomorrow, we can walk on again“, und das „Because tomorrow, we can meet again“ von Track 10 ist dieser Satz mit einem anderen Verb. Das Outro von Track 08 bittet die Hörenden dann, auch sich selbst zu sagen, dass sie es gut gemacht haben. In Track 10 werden diese Worte zum Titel.
 
-## Flüstern: eine Reihenfolge von Grüßen
+## Flüsterzeilen: eine Reihenfolge von Grüßen
 
-Jeder Song trägt Flüstern in der entgegengesetzten Sprache. Track 01 hat vier (in der koreanischen Version: *It's okay*, *Take your time*, *Breathe*, *I'm here*). Track 10 hat drei. Die koreanische Version trägt *Good evening*, *You did enough* und *Sleep well*; die englische Version trägt 좋은 저녁이야 („guten Abend“), 넌 충분히 했어 („du hast genug getan“) und 잘 자 („schlaf gut“).
+Jeder Song trägt Flüsterzeilen in der entgegengesetzten Sprache. Track 01 hat vier (in der koreanischen Version: *It's okay*, *Take your time*, *Breathe*, *I'm here*). Track 10 hat drei. Die koreanische Version trägt *Good evening*, *You did enough* und *Sleep well*; die englische Version trägt 좋은 저녁이야 („guten Abend“), 넌 충분히 했어 („du hast genug getan“) und 잘 자 („schlaf gut“).
 
-Die Flüstern von Track 01 sind alle an den gegenwärtigen Moment gerichtet: es ist okay, langsam, atme, ich bin da. Die Flüstern von Track 10 folgen der Ordnung der Zeit. Ein Gruß für den Abend eröffnet, dann ein Urteil über den Tag (in der Vergangenheitsform), dann ein Gruß fürs Schlafengehen. Im Outro kommt, ohne Flüstermarkierung im Entwurf, ein schlichtes „Good night,“ und dann die Signatur. Der Übergang vom Abend zur Nacht wird innerhalb eines einzigen Songs der Reihe nach ausgesprochen. Wenn Track 01 sich neben eine erschöpfte Person setzt, liest sich Track 10 wie das Begleiten dieser Person bis zur Schlafzimmertür.
+Die Flüsterzeilen von Track 01 sind alle an den gegenwärtigen Moment gerichtet: es ist okay, langsam, atme, ich bin da. Die Flüsterzeilen von Track 10 folgen der Ordnung der Zeit. Ein Gruß für den Abend eröffnet, dann ein Urteil über den Tag (in der Vergangenheitsform), dann ein Gruß fürs Schlafengehen. Im Outro kommt, ohne Flüstermarkierung im Entwurf, ein schlichtes „Good night,“ und dann die Signatur. Der Übergang vom Abend zur Nacht wird innerhalb eines einzigen Songs der Reihe nach ausgesprochen. Wenn Track 01 sich neben eine erschöpfte Person setzt, liest sich Track 10 wie das Begleiten dieser Person bis zur Schlafzimmertür.
 
 ## Slots und Zeilen: Warum einer hinzukam, ist nicht festgehalten
 
-Track 01 hat sechs Slots und in der englischen wie der koreanischen Version 59 Zeilen. Er hat keinen Final Chorus; statt den Chorus noch einmal zu singen, geht er direkt zu seinem Abschied. Track 10 hat sieben Slots, mit einem Final Chorus zwischen Bridge und Outro. Die koreanische Version hat 14, 12, 8, 10, 11, 10 und 9 Zeilen, insgesamt 74, und die englische Version hat 73, weil ihre Verse 2 eine Zeile kürzer ist. (Die Zählung lässt Titel und Leerzeilen aus und schließt Flüstern und die Schlusssignatur ein.)
+Track 01 hat sechs Slots und in der englischen wie der koreanischen Version 59 Zeilen. Er hat keinen Final Chorus; statt den Chorus noch einmal zu singen, geht er direkt zu seinem Abschied. Track 10 hat sieben Slots, mit einem Final Chorus zwischen Bridge und Outro. Die koreanische Version hat 14, 12, 8, 10, 11, 10 und 9 Zeilen, insgesamt 74, und die englische Version hat 73, weil ihre Verse 2 eine Zeile kürzer ist. (Die Zählung lässt Titel und Leerzeilen aus und schließt Flüsterzeilen und die Schlusssignatur ein.)
 
 Der Final Chorus erscheint zuerst in Track 03, ist also nicht einzigartig für Track 10. Bemerkenswert bleibt, was in diesem Slot steht. Er spricht die Anerkennung noch einmal aus und enthält den Dank: „Thank you. For living this day all the way through.“ Track 01 hatte seinen Dank in ein kurzes Outro gesteckt. Warum die Slots so aufgeteilt wurden, steht nirgends geschrieben, deshalb berichten wir nur, was die Struktur zeigt.
 
@@ -133,7 +133,7 @@ Allein auf dem Papier sinkt das Tempo auf 64, die Gitarre fehlt in der Liste von
 
 Beide Entwürfe enden mit denselben Worten: der geflüsterten englischen Signatur „ipe. be still“, die jeden Track des Albums beschließt. Sie ist auf den Markenslogan `ipe(); // be still` abgestimmt. Die Notiz im Entwurfsdokument zu Track 10 beschreibt diese Zeile als den letzten Klang des letzten Songs, den Schlusspunkt des ganzen Albums.
 
-Dieselbe Zeile kann am Anfang und am Ende unterschiedlich wirken, wegen dem, was vor ihr steht. Vor der Signatur von Track 01 steht die Erlaubnis, die einer Frage folgt: ruh dich gut aus, und morgen darfst du auch langsam kommen. Vor der Signatur von Track 10 steht dies.
+Dieselbe Zeile kann am Anfang und am Ende unterschiedlich wirken, wegen dessen, was vor ihr steht. Vor der Signatur von Track 01 steht die Erlaubnis, die einer Frage folgt: ruh dich gut aus, und morgen darfst du auch langsam kommen. Vor der Signatur von Track 10 steht dies.
 
 > Leave today's worries with today, and let's meet tomorrow's hope tomorrow.
 
