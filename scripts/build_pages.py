@@ -31,9 +31,9 @@ import build_journal as bj  # noqa: E402
 SITE = bj.SITE
 OPERATOR = "Davy Kim (ipe Studio)"
 EMAIL = "ipe.haven@gmail.com"
-EFFECTIVE = "2026-10-20"
+EFFECTIVE = "2026-10-24"
 REPLY_DAYS = 10
-PAGES_UPDATED = "2026-10-23"  # sitemap lastmod of the 39 page URLs; bump when any content/pages text changes
+PAGES_UPDATED = "2026-10-24"  # sitemap lastmod of the 39 page URLs; bump when any content/pages text changes
 SLUGS = ("about", "contact", "privacy")
 SRC = Path("content") / "pages"
 HEADER_KEYS = ("title", "desc", "h1", "sub", "ai")

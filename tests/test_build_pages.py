@@ -103,6 +103,15 @@ class Pages(Built):
                 notes[slug] = len(re.sub(r"<[^>]+>", "", m.group(1)))
             self.assertGreater(notes["privacy"], notes["about"] + 20, lang)
 
+    def test_privacy_has_app_section_12_and_contact_13(self):
+        for lang in LANGS:
+            h = self.page(lang, "privacy")
+            nums = re.findall(r"<h2>(\d+)\.", h)
+            self.assertEqual(nums, [str(n) for n in range(1, 14)], lang)
+            self.assertIn("idle()", re.search(r"<h2>12\.(.*?)</h2>", h).group(1), lang)
+            self.assertIn("sessionStorage", h, lang)
+            self.assertIn("2026-10-24", h, lang)
+
     def test_operator_and_email_are_filled_not_translated(self):
         for slug in SLUGS:
             for lang in LANGS:
