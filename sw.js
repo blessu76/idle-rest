@@ -1,5 +1,5 @@
 // idle() service worker — installable PWA + offline fallback
-const CACHE = 'idle-v30';
+const CACHE = 'idle-v31';
 const CORE = [
   '/', '/index.html',
   '/manifest.webmanifest',
@@ -25,6 +25,8 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
+  // 외부 출처(GA gtag.js 등)는 브라우저 기본 처리 — 캐시하지 않는다
+  if (new URL(req.url).origin !== self.location.origin) return;
 
   const isHTML = req.mode === 'navigate' ||
     (req.headers.get('accept') || '').includes('text/html');
@@ -33,8 +35,10 @@ self.addEventListener('fetch', (e) => {
     // network-first: 항상 최신 페이지, 오프라인이면 캐시
     e.respondWith(
       fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE).then((c) => c.put(req, copy));
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put(req, copy));
+        }
         return res;
       }).catch(() => caches.match(req).then((r) => r || caches.match('/index.html')))
     );
@@ -42,8 +46,10 @@ self.addEventListener('fetch', (e) => {
     // 정적 자산: cache-first
     e.respondWith(
       caches.match(req).then((cached) => cached || fetch(req).then((res) => {
-        const copy = res.clone();
-        caches.open(CACHE).then((c) => c.put(req, copy));
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put(req, copy));
+        }
         return res;
       }).catch(() => undefined))
     );
