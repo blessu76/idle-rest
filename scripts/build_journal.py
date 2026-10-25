@@ -397,7 +397,7 @@ def fmt_date(d):
 
 
 LOCALTIME_JS = (Path(__file__).resolve().parent / "vendor" / "ipe-localtime.js").read_text(encoding="utf-8")
-LOCALTIME_SHA256 = "3bfef3fdb7b0e1bef986f6da30f938d9dd9382074bd1bca973f7605318c46549"  # ipe-rest shared/ipe-localtime.js v1 (88b955b); never edit the copy
+LOCALTIME_SHA256 = "57326449ddf5050eabadd1394d69eb2b0f61c88f084ec83ee4aff6fcad0f74b8"  # ipe-rest shared/ipe-localtime.js v2 (c466827); never edit the copy
 
 
 def time_html(p):
@@ -414,7 +414,7 @@ def with_localtime(html):
     if "data-ipe-time" not in html:
         return html
     i = html.rindex("</body>")
-    return html[:i] + "<script>\n" + LOCALTIME_JS + "</script>\n" + html[i:]
+    return html[:i] + "<script>" + LOCALTIME_JS + "</script>\n" + html[i:]
 
 
 def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):

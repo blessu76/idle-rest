@@ -469,7 +469,8 @@ class LocalTime(Site):
     def test_vendored_copy_is_the_pinned_original(self):
         import hashlib
         raw = (REPO / "scripts/vendor/ipe-localtime.js").read_bytes()
-        self.assertEqual(hashlib.sha256(raw).hexdigest(), "3bfef3fdb7b0e1bef986f6da30f938d9dd9382074bd1bca973f7605318c46549")
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), "57326449ddf5050eabadd1394d69eb2b0f61c88f084ec83ee4aff6fcad0f74b8")
+        self.assertEqual(len(raw), 1639)
 
     def test_inline_script_is_byte_identical_and_only_on_timed_pages(self):
         raw = (REPO / "scripts/vendor/ipe-localtime.js").read_text(encoding="utf-8")
@@ -477,11 +478,20 @@ class LocalTime(Site):
         self.post("n2", "en")
         self.build()
         h = self.read("journal/en/t/index.html")
-        self.assertEqual(h.count("<script>\n" + raw + "</script>\n</body>"), 1)
-        self.assertEqual(h.count("ipe-localtime v1"), 1)
+        self.assertEqual(h.count("<script>" + raw + "</script>\n</body>"), 1)
+        self.assertEqual(h.count("ipe-localtime v2"), 1)
         self.assertIn('<time datetime="2026-10-22T09:09:00+09:00" data-ipe-time>2026. 10. 22 09:09 KST</time>', self.read("journal/en/index.html"))
         self.assertNotIn("ipe-localtime", self.read("journal/en/n2/index.html"))  # date-only post: no time script, no data-ipe-time
         self.assertNotIn("data-ipe-time", self.read("journal/en/n2/index.html"))
+
+    def test_inline_script_content_matches_csp_hash(self):
+        import base64, hashlib, re
+        self.post("t", "en", extra='time: "09:09"\n')
+        self.build()
+        h = self.read("journal/en/t/index.html")
+        body = next(b for b in re.findall(r"<script>(.*?)</script>", h, re.S) if "ipe-localtime v2" in b)
+        self.assertEqual(body.encode("utf-8"), (REPO / "scripts/vendor/ipe-localtime.js").read_bytes())
+        self.assertEqual(base64.b64encode(hashlib.sha256(body.encode("utf-8")).digest()).decode(), "VzJkSd31BQ6rrdE5TWnrKw9hyI8ITsg+5K/2/K0PdLg=")
 
     def test_arabic_time_is_ltr(self):
         self.post("t", "ar", extra='translation_of: en\ntime: "09:09"\n')
