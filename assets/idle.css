@@ -245,7 +245,7 @@ select.lang option { color: #1f2933; background: #fff; }
 .j-card:last-child { border-inline-end: 0; }
 .j-card .j-art { height: 6px; margin-bottom: 10px; border-radius: 3px; background: linear-gradient(90deg, var(--surface-3), var(--line-strong)); }
 .j-date { color: var(--muted-2); font: 12px/1.4 var(--mono); }
-.j-date time, .j-date .j-cat { white-space: nowrap; }
+.j-date .j-cat { white-space: nowrap; }  /* time may wrap: the viewer's-time-zone text can be longer than the static KST one */
 .j-date time { direction: ltr; unicode-bidi: isolate; }
 .j-card h3 { font: 500 19px/1.35 var(--sans); }
 .j-card h3 a { text-decoration: none; }

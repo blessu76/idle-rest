@@ -164,7 +164,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261030">
+<link rel="stylesheet" href="/assets/idle.css?v=20261031">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -215,7 +215,7 @@
 <main id="main" class="shell">
   <article class="article">
     <header class="article-head">
-      <p class="j-date"><time datetime="2026-10-24T14:18:00+09:00">2026. 10. 24 14:18</time><span class="j-cat">· behind-the-music</span></p>
+      <p class="j-date"><time datetime="2026-10-24T14:18:00+09:00" data-ipe-time>2026. 10. 24 14:18 KST</time><span class="j-cat">· behind-the-music</span></p>
       <h1>सवाल से शुरू करें, दिलासे पर ख़त्म करें — पहले और आख़िरी गाने को एक जोड़ी की तरह पढ़ना</h1>
       <p>dear(you); vol.1 &quot;Hard Day Again, Wasn&#x27;t It?&quot; से शुरू होता है और &quot;You Did So Well Today.&quot; पर ख़त्म। पहला और आख़िरी गाना कैसे जोड़ी बनाते हैं, प्रश्नचिह्न कहाँ ग़ायब हो जाता है और वाक्य का रूप कहाँ पलट जाता है, बोलों के मसौदों के सहारे पढ़ा गया।</p>
     </header>
@@ -341,6 +341,35 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261030"></script>
+<script src="/assets/idle.js?v=20261031"></script>
+<script>
+/* ipe-localtime v1 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
+/* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
+(function () {
+  try {
+    var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var names = { 'Asia/Seoul': 'KST', 'Asia/Tokyo': 'JST' };
+    var fmt = new Intl.DateTimeFormat(document.documentElement.lang || 'en', {
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'
+    });
+    var els = document.querySelectorAll('time[data-ipe-time]');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      try {
+        if (el.hasAttribute('data-ipe-time-done')) continue;
+        var d = new Date(el.getAttribute('datetime'));
+        if (isNaN(d.getTime())) continue;
+        var text = fmt.formatToParts(d).map(function (p) {
+          return p.type === 'timeZoneName' && names[zone] ? names[zone] : p.value;
+        }).join('');
+        if (!el.getAttribute('title')) el.setAttribute('title', el.textContent.trim());
+        el.textContent = text;
+        el.setAttribute('data-ipe-time-done', '');
+      } catch (e) {}
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>

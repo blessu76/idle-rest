@@ -167,7 +167,7 @@
 </script>
 
 <link rel="preload" as="image" href="/assets/covers/dear-you-titled.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/assets/idle.css?v=20261030">
+<link rel="stylesheet" href="/assets/idle.css?v=20261031">
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
@@ -367,21 +367,21 @@
     <div class="journal-grid">
       <article class="j-card" lang="de">
         <div class="j-art" aria-hidden="true"></div>
-        <p class="j-date"><time datetime="2026-10-25T08:52:00+09:00">2026. 10. 25 08:52</time></p>
+        <p class="j-date"><time datetime="2026-10-25T08:52:00+09:00" data-ipe-time>2026. 10. 25 08:52 KST</time></p>
         <h3><a href="/journal/de/same-sentence-in-two-songs/">Derselbe Satz in zwei Songs — Eine Lesart des Bridge-Refrains in Track 04 und 07</a></h3>
         <p>In dear(you); vol.1 wiederholen die Bridges von Track 04 und 07 Wort für Wort einen Satz: „AI can make good answers. But the one who makes a good day was always a person.“ Wo die beiden Songs danach auseinandergehen, gelesen anhand der Textentwürfe.</p>
         <a class="more-link" href="/journal/de/same-sentence-in-two-songs/" aria-label="Weiterlesen: Derselbe Satz in zwei Songs — Eine Lesart des Bridge-Refrains in Track 04 und 07"><span>Weiterlesen</span> <span aria-hidden="true">→</span></a>
       </article>
       <article class="j-card" lang="de">
         <div class="j-art" aria-hidden="true"></div>
-        <p class="j-date"><time datetime="2026-10-24T14:18:00+09:00">2026. 10. 24 14:18</time></p>
+        <p class="j-date"><time datetime="2026-10-24T14:18:00+09:00" data-ipe-time>2026. 10. 24 14:18 KST</time></p>
         <h3><a href="/journal/de/open-with-a-question-close-with-comfort/">Mit einer Frage beginnen, mit Trost enden — Den ersten und den letzten Song als Paar lesen</a></h3>
         <p>dear(you); vol.1 beginnt mit „Hard Day Again, Wasn&#x27;t It?“ und endet mit „You Did So Well Today.“ Wie der erste und der letzte Song ein Paar bilden, wo das Fragezeichen verschwindet und eine Satzform kippt, gelesen anhand der Textentwürfe.</p>
         <a class="more-link" href="/journal/de/open-with-a-question-close-with-comfort/" aria-label="Weiterlesen: Mit einer Frage beginnen, mit Trost enden — Den ersten und den letzten Song als Paar lesen"><span>Weiterlesen</span> <span aria-hidden="true">→</span></a>
       </article>
       <article class="j-card" lang="de">
         <div class="j-art" aria-hidden="true"></div>
-        <p class="j-date"><time datetime="2026-10-24T08:19:00+09:00">2026. 10. 24 08:19</time></p>
+        <p class="j-date"><time datetime="2026-10-24T08:19:00+09:00" data-ipe-time>2026. 10. 24 08:19 KST</time></p>
         <h3><a href="/journal/de/whispers-in-the-other-language/">Flüstern in der anderen Sprache — Wie dear(you); vol.1 seine zwei Versionen paart</a></h3>
         <p>Jeder Song auf dear(you); vol.1 existiert in einer Version mit Englisch als Hauptsprache und einer mit Koreanisch als Hauptsprache, und die geflüsterten Zeilen stehen jeweils in der entgegengesetzten Sprache. Wir haben alle 29 Flüsterstellen in den Textentwürfen gezählt und gelesen, wo sie stehen, was sie sagen und wie sich die beiden Versionen paaren.</p>
         <a class="more-link" href="/journal/de/whispers-in-the-other-language/" aria-label="Weiterlesen: Flüstern in der anderen Sprache — Wie dear(you); vol.1 seine zwei Versionen paart"><span>Weiterlesen</span> <span aria-hidden="true">→</span></a>
@@ -476,7 +476,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<script src="/assets/idle.js?v=20261030"></script>
+<script src="/assets/idle.js?v=20261031"></script>
 
 <script>window.__PAGE={"lang": "de", "dict": {"aria_play_yt": "Play on YouTube:", "aria_theme_to_dark": "Zum dunklen Design wechseln", "aria_theme_to_light": "Zum hellen Design wechseln"}};window.__applyAria=function(el){var v=window.__PAGE.dict[el.getAttribute('data-i18n-aria')];if(v!=null)el.setAttribute('aria-label',v);};</script>
 <!-- ===== player bar: track selection + EN/KR version; playback opens YouTube via /go/{track} ===== -->
@@ -530,6 +530,35 @@ if ('serviceWorker' in navigator) {
     try { localStorage.setItem('ipe_lang', this.value); } catch (e) {}
     location.href = '/' + this.value + '/';
   });
+})();
+</script>
+<script>
+/* ipe-localtime v1 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
+/* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
+(function () {
+  try {
+    var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var names = { 'Asia/Seoul': 'KST', 'Asia/Tokyo': 'JST' };
+    var fmt = new Intl.DateTimeFormat(document.documentElement.lang || 'en', {
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'
+    });
+    var els = document.querySelectorAll('time[data-ipe-time]');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      try {
+        if (el.hasAttribute('data-ipe-time-done')) continue;
+        var d = new Date(el.getAttribute('datetime'));
+        if (isNaN(d.getTime())) continue;
+        var text = fmt.formatToParts(d).map(function (p) {
+          return p.type === 'timeZoneName' && names[zone] ? names[zone] : p.value;
+        }).join('');
+        if (!el.getAttribute('title')) el.setAttribute('title', el.textContent.trim());
+        el.textContent = text;
+        el.setAttribute('data-ipe-time-done', '');
+      } catch (e) {}
+    }
+  } catch (e) {}
 })();
 </script>
 </body>

@@ -52,7 +52,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261030"  # keep equal to the ?v= in index.html
+ASSET_V = "20261031"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -396,10 +396,25 @@ def fmt_date(d):
     return "%04d. %02d. %02d" % (d.year, d.month, d.day)
 
 
+LOCALTIME_JS = (Path(__file__).resolve().parent / "vendor" / "ipe-localtime.js").read_text(encoding="utf-8")
+LOCALTIME_SHA256 = "3bfef3fdb7b0e1bef986f6da30f938d9dd9382074bd1bca973f7605318c46549"  # ipe-rest shared/ipe-localtime.js v1 (88b955b); never edit the copy
+
+
 def time_html(p):
-    """<time> for a post: date (+ ' HH:MM' KST when the post has `time:`); datetime carries +09:00."""
-    t = " " + p["time"] if p.get("time") else ""
-    return '<time datetime="%s">%s%s</time>' % (p["_pub"], fmt_date(p["_date"]), t)
+    """<time> for a post: date (+ ' HH:MM KST' when the post has `time:`); datetime carries +09:00.
+    Timed posts also carry data-ipe-time: the inline ipe-localtime script shows them in the viewer's time zone."""
+    if not p.get("time"):
+        return '<time datetime="%s">%s</time>' % (p["_pub"], fmt_date(p["_date"]))
+    ltr = ' dir="ltr"' if LANGS[p["lang"]]["dir"] == "rtl" else ""
+    return '<time datetime="%s" data-ipe-time%s>%s %s KST</time>' % (p["_pub"], ltr, fmt_date(p["_date"]), p["time"])
+
+
+def with_localtime(html):
+    """pages that show a timed <time data-ipe-time> get the shared script inlined (byte for byte) before </body>."""
+    if "data-ipe-time" not in html:
+        return html
+    i = html.rindex("</body>")
+    return html[:i] + "<script>\n" + LOCALTIME_JS + "</script>\n" + html[i:]
 
 
 def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):
@@ -1022,7 +1037,7 @@ def main():
 
     def write(path, text):
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding="utf-8")
+        path.write_text(with_localtime(text), encoding="utf-8")
         written.add(path)
 
     for p in posts:

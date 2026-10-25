@@ -185,12 +185,12 @@ class PostTime(Site):
         self.build()
         h, blocks = self.ld("journal/en/t/index.html")
         post = next(b for b in blocks if b["@type"] == "BlogPosting")
-        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00">2026. 10. 22 09:09</time>', h)
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00" data-ipe-time>2026. 10. 22 09:09 KST</time>', h)
         self.assertEqual(post["datePublished"], "2026-10-22T09:09:00+09:00")
         self.assertEqual(post["dateModified"], "2026-10-22T09:09:00+09:00")
         self.assertIn('article:published_time" content="2026-10-22T09:09:00+09:00"', h)
         lst = self.read("journal/en/index.html")
-        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00">2026. 10. 22 09:09</time>', lst)
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00" data-ipe-time>2026. 10. 22 09:09 KST</time>', lst)
         self.assertIn('<time datetime="2026-10-22">2026. 10. 22</time>', lst)  # post without time
 
     def test_no_time_stays_date_only(self):
@@ -210,7 +210,7 @@ class PostTime(Site):
         self.fails("en/late.md: time: HH:MM (KST) is required")
         f.write_text(f.read_text().replace("category: notes\n", 'category: notes\ntime: "13:34"\n'))
         self.build()
-        self.assertIn('<time datetime="2026-10-23T13:34:00+09:00">2026. 10. 23 13:34</time>', self.read("journal/en/late/index.html"))
+        self.assertIn('<time datetime="2026-10-23T13:34:00+09:00" data-ipe-time>2026. 10. 23 13:34 KST</time>', self.read("journal/en/late/index.html"))
 
     def test_same_day_order_feed_and_modified(self):
         for slug, tm in (("zz", "08:00"), ("aa", "12:30"), ("mm", "10:15")):
@@ -463,6 +463,31 @@ class I18n(Site):
         self.build()
         post = next(b for b in self.ld("journal/ja/a/index.html")[1] if b["@type"] == "BlogPosting")
         self.assertGreater(post["wordCount"], 40)
+
+
+class LocalTime(Site):
+    def test_vendored_copy_is_the_pinned_original(self):
+        import hashlib
+        raw = (REPO / "scripts/vendor/ipe-localtime.js").read_bytes()
+        self.assertEqual(hashlib.sha256(raw).hexdigest(), "3bfef3fdb7b0e1bef986f6da30f938d9dd9382074bd1bca973f7605318c46549")
+
+    def test_inline_script_is_byte_identical_and_only_on_timed_pages(self):
+        raw = (REPO / "scripts/vendor/ipe-localtime.js").read_text(encoding="utf-8")
+        self.post("t", "en", extra='time: "09:09"\n')
+        self.post("n2", "en")
+        self.build()
+        h = self.read("journal/en/t/index.html")
+        self.assertEqual(h.count("<script>\n" + raw + "</script>\n</body>"), 1)
+        self.assertEqual(h.count("ipe-localtime v1"), 1)
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00" data-ipe-time>2026. 10. 22 09:09 KST</time>', self.read("journal/en/index.html"))
+        self.assertNotIn("ipe-localtime", self.read("journal/en/n2/index.html"))  # date-only post: no time script, no data-ipe-time
+        self.assertNotIn("data-ipe-time", self.read("journal/en/n2/index.html"))
+
+    def test_arabic_time_is_ltr(self):
+        self.post("t", "ar", extra='translation_of: en\ntime: "09:09"\n')
+        self.post("t", "en", extra='time: "09:09"\n')
+        self.build()
+        self.assertIn('<time datetime="2026-10-22T09:09:00+09:00" data-ipe-time dir="ltr">2026. 10. 22 09:09 KST</time>', self.read("journal/ar/t/index.html"))
 
 
 class PublishedSchedule(unittest.TestCase):

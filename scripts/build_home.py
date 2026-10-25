@@ -160,7 +160,7 @@ def build(root, posts, list_langs):
         page = render_page(tpl, strings, lang or "en", is_root, posts)
         path = root / "index.html" if is_root else root / lang / "index.html"
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(page, encoding="utf-8")
+        path.write_text(bj.with_localtime(page), encoding="utf-8")
         written.append(path)
     sm = root / "sitemap.xml"
     sm.write_text(bj.replace_between(sm.read_text(encoding="utf-8"), r"<!-- home:start[^>]*-->", "  <!-- home:end -->",
