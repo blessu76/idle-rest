@@ -96,9 +96,46 @@ class BuildHome(unittest.TestCase):
         ja = self.page("ja")
         self.assertIn('href="/journal/ja/hello/"', ja)
         self.assertIn('href="/journal/ja/"', ja)  # "view all" goes to that language's list
-        ko = self.page("ko")  # no ko post: falls back to the English card, linked to the English page
-        self.assertIn('href="/journal/en/hello/"', ko)
+        ko = self.page("ko")  # no ko post: no cards, never another language's post; the section is hidden
+        self.assertNotIn('class="j-card"', ko)
+        self.assertNotIn('href="/journal/en/hello/"', ko)
+        self.assertRegex(ko, r'<section class="section" id="journal"[^>]* hidden>')
         self.assertIn('href="/journal/"', ko)  # ko has no list -> x-default hub
+
+    def add_posts(self, lang, rows):
+        for slug, date, time in rows:
+            body = POST % dict(l=lang, extra="translation_of: en\n" if lang != "en" else "")
+            body = body.replace("slug: hello", "slug: " + slug).replace("date: 2026-10-22", "date: %s%s" % (date, '\ntime: "%s"' % time if time else ""))
+            (self.tmp / "content/journal" / lang / (slug + ".md")).write_text(body, encoding="utf-8")
+
+    def cards(self, lang):
+        return re.findall(r'<a class="j-card" href="([^"]+)" lang="([^"]+)">(.*?)</a>', self.page(lang), re.S)
+
+    def test_cards_are_the_latest_three_newest_first_one_link_each(self):
+        self.add_posts("en", [("p-old", "2026-10-01", None), ("p-mid", "2026-10-23", "09:54"), ("p-new", "2026-10-23", "13:10"), ("p-new2", "2026-10-25", "08:00")])
+        self.build()
+        got = self.cards("en")
+        self.assertEqual([g[0] for g in got], ["/journal/en/p-new2/", "/journal/en/p-new/", "/journal/en/p-mid/"])
+        self.assertEqual([g[1] for g in got], ["en"] * 3)
+        self.assertEqual(self.page("en").count('class="j-card"'), 3)
+        self.assertEqual(self.cards("ja")[0][0], "/journal/ja/hello/")  # other languages: only their own posts
+        self.assertEqual(len(self.cards("ja")), 1)  # fewer than 3 -> as many as there are, no filler
+        for href, lang, inner in got:
+            self.assertNotIn("<a ", inner)  # one <a> per card (no nested links)
+            self.assertIn("<h3>", inner)
+            self.assertIn("<p>Desc en.</p>", inner)
+        self.assertIn('<time datetime="2026-10-23T13:10:00+09:00" data-ipe-time>2026-10-23 13:10 KST</time>', self.page("en"))
+        self.assertIn('href="/journal/en/"', self.page("en"))  # "view all"
+
+    def test_check_fails_when_home_cards_are_stale(self):
+        cmd = [sys.executable, str(REPO / "scripts/build_journal.py"), "--root", str(self.tmp), "--check"]
+        self.assertEqual(subprocess.run(cmd, capture_output=True, text=True).returncode, 0)
+        self.add_posts("en", [("fresh", "2026-10-25", "09:54")])  # published but the build was not run
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("home cards are not up to date", r.stderr)
+        self.build()
+        self.assertEqual(subprocess.run(cmd, capture_output=True, text=True).returncode, 0)
 
     def test_sitemap_has_home_in_every_language(self):
         ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml"}

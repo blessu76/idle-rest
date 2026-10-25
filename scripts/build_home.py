@@ -64,9 +64,8 @@ def lang_url(lang):
 
 
 def card_posts(lang, posts):
-    """journal cards on a home page: that language's posts; none yet -> the English originals (else Korean)."""
-    own = [p for p in posts if p["lang"] == lang]
-    return (own or [p for p in posts if p["lang"] == "en"] or [p for p in posts if p["lang"] == "ko"])[:3]
+    """journal cards on a home page: the latest 3 posts of that language (posts are sorted newest first); never another language's."""
+    return [p for p in posts if p["lang"] == lang][:3]
 
 
 def render_page(tpl, strings, lang, root, posts):
@@ -146,21 +145,36 @@ def llms_block():
     return "\n".join(lines) + "\n"
 
 
-def build(root, posts, list_langs):
-    """write /index.html + /<lang>/index.html, sitemap home block, llms home block. root: Path of the site."""
+def render_all(root, posts, list_langs):
+    """[(path, html)] for /index.html + the 12 /<lang>/index.html."""
     bj.LIST_LANGS = set(list_langs)  # (this module imports build_journal under its own name — share the state explicitly)
     tpl = (root / TEMPLATE).read_text(encoding="utf-8")
     strings = json.loads((root / STRINGS).read_text(encoding="utf-8"))
     missing = [l for l in bj.LANGS if l not in strings]
     if missing:
         raise SystemExit("home i18n.json lacks: " + " ".join(missing))
-    written = []
-    pages = [(None, True)] + [(l, False) for l in bj.LANGS]
-    for lang, is_root in pages:
+    out = []
+    for lang, is_root in [(None, True)] + [(l, False) for l in bj.LANGS]:
         page = render_page(tpl, strings, lang or "en", is_root, posts)
-        path = root / "index.html" if is_root else root / lang / "index.html"
+        out.append((root / "index.html" if is_root else root / lang / "index.html", bj.with_localtime(page)))
+    return out
+
+
+def stale_pages(root, posts, list_langs):
+    """home pages whose file differs from what the build would write (e.g. a post was added but the build was not run)."""
+    stale = []
+    for path, page in render_all(root, posts, list_langs):
+        if not path.is_file() or path.read_text(encoding="utf-8") != page:
+            stale.append(str(path.relative_to(root)))
+    return stale
+
+
+def build(root, posts, list_langs):
+    """write /index.html + /<lang>/index.html, sitemap home block, llms home block. root: Path of the site."""
+    written = []
+    for path, page in render_all(root, posts, list_langs):
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(bj.with_localtime(page), encoding="utf-8")
+        path.write_text(page, encoding="utf-8")
         written.append(path)
     sm = root / "sitemap.xml"
     sm.write_text(bj.replace_between(sm.read_text(encoding="utf-8"), r"<!-- home:start[^>]*-->", "  <!-- home:end -->",

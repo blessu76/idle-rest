@@ -257,6 +257,7 @@ class PostTime(Site):
 class Validation(Site):
     def test_post_without_optional_fields(self):
         self.post("plain")
+        self.build()  # --check also wants the generated home cards up to date
         self.assertEqual(self.run_build("--check").returncode, 0)
         self.build()
         h, blocks = self.ld("journal/en/plain/index.html")
@@ -280,10 +281,12 @@ class Validation(Site):
         (self.tmp / "assets/journal/ok").mkdir(parents=True)
         (self.tmp / "assets/journal/ok/c.png").write_bytes(png(4, 4))
         self.post("ok", extra="image: https://example.com/c.png\n", body="![x](/assets/journal/ok/c.png)\n")
+        self.build()  # --check also wants the generated home cards up to date
         self.assertEqual(self.run_build("--check").returncode, 0)
 
     def test_valid_pair_ok(self):
         self.pair()
+        self.build()  # --check also wants the generated home cards up to date
         self.assertEqual(self.run_build("--check").returncode, 0)
 
     def test_old_translation_field_removed(self):
@@ -451,6 +454,7 @@ class I18n(Site):
         self.pair()
         self.ai("ja")
         self.ai("ja", sub="ja")  # same file again = same language/slug
+        self.build()  # --check also wants the generated home cards up to date
         self.assertEqual(self.run_build("--check").returncode, 0)
 
     def test_draft_translation_does_not_leak(self):

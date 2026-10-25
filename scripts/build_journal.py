@@ -52,7 +52,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261031"  # keep equal to the ?v= in index.html
+ASSET_V = "20261032"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -848,13 +848,12 @@ def render_list(posts, lang=None, list_langs=("en",)):
 def render_home_cards(posts):
     if not posts:
         return '    <div class="empty-note"><strong data-i18n="journal_empty">The first post is coming soon.</strong></div>'
-    cards = "\n".join(f"""      <article class="j-card" lang="{esc(p['lang'])}">
-        <div class="j-art" aria-hidden="true"></div>
-        <p class="j-date">{time_html(p)}</p>
-        <h3><a href="{post_path(p)}">{esc(p['title'])}</a></h3>
+    cards = "\n".join(f"""      <a class="j-card" href="{post_path(p)}" lang="{esc(p['lang'])}">
+        <span class="j-date">{time_html(p)}</span>
+        <h3>{esc(p['title'])}</h3>
         <p>{esc(p['description'])}</p>
-        <a class="more-link" href="{post_path(p)}" aria-label="{esc(ui(p['lang'])['read_more'])}: {esc(p['title'])}"><span>{esc(ui(p['lang'])['read_more'])}</span> <span aria-hidden="true">→</span></a>
-      </article>""" for p in posts[:3])
+        <span class="more-link"><span>{esc(ui(p['lang'])['read_more'])}</span> <span aria-hidden="true">→</span></span>
+      </a>""" for p in posts[:3])
     return '    <div class="journal-grid">\n%s\n    </div>' % cards
 
 
@@ -1028,6 +1027,12 @@ def main():
     global LIST_LANGS
     LIST_LANGS = set(list_langs)
     if a.check:
+        if not a.drafts:  # the home page's journal cards are generated: stale = fail (publish → rebuild)
+            import build_home
+            stale = build_home.stale_pages(root, posts, list_langs)
+            if stale:
+                print("journal: home cards are not up to date — run python3 scripts/build_journal.py\n  " + "\n  ".join(stale), file=sys.stderr)
+                return 1
         print("journal: OK — %d post(s) ready%s" % (len(posts), " (incl. drafts)" if a.drafts else ""))
         return 0
 

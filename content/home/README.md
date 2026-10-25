@@ -7,5 +7,5 @@
 - `/index.html`·`/<lang>/index.html` 은 **생성물** — 고치지 말고 template/i18n 을 고친다. 문구를 바꾸면 `scripts/build_home.py` 의 `HOME_UPDATED` 날짜(사이트맵 lastmod)도 올린다.
 - 로봇·방문자를 자동으로 보내지 않는다. 루트 `/` 에서만 저장된 선호(`localStorage ipe_lang`)·브라우저 언어를 보고 「日本語 →」 안내 띠를 띄운다(닫으면 세션 동안 숨김). 옛 `?lang=xx` 주소는 JS 로 `/xx/` 로 이동.
 - 언어 선택(select)은 해당 언어 주소로 이동한다. 푸터에 12개 언어 링크(크롤러용).
-- 저널 카드: 그 언어 글이 있으면 그 글, 없으면 영어(없으면 한국어) 글. 「전체 보기」는 그 언어 목록이 있으면 `/journal/<lang>/`, 없으면 `/journal/`.
+- 저널 카드: 그 언어의 최신 3편(카드 전체가 링크 하나, 최신순). 그 언어 글이 3편 미만이면 있는 만큼만, 0편이면 섹션을 숨김 — 다른 언어 글을 섞지 않는다. `build_journal.py --check` 는 이 카드가 최신이 아니면 실패. 「전체 보기」는 그 언어 목록이 있으면 `/journal/<lang>/`, 없으면 `/journal/`.
 - about·contact·privacy 는 en/ko 만 있어 주소 `/about/`·`/ko/about/` 그대로(hreflang en·ko·x-default).

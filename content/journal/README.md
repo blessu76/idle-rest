@@ -39,6 +39,7 @@ aliases: /journal/old-slug/   # ← 선택: 옛 주소(쉼표로 여러 개). �
 ## 게시 절차
 
 1. 원고(ko/en + 번역) 작성 → `python3 scripts/build_journal.py` (빌드가 형식 오류를 잡는다).
+   **메인 카드 갱신**: 이 빌드가 12개 언어 메인(`/index.html`·`/<lang>/index.html`)의 「저널」 카드(그 언어 최신 3편)를 다시 쓴다 — 빌드 없이 커밋하면 `build_journal.py --check` 가 실패한다(생성물 `index.html` 도 함께 커밋).
 2. **`python3 scripts/check_sitemap.py` 통과 필수** — sitemap.xml 유효 · 공개 저널 URL(허브·언어별 목록·글) 누락 0 · 옛 주소 미등재 · hreflang 상호참조+x-default. 실패하면 exit 1(게시 금지).
 3. `python3 -m unittest discover -s tests` 통과 → 커밋·push → 배포 후 `python3 scripts/check_sitemap.py --live`(모든 URL HTTP 200).
 
