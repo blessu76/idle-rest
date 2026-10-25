@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Oct 2026 14:52:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 09:54:00 +0900</lastBuildDate>
+    <item>
+      <title>영어는 여성이, 한국어는 남성이 — 두 버전을 나누는 규칙과 의역의 방식</title>
+      <link>https://idle.ipe.rest/journal/ko/english-female-korean-male/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/english-female-korean-male/</guid>
+      <pubDate>Mon, 26 Oct 2026 09:54:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 열 곡은 영어 메인에 여성, 한국어 메인에 남성 보컬을 짝지어 만듭니다. 이 짝이 어디에 어떻게 적혀 있는지, 영어를 「자연스러운 의역」으로 쓴다는 원칙이 가사 줄 안에서 어떻게 나타나는지 원고로 읽어 봅니다.</description>
+    </item>
+    <item>
+      <title>English by a Woman, Korean by a Man — The Rule That Splits the Two Versions, and How the English Was Paraphrased</title>
+      <link>https://idle.ipe.rest/journal/en/english-female-korean-male/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/english-female-korean-male/</guid>
+      <pubDate>Mon, 26 Oct 2026 09:54:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Every song on dear(you); vol.1 pairs an English-main version with a female voice and a Korean-main version with a male voice. Where that pairing is written down, and how the principle of a &quot;natural paraphrase&quot; shows up inside the lyric lines, read against the drafts.</description>
+    </item>
     <item>
       <title>쉼을 정중앙에 놓다 — 앨범 한가운데 5번 「잠깐 쉬어가도 돼.」 읽기</title>
       <link>https://idle.ipe.rest/journal/ko/rest-at-the-center/</link>

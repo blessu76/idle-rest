@@ -544,5 +544,28 @@ class PublishedSchedule(unittest.TestCase):
                 self.assertGreaterEqual(b[0] - a[0], 240, "%s: %s and %s are less than 4h apart" % (d, a[1], b[1]))
 
 
+class Post09(unittest.TestCase):
+    """journal 09 (english-female-korean-male) is published in all 12 languages at 09:54, with its three images."""
+    LANGS = "ko en ja zh es fr de pt ru ar hi id".split()
+
+    def test_published_in_12_languages_with_time(self):
+        for lang in self.LANGS:
+            f = REPO / "content/journal" / lang / "english-female-korean-male.md"
+            self.assertTrue(f.exists(), lang)
+            head = f.read_text(encoding="utf-8").split("\n---", 1)[0]
+            self.assertIn('time: "09:54"', head, lang)
+            self.assertIn("date: 2026-10-26", head, lang)
+            html = (REPO / "journal" / lang / "english-female-korean-male" / "index.html").read_text(encoding="utf-8")
+            self.assertIn("2026-10-26 09:54 KST", html, lang)
+
+    def test_no_internal_markers_and_images_exist(self):
+        for lang in self.LANGS:
+            t = (REPO / "content/journal" / lang / "english-female-korean-male.md").read_text(encoding="utf-8")
+            for bad in ("S1A", "_ipe", "/Users", "rooms/"):
+                self.assertNotIn(bad, t, (lang, bad))
+        for img in ("vocal-spec-ten", "version-lengths", "paraphrase-cards"):
+            self.assertTrue((REPO / "assets/journal/english-female-korean-male" / (img + ".jpg")).exists(), img)
+
+
 if __name__ == "__main__":
     unittest.main()
