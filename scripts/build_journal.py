@@ -401,12 +401,12 @@ LOCALTIME_SHA256 = "57326449ddf5050eabadd1394d69eb2b0f61c88f084ec83ee4aff6fcad0f
 
 
 def time_html(p):
-    """<time> for a post: date (+ ' HH:MM KST' when the post has `time:`); datetime carries +09:00.
+    """<time> for a post: date (or 'YYYY-MM-DD HH:MM KST' when the post has `time:`); datetime carries +09:00.
     Timed posts also carry data-ipe-time: the inline ipe-localtime script shows them in the viewer's time zone."""
     if not p.get("time"):
         return '<time datetime="%s">%s</time>' % (p["_pub"], fmt_date(p["_date"]))
     ltr = ' dir="ltr"' if LANGS[p["lang"]]["dir"] == "rtl" else ""
-    return '<time datetime="%s" data-ipe-time%s>%s %s KST</time>' % (p["_pub"], ltr, fmt_date(p["_date"]), p["time"])
+    return '<time datetime="%s" data-ipe-time%s>%04d-%02d-%02d %s KST</time>' % (p["_pub"], ltr, p["_date"].year, p["_date"].month, p["_date"].day, p["time"])
 
 
 def with_localtime(html):

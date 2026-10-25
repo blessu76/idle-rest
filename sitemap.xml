@@ -1270,6 +1270,330 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/"/>
   </url>
   <url>
+    <loc>https://idle.ipe.rest/journal/zh/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ru/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/pt/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ko/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ja/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/id/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/hi/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/fr/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/es/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/en/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/de/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ar/rest-at-the-center/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/rest-at-the-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/rest-at-the-center/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/center-arc.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/mirrored-evening.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/assets/journal/rest-at-the-center/short-chorus.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://idle.ipe.rest/journal/zh/same-sentence-in-two-songs/</loc>
     <lastmod>2026-10-25</lastmod>
     <priority>0.5</priority>
