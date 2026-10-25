@@ -1,7 +1,7 @@
 ---
 title: idle() की छह सीरीज़ — कोड जैसे दिखने वाले नामों को कैसे पढ़ें
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: hi
 description: idle() के गाने छह सीरीज़ में बँटे हैं, late_night.lofi से लेकर night_mode // not_alone तक। इन नामों को कैसे पढ़ें, गानों के कोड कैसे काम करते हैं, और सिंगल्स कैसे एक एल्बम बनते हैं।

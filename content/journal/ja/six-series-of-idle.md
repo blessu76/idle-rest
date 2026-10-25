@@ -1,7 +1,7 @@
 ---
 title: idle() の6つのシリーズ — コードのように見える名前の読み方
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: ja
 description: idle() の曲は late_night.lofi から night_mode // not_alone まで6つのシリーズに分かれています。名前の読み方、曲コードの仕組み、シングルがアルバムになるまでを紹介します。

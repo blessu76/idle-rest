@@ -1,7 +1,7 @@
 ---
 title: Abrir con una pregunta, cerrar con consuelo — Leer la primera y la última canción como pareja
 date: 2026-10-24
-time: "08:23"
+time: "14:18"
 slug: open-with-a-question-close-with-comfort
 lang: es
 description: dear(you); vol.1 abre con "Hard Day Again, Wasn't It?" y cierra con "You Did So Well Today." Cómo se emparejan la primera y la última canción, dónde desaparece el signo de interrogación y dónde se invierte la forma de una frase, leído a partir de los borradores de la letra.

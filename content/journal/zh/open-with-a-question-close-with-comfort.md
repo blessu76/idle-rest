@@ -1,7 +1,7 @@
 ---
 title: 以提问开场，以安慰收尾 — 把第一首和最后一首歌当作一对来读
 date: 2026-10-24
-time: "08:23"
+time: "14:18"
 slug: open-with-a-question-close-with-comfort
 lang: zh
 description: dear(you); vol.1 以 "Hard Day Again, Wasn't It?" 开场，以 "You Did So Well Today." 收尾。我们对照歌词草稿，读这首尾两首歌如何成对，问号在哪里消失，句子的形状又在哪里翻转。

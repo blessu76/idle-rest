@@ -1,7 +1,7 @@
 ---
 title: Mit einer Frage beginnen, mit Trost enden — Den ersten und den letzten Song als Paar lesen
 date: 2026-10-24
-time: "08:23"
+time: "14:18"
 slug: open-with-a-question-close-with-comfort
 lang: de
 description: dear(you); vol.1 beginnt mit „Hard Day Again, Wasn't It?“ und endet mit „You Did So Well Today.“ Wie der erste und der letzte Song ein Paar bilden, wo das Fragezeichen verschwindet und eine Satzform kippt, gelesen anhand der Textentwürfe.

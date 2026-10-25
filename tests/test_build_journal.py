@@ -465,5 +465,33 @@ class I18n(Site):
         self.assertGreater(post["wordCount"], 40)
 
 
+class PublishedSchedule(unittest.TestCase):
+    """the real posts under content/journal: one time per post (all languages agree), and a day's posts are spread over the day."""
+
+    def times(self):
+        by = {}
+        for f in (REPO / "content/journal").glob("*/*.md"):
+            fm = f.read_text(encoding="utf-8").split("\n---", 1)[0]
+            m = {k.strip(): v.strip().strip('"') for k, v in (l.split(":", 1) for l in fm.split("\n") if ":" in l)}
+            if m.get("draft") == "true" or not m.get("time"):
+                continue
+            by.setdefault((m["date"], m["slug"]), set()).add(m["time"])
+        return by
+
+    def test_every_language_has_the_same_time(self):
+        for key, ts in self.times().items():
+            self.assertEqual(len(ts), 1, key)
+
+    def test_same_day_posts_are_at_least_four_hours_apart(self):
+        days = {}
+        for (d, slug), ts in self.times().items():
+            h, m = next(iter(ts)).split(":")
+            days.setdefault(d, []).append((int(h) * 60 + int(m), slug))
+        for d, v in days.items():
+            v.sort()
+            for a, b in zip(v, v[1:]):
+                self.assertGreaterEqual(b[0] - a[0], 240, "%s: %s and %s are less than 4h apart" % (d, a[1], b[1]))
+
+
 if __name__ == "__main__":
     unittest.main()

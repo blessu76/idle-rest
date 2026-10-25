@@ -1,7 +1,7 @@
 ---
 title: ابدأ بسؤال واختم بمواساة — قراءة الأغنية الأولى والأخيرة كزوج
 date: 2026-10-24
-time: "08:23"
+time: "14:18"
 slug: open-with-a-question-close-with-comfort
 lang: ar
 description: يفتتح dear(you); vol.1 بأغنية "Hard Day Again, Wasn't It?" ويُختتم بأغنية "You Did So Well Today." كيف تتقابل الأغنية الأولى والأخيرة، وأين تختفي علامة الاستفهام وينقلب شكل الجملة، مقروءًا على مسودات الكلمات.

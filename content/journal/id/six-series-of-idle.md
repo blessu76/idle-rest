@@ -1,7 +1,7 @@
 ---
 title: Enam Seri idle() — Cara Membaca Nama yang Tampak Seperti Kode
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: id
 description: Lagu-lagu idle() dikelompokkan ke dalam enam seri, dari late_night.lofi hingga night_mode // not_alone. Cara membaca namanya, cara kerja kode lagu, dan bagaimana single menjadi sebuah album.

@@ -1,7 +1,7 @@
 ---
 title: السلاسل الست في idle() — كيف نقرأ أسماءً تبدو كأنها شيفرة
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: ar
 description: تُجمَع أغاني idle() في ست سلاسل، من late_night.lofi إلى night_mode // not_alone. كيف نقرأ الأسماء، وكيف تعمل رموز الأغاني، وكيف تتحول الأغاني المنفردة إلى ألبوم.

@@ -1,7 +1,7 @@
 ---
 title: Шесть серий idle() — как читать названия, похожие на код
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: ru
 description: Песни idle() объединены в шесть серий — от late_night.lofi до night_mode // not_alone. Как читать названия, как устроены коды песен и как синглы становятся альбомом.

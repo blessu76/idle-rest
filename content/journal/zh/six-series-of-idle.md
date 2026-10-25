@@ -1,7 +1,7 @@
 ---
 title: idle() 的六个系列 — 如何解读看起来像代码的名字
 date: 2026-10-23
-time: "13:38"
+time: "09:24"
 slug: six-series-of-idle
 lang: zh
 description: idle() 的歌曲分为六个系列，从 late_night.lofi 到 night_mode // not_alone。本文介绍名字的读法、歌曲编号的规则，以及单曲如何汇集成专辑。
