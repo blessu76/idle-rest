@@ -1,7 +1,7 @@
 ---
 title: 英语由女声唱，韩语由男声唱 — 分开两个版本的规则，以及英语是怎样意译的
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: zh
 description: dear(you); vol.1 的每首歌都把英语主打版配女声、韩语主打版配男声。这种配对写在哪里，"自然意译"的原则又在歌词行里呈现出什么样子，我们对照初稿读了一遍。

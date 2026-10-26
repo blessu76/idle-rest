@@ -1,7 +1,7 @@
 ---
 title: Inglês por uma mulher, coreano por um homem — a regra que separa as duas versões e como o inglês foi parafraseado
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: pt
 description: Cada canção de dear(you); vol.1 junta uma versão principal em inglês com voz feminina e uma versão principal em coreano com voz masculina. Onde esse par está escrito e como o princípio de uma "paráfrase natural" aparece dentro das linhas da letra, lidos junto aos rascunhos.

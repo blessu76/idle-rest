@@ -1,7 +1,7 @@
 ---
 title: El inglés lo canta una mujer, el coreano un hombre — La regla que separa las dos versiones y cómo se parafraseó el inglés
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: es
 description: Cada canción de dear(you); vol.1 empareja una versión con el inglés como idioma principal y voz femenina con una versión con el coreano como idioma principal y voz masculina. Dónde está escrito ese emparejamiento y cómo aparece, dentro de las líneas de la letra, el principio de una "paráfrasis natural", leído contra los borradores.

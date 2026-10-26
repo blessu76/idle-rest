@@ -1,7 +1,7 @@
 ---
 title: Inggris oleh Perempuan, Korea oleh Laki-laki — Aturan yang Memisahkan Dua Versi, dan Bagaimana Bahasa Inggrisnya Diparafrasekan
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: id
 description: Setiap lagu di dear(you); vol.1 memasangkan versi utama bahasa Inggris bersuara perempuan dengan versi utama bahasa Korea bersuara laki-laki. Di mana pasangan itu dituliskan, dan bagaimana prinsip "parafrase yang alami" muncul di dalam baris-baris lirik, dibaca bersama drafnya.

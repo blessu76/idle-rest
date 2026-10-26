@@ -1,7 +1,7 @@
 ---
 title: English by a Woman, Korean by a Man — The Rule That Splits the Two Versions, and How the English Was Paraphrased
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: en
 description: Every song on dear(you); vol.1 pairs an English-main version with a female voice and a Korean-main version with a male voice. Where that pairing is written down, and how the principle of a "natural paraphrase" shows up inside the lyric lines, read against the drafts.

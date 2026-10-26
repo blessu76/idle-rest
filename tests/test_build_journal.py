@@ -545,7 +545,7 @@ class PublishedSchedule(unittest.TestCase):
 
 
 class Post09(unittest.TestCase):
-    """journal 09 (english-female-korean-male) is published in all 12 languages at 09:54, with its three images."""
+    """journal 09 (english-female-korean-male) is published in all 12 languages at 10:17, with its three images."""
     LANGS = "ko en ja zh es fr de pt ru ar hi id".split()
 
     def test_published_in_12_languages_with_time(self):
@@ -553,10 +553,10 @@ class Post09(unittest.TestCase):
             f = REPO / "content/journal" / lang / "english-female-korean-male.md"
             self.assertTrue(f.exists(), lang)
             head = f.read_text(encoding="utf-8").split("\n---", 1)[0]
-            self.assertIn('time: "09:54"', head, lang)
+            self.assertIn('time: "10:17"', head, lang)
             self.assertIn("date: 2026-10-26", head, lang)
             html = (REPO / "journal" / lang / "english-female-korean-male" / "index.html").read_text(encoding="utf-8")
-            self.assertIn("2026-10-26 09:54 KST", html, lang)
+            self.assertIn("2026-10-26 10:17 KST", html, lang)
 
     def test_no_internal_markers_and_images_exist(self):
         for lang in self.LANGS:

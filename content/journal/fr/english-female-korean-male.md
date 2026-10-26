@@ -1,7 +1,7 @@
 ---
 title: L'anglais chanté par une femme, le coréen par un homme — La règle qui sépare les deux versions, et comment l'anglais a été paraphrasé
 date: 2026-10-26
-time: "09:54"
+time: "10:17"
 slug: english-female-korean-male
 lang: fr
 description: Chaque chanson de dear(you); vol.1 associe une version à dominante anglaise chantée par une voix féminine et une version à dominante coréenne chantée par une voix masculine. Où cette association est écrite, et comment le principe d'une « paraphrase naturelle » se manifeste à l'intérieur des lignes des paroles, lu à la lumière des premiers jets.
