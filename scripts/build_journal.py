@@ -65,7 +65,9 @@ ROOT = Path(__file__).resolve().parent.parent  # overwritten in main() from --ro
 IMG_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 SOCIAL_HOSTS = ("youtube.com", "youtu.be", "instagram.com", "soundcloud.com", "tiktok.com", "x.com", "twitter.com",
                 "facebook.com", "ipe.rest")  # not "articles" -> never auto-cited
-ORG = {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"}
+ORG_ID = "https://ipe.rest/#organization"  # one Organization node: same @id on every post, list and the idle home
+ORG = {"@type": "Organization", "@id": ORG_ID, "name": "ipe()", "url": "https://ipe.rest/"}
+PUB_FALLBACK_HM = "09:00"  # JSON-LD time for a post without `time:` (same value the RSS feed uses)
 
 # 12 languages. ko + en = human-reviewed originals (URL /journal/<slug>/, unchanged); the other 10 = AI translations
 # (URL /<lang>/journal/<slug>/). name = the language's own name (language switcher); og = og:locale.
@@ -200,7 +202,7 @@ def parse_post(path):
             raise ValueError("time must be HH:MM (24h, KST): %r" % meta["time"])
         meta["_pub"] = "%sT%s:00+09:00" % (meta["date"], meta["time"])
     else:
-        meta["_pub"] = meta["_date"].isoformat()
+        meta["_pub"] = "%sT%s:00+09:00" % (meta["date"], PUB_FALLBACK_HM)  # always ISO +09:00 (date-only shown on screen)
     meta["draft"] = str(meta.get("draft", "false")).lower() in ("true", "yes", "1")
     if not meta["draft"] and not meta.get("time") and meta["_date"] >= TIME_REQUIRED_FROM:
         raise ValueError("time: HH:MM (KST) is required for posts dated %s or later (use the real first-commit/publish time)" % TIME_REQUIRED_FROM)
@@ -430,7 +432,7 @@ def time_html(p):
     """<time> for a post: date (or 'YYYY-MM-DD HH:MM KST' when the post has `time:`); datetime carries +09:00.
     Timed posts also carry data-ipe-time: the inline ipe-localtime script shows them in the viewer's time zone."""
     if not p.get("time"):
-        return '<time datetime="%s">%s</time>' % (p["_pub"], fmt_date(p["_date"]))
+        return '<time datetime="%s">%s</time>' % (p["_date"].isoformat(), fmt_date(p["_date"]))
     ltr = ' dir="ltr"' if LANGS[p["lang"]]["dir"] == "rtl" else ""
     return '<time datetime="%s" data-ipe-time%s>%04d-%02d-%02d %s KST</time>' % (p["_pub"], ltr, p["_date"].year, p["_date"].month, p["_date"].day, p["time"])
 
@@ -787,7 +789,7 @@ def render_post(p, grp=None):
         "datePublished": p["_pub"], "dateModified": p["_mod"],
         "inLanguage": p["lang"], "articleSection": p["category"],
         "mainEntityOfPage": {"@type": "WebPage", "@id": url}, "url": url,
-        "image": image_obj(hero, p.get("image_alt")) if hero else SITE + "/og-image.png",
+        "image": image_obj(hero, p.get("image_alt")) if hero else image_obj("/og-image.png"),
         "wordCount": word_count(plain_text(p["_html"]), p["lang"]),
         "author": dict(ORG),
         "publisher": dict(ORG, logo={"@type": "ImageObject", "url": SITE + "/icon-512.png"}),
@@ -866,7 +868,7 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
     pw = PAGER[loc][2]
     label = "%s · %s %d" % (t["journal"], pw, page) if page > 1 else t["journal"]
     data = {"@context": "https://schema.org", "@type": "Blog", "name": "idle() %s" % label, "url": url,
-            "publisher": {"@type": "Organization", "name": "ipe()", "url": "https://ipe.rest/"},
+            "publisher": dict(ORG),
             "inLanguage": langs_in if not lang else lang,
             "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": post_url(p),
                           "datePublished": p["_pub"], "inLanguage": p["lang"]} for p in shown]}

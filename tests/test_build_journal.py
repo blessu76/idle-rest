@@ -211,9 +211,9 @@ class PostTime(Site):
         h, blocks = self.ld("journal/en/n/index.html")
         post = next(b for b in blocks if b["@type"] == "BlogPosting")
         self.assertIn('<time datetime="2026-10-22">2026. 10. 22</time>', h)
-        self.assertEqual(post["datePublished"], "2026-10-22")
-        self.assertEqual(post["dateModified"], "2026-10-22")
-        self.assertNotIn("T00:00", h)
+        self.assertEqual(post["datePublished"], "2026-10-22T09:00:00+09:00")  # JSON-LD is always ISO +09:00 (feed's 09:00 fallback)
+        self.assertEqual(post["dateModified"], post["datePublished"])
+        self.assertNotIn("data-ipe-time", h)
 
     def test_time_required_from_oct_23(self):
         self.post("late", "en")
@@ -565,6 +565,44 @@ class Post09(unittest.TestCase):
                 self.assertNotIn(bad, t, (lang, bad))
         for img in ("vocal-spec-ten", "version-lengths", "paraphrase-cards"):
             self.assertTrue((REPO / "assets/journal/english-female-korean-male" / (img + ".jpg")).exists(), img)
+
+
+class JsonLd(Site):
+    ORG_ID = "https://ipe.rest/#organization"
+
+    def test_one_organization_id_everywhere_and_iso_dates(self):
+        shutil.copy(REPO / "og-image.png", self.tmp / "og-image.png")
+        self.post("n", "en")
+        self.post("t", "en", extra='time: "08:01"\n')
+        self.build()
+        for rel in ("journal/en/n/index.html", "journal/en/t/index.html", "journal/en/index.html", "journal/index.html"):
+            _, blocks = self.ld(rel)
+            for b in blocks:
+                for k in ("author", "publisher"):
+                    if k in b:
+                        self.assertEqual(b[k]["@id"], self.ORG_ID, (rel, k))
+                        self.assertEqual((b[k]["@type"], b[k]["name"], b[k]["url"]), ("Organization", "ipe()", "https://ipe.rest/"))
+                if b["@type"] == "BlogPosting":
+                    self.assertRegex(b["datePublished"], r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\+09:00$")
+                    self.assertRegex(b["dateModified"], r"^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\+09:00$")
+                    self.assertEqual(b["publisher"]["logo"]["url"], "https://idle.ipe.rest/icon-512.png")
+                    self.assertIsInstance(b["image"], dict)  # no bare-string og-image fallback
+                    self.assertEqual(b["image"]["url"], "https://idle.ipe.rest/og-image.png")
+                    self.assertIn("width", b["image"])
+        home = self.read("index.html")
+        orgs = [json.loads(m) for m in LD.findall(home)]
+        self.assertIn(self.ORG_ID, [o.get("@id") for o in orgs if o["@type"] == "Organization"])
+        self.assertEqual(next(o for o in orgs if o["@type"] == "WebSite")["publisher"]["@id"], self.ORG_ID)
+
+    def test_published_site_has_no_date_only_json_ld(self):
+        for f in sorted((REPO / "journal").glob("*/*/index.html")):
+            for m in LD.findall(f.read_text(encoding="utf-8")):
+                b = json.loads(m)
+                if b.get("@type") == "BlogPosting":
+                    self.assertIn("T", b["datePublished"], f)
+                    self.assertTrue(b["datePublished"].endswith("+09:00"), f)
+                    self.assertIsInstance(b["image"], dict, f)
+                    self.assertEqual(b["author"]["@id"], self.ORG_ID, f)
 
 
 class Numbering(Site):
