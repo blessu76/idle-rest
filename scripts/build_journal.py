@@ -52,7 +52,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261033"  # keep equal to the ?v= in index.html
+ASSET_V = "20261034"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -292,7 +292,11 @@ def safe_url(u):
 def img_tag(src, alt):
     wh = image_size(src)
     dims = ' width="%d" height="%d"' % wh if wh else ""
-    return '<img src="%s" alt="%s"%s loading="lazy" decoding="async">' % (esc(src), esc(alt), dims)
+    img = '<img src="%s" alt="%s"%s loading="lazy" decoding="async">' % (esc(src), esc(alt), dims)
+    webp = re.sub(r"\.jpe?g$", ".webp", src, flags=re.I)
+    if webp != src and src.startswith("/") and (ROOT / webp.lstrip("/")).is_file():
+        return '<picture><source type="image/webp" srcset="%s">%s</picture>' % (esc(webp), img)
+    return img
 
 
 FIG_RE = re.compile(r'^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)$')

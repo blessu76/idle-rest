@@ -162,7 +162,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261033">
+<link rel="stylesheet" href="/assets/idle.css?v=20261034">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -222,7 +222,7 @@
 <p>如果你浏览 idle() 的歌曲列表，会看到几个陌生的名字：<code>late_night.lofi</code>、<code>rest() { chill(); }</code>、<code>undefined → known</code>。它们不是歌名，而是把歌曲归在一起的名字，我们称之为系列。本文说明什么是系列、读懂这些名字的一种方式，以及歌曲编号和专辑如何与系列联系起来。</p>
 <p>先坦率说明几点。本文依据的是网站上已经公开的信息和我们的歌曲编号规则。每个名字最初是怎么定下来的，没有任何记录，所以我们不讲这段故事。下面的读法借用了以读代码为日常的人的习惯，只是解读，并不是在说明命名的本意。另外，一如既往：音乐由 AI（Suno）制作。歌词由 AI 起草，并经人工审阅。</p>
 <h2>系列是歌曲的氛围标签</h2>
-<figure><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="六张卡片，每个系列一张。late_night.lofi 是 lo-fi，be still; 是治愈，rest() { chill(); } 是 chill，grace_in_the_loop 是氛围乐，undefined → known 是 lo-fi，night_mode // not_alone 是治愈。late_night.lofi 和 undefined → known 的卡片带有标记，表示已发行单曲" width="1600" height="860" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/six-series.webp"><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="六张卡片，每个系列一张。late_night.lofi 是 lo-fi，be still; 是治愈，rest() { chill(); } 是 chill，grace_in_the_loop 是氛围乐，undefined → known 是 lo-fi，night_mode // not_alone 是治愈。late_night.lofi 和 undefined → known 的卡片带有标记，表示已发行单曲" width="1600" height="860" loading="lazy" decoding="async"></picture></figure>
 <p><em>网站上公开的六个系列。曲风与主题均取自网站自己的简介；金色轮廓表示该系列已有单曲发行。</em></p>
 <p>系列是曲风与感受的名牌，一个短语就能告诉你这首歌用什么声音制作，希望传达怎样的氛围。网站上公开的六个系列如下：</p>
 <ul><li><code>be still;</code>：治愈，主题是静止</li><li><code>late_night.lofi</code>：lo-fi，熬夜之后回家的路上</li><li><code>rest() { chill(); }</code>：chill，今天已经做得够多了</li><li><code>grace_in_the_loop</code>：氛围乐，重复之中的恩典</li><li><code>undefined → known</code>：lo-fi，未知变为已知的那一刻</li><li><code>night_mode // not_alone</code>：治愈，献给觉得孤单的夜晚</li></ul>
@@ -237,12 +237,12 @@
 <p><code>night_mode // not_alone</code> 由两部分组成。前一部分是让屏幕变暗的设置的名字。后一部分的 <code>//</code> 在许多语言中表示注释的开始：写在代码旁边的一句轻声备注。你可以想象一块切换到夜间模式的屏幕，旁边有一条注释，说你并不孤单。</p>
 <p>第一张专辑的命名用的是同样的语法。<code>dear(you);</code> 看起来像一个把 “you” 作为参数传入的函数调用，同时也是一封信的第一行，收信人写在括号里。品牌名 <code>ipe()</code> 和口号 <code>ipe(); // be still</code> 也是同样的读法。这个网站上的每一个名字，都是用同一种语言写成的。</p>
 <h2>如何读歌曲编号</h2>
-<figure><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="歌曲编号的说明：S1A1.03 读作第1季、第1张专辑、第3首曲目，而 U-001 和 N-001 是系列字母 U 或 N 加上顺序编号" width="1600" height="680" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/song-codes.webp"><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="歌曲编号的说明：S1A1.03 读作第1季、第1张专辑、第3首曲目，而 U-001 和 N-001 是系列字母 U 或 N 加上顺序编号" width="1600" height="680" loading="lazy" decoding="async"></picture></figure>
 <p><em>两种歌曲编号。专辑中的曲目有一个地址；独立发行的单曲则是系列字母加一个编号。</em></p>
 <p>系列也体现在歌曲编号里，有两种写法。属于专辑的歌曲有一个由季、专辑和曲目组成的三段式地址。第一张专辑的第三首歌是 S1A1.03：S1 是第1季，A1 是该季的第一张专辑，03 是这张专辑的第3首曲目。这个数字同时也是这首歌在专辑所讲述的故事中的位置。</p>
 <p>尚未收入专辑的单曲，取其系列的首字母加一个顺序编号。<code>late_night.lofi</code> 的 N-001 和 <code>undefined → known</code> 的 U-001 就是例子。N 来自 night，U 来自 undefined。每个系列有一个前缀字母，所以只看编号就知道一首歌属于哪个系列。当单曲被收入专辑时，它的编号会改为专辑编号，而已经使用过的编号绝不会再次使用。</p>
 <h2>单曲如何成为专辑</h2>
-<figure><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="一张示意图：五首单曲通过箭头汇入专辑 dear(you); vol.1，这是第1季的第一张专辑，十首曲目从 S1A1.01 到 S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/singles-to-album.webp"><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="一张示意图：五首单曲通过箭头汇入专辑 dear(you); vol.1，这是第1季的第一张专辑，十首曲目从 S1A1.01 到 S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></picture></figure>
 <p><em>我们确定的方向：一首一首地发行单曲，等歌曲足够多了，再汇集成专辑。</em></p>
 <p>我们确定的发行方向是逐首发行单曲，等歌曲足够多时再汇集成专辑。<em>dear(you); vol.1</em> 就是以这种方式汇集的第一张专辑。它的十首歌都有英文版和韩文版，编号从 S1A1.01 到 S1A1.10。</p>
 <p>歌曲一旦进入专辑，就有了地址，而这个地址也与一天中的时间相连。第1季把开发者的一天分成四张专辑：夜晚、黎明、早晨和傍晚。第一张专辑 <em>dear(you); vol.1</em> 对应的是睡前的夜晚。所以，当专辑编号改变时，你就来到了一天中的另一个时刻。</p>
@@ -302,7 +302,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261033"></script>
+<script src="/assets/idle.js?v=20261034"></script>
 <script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
 /* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
 /* v2: 오프셋 없는/잘못된 datetime 은 건너뜀 · 그레고리력·라틴 숫자 고정 */

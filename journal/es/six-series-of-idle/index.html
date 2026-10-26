@@ -162,7 +162,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261033">
+<link rel="stylesheet" href="/assets/idle.css?v=20261034">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -222,7 +222,7 @@
 <p>Si recorres la lista de canciones de idle(), te llamarán la atención algunos nombres poco familiares: <code>late_night.lofi</code>, <code>rest() { chill(); }</code>, <code>undefined → known</code>. No son títulos de canciones. Son nombres que agrupan canciones, y los llamamos series. Esta entrada explica qué es una serie, una forma de leer los nombres y cómo los códigos de canción y los álbumes se conectan con las series.</p>
 <p>Antes, unas aclaraciones honestas. Esta entrada se apoya en información que ya es pública en el sitio y en nuestras reglas de numeración de canciones. La historia de cómo se eligió cada nombre por primera vez no está registrada en ningún lugar, así que no la contamos. Las lecturas que siguen toman prestados los hábitos de alguien que lee código a diario; son interpretaciones, no afirmaciones sobre la intención. Y, como siempre: la música está producida con IA (Suno). La letra la redacta una IA como borrador y la revisa una persona.</p>
 <h2>Una serie es una etiqueta de ambiente para las canciones</h2>
-<figure><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="Seis tarjetas, una por serie. late_night.lofi es lo-fi, be still; es sanación, rest() { chill(); } es chill, grace_in_the_loop es ambient, undefined → known es lo-fi y night_mode // not_alone es sanación. Las tarjetas de late_night.lofi y undefined → known están marcadas como series con un sencillo publicado" width="1600" height="860" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/six-series.webp"><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="Seis tarjetas, una por serie. late_night.lofi es lo-fi, be still; es sanación, rest() { chill(); } es chill, grace_in_the_loop es ambient, undefined → known es lo-fi y night_mode // not_alone es sanación. Las tarjetas de late_night.lofi y undefined → known están marcadas como series con un sencillo publicado" width="1600" height="860" loading="lazy" decoding="async"></picture></figure>
 <p><em>Las seis series publicadas en el sitio. Los géneros y temas son los que da el propio resumen del sitio; un contorno dorado marca una serie que tiene un sencillo publicado.</em></p>
 <p>Una serie es una etiqueta de género y de sensación. Te dice en una frase con qué sonido se hizo una canción y a qué ambiente aspira. Las seis series publicadas en el sitio son estas:</p>
 <ul><li><code>be still;</code>: sanación, tema de la quietud</li><li><code>late_night.lofi</code>: lo-fi, el camino a casa tras una noche larga</li><li><code>rest() { chill(); }</code>: chill, ya has hecho bastante hoy</li><li><code>grace_in_the_loop</code>: ambient, la gracia dentro de la repetición</li><li><code>undefined → known</code>: lo-fi, el momento en que lo desconocido pasa a ser conocido</li><li><code>night_mode // not_alone</code>: sanación, para las noches en que te sientes solo</li></ul>
@@ -237,12 +237,12 @@
 <p><code>night_mode // not_alone</code> tiene dos partes. La primera es el nombre de un ajuste que oscurece la pantalla. La segunda, <code>//</code>, inicia un comentario en muchos lenguajes: una nota discreta escrita junto al código. Puedes imaginar una pantalla en modo nocturno, con una nota al lado que dice que no estás solo.</p>
 <p>El primer álbum se nombra con la misma gramática. <code>dear(you);</code> parece una llamada a una función que recibe &quot;you&quot; como argumento. También es la primera línea de una carta, con el destinatario escrito entre paréntesis. El nombre de la marca <code>ipe()</code> y su lema <code>ipe(); // be still</code> se leen igual. Todos los nombres de este sitio están escritos en un solo idioma.</p>
 <h2>Cómo leer un código de canción</h2>
-<figure><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="Explicación de los códigos de canción: S1A1.03 se lee como temporada 1, álbum 1, pista 3, mientras que U-001 y N-001 son una letra de serie, U o N, seguida de un número correlativo" width="1600" height="680" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/song-codes.webp"><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="Explicación de los códigos de canción: S1A1.03 se lee como temporada 1, álbum 1, pista 3, mientras que U-001 y N-001 son una letra de serie, U o N, seguida de un número correlativo" width="1600" height="680" loading="lazy" decoding="async"></picture></figure>
 <p><em>Dos tipos de código de canción. Una pista de álbum tiene una dirección; un sencillo independiente tiene la letra de su serie y un número.</em></p>
 <p>Las series también aparecen en los códigos de canción, y hay dos estilos. Una canción que pertenece a un álbum tiene una dirección de tres partes: temporada, álbum y pista. La tercera canción del primer álbum es S1A1.03: S1 es la temporada 1, A1 es el primer álbum de esa temporada y 03 es la tercera pista. Ese número es también el lugar de la canción en la historia que cuenta el álbum.</p>
 <p>Un sencillo que todavía no se ha reunido en un álbum toma la primera letra de su serie más un número correlativo. N-001 en <code>late_night.lofi</code> y U-001 en <code>undefined → known</code> son ejemplos. La N viene de night y la U de undefined. Cada serie tiene una letra de prefijo, así que el número por sí solo indica a qué serie pertenece una canción. Cuando un sencillo pasa a un álbum, su número se traslada a un código de álbum, y un número ya asignado nunca se reutiliza.</p>
 <h2>Cómo los sencillos se convierten en un álbum</h2>
-<figure><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="Un diagrama de cinco sencillos unidos por una flecha en el álbum dear(you); vol.1, el primer álbum de la Temporada 1, cuyas diez pistas van de S1A1.01 a S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/singles-to-album.webp"><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="Un diagrama de cinco sencillos unidos por una flecha en el álbum dear(you); vol.1, el primer álbum de la Temporada 1, cuyas diez pistas van de S1A1.01 a S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></picture></figure>
 <p><em>La dirección que hemos fijado: publicar sencillos uno a uno y, cuando haya suficientes canciones, reunirlos en un álbum.</em></p>
 <p>La dirección de lanzamiento que hemos fijado es publicar sencillos uno por uno y, cuando haya suficientes canciones, reunirlos en un álbum. <em>dear(you); vol.1</em> es el primer álbum reunido de ese modo. Sus diez canciones están todas publicadas en versión en inglés y versión en coreano, y sus códigos van de S1A1.01 a S1A1.10.</p>
 <p>Una vez que una canción está en un álbum, tiene una dirección, y esa dirección también está ligada a la hora del día. La Temporada 1 divide el día de un desarrollador en cuatro álbumes: noche, madrugada, mañana y tarde. El primer álbum, <em>dear(you); vol.1</em>, se queda con la noche antes de dormir. Así que cuando cambia el número de álbum, pasas a otra hora del día.</p>
@@ -302,7 +302,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261033"></script>
+<script src="/assets/idle.js?v=20261034"></script>
 <script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
 /* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
 /* v2: 오프셋 없는/잘못된 datetime 은 건너뜀 · 그레고리력·라틴 숫자 고정 */

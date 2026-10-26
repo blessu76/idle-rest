@@ -162,7 +162,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261033">
+<link rel="stylesheet" href="/assets/idle.css?v=20261034">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -222,7 +222,7 @@
 <p>Если пролистать список песен на idle(), в глаза бросаются несколько незнакомых названий: <code>late_night.lofi</code>, <code>rest() { chill(); }</code>, <code>undefined → known</code>. Это не названия песен. Это имена, которые объединяют песни в группы, и мы называем их сериями. В этой записи рассказано, что такое серия, как можно прочитать эти названия и как коды песен и альбомы связаны с сериями.</p>
 <p>Сначала несколько честных замечаний. Запись опирается на информацию, которая уже опубликована на сайте, и на наши правила нумерации песен. История о том, как каждое название выбиралось впервые, нигде не записана, поэтому мы её не рассказываем. Приведённые ниже прочтения заимствуют привычки человека, который читает код по профессии; это интерпретации, а не утверждения о замысле. И, как всегда: музыка создаётся с помощью ИИ (Suno). Тексты набрасывает ИИ, а проверяет человек.</p>
 <h2>Серия — это настроение песни в виде ярлыка</h2>
-<figure><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="Шесть карточек, по одной на серию. late_night.lofi — lo-fi, be still; — исцеление, rest() { chill(); } — чилл, grace_in_the_loop — эмбиент, undefined → known — lo-fi, а night_mode // not_alone — исцеление. Карточки late_night.lofi и undefined → known отмечены как серии, в которых вышел сингл" width="1600" height="860" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/six-series.webp"><img src="/assets/journal/six-series-of-idle/six-series.jpg" alt="Шесть карточек, по одной на серию. late_night.lofi — lo-fi, be still; — исцеление, rest() { chill(); } — чилл, grace_in_the_loop — эмбиент, undefined → known — lo-fi, а night_mode // not_alone — исцеление. Карточки late_night.lofi и undefined → known отмечены как серии, в которых вышел сингл" width="1600" height="860" loading="lazy" decoding="async"></picture></figure>
 <p><em>Шесть серий, опубликованных на сайте. Жанры и темы приведены так, как они указаны в собственном описании сайта; золотая рамка отмечает серию, в которой вышел сингл.</em></p>
 <p>Серия — это ярлык жанра и настроения. Одной фразой он сообщает, в каком звучании сделана песня и до какого настроения она хочет дотянуться. На сайте опубликованы такие шесть серий:</p>
 <ul><li><code>be still;</code>: исцеление, тема неподвижности</li><li><code>late_night.lofi</code>: lo-fi, дорога домой после позднего вечера</li><li><code>rest() { chill(); }</code>: чилл, на сегодня ты сделал достаточно</li><li><code>grace_in_the_loop</code>: эмбиент, благодать внутри повторения</li><li><code>undefined → known</code>: lo-fi, миг, когда неизвестное становится известным</li><li><code>night_mode // not_alone</code>: исцеление, для ночей, когда чувствуешь себя одиноко</li></ul>
@@ -237,12 +237,12 @@
 <p><code>night_mode // not_alone</code> состоит из двух частей. Первая — название настройки, затемняющей экран. Вторая, <code>//</code>, во многих языках начинает комментарий: тихую заметку, написанную рядом с кодом. Можно представить экран, переключённый в ночной режим, а рядом заметку о том, что ты не один.</p>
 <p>Первый альбом назван по той же грамматике. <code>dear(you);</code> выглядит как вызов функции, в которую передан аргумент «ты». Это и первая строка письма, где адресат записан в скобках. Название бренда <code>ipe()</code> и его слоган <code>ipe(); // be still</code> читаются так же. Каждое название на этом сайте написано на одном языке.</p>
 <h2>Как читать код песни</h2>
-<figure><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="Объяснение кодов песен: S1A1.03 читается как сезон 1, альбом 1, трек 3, а U-001 и N-001 — это буква серии, U или N, и порядковый номер" width="1600" height="680" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/song-codes.webp"><img src="/assets/journal/six-series-of-idle/song-codes.jpg" alt="Объяснение кодов песен: S1A1.03 читается как сезон 1, альбом 1, трек 3, а U-001 и N-001 — это буква серии, U или N, и порядковый номер" width="1600" height="680" loading="lazy" decoding="async"></picture></figure>
 <p><em>Два вида кодов песен. У трека альбома есть адрес; у отдельного сингла — буква его серии и номер.</em></p>
 <p>Серии отражаются и в кодах песен, причём есть два стиля. У песни, входящей в альбом, трёхчастный адрес: сезон, альбом и трек. Третья песня первого альбома — S1A1.03: S1 — это сезон 1, A1 — первый альбом этого сезона, а 03 — третий трек в нём. Этот номер также обозначает место песни в истории, которую рассказывает альбом.</p>
 <p>Сингл, который ещё не собран в альбом, получает первую букву своей серии и порядковый номер. Примеры — N-001 в <code>late_night.lofi</code> и U-001 в <code>undefined → known</code>. N происходит от night, а U — от undefined. У каждой серии своя буква-префикс, поэтому по одному номеру понятно, к какой серии относится песня. Когда сингл включают в альбом, его номер заменяется кодом альбома, а однажды выданный номер никогда не используется повторно.</p>
 <h2>Как синглы становятся альбомом</h2>
-<figure><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="Схема: пять синглов, соединённых стрелкой в альбом dear(you); vol.1 — первый альбом Сезона 1, десять треков которого идут от S1A1.01 до S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></figure>
+<figure><picture><source type="image/webp" srcset="/assets/journal/six-series-of-idle/singles-to-album.webp"><img src="/assets/journal/six-series-of-idle/singles-to-album.jpg" alt="Схема: пять синглов, соединённых стрелкой в альбом dear(you); vol.1 — первый альбом Сезона 1, десять треков которого идут от S1A1.01 до S1A1.10" width="1600" height="640" loading="lazy" decoding="async"></picture></figure>
 <p><em>Выбранное нами направление: выпускать синглы по одному, а когда песен наберётся достаточно, собирать их в альбом.</em></p>
 <p>Мы выбрали такой путь выпуска: выпускать синглы по одному, а когда песен станет достаточно, собирать их в альбом. <em>dear(you); vol.1</em> — первый альбом, собранный таким образом. Все десять его песен вышли в английской и корейской версиях, а их коды идут от S1A1.01 до S1A1.10.</p>
 <p>Когда песня попадает в альбом, у неё появляется адрес, и этот адрес связан ещё и со временем суток. Сезон 1 делит день разработчика на четыре альбома: ночь, рассвет, утро и вечер. Первый альбом, <em>dear(you); vol.1</em>, занимает ночь перед сном. Так что, когда меняется номер альбома, вы переходите к другому часу дня.</p>
@@ -302,7 +302,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261033"></script>
+<script src="/assets/idle.js?v=20261034"></script>
 <script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
 /* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
 /* v2: 오프셋 없는/잘못된 datetime 은 건너뜀 · 그레고리력·라틴 숫자 고정 */

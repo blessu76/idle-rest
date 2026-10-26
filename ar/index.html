@@ -166,8 +166,8 @@
 }
 </script>
 
-<link rel="preload" as="image" href="/assets/covers/dear-you-titled.jpg" fetchpriority="high">
-<link rel="stylesheet" href="/assets/idle.css?v=20261033">
+<link rel="preload" as="image" href="/assets/covers/dear-you-titled.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="/assets/idle.css?v=20261034">
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
@@ -232,7 +232,7 @@
       <div class="art">
         <div class="art-stage">
           <div class="lp" aria-hidden="true"><span class="lp-label"></span></div>
-          <img class="art-cover" src="/assets/covers/dear-you-titled.jpg" alt="dear(you); vol.1 — album cover" width="1400" height="1400" fetchpriority="high">
+          <picture><source type="image/webp" srcset="/assets/covers/dear-you-titled.webp"><img class="art-cover" src="/assets/covers/dear-you-titled.jpg" alt="dear(you); vol.1 — album cover" width="1400" height="1400" fetchpriority="high"></picture>
         </div>
         <p class="art-vertical ltr" aria-hidden="true">when the process finally rests</p>
       </div>
@@ -240,7 +240,7 @@
 
     <!-- Player bar: plays on YouTube via /go/{track} (keeps the go_redirect GA4 event). -->
     <section class="player-bar" aria-label="dear(you); vol.1 — player">
-      <img class="pb-thumb" src="/assets/covers/dear-you.jpg" alt="" width="1400" height="1400" loading="lazy">
+      <picture><source type="image/webp" srcset="/assets/covers/dear-you.webp"><img class="pb-thumb" src="/assets/covers/dear-you.jpg" alt="" width="1400" height="1400" loading="lazy" decoding="async"></picture>
       <div class="pb-meta">
         <p class="pb-line"><span class="pb-no" id="pbNo">01</span> <span class="pb-title ltr" id="pbTitle" aria-live="polite">Hard Day Again, Wasn't It?</span></p>
         <span class="pb-sub ltr">dear(you); vol.1 · idle()</span>
@@ -323,7 +323,7 @@
       <p class="section-sub" data-i18n="feat_count">10 مقطوعات</p>
     </div>
     <div class="album">
-      <img class="album-cover" src="/assets/covers/dear-you.jpg" alt="dear(you); vol.1 — album cover" width="1400" height="1400" loading="lazy">
+      <picture><source type="image/webp" srcset="/assets/covers/dear-you.webp"><img class="album-cover" src="/assets/covers/dear-you.jpg" alt="dear(you); vol.1 — album cover" width="1400" height="1400" loading="lazy" decoding="async"></picture>
       <div>
         <ol class="tracklist" aria-labelledby="album-title">
           <li><a class="track" data-track="S1A1.01" href="/go/S1A1.01/?l=en&amp;s=other"><span class="t-no">01</span><span class="t-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15L19.5 12z"/></svg></span><span class="t-title ltr">Hard Day Again, Wasn&#x27;t It?</span><span class="t-code ltr">S1A1.01</span><span class="visually-hidden"> — YouTube</span></a></li>
@@ -406,7 +406,7 @@
       </article>
       <article class="card" id="app">
         <div class="app-row">
-          <img src="/idle-app-icon.png" alt="idle() app icon" width="320" height="320" loading="lazy">
+          <picture><source type="image/webp" srcset="/idle-app-icon.webp"><img src="/idle-app-icon.png" alt="idle() app icon" width="320" height="320" loading="lazy" decoding="async"></picture>
           <div>
             <p class="section-sub ltr">// idle() for iOS</p>
             <h3 data-i18n="app_title">لو-فاي يتدفّق<br>مع وقتك أنت</h3>
@@ -473,7 +473,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<script src="/assets/idle.js?v=20261033"></script>
+<script src="/assets/idle.js?v=20261034"></script>
 
 <script>window.__PAGE={"lang": "ar", "dict": {"aria_play_yt": "Play on YouTube:", "aria_theme_to_dark": "التبديل إلى الوضع الداكن", "aria_theme_to_light": "التبديل إلى الوضع الفاتح"}};window.__applyAria=function(el){var v=window.__PAGE.dict[el.getAttribute('data-i18n-aria')];if(v!=null)el.setAttribute('aria-label',v);};</script>
 <!-- ===== player bar: track selection + EN/KR version; playback opens YouTube via /go/{track} ===== -->
