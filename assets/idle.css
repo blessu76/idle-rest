@@ -293,6 +293,11 @@ select.lang option { color: #1f2933; background: #fff; }
 .j-list p { margin-top: 6px; color: var(--muted); }
 .article { max-width: 720px; margin-inline: auto; }
 .article-head { padding: 48px 0 28px; border-bottom: 1px solid var(--line); }
+.j-no { display: inline-block; margin-inline-end: 10px; padding: 1px 8px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--text); font-weight: 600; white-space: nowrap; }
+.pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px; margin-top: 28px; font: 14px/1 var(--mono); }
+.pager a, .pager .pg-num { min-width: 40px; min-height: 40px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); border-radius: 8px; text-decoration: none; }
+.pager a:hover { border-color: var(--accent); color: var(--accent); }
+.pager .pg-num[aria-current] { background: var(--text); border-color: var(--text); color: var(--bg, #fff); font-weight: 600; }
 .article-head .j-date { display: flex; flex-wrap: wrap; gap: 10px; }
 .article-head h1 { margin-top: 12px; font: 500 clamp(28px, 4vw, 40px)/1.25 var(--sans); }
 .article-head p { margin-top: 12px; color: var(--muted); font-size: 17px; }
@@ -306,6 +311,10 @@ select.lang option { color: #1f2933; background: #fff; }
 .prose code { padding: 1px 6px; border-radius: 4px; background: var(--surface-2); font: .88em var(--mono); }
 .prose pre { overflow-x: auto; padding: 16px; border-radius: 8px; background: var(--surface-2); font: 14px/1.6 var(--mono); }
 .prose pre code { padding: 0; background: none; }
+.prose .table-wrap { overflow-x: auto; margin: 1.2em 0; }
+.prose table { width: 100%; min-width: 440px; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
+.prose th, .prose td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.prose th { color: var(--text); font-weight: 600; white-space: nowrap; }
 .prose ul, .prose ol { padding-inline-start: 1.4em; }
 .prose img { border-radius: 6px; }
 .prose figure { margin: 1.6em 0; }

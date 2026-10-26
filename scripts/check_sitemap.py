@@ -61,7 +61,13 @@ def check(root):
         want.update(bp.page_url(l, slug) for l in (None,) + tuple(bj.LANGS))
     for p in posts:
         want.add(bj.post_url(p))
-        want.add(bj.SITE + bj.lang_path(p["lang"]))
+    per = {}  # list pages: page 1 of each language + /journal/page/N/ ... for lists longer than PER_PAGE
+    for p in posts:
+        per[p["lang"]] = per.get(p["lang"], 0) + 1
+        if p["lang"] in bj.MAIN_LANGS:
+            per[None] = per.get(None, 0) + 1
+    for key, n in per.items():
+        want.update(bj.SITE + bj.list_path(key, k) for k in range(1, bj.page_count(n) + 1))
     for u in sorted(want - set(urls)):
         errs.append("missing from sitemap: %s" % u)
     for u in sorted(urls):
@@ -81,7 +87,7 @@ def check(root):
             errs.append("%s: no x-default" % loc)
         mine = [l for l, h in links if h == loc and l != "x-default"]
         defaults = (bj.SITE + "/journal/", bj.SITE + "/") + tuple(bp.page_url(None, s) for s in bp.SLUGS)
-        if not mine and loc not in defaults:  # hub, root and the x-default trust pages are only the x-default of their language pages
+        if not mine and loc not in defaults and not loc.startswith(bj.SITE + "/journal/page/"):  # hub, root and the x-default trust pages are only the x-default of their language pages
             errs.append("%s: does not list itself in hreflang" % loc)
         for lang, href in links:
             if href not in urls:

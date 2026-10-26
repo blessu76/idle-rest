@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Oct 2026 10:17:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 08:47:00 +0900</lastBuildDate>
+    <item>
+      <title>가장 느린 곡으로 앨범을 닫다 — 64 BPM 마지막 편지를 사양과 원고로 읽기</title>
+      <link>https://idle.ipe.rest/journal/ko/closing-with-the-slowest-song/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/closing-with-the-slowest-song/</guid>
+      <pubDate>Tue, 27 Oct 2026 08:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 열 번째 곡은 열 곡 가운데 가장 느린 64 BPM으로 적혀 있습니다. 템포, 악기, 가사의 줄 모양, 감사의 자리를 앞의 아홉 곡과 견주어, 앨범을 닫는 곡이 문서와 원고에서 어떻게 달라지는지 읽어 봅니다.</description>
+    </item>
+    <item>
+      <title>Closing the Album with Its Slowest Song — Reading the 64 BPM Last Letter in Specs and Lyrics</title>
+      <link>https://idle.ipe.rest/journal/en/closing-with-the-slowest-song/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/closing-with-the-slowest-song/</guid>
+      <pubDate>Tue, 27 Oct 2026 08:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The tenth song of dear(you); vol.1 is written down at 64 BPM, the slowest of the ten. This post sets its tempo, instruments, line shapes, place for thanks against the nine songs before it, to see how the closing song differs in the documents and lyric sheets.</description>
+    </item>
     <item>
       <title>영어는 여성이, 한국어는 남성이 — 두 버전을 나누는 규칙과 의역의 방식</title>
       <link>https://idle.ipe.rest/journal/ko/english-female-korean-male/</link>

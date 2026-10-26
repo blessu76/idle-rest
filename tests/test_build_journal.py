@@ -567,5 +567,75 @@ class Post09(unittest.TestCase):
             self.assertTrue((REPO / "assets/journal/english-female-korean-male" / (img + ".jpg")).exists(), img)
 
 
+class Numbering(Site):
+    """No. n (publication order) on cards and post heads; lists capped at 10 per page with /page/N/ from page 2."""
+
+    def many(self, n, langs=("en",)):
+        for i in range(n):
+            for l in langs:
+                self.post("p%02d" % i, l, extra='time: "08:%02d"\n' % i + ("translation_of: en\n" if l == "ja" else ""), title="Title %02d %s" % (i, l))
+        self.build()
+
+    def list_nos(self, rel):
+        return [int(x) for x in re.findall(r'<span class="j-no">No\. (\d+)</span>', re.search(r'<ol class="j-list".*?</ol>', self.read(rel), re.S).group(0))]
+
+    def test_counts_pages_numbers_and_links(self):
+        for n, pages in ((1, 1), (9, 1), (10, 1), (11, 2), (21, 3)):
+            with self.subTest(n=n):
+                self.tearDown()
+                self.setUp()
+                self.many(n)
+                self.assertEqual(self.list_nos("journal/en/index.html"), list(range(n, max(0, n - 10), -1)))
+                for k in range(2, pages + 1):
+                    self.assertTrue((self.tmp / ("journal/en/page/%d/index.html" % k)).is_file())
+                self.assertFalse((self.tmp / ("journal/en/page/%d/index.html" % (pages + 1))).exists())
+                if pages == 1:
+                    self.assertFalse((self.tmp / "journal/en/page").exists())
+                    self.assertNotIn('class="pager"', self.read("journal/en/index.html"))
+
+    def test_page_two_links_title_canonical_sitemap(self):
+        self.many(21)
+        p1, p2, p3 = (self.read(x) for x in ("journal/en/index.html", "journal/en/page/2/index.html", "journal/en/page/3/index.html"))
+        self.assertEqual(self.list_nos("journal/en/page/2/index.html"), list(range(11, 1, -1)))
+        self.assertEqual(self.list_nos("journal/en/page/3/index.html"), [1])
+        self.assertIn("<title>Journal — idle()", p1)
+        self.assertIn("<title>Journal · Page 2 — idle()", p2)
+        self.assertIn('<link rel="canonical" href="https://idle.ipe.rest/journal/en/page/2/">', p2)
+        self.assertIn('<link rel="canonical" href="https://idle.ipe.rest/journal/en/">', p1)
+        self.assertIn('hreflang="en" href="https://idle.ipe.rest/journal/en/page/2/"', p2)
+        self.assertIn('<a class="pg-step" rel="next" href="/journal/en/page/3/"', p2)
+        self.assertIn('<a class="pg-step" rel="prev" href="/journal/en/"', p2)
+        self.assertIn('<a class="pg-step" rel="next" href="/journal/en/page/2/"', p1)
+        self.assertNotIn('rel="next"', p3)
+        sm = self.read("sitemap.xml")
+        for u in ("/journal/en/page/2/", "/journal/en/page/3/", "/journal/page/2/"):
+            self.assertIn("<loc>https://idle.ipe.rest%s</loc>" % u, sm)
+        self.assertNotIn("/journal/en/page/4/", sm)
+        r = subprocess.run([sys.executable, str(REPO / "scripts/check_sitemap.py"), "--root", str(self.tmp)], capture_output=True, text=True)
+        self.assertEqual(r.returncode, 0, r.stderr)
+
+    def test_post_head_has_number_shared_across_languages(self):
+        self.many(3, langs=("en", "ja"))
+        for l in ("en", "ja"):
+            h = self.read("journal/%s/p01/index.html" % l)
+            self.assertIn('<span class="j-no">No. 2</span>', h)
+        self.assertEqual(self.list_nos("journal/ja/index.html"), [3, 2, 1])
+
+    def test_slug_page_is_reserved(self):
+        self.post("page", "en")
+        self.fails("reserved")
+
+
+class Tables(Site):
+    def test_gfm_table_wrapped_for_scroll(self):
+        self.post("t", "en", body="| A | B |\n|---|:--:|\n| 1 | **x** |\n| 2 |\n\nafter")
+        self.build()
+        h = self.read("journal/en/t/index.html")
+        self.assertIn('<div class="table-wrap" tabindex="0"><table><thead><tr><th scope="col">A</th><th scope="col">B</th></tr></thead>', h)
+        self.assertIn("<td>1</td><td><strong>x</strong></td>", h)
+        self.assertIn("<tr><td>2</td><td></td></tr>", h)
+        self.assertIn("<p>after</p>", h)
+
+
 if __name__ == "__main__":
     unittest.main()
