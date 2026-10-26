@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Oct 2026 08:47:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 13:52:00 +0900</lastBuildDate>
+    <item>
+      <title>열 단계의 감정 아크 — 곡마다 한 줄로 읽는 dear(you); vol.1</title>
+      <link>https://idle.ipe.rest/journal/ko/ten-steps-of-feeling/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/ten-steps-of-feeling/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 열 곡은 공감에서 평온까지 열 단계의 순서로 놓여 있습니다. 앨범 기획서와 곡 설계 문서를 따라, 곡마다 그 자리에서 무엇을 하는지 한 줄씩 읽고 앞 곡과 이어지는 방식을 확인합니다.</description>
+    </item>
+    <item>
+      <title>The Ten Steps of Feeling — Reading dear(you); vol.1 One Line per Song</title>
+      <link>https://idle.ipe.rest/journal/en/ten-steps-of-feeling/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/ten-steps-of-feeling/</guid>
+      <pubDate>Tue, 27 Oct 2026 13:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The ten songs of dear(you); vol.1 are laid out as ten steps from empathy to peace. Following the album plan and the song design documents, this post reads what each song does at its place in the order, one line at a time, and checks how each one connects to the song before it.</description>
+    </item>
     <item>
       <title>가장 느린 곡으로 앨범을 닫다 — 64 BPM 마지막 편지를 사양과 원고로 읽기</title>
       <link>https://idle.ipe.rest/journal/ko/closing-with-the-slowest-song/</link>

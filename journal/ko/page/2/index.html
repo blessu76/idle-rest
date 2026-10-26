@@ -69,6 +69,13 @@
   "blogPost": [
     {
       "@type": "BlogPosting",
+      "headline": "해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다",
+      "url": "https://idle.ipe.rest/journal/ko/check-in-before-you-fix/",
+      "datePublished": "2026-10-22T09:03:00+09:00",
+      "inLanguage": "ko"
+    },
+    {
+      "@type": "BlogPosting",
       "headline": "열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다",
       "url": "https://idle.ipe.rest/journal/ko/ten-letters-one-skeleton/",
       "datePublished": "2026-10-21",
@@ -83,12 +90,18 @@
   "@type": "ItemList",
   "name": "idle() 저널 · 쪽 2",
   "url": "https://idle.ipe.rest/journal/ko/page/2/",
-  "numberOfItems": 11,
+  "numberOfItems": 12,
   "itemListOrder": "https://schema.org/ItemListOrderDescending",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 11,
+      "url": "https://idle.ipe.rest/journal/ko/check-in-before-you-fix/",
+      "name": "해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
       "url": "https://idle.ipe.rest/journal/ko/ten-letters-one-skeleton/",
       "name": "열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다"
     }
@@ -115,7 +128,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261035">
+<link rel="stylesheet" href="/assets/idle.css?v=20261036">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -170,6 +183,11 @@
   </div>
     <ol class="j-list" reversed>
       <li lang="ko">
+        <p class="j-date"><span class="j-no">No. 2</span><time datetime="2026-10-22T09:03:00+09:00" data-ipe-time>2026-10-22 09:03 KST</time> <span class="j-cat">· behind-the-music</span></p>
+        <h2><a href="/journal/ko/check-in-before-you-fix/">해결책 대신 안부부터 — 첫 곡 「오늘도 많이 힘들었지?」를 이렇게 설계했다</a></h2>
+        <p>조언도 해결책도 없이 먼저 안부를 묻는 곡. dear(you); 첫 트랙의 설계 의도와 가사 장면, 59줄의 짜임, 속삭임과 소리의 결을 가사 원고를 기준으로 풀어 봅니다.</p>
+      </li>
+      <li lang="ko">
         <p class="j-date"><span class="j-no">No. 1</span><time datetime="2026-10-21">2026. 10. 21</time> <span class="j-cat">· behind-the-music</span></p>
         <h2><a href="/journal/ko/ten-letters-one-skeleton/">열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다</a></h2>
         <p>dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.</p>
@@ -219,6 +237,39 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261035"></script>
+<script src="/assets/idle.js?v=20261036"></script>
+<script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
+/* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
+/* v2: 오프셋 없는/잘못된 datetime 은 건너뜀 · 그레고리력·라틴 숫자 고정 */
+(function () {
+  try {
+    var zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var names = { 'Asia/Seoul': 'KST', 'Asia/Tokyo': 'JST' };
+    var ok = /^\d{4}-\d\d-\d\dT\d\d:\d\d(:\d\d)?([+-]\d\d:?\d\d|Z)$/;
+    var fmt = new Intl.DateTimeFormat(document.documentElement.lang || 'en', {
+      calendar: 'gregory', numberingSystem: 'latn',
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short'
+    });
+    var els = document.querySelectorAll('time[data-ipe-time]');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      try {
+        if (el.hasAttribute('data-ipe-time-done')) continue;
+        var raw = (el.getAttribute('datetime') || '').trim();
+        if (!ok.test(raw)) continue;
+        var d = new Date(raw.replace(/([+-]\d\d)(\d\d)$/, '$1:$2'));
+        if (isNaN(d.getTime())) continue;
+        var text = fmt.formatToParts(d).map(function (p) {
+          return p.type === 'timeZoneName' && names[zone] ? names[zone] : p.value;
+        }).join('');
+        if (!el.getAttribute('title')) el.setAttribute('title', el.textContent.trim());
+        el.textContent = text;
+        el.setAttribute('data-ipe-time-done', '');
+      } catch (e) {}
+    }
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
