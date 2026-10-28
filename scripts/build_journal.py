@@ -85,6 +85,7 @@ LANGS = {
     "hi": {"name": "हिन्दी", "og": "hi_IN", "dir": "ltr"},
     "id": {"name": "Bahasa Indonesia", "og": "id_ID", "dir": "ltr"},
 }
+LIST_DESC_MIN, LIST_DESC_MAX = 90, 160  # journal list meta description: aim for >=90, never over 160 (search snippet limit)
 PER_PAGE = 10  # posts per journal list page (Davy 2026-10-27): more -> /journal/<lang>/page/2/ ...
 PAGER = {  # (previous, next, page) — aria-labels and <title> word
     "en": ("Previous", "Next", "Page"), "ko": ("이전", "다음", "쪽"), "ja": ("前へ", "次へ", "ページ"), "zh": ("上一页", "下一页", "页"),
@@ -470,6 +471,8 @@ def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/jou
 <link rel="canonical" href="{esc(canonical)}">
 {alternates}<link rel="alternate" type="application/rss+xml" title="idle() Journal" href="{SITE}/journal/feed.xml">
 <link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/icon-180.png">
 <meta property="og:site_name" content="idle() · ipe()">
 <meta property="og:title" content="{esc(title)}">
@@ -902,6 +905,11 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
     desc = ("Notes from idle(), the music of ipe(): behind the music, and other quiet updates." if not lang else "idle() · ipe() — " + t["sub"])
     if page > 1:
         desc += " · %s %d" % (pw, page)
+    for p in shown:  # fill the snippet toward 70–160 chars with this page's newest titles (whole titles only)
+        if len(desc) >= LIST_DESC_MIN:
+            break
+        if len(desc) + 3 + len(p["title"]) <= LIST_DESC_MAX:
+            desc += " · " + p["title"]
     # hreflang: every language whose list has this page (+ x-default = the hub's same page when it exists)
     has = [l for l in pages if counts.get(l, 1) >= page]
     alts = ""

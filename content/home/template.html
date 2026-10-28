@@ -23,6 +23,8 @@
 
 <!-- ===== PWA ===== -->
 <link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -397,6 +399,9 @@
       <li><a href="{{CONTACT_HREF}}" data-i18n="nav_contact">Contact</a></li>
       <li><a href="{{PRIVACY_HREF}}" data-i18n="nav_privacy">Privacy Policy</a></li>
       <li><a href="https://ipe.rest/" class="ltr">ipe.rest</a></li>
+    </ul>
+    <ul class="footer-links footer-langs" aria-labelledby="langlabel">
+{{LANG_LINKS}}
     </ul>
     <ul class="social">
       <li><a href="https://www.youtube.com/@ipe-rest" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="M10 9v6l5-3z" fill="var(--bg)"/></svg>YouTube</a></li>

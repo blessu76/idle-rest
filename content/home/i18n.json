@@ -73,7 +73,9 @@
   "how_h": "How it's made",
   "how_tag": "// produced with AI, reviewed by a person",
   "how_p1": "The music is produced with AI (Suno), openly and transparently. Lyrics are AI-drafted and reviewed by a person.",
-  "how_p2": "Since the dear(you); album, every track closes with a quiet spoken signature — “ipe. be still” — a single breath, whispered."
+  "how_p2": "Since the dear(you); album, every track closes with a quiet spoken signature — “ipe. be still” — a single breath, whispered.",
+  "meta_title_root": "idle() — the music of ipe() · AI lo-fi & healing music | idle.ipe.rest",
+  "meta_desc_root": "Quiet AI lo-fi & healing music for tired developers, from the studio ipe(). Start with the album dear(you); vol.1 or the journal — every page is in 12 languages."
  },
  "ko": {
   "meta_title": "idle() — 지친 개발자를 위한 AI 로파이·힐링 음악 · ipe(); // be still",
@@ -210,7 +212,12 @@
   "journal_empty": "最初の記事はまもなく公開されます。",
   "view_all": "すべて見る",
   "read_more": "続きを読む",
-  "how_h": "つくり方"
+  "how_h": "つくり方",
+  "journal_sub": "音楽の裏話と、静かなお知らせ。",
+  "nav_about": "概要",
+  "nav_contact": "お問い合わせ",
+  "nav_privacy": "プライバシーポリシー",
+  "singles_sub": "静かなひとときを、あと二曲"
  },
  "zh": {
   "meta_title": "idle() — 为疲惫开发者打造的 AI Lo-Fi 与疗愈音乐 · ipe(); // be still",
@@ -271,7 +278,12 @@
   "journal_empty": "第一篇文章即将发布。",
   "view_all": "查看全部",
   "read_more": "阅读更多",
-  "how_h": "制作方式"
+  "how_h": "制作方式",
+  "journal_sub": "音乐背后的故事与安静的近况。",
+  "nav_about": "关于",
+  "nav_contact": "联系",
+  "nav_privacy": "隐私政策",
+  "singles_sub": "再来两首安静的小曲"
  },
  "es": {
   "meta_title": "idle() — música AI lo-fi y de relajación para desarrolladores cansados · ipe(); // be still",
@@ -332,7 +344,12 @@
   "journal_empty": "La primera entrada llegará pronto.",
   "view_all": "Ver todo",
   "read_more": "Leer más",
-  "how_h": "Cómo se hace"
+  "how_h": "Cómo se hace",
+  "journal_sub": "Historias detrás de la música y otras novedades tranquilas.",
+  "nav_about": "Acerca de",
+  "nav_contact": "Contacto",
+  "nav_privacy": "Política de privacidad",
+  "singles_sub": "dos momentos tranquilos más"
  },
  "fr": {
   "meta_title": "idle() — musique AI lo-fi et apaisante pour développeurs fatigués · ipe(); // be still",
@@ -393,7 +410,12 @@
   "journal_empty": "Le premier article arrive bientôt.",
   "view_all": "Tout voir",
   "read_more": "Lire la suite",
-  "how_h": "Comment c'est fait"
+  "how_h": "Comment c'est fait",
+  "journal_sub": "Les coulisses de la musique et d'autres nouvelles tranquilles.",
+  "nav_about": "À propos",
+  "nav_contact": "Contact",
+  "nav_privacy": "Politique de confidentialité",
+  "singles_sub": "deux moments paisibles de plus"
  },
  "de": {
   "meta_title": "idle() — AI-Lo-Fi- und Healing-Musik für erschöpfte Entwickler · ipe(); // be still",
@@ -454,7 +476,12 @@
   "journal_empty": "Der erste Beitrag erscheint bald.",
   "view_all": "Alle ansehen",
   "read_more": "Weiterlesen",
-  "how_h": "So entsteht es"
+  "how_h": "So entsteht es",
+  "journal_sub": "Hintergründe zur Musik und andere leise Neuigkeiten.",
+  "nav_about": "Über uns",
+  "nav_contact": "Kontakt",
+  "nav_privacy": "Datenschutzerklärung",
+  "singles_sub": "zwei weitere stille Momente"
  },
  "pt": {
   "meta_title": "idle() — música AI lo-fi e relaxante para desenvolvedores cansados · ipe(); // be still",
@@ -515,7 +542,12 @@
   "journal_empty": "O primeiro texto chega em breve.",
   "view_all": "Ver tudo",
   "read_more": "Ler mais",
-  "how_h": "Como é feito"
+  "how_h": "Como é feito",
+  "journal_sub": "Os bastidores da música e outras novidades tranquilas.",
+  "nav_about": "Sobre",
+  "nav_contact": "Contato",
+  "nav_privacy": "Política de Privacidade",
+  "singles_sub": "mais dois momentos tranquilos"
  },
  "ru": {
   "meta_title": "idle() — AI lo-fi и музыка для отдыха для уставших разработчиков · ipe(); // be still",
@@ -576,7 +608,12 @@
   "journal_empty": "Первая запись скоро появится.",
   "view_all": "Смотреть все",
   "read_more": "Читать далее",
-  "how_h": "Как это сделано"
+  "how_h": "Как это сделано",
+  "journal_sub": "Закулисье музыки и другие тихие новости.",
+  "nav_about": "О проекте",
+  "nav_contact": "Контакты",
+  "nav_privacy": "Политика конфиденциальности",
+  "singles_sub": "ещё два тихих мгновения"
  },
  "ar": {
   "meta_title": "‏idle() — موسيقى لو-فاي واسترخاء بالذكاء الاصطناعي للمطوّرين المُنهَكين · ipe(); // be still",
@@ -637,7 +674,12 @@
   "journal_empty": "ستُنشر أول تدوينة قريبًا.",
   "view_all": "عرض الكل",
   "read_more": "اقرأ المزيد",
-  "how_h": "كيف نصنعها"
+  "how_h": "كيف نصنعها",
+  "journal_sub": "كواليس الموسيقى وأخبار هادئة أخرى.",
+  "nav_about": "حول",
+  "nav_contact": "اتصل بنا",
+  "nav_privacy": "سياسة الخصوصية",
+  "singles_sub": "لحظتان هادئتان أخريان"
  },
  "hi": {
   "meta_title": "idle() — थके डेवलपर्स के लिए AI लो-फ़ाई और हीलिंग संगीत · ipe(); // be still",
@@ -698,7 +740,12 @@
   "journal_empty": "पहली पोस्ट जल्द आएगी।",
   "view_all": "सभी देखें",
   "read_more": "और पढ़ें",
-  "how_h": "यह कैसे बनता है"
+  "how_h": "यह कैसे बनता है",
+  "journal_sub": "संगीत के पीछे की बातें और कुछ शांत ख़बरें।",
+  "nav_about": "परिचय",
+  "nav_contact": "संपर्क",
+  "nav_privacy": "गोपनीयता नीति",
+  "singles_sub": "दो और शांत पल"
  },
  "id": {
   "meta_title": "idle() — musik AI lo-fi & penenang untuk developer yang lelah · ipe(); // be still",
@@ -759,6 +806,11 @@
   "journal_empty": "Tulisan pertama segera hadir.",
   "view_all": "Lihat semua",
   "read_more": "Baca selengkapnya",
-  "how_h": "Cara pembuatannya"
+  "how_h": "Cara pembuatannya",
+  "journal_sub": "Cerita di balik musik dan kabar tenang lainnya.",
+  "nav_about": "Tentang",
+  "nav_contact": "Kontak",
+  "nav_privacy": "Kebijakan Privasi",
+  "singles_sub": "dua momen tenang lainnya"
  }
 }

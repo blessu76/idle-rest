@@ -21,7 +21,7 @@ from pathlib import Path
 import build_journal as bj
 
 SITE = bj.SITE
-HOME_UPDATED = "2026-10-22"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
+HOME_UPDATED = "2026-10-28"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
 TEMPLATE = Path("content") / "home" / "template.html"
 STRINGS = Path("content") / "home" / "i18n.json"
 LANG_ATTR = re.compile(r'(<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\sdata-i18n="(?P<key>[^"]+)"[^>]*)>)(?P<inner>.*?)(</(?P=tag)>)', re.S)
@@ -109,15 +109,18 @@ def render_page(tpl, strings, lang, root, posts):
     page_dict = {k: d[k] for k in ("aria_play_yt", "aria_theme_to_dark", "aria_theme_to_light") if k in d}
     page_script = ("<script>window.__PAGE=%s;window.__applyAria=function(el){var v=window.__PAGE.dict[el.getAttribute('data-i18n-aria')];"
                    "if(v!=null)el.setAttribute('aria-label',v);};</script>" % json.dumps({"lang": lang, "dict": page_dict}, ensure_ascii=False))
+    lang_links = "\n".join('      <li><a href="%s" hreflang="%s" lang="%s"%s>%s</a></li>' % (
+        lang_url(l), l, l, ' aria-current="true"' if l == lang and not root else "", esc(bj.LANGS[l]["name"])) for l in bj.LANGS)
     names = json.dumps({l: bj.LANGS[l]["name"] for l in bj.LANGS}, ensure_ascii=False)
     subs = {
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
-        "LANG_OPTIONS": options, "JOURNAL_HREF": jl,
+        "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT", "PRIVACY")},
         "LEGACY_SCRIPT": LEGACY_JS % "|".join(bj.LANGS), "PAGE_SCRIPT": page_script,
         "LANG_HINT": '<div class="lang-hint" id="langHint" hidden></div>\n' if root else "",
         "NAV_SCRIPT": NAV_SCRIPT % (HINT_JS % names if root else ""),
-        "meta_title": esc(d["meta_title"]), "meta_desc": esc(d["meta_desc"]),
+        "meta_title": esc(d["meta_title_root"] if root and "meta_title_root" in d else d["meta_title"]),
+        "meta_desc": esc(d["meta_desc_root"] if root and "meta_desc_root" in d else d["meta_desc"]),
     }
     out = re.sub(r"\{\{(\w+)\}\}", lambda m: subs[m.group(1)], out)
     # structured data follows the page: WebSite.inLanguage = this language, album url = this page

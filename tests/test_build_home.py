@@ -149,6 +149,41 @@ class BuildHome(unittest.TestCase):
         self.assertFalse([l for l in rows if "?lang=" in l])
         self.assertIn("https://idle.ipe.rest/ja/", self.tmp.joinpath("llms.txt").read_text(encoding="utf-8"))
 
+    def test_footer_has_crawlable_hreflang_links_to_all_12(self):
+        for l in [None] + LANGS:
+            h = self.page(l)
+            got = dict(re.findall(r'<a href="([^"]+)" hreflang="(\w+)" lang="\2"', h))
+            self.assertEqual(sorted(got.values()), sorted(LANGS), l)
+            self.assertTrue(all(u == "https://idle.ipe.rest/%s/" % x for u, x in got.items()), l)
+
+    def test_root_title_and_description_differ_from_en(self):
+        pick = lambda h, pat: re.search(pat, h).group(1)
+        root, en = self.page(), self.page("en")
+        self.assertNotEqual(pick(root, r"<title>(.*?)</title>"), pick(en, r"<title>(.*?)</title>"))
+        self.assertNotEqual(pick(root, r'name="description" content="([^"]*)"'), pick(en, r'name="description" content="([^"]*)"'))
+
+    def test_translated_subtitles_in_all_languages(self):
+        import json
+        d = json.loads((REPO / "content/home/i18n.json").read_text(encoding="utf-8"))
+        for l in LANGS[1:]:
+            for k in ("singles_sub", "journal_sub"):
+                self.assertIn(k, d[l], (l, k))
+                self.assertNotEqual(d[l][k], d["en"][k], (l, k))
+
+    def test_static_root_files(self):
+        self.assertGreater((REPO / "favicon.ico").stat().st_size, 100)
+        h = (REPO / "404.html").read_text(encoding="utf-8")
+        self.assertIn('<html lang="en"', h)
+        self.assertIn("noindex", h)
+
+    def test_journal_list_descriptions_are_snippet_sized(self):
+        import html
+        files = [f for f in REPO.glob("journal/**/index.html") if 'class="j-list"' in f.read_text(encoding="utf-8")]
+        self.assertGreater(len(files), 12)
+        for f in files:
+            n = len(html.unescape(re.search(r'name="description" content="([^"]*)"', f.read_text(encoding="utf-8")).group(1)))
+            self.assertTrue(70 <= n <= 160, (str(f.relative_to(REPO)), n))
+
     def test_idempotent(self):
         before = {p: p.read_bytes() for p in self.tmp.rglob("*") if p.is_file()}
         self.build()
