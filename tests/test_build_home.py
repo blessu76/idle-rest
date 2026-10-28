@@ -162,6 +162,18 @@ class BuildHome(unittest.TestCase):
         self.assertNotEqual(pick(root, r"<title>(.*?)</title>"), pick(en, r"<title>(.*?)</title>"))
         self.assertNotEqual(pick(root, r'name="description" content="([^"]*)"'), pick(en, r'name="description" content="([^"]*)"'))
 
+    def test_root_description_within_160(self):
+        import html
+        d = html.unescape(re.search(r'name="description" content="([^"]*)"', self.page()).group(1))
+        self.assertLessEqual(len(d), 160, len(d))
+
+    def test_404_noindex_and_asset_version_matches(self):
+        h = (REPO / "404.html").read_text(encoding="utf-8")
+        self.assertIn("noindex", h)
+        src = (REPO / "scripts/build_journal.py").read_text(encoding="utf-8")
+        v = re.search(r'^ASSET_V = "(\d+)"', src, re.M).group(1)
+        self.assertEqual(set(re.findall(r"\?v=(\d+)", h)), {v})
+
     def test_translated_subtitles_in_all_languages(self):
         import json
         d = json.loads((REPO / "content/home/i18n.json").read_text(encoding="utf-8"))

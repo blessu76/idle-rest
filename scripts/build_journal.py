@@ -905,6 +905,7 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
     desc = ("Notes from idle(), the music of ipe(): behind the music, and other quiet updates." if not lang else "idle() · ipe() — " + t["sub"])
     if page > 1:
         desc += " · %s %d" % (pw, page)
+    desc = desc.rstrip(".")
     for p in shown:  # fill the snippet toward 70–160 chars with this page's newest titles (whole titles only)
         if len(desc) >= LIST_DESC_MIN:
             break
