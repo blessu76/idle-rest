@@ -1,6 +1,7 @@
 ---
 title: Zehn Briefe, ein Skelett — die Textstruktur von dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: de
 description: Das gemeinsame Text-Skelett der zehn Songs auf dear(you); vol.1: sechs Plätze, die Stelle, an der ein siebter hinzukommt, die englischen und koreanischen Zwillingsfassungen und die geflüsterte Zeile, die jeden Song beschließt.

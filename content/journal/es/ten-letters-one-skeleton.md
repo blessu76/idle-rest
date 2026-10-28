@@ -1,6 +1,7 @@
 ---
 title: Diez cartas, un solo esqueleto: la estructura lírica de dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: es
 description: El esqueleto lírico que comparten las diez canciones de dear(you); vol.1: seis espacios, el punto donde aparece un séptimo, las versiones gemelas en inglés y coreano, y la línea susurrada que cierra cada canción.

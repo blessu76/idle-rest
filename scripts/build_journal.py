@@ -92,6 +92,7 @@ PAGER = {  # (previous, next, page) — aria-labels and <title> word
     "pt": ("Anterior", "Próxima", "Página"), "ru": ("Назад", "Далее", "Страница"), "ar": ("السابق", "التالي", "صفحة"),
     "hi": ("पिछला", "अगला", "पृष्ठ"), "id": ("Sebelumnya", "Berikutnya", "Halaman"),
 }
+PAGER_NAV = {"zh": "分页"}  # <nav class="pager"> aria-label where it differs from the PAGER page word (title/number links keep the page word)
 MAIN_LANGS = ("ko", "en")  # originals: flat URLs /journal/<slug>/ ; everything else is an AI translation under /<lang>/journal/
 _K = ("journal", "back", "listen", "ad", "sub", "empty", "read_more", "rss", "home", "music", "albums", "story", "menu",
       "to_dark", "to_light", "skip", "about", "contact", "privacy", "ai_note", "ai_orig", "other_langs")
@@ -893,7 +894,7 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
                 nav.append('<span class="pg-num" aria-current="page" aria-label="%s %d">%d</span>' % (pw, k, k) if k == page else link(k, str(k), ' class="pg-num"'))
             if page < total:
                 nav.append('<a class="pg-step" rel="next" href="%s" aria-label="%s"><span class="pg-word">%s</span> <span aria-hidden="true">→</span></a>' % (esc(list_path(lang, page + 1)), esc(next_w), esc(next_w)))
-            body += '\n    <nav class="pager" aria-label="%s">%s</nav>' % (esc(pw), "".join(nav))
+            body += '\n    <nav class="pager" aria-label="%s">%s</nav>' % (esc(PAGER_NAV.get(loc, pw)), "".join(nav))
     else:
         body = (f'    <div class="empty-note"><strong>{esc(en["empty"])}</strong>'
                 f'<span lang="ko">{esc(ko["empty"])}</span></div>')

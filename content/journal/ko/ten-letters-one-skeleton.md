@@ -1,6 +1,7 @@
 ---
 title: 열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: ko
 description: dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.

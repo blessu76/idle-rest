@@ -1,6 +1,7 @@
 ---
 title: Sepuluh Surat, Satu Kerangka — Struktur Lirik dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: id
 description: Kerangka lirik yang dipakai bersama oleh sepuluh lagu di dear(you); vol.1: enam slot, tempat slot ketujuh muncul, versi kembar bahasa Inggris dan Korea, serta baris bisikan yang menutup setiap lagu.

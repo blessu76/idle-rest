@@ -1,6 +1,7 @@
 ---
 title: Dix lettres, un seul squelette — la structure des paroles de dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: fr
 description: Le squelette commun aux dix chansons de dear(you); vol.1 : six emplacements, l'endroit où un septième apparaît, les versions jumelles en anglais et en coréen, et la phrase chuchotée qui clôt chaque chanson.

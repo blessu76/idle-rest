@@ -1,6 +1,7 @@
 ---
 title: Ten Letters, One Skeleton — The Lyric Structure of dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: en
 description: The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song.

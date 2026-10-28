@@ -652,6 +652,20 @@ class Numbering(Site):
         r = subprocess.run([sys.executable, str(REPO / "scripts/check_sitemap.py"), "--root", str(self.tmp)], capture_output=True, text=True)
         self.assertEqual(r.returncode, 0, r.stderr)
 
+    def test_pager_aria_label_is_per_language(self):
+        for lang, label in (("en", "Page"), ("ko", "쪽"), ("ja", "ページ"), ("zh", "分页"), ("ar", "صفحة")):
+            with self.subTest(lang=lang):
+                self.tearDown()
+                self.setUp()
+                for i in range(11):
+                    self.post("p%02d" % i, "en", extra='time: "08:%02d"\n' % i, title="T %02d" % i)
+                    if lang not in ("en", "ko"):
+                        self.post("p%02d" % i, lang, extra='time: "08:%02d"\ntranslation_of: en\n' % i, title="T %02d" % i)
+                    elif lang == "ko":
+                        self.post("p%02d" % i, "ko", extra='time: "08:%02d"\n' % i, title="T %02d" % i)
+                self.build()
+                self.assertIn('<nav class="pager" aria-label="%s">' % label, self.read("journal/%s/index.html" % lang))
+
     def test_post_head_has_number_shared_across_languages(self):
         self.many(3, langs=("en", "ja"))
         for l in ("en", "ja"):

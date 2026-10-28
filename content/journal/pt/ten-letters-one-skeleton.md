@@ -1,6 +1,7 @@
 ---
 title: Dez cartas, um só esqueleto — a estrutura das letras de dear(you);
 date: 2026-10-21
+time: "23:46"
 slug: ten-letters-one-skeleton
 lang: pt
 description: O esqueleto de letra compartilhado pelas dez músicas de dear(you); vol.1: seis espaços, o ponto em que surge um sétimo, as versões gêmeas em inglês e coreano e a linha sussurrada que encerra cada música.
