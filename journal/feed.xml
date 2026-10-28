@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Oct 2026 10:37:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 11:30:00 +0900</lastBuildDate>
+    <item>
+      <title>한국어 초안 C에서 첫 싱글까지 — 「good morning, world」의 원안과 부르는 가사를 줄마다 맞춰 보기</title>
+      <link>https://idle.ipe.rest/journal/ko/from-draft-c-to-good-morning-world/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/from-draft-c-to-good-morning-world/</guid>
+      <pubDate>Thu, 29 Oct 2026 11:30:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>ipe()의 첫 싱글 「good morning, world」는 한국어 초안(코드명 C)을 영어 메인에 한국어 포인트로 다시 쓴 곡입니다. 창작 일지에 남은 원안과 부르는 가사를 줄마다 맞춰, 무엇이 남고 무엇이 바뀌었는지 확인합니다.</description>
+    </item>
+    <item>
+      <title>From Korean Draft C to the First Single — Matching the Draft and the Sung Lyrics of &quot;good morning, world&quot; Line by Line</title>
+      <link>https://idle.ipe.rest/journal/en/from-draft-c-to-good-morning-world/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/from-draft-c-to-good-morning-world/</guid>
+      <pubDate>Thu, 29 Oct 2026 11:30:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>ipe()&#x27;s first single, &quot;good morning, world&quot;, is a Korean draft (code name C) rewritten as English-led with Korean accents. Using the creation log, we lay the draft against the sung lyrics line by line to see what stayed and what changed.</description>
+    </item>
     <item>
       <title>개발자라는 말 없이 쓴 개발자의 노래 — 3번의 두려움과 4번의 대답을 나란히 읽기</title>
       <link>https://idle.ipe.rest/journal/ko/fear-and-the-reply/</link>
