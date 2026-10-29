@@ -742,15 +742,19 @@ def plain_text(html_body):
 
 
 CJK_LANGS = ("ko", "ja", "zh")
-LINT_MIN_WORDS = 300
+LINT_WARN_WORDS = 400  # original (ko/en) body under this -> SEO warning
+LINT_ERROR_WORDS = 300  # a NEW post (LINT_ERROR_FROM or later) under this -> lint ERROR (build / --check exit 1); older posts stay warnings
+LINT_ERROR_FROM = dt.date(2026, 10, 30)  # publish date from which LINT_ERROR_WORDS is enforced (posts up to 10-29 are the known backlog: warn only)
 LINT_TITLE_MAX = {"latin": 60, "cjk": 40}
 LINT_DESC_MAX = {"latin": 160, "cjk": 110}
 
 
-def lint_warnings(posts):
-    """SEO publish lint (guide v1) — [(post, message)] ; warnings only, never an error.
-    original (ko/en) body < LINT_MIN_WORDS words · <title> / description over the SERP length · duplicate <title> within a language."""
-    out, titles = [], {}
+def lint_issues(posts):
+    """SEO publish lint (guide v1) -> (warnings, errors), each [(post, message)].
+    warnings: original (ko/en) body < LINT_WARN_WORDS words · <title> / description over the SERP length · duplicate <title> within a language.
+    errors: a published (non-draft) original post dated LINT_ERROR_FROM or later with body < LINT_ERROR_WORDS words — main() fails loudly (exit 1,
+    nothing is built) instead of dropping the post, so the author lengthens it. Older posts under LINT_ERROR_WORDS only get the warning."""
+    out, errs, titles = [], [], {}
     today = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
     for p in posts:
         if p["_date"] > today:
@@ -759,8 +763,11 @@ def lint_warnings(posts):
         page_title = "%s — idle() %s" % (p["title"], ui(p["lang"])["journal"])
         if p["lang"] in MAIN_LANGS:
             n = word_count(plain_text(p["_html"]), p["lang"])
-            if n < LINT_MIN_WORDS:
-                out.append((p, "body %d words < %d" % (n, LINT_MIN_WORDS)))
+            if n < LINT_ERROR_WORDS and p["_date"] >= LINT_ERROR_FROM and not p.get("draft"):
+                errs.append((p, "body %d words < %d (minimum for posts dated %s or later) — lengthen it to at least %d words (target %d)"
+                             % (n, LINT_ERROR_WORDS, LINT_ERROR_FROM, LINT_ERROR_WORDS, LINT_WARN_WORDS)))
+            elif n < LINT_WARN_WORDS:
+                out.append((p, "body %d words < %d" % (n, LINT_WARN_WORDS)))
         if len(page_title) > LINT_TITLE_MAX[kind]:
             out.append((p, "title %d chars > %d" % (len(page_title), LINT_TITLE_MAX[kind])))
         if len(p["description"]) > LINT_DESC_MAX[kind]:
@@ -768,11 +775,19 @@ def lint_warnings(posts):
         first = titles.setdefault((p["lang"], page_title), p)
         if first is not p:
             out.append((p, "duplicate title (also %s)" % first["slug"]))
-    return out
+    return out, errs
+
+
+def lint_warnings(posts):
+    return lint_issues(posts)[0]
+
+
+def lint_errors(posts):
+    return lint_issues(posts)[1]
 
 
 def print_lint(posts, verbose=False):
-    """newest publish date in detail, older posts as a count (the backlog is known); stderr, exit code unaffected."""
+    """newest publish date in detail, older posts as a count (the backlog is known); stderr; lint errors are reported separately by main()."""
     warns = lint_warnings(posts)
     if not warns:
         print("lint: no SEO warnings")
@@ -1202,6 +1217,11 @@ def main():
     posts.sort(key=lambda p: (p["_date"], p.get("time") or "", p["slug"], p["lang"]), reverse=True)
     assign_numbers(posts)
     print_lint(posts, a.lint)
+    lerrs = lint_errors(posts)
+    if lerrs:  # never drop the post silently: fail the build / --check so the author fixes it inside the same publish window
+        print("journal: LINT ERROR(S) — %d post(s) too short, nothing was built:\n  " % len(lerrs)
+              + "\n  ".join("[%s] %s/%s: %s" % (p["_date"], p["lang"], p["slug"], m) for p, m in lerrs), file=sys.stderr)
+        return 1
     grp = groups(posts)
     main_posts = [p for p in posts if p["lang"] in MAIN_LANGS]
     list_langs = [l for l in LANGS if any(p["lang"] == l for p in posts)]

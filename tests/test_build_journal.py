@@ -717,3 +717,79 @@ class SeoLint(unittest.TestCase):
         p = {"slug": "s", "lang": "en", "title": "T", "description": "d", "_html": "<p>%s</p>" % " ".join(["w"] * 400),
              "_date": datetime.date.today() + datetime.timedelta(days=3)}
         self.assertTrue(any("future" in m for _, m in bj.lint_warnings([p])))
+
+
+class SeoLintBodyLength(unittest.TestCase):
+    """400 words -> warning; new posts (2026-10-30+) under 300 -> ERROR; older posts under 300 -> warning only."""
+
+    @staticmethod
+    def mk(words, date, draft=False, lang="en"):
+        import datetime
+        return {"slug": "s", "lang": lang, "title": "Short", "description": "ok", "draft": draft, "_date": datetime.date.fromisoformat(date),
+                "_html": "<p>%s</p>" % " ".join(["w"] * words)}
+
+    def setUp(self):
+        sys.path.insert(0, str(REPO / "scripts"))
+        import build_journal as bj
+        self.bj = bj
+
+    def issues(self, p):
+        w, e = self.bj.lint_issues([p])
+        return [m for _, m in w], [m for _, m in e]
+
+    def test_constants(self):
+        import datetime
+        self.assertEqual((self.bj.LINT_WARN_WORDS, self.bj.LINT_ERROR_WORDS, self.bj.LINT_ERROR_FROM), (400, 300, datetime.date(2026, 10, 30)))
+
+    def test_old_post_280_is_warning_only(self):
+        w, e = self.issues(self.mk(280, "2026-10-29"))
+        self.assertEqual(e, [])
+        self.assertTrue(len(w) == 1 and "body 280 words < 400" in w[0], w)
+
+    def test_new_post_280_is_error(self):
+        w, e = self.issues(self.mk(280, "2026-10-30"))
+        self.assertEqual(w, [])
+        self.assertTrue(len(e) == 1 and "body 280 words < 300" in e[0], e)
+        self.assertEqual(len(self.issues(self.mk(299, "2026-11-02"))[1]), 1)
+
+    def test_new_post_350_is_warning(self):
+        w, e = self.issues(self.mk(350, "2026-10-30"))
+        self.assertEqual(e, [])
+        self.assertTrue(len(w) == 1 and "body 350 words < 400" in w[0], w)
+        self.assertEqual(self.issues(self.mk(300, "2026-10-30"))[1], [])  # exactly 300 is allowed
+
+    def test_post_450_is_quiet(self):
+        self.assertEqual(self.issues(self.mk(450, "2026-10-30")), ([], []))
+        self.assertEqual(self.issues(self.mk(450, "2026-10-29")), ([], []))
+
+    def test_draft_and_translation_never_error(self):
+        self.assertEqual(self.issues(self.mk(100, "2026-10-30", draft=True))[1], [])  # drafts are not published
+        self.assertEqual(self.issues(self.mk(100, "2026-10-30", lang="de")), ([], []))  # AI translations are not length-linted
+
+    def test_error_exit_code_and_nothing_built(self):
+        with tempfile.TemporaryDirectory() as td:
+            tmp = Path(td)
+            for f in ("index.html", "sitemap.xml", "llms.txt"):
+                shutil.copy(REPO / f, tmp / f)
+            shutil.copytree(REPO / "content/home", tmp / "content/home")
+            shutil.copytree(REPO / "content/pages", tmp / "content/pages")
+            (tmp / "content/journal/en").mkdir(parents=True)
+
+            def write(date):
+                (tmp / "content/journal/en/a.md").write_text(
+                    "---\ntitle: T\ndate: %s\ntime: 09:00\nslug: a\nlang: en\ndescription: d\ncategory: notes\n---\n\n%s\n" % (date, " ".join(["w"] * 280)), encoding="utf-8")
+
+            def run(*flags):
+                return subprocess.run([sys.executable, str(REPO / "scripts/build_journal.py"), "--root", str(tmp), *flags], capture_output=True, text=True)
+            write("2026-10-30")
+            for flags in (("--check",), ()):
+                r = run(*flags)
+                self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+                self.assertIn("LINT ERROR", r.stderr)
+                self.assertIn("en/a: body 280 words < 300", r.stderr)
+            self.assertFalse((tmp / "journal").exists(), "a failing lint must not build anything")
+            write("2026-10-29")  # same 280 words, older post -> warning only
+            r = run()
+            self.assertEqual(r.returncode, 0, r.stderr)
+            self.assertIn("body 280 words < 400", r.stderr)
+            self.assertTrue((tmp / "journal/index.html").exists())
