@@ -691,3 +691,21 @@ class Tables(Site):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SeoLint(unittest.TestCase):
+    def test_lint_warns_but_never_raises(self):
+        sys.path.insert(0, str(REPO / "scripts"))
+        import build_journal as bj
+        mk = lambda lang, title, desc, words: {"slug": "s", "lang": lang, "title": title, "description": desc, "_html": "<p>%s</p>" % " ".join(["w"] * words),
+                                               "_date": __import__("datetime").date(2026, 10, 29)}
+        ok = mk("en", "Short", "ok", 400)
+        self.assertEqual(bj.lint_warnings([ok]), [])
+        thin = mk("en", "T" * 80, "d" * 200, 120)
+        msgs = [m for _, m in bj.lint_warnings([thin])]
+        self.assertEqual(len(msgs), 3, msgs)
+        self.assertTrue(any("words" in m for m in msgs) and any("title" in m for m in msgs) and any("description" in m for m in msgs))
+        ko = mk("ko", "가" * 30, "가" * 120, 400)  # CJK limits: title 40 (incl. site suffix), description 110
+        self.assertEqual(len(bj.lint_warnings([ko])), 2)
+        a, b = mk("en", "Same", "x", 400), mk("en", "Same", "x", 400)
+        self.assertEqual([m.split(" (")[0] for _, m in bj.lint_warnings([a, b])], ["duplicate title"])

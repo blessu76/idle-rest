@@ -741,6 +741,46 @@ def plain_text(html_body):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", html_body))).strip()
 
 
+CJK_LANGS = ("ko", "ja", "zh")
+LINT_MIN_WORDS = 300
+LINT_TITLE_MAX = {"latin": 60, "cjk": 40}
+LINT_DESC_MAX = {"latin": 160, "cjk": 110}
+
+
+def lint_warnings(posts):
+    """SEO publish lint (guide v1) — [(post, message)] ; warnings only, never an error.
+    original (ko/en) body < LINT_MIN_WORDS words · <title> / description over the SERP length · duplicate <title> within a language."""
+    out, titles = [], {}
+    for p in posts:
+        kind = "cjk" if p["lang"] in CJK_LANGS else "latin"
+        page_title = "%s — idle() %s" % (p["title"], ui(p["lang"])["journal"])
+        if p["lang"] in MAIN_LANGS:
+            n = word_count(plain_text(p["_html"]), p["lang"])
+            if n < LINT_MIN_WORDS:
+                out.append((p, "body %d words < %d" % (n, LINT_MIN_WORDS)))
+        if len(page_title) > LINT_TITLE_MAX[kind]:
+            out.append((p, "title %d chars > %d" % (len(page_title), LINT_TITLE_MAX[kind])))
+        if len(p["description"]) > LINT_DESC_MAX[kind]:
+            out.append((p, "description %d chars > %d" % (len(p["description"]), LINT_DESC_MAX[kind])))
+        first = titles.setdefault((p["lang"], page_title), p)
+        if first is not p:
+            out.append((p, "duplicate title (also %s)" % first["slug"]))
+    return out
+
+
+def print_lint(posts, verbose=False):
+    """newest publish date in detail, older posts as a count (the backlog is known); stderr, exit code unaffected."""
+    warns = lint_warnings(posts)
+    if not warns:
+        print("lint: no SEO warnings")
+        return
+    newest = max((p["_date"] for p in posts), default=None)
+    shown = [(p, m) for p, m in warns if verbose or p["_date"] == newest]
+    print("lint: %d SEO warning(s) on %d post(s) (warn only; --lint lists all)" % (len(warns), len({id(p) for p, _ in warns})), file=sys.stderr)
+    for p, m in shown:
+        print("  [%s] %s/%s: %s" % (p["_date"], p["lang"], p["slug"], m), file=sys.stderr)
+
+
 def thing(kind, title, url):
     o = {"@type": kind, "name": title, "byArtist": {"@type": "MusicGroup", "name": "ipe()", "url": "https://ipe.rest/"}}
     if url:
@@ -1111,6 +1151,7 @@ def main():
     ap.add_argument("--root", default=str(Path(__file__).resolve().parent.parent), help="site root (default: this repo)")
     ap.add_argument("--drafts", action="store_true", help="include draft posts (preview only — never commit the result)")
     ap.add_argument("--check", action="store_true", help="validate posts only, write nothing")
+    ap.add_argument("--lint", action="store_true", help="list every SEO lint warning (default: only the newest publish date + a count)")
     a = ap.parse_args()
     root = Path(a.root).resolve()
     src = root / "content" / "journal"
@@ -1157,6 +1198,7 @@ def main():
         return 1
     posts.sort(key=lambda p: (p["_date"], p.get("time") or "", p["slug"], p["lang"]), reverse=True)
     assign_numbers(posts)
+    print_lint(posts, a.lint)
     grp = groups(posts)
     main_posts = [p for p in posts if p["lang"] in MAIN_LANGS]
     list_langs = [l for l in LANGS if any(p["lang"] == l for p in posts)]

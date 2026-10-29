@@ -74,3 +74,28 @@ class IndexNow(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ChangedUrls(unittest.TestCase):
+    def test_changed_pages_only_public_indexable(self):
+        import subprocess
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            git = lambda *a: subprocess.run(["git", "-C", d, "-c", "user.email=t@t", "-c", "user.name=t"] + list(a), check=True, capture_output=True)
+            git("init", "-q")
+            (root / "CNAME").write_text("example.test\n")
+            page = lambda body, robots="index, follow": '<html><head><meta name="robots" content="%s"></head><body>%s</body></html>' % (robots, body)
+            for rel in ("index.html", "a/index.html", "b/index.html", "go/x/index.html", "content/n/index.html", "old/index.html"):
+                (root / rel).parent.mkdir(parents=True, exist_ok=True)
+                (root / rel).write_text(page("v1", "noindex" if rel == "old/index.html" else "index, follow"))
+            git("add", "-A")
+            git("commit", "-qm", "one")
+            for rel in ("index.html", "a/index.html", "go/x/index.html", "content/n/index.html", "old/index.html"):
+                (root / rel).write_text(page("v2", "noindex" if rel == "old/index.html" else "index, follow"))
+            (root / "n/new").mkdir(parents=True)
+            (root / "n/new/index.html").write_text(page("new"))
+            git("add", "-A")
+            git("commit", "-qm", "two")
+            want = ["https://example.test/", "https://example.test/a/", "https://example.test/n/new/"]
+            self.assertEqual(indexnow.changed_urls(root, "HEAD~1"), want)
+            self.assertEqual(indexnow.changed_urls(root, "0" * 40), want)  # unknown/zero rev -> HEAD~1
