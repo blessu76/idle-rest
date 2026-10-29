@@ -709,3 +709,11 @@ class SeoLint(unittest.TestCase):
         self.assertEqual(len(bj.lint_warnings([ko])), 2)
         a, b = mk("en", "Same", "x", 400), mk("en", "Same", "x", 400)
         self.assertEqual([m.split(" (")[0] for _, m in bj.lint_warnings([a, b])], ["duplicate title"])
+
+    def test_future_date_is_a_warning(self):
+        import datetime
+        sys.path.insert(0, str(REPO / "scripts"))
+        import build_journal as bj
+        p = {"slug": "s", "lang": "en", "title": "T", "description": "d", "_html": "<p>%s</p>" % " ".join(["w"] * 400),
+             "_date": datetime.date.today() + datetime.timedelta(days=3)}
+        self.assertTrue(any("future" in m for _, m in bj.lint_warnings([p])))

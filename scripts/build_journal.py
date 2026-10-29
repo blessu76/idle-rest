@@ -751,7 +751,10 @@ def lint_warnings(posts):
     """SEO publish lint (guide v1) — [(post, message)] ; warnings only, never an error.
     original (ko/en) body < LINT_MIN_WORDS words · <title> / description over the SERP length · duplicate <title> within a language."""
     out, titles = [], {}
+    today = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date()
     for p in posts:
+        if p["_date"] > today:
+            out.append((p, "datePublished %s is in the future (today KST %s) — structured data must not claim a date that has not happened" % (p["_date"], today)))
         kind = "cjk" if p["lang"] in CJK_LANGS else "latin"
         page_title = "%s — idle() %s" % (p["title"], ui(p["lang"])["journal"])
         if p["lang"] in MAIN_LANGS:

@@ -99,3 +99,15 @@ class ChangedUrls(unittest.TestCase):
             want = ["https://example.test/", "https://example.test/a/", "https://example.test/n/new/"]
             self.assertEqual(indexnow.changed_urls(root, "HEAD~1"), want)
             self.assertEqual(indexnow.changed_urls(root, "0" * 40), want)  # unknown/zero rev -> HEAD~1
+
+
+class Today(unittest.TestCase):
+    def test_modified_only_that_day(self):
+        with tempfile.TemporaryDirectory() as d:
+            sm = Path(d) / "sitemap.xml"
+            sm.write_text('<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                          '<url><loc>https://example.test/a/</loc><lastmod>2026-10-29</lastmod></url>'
+                          '<url><loc>https://example.test/b/</loc><lastmod>2026-10-28</lastmod></url>'
+                          '<url><loc>https://example.test/c/</loc></url></urlset>')
+            self.assertEqual(indexnow.sitemap_urls_modified(sm, "2026-10-29"), ["https://example.test/a/"])
+            self.assertEqual(indexnow.sitemap_urls_modified(sm, "2000-01-01"), [])
