@@ -206,6 +206,9 @@ def render(pages, lang, slug):
     meta, body = pages[(src_lang, slug)]
     plain = lambda s: fill(s, lang, slug, True)
     title, desc = plain(meta["title"]), plain(meta["desc"])
+    if lang is None:  # x-default shares its English text with /en/ — keep title/description distinct per URL
+        title += " (all languages)"
+        desc += " Pick your language."
     canonical = page_url(lang, slug)
     alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, page_url(l, slug)) for l in bj.LANGS)
     alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % page_url(None, slug)

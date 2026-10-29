@@ -52,7 +52,7 @@ import urllib.parse
 from pathlib import Path
 
 SITE = "https://idle.ipe.rest"
-ASSET_V = "20261037"  # keep equal to the ?v= in index.html
+ASSET_V = "20261038"  # keep equal to the ?v= in index.html
 ADS_ATTR = "off"  # overwritten in main() from <html data-ads="..."> of index.html (single switch)
 GA_ID = "G-XG4BH800J0"
 CF_TOKEN = "fc0a8475fd6c49299c632d6023a40a3a"
@@ -94,6 +94,12 @@ PAGER = {  # (previous, next, page) — aria-labels and <title> word
     "hi": ("पिछला", "अगला", "पृष्ठ"), "id": ("Sebelumnya", "Berikutnya", "Halaman"),
 }
 PAGER_NAV = {"zh": "分页"}  # <nav class="pager"> aria-label where it differs from the PAGER page word (title/number links keep the page word)
+RELATED = {  # heading of the "more posts" block at the end of a post
+    "en": "More from the journal", "ko": "저널의 다른 글", "ja": "ジャーナルのほかの記事", "zh": "日志中的更多文章",
+    "es": "Más del diario", "fr": "Autres articles du journal", "de": "Mehr aus dem Journal", "pt": "Mais do diário",
+    "ru": "Ещё из журнала", "ar": "المزيد من اليوميات", "hi": "जर्नल के और लेख", "id": "Lainnya dari jurnal",
+}
+RELATED_COUNT = 3
 MAIN_LANGS = ("ko", "en")  # originals: flat URLs /journal/<slug>/ ; everything else is an AI translation under /<lang>/journal/
 _K = ("journal", "back", "listen", "ad", "sub", "empty", "read_more", "rss", "home", "music", "albums", "story", "menu",
       "to_dark", "to_light", "skip", "about", "contact", "privacy", "ai_note", "ai_orig", "other_langs")
@@ -781,7 +787,40 @@ def alternates(p, grp):
     return "\n".join(rows) + "\n"
 
 
-def render_post(p, grp=None):
+def post_neighbours(p, siblings):
+    """(older, newer, related) among the same-language published posts `siblings` (newest first).
+    related = the newest RELATED_COUNT others that are not already linked as older/newer."""
+    same = [q for q in siblings if q["lang"] == p["lang"]]
+    i = next((k for k, q in enumerate(same) if q is p), None)
+    if i is None:
+        return None, None, []
+    newer = same[i - 1] if i > 0 else None
+    older = same[i + 1] if i + 1 < len(same) else None
+    skip = {id(p), id(newer), id(older)}
+    return older, newer, [q for q in same if id(q) not in skip][:RELATED_COUNT]
+
+
+def related_html(p, siblings):
+    older, newer, related = post_neighbours(p, siblings or [])
+    if not (older or newer or related):
+        return ""
+    prev_w, next_w, _ = PAGER[p["lang"]]
+    out = '    <nav class="post-more" aria-label="%s">\n' % esc(RELATED[p["lang"]])
+    if older or newer:
+        out += '      <ul class="post-step">\n'
+        if older:
+            out += '        <li><a rel="prev" href="%s"><span class="ps-word"><span aria-hidden="true">←</span> %s</span> <span class="ps-title">%s</span></a></li>\n' % (esc(post_path(older)), esc(prev_w), esc(older["title"]))
+        if newer:
+            out += '        <li><a rel="next" href="%s"><span class="ps-word">%s <span aria-hidden="true">→</span></span> <span class="ps-title">%s</span></a></li>\n' % (esc(post_path(newer)), esc(next_w), esc(newer["title"]))
+        out += "      </ul>\n"
+    if related:
+        out += '      <h2>%s</h2>\n      <ul class="post-related">\n' % esc(RELATED[p["lang"]])
+        out += "".join('        <li><a href="%s">%s</a> <span class="j-date">%s</span></li>\n' % (esc(post_path(q)), esc(q["title"]), esc(str(q["_date"]))) for q in related)
+        out += "      </ul>\n"
+    return out + "    </nav>\n"
+
+
+def render_post(p, grp=None, siblings=None):
     grp = grp or {}
     members = grp.get(id(p), [p])
     t = ui(p["lang"])
@@ -844,7 +883,7 @@ def render_post(p, grp=None):
     </div>
     <!-- Ad slot (journal-post): reserved space only — place the AdSense unit here after approval and drop aria-hidden. -->
     <div class="ad-slot" data-ad-slot="journal-post" aria-hidden="true"><span class="ad-label">{esc(t['ad'])}</span></div>
-    <nav class="article-foot" aria-label="{esc(t['journal'])}">
+{related_html(p, siblings)}    <nav class="article-foot" aria-label="{esc(t['journal'])}">
       <a class="more-link" href="{jhome(p['lang'])}"><span aria-hidden="true">←</span> {esc(t['back'])}</a>
       <a class="more-link" href="/">{esc(t['listen'])} <span aria-hidden="true">→</span></a>
     </nav>
@@ -919,7 +958,7 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
         if counts.get(None, 1) >= page:
             alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % (SITE + list_path(None, page))
     ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang and lang not in MAIN_LANGS else "")
-    ttl = "%s — idle() · the music of ipe()" % label
+    ttl = "%s%s — idle() · the music of ipe()" % (label, "" if lang else " (all languages)")  # x-default hub != /en/ title
     return (head(ttl, desc, url, loc, not posts,
                  ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url, SITE + "/journal/" if not lang else None)), alternates=alts, locales=list(pages))
             + header(loc, targets={l: lang_path(l) for l in pages}) + f"""<main id="main" class="shell">
@@ -1144,7 +1183,7 @@ def main():
         written.add(path)
 
     for p in posts:
-        write(root / post_path(p).strip("/") / "index.html", render_post(p, grp))
+        write(root / post_path(p).strip("/") / "index.html", render_post(p, grp, posts))
         for al in p["_aliases"]:  # old URL -> static redirect stub to the new address
             write(root / al.strip("/") / "index.html", render_redirect(post_url(p)))
     lists = {None: main_posts, **{l: [p for p in posts if p["lang"] == l] for l in list_langs}}

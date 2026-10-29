@@ -442,3 +442,18 @@ html:lang(hi) body { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari",
 .lang-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 10px; margin: 0 0 14px; padding: 0; list-style: none; }
 .lang-card { display: flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line-strong); border-radius: 10px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 15px; }
 .lang-card:hover, .lang-card:focus-visible { border-color: var(--accent); color: var(--accent); }
+
+/* post end: older/newer + related posts (build_journal.py related_html) */
+.post-more { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.post-more h2 { font: 500 16px/1.4 var(--sans); color: var(--muted); margin: 24px 0 8px; }
+.post-step, .post-related { list-style: none; margin: 0; padding: 0; }
+.post-step { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; }
+.post-step a { display: block; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--radius); text-decoration: none; min-height: 44px; }
+.post-step a:hover { border-color: var(--accent); }
+.post-step .ps-word { display: block; font-size: 13px; color: var(--muted); }
+.post-step .ps-title { display: block; margin-top: 2px; overflow-wrap: anywhere; color: var(--accent); }
+.post-related li { padding: 10px 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.post-related a { color: var(--accent); }
+.post-related .j-date { margin-left: 8px; font-size: 13px; }
+[dir="rtl"] .post-step .ps-word span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }
+[dir="rtl"] .post-related .j-date { margin-left: 0; margin-right: 8px; }

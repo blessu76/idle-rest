@@ -160,7 +160,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/assets/idle.css?v=20261037">
+<link rel="stylesheet" href="/assets/idle.css?v=20261038">
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "fc0a8475fd6c49299c632d6023a40a3a"}'></script>
 </head>
 <body>
@@ -253,6 +253,18 @@
     </div>
     <!-- Ad slot (journal-post): reserved space only — place the AdSense unit here after approval and drop aria-hidden. -->
     <div class="ad-slot" data-ad-slot="journal-post" aria-hidden="true"><span class="ad-label">광고</span></div>
+    <nav class="post-more" aria-label="저널의 다른 글">
+      <ul class="post-step">
+        <li><a rel="prev" href="/journal/ko/how-a-song-gets-made/"><span class="ps-word"><span aria-hidden="true">←</span> 이전</span> <span class="ps-title">한 곡이 나오기까지 — 가사에서 발매까지 다섯 번의 인계</span></a></li>
+        <li><a rel="next" href="/journal/ko/i-was-scared-too/"><span class="ps-word">다음 <span aria-hidden="true">→</span></span> <span class="ps-title">두려움을 없애지 않고 인정하기 — 「나도 무서웠어.」를 이렇게 설계했다</span></a></li>
+      </ul>
+      <h2>저널의 다른 글</h2>
+      <ul class="post-related">
+        <li><a href="/journal/ko/from-draft-c-to-good-morning-world/">한국어 초안 C에서 첫 싱글까지 — 「good morning, world」의 원안과 부르는 가사를 줄마다 맞춰 보기</a> <span class="j-date">2026-10-29</span></li>
+        <li><a href="/journal/ko/fear-and-the-reply/">개발자라는 말 없이 쓴 개발자의 노래 — 3번의 두려움과 4번의 대답을 나란히 읽기</a> <span class="j-date">2026-10-28</span></li>
+        <li><a href="/journal/ko/ten-steps-of-feeling/">열 단계의 감정 아크 — 곡마다 한 줄로 읽는 dear(you); vol.1</a> <span class="j-date">2026-10-27</span></li>
+      </ul>
+    </nav>
     <nav class="article-foot" aria-label="저널">
       <a class="more-link" href="/journal/ko/"><span aria-hidden="true">←</span> 글 목록</a>
       <a class="more-link" href="/">idle() 듣기 <span aria-hidden="true">→</span></a>
@@ -300,7 +312,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
 }
 </script>
-<script src="/assets/idle.js?v=20261037"></script>
+<script src="/assets/idle.js?v=20261038"></script>
 <script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */
 /* time[data-ipe-time] 의 datetime(+09:00)을 보는 기기 시간대로 바꿔 보인다. 실패하면 정적 KST 글자를 그대로 둔다. */
 /* v2: 오프셋 없는/잘못된 datetime 은 건너뜀 · 그레고리력·라틴 숫자 고정 */
