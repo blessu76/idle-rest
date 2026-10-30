@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 10:22:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 14:30:00 +0900</lastBuildDate>
+    <item>
+      <title>원고 82줄, 자막 15칸 — 클립이 남기는 것</title>
+      <link>https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/</guid>
+      <pubDate>Fri, 30 Oct 2026 14:30:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>3번 곡의 가사 원고는 버전마다 82줄인데, 영어 클립 자막 파일에는 58초 안에 15칸이 있습니다. 클립 파일이 무엇을 남기고 바꾸는지 세어 봅니다.</description>
+    </item>
+    <item>
+      <title>82 Draft Lines, 15 Cues: What a Clip Keeps</title>
+      <link>https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/</guid>
+      <pubDate>Fri, 30 Oct 2026 14:30:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Track 3&#x27;s lyric draft runs 82 lines per version; its English clip subtitle file holds 15 cues in 58 seconds. We count what the clip files keep and change.</description>
+    </item>
     <item>
       <title>still compiling — 하룻밤, 두 언어</title>
       <link>https://idle.ipe.rest/journal/ko/still-compiling-one-night-two-languages/</link>

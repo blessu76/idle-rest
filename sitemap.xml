@@ -1079,6 +1079,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://idle.ipe.rest/journal/page/4/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://idle.ipe.rest/journal/en/</loc>
     <lastmod>2026-10-30</lastmod>
     <priority>0.4</priority>
@@ -1509,6 +1515,258 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/page/2/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/page/2/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/2/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/zh/still-compiling-one-night-two-languages/</loc>
