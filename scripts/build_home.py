@@ -77,6 +77,15 @@ def faq_jsonld(d):
     return json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": items}, ensure_ascii=False, indent=2)
 
 
+def css_inline():
+    """assets/idle.css (source of truth stays a file) as a minified <style> — the home no longer waits for a render-blocking request."""
+    css = (Path("assets") / "idle.css").read_text(encoding="utf-8")
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s*\n\s*", " ", css).strip()
+    css = re.sub(r'url\((["\']?)(?!/|data:|https?:)', lambda m: "url(%s/assets/" % m.group(1), css)  # relative to /assets/ once inlined
+    return "<style>" + css + "</style>"
+
+
 def render_page(tpl, strings, lang, root, posts):
     d = dict(strings["en"], **strings[lang])
     canonical = SITE + "/" if root else lang_url(lang)
@@ -122,6 +131,7 @@ def render_page(tpl, strings, lang, root, posts):
         lang_url(l), l, l, ' aria-current="true"' if l == lang and not root else "", esc(bj.LANGS[l]["name"])) for l in bj.LANGS)
     names = json.dumps({l: bj.LANGS[l]["name"] for l in bj.LANGS}, ensure_ascii=False)
     subs = {
+        "CSS_INLINE": css_inline(),
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
         "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT", "PRIVACY")},

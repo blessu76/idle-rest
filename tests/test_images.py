@@ -21,8 +21,8 @@ class Images(unittest.TestCase):
 
     def test_home_lcp_cover(self):
         h = (REPO / "index.html").read_text()
-        self.assertRegex(h, r'<link rel="preload" as="image" href="/assets/covers/dear-you-titled\.webp" type="image/webp" fetchpriority="high">')
-        m = re.search(r'<picture><source type="image/webp" srcset="[^"]+\.webp"><img class="art-cover"[^>]*>', h)
+        self.assertRegex(h, r'<link rel="preload" as="image" href="/assets/covers/dear-you-titled-660\.webp" imagesrcset="[^"]*dear-you-titled-660\.webp 660w[^"]*" imagesizes="[^"]+" type="image/webp" fetchpriority="high">')
+        m = re.search(r'<picture><source type="image/webp" srcset="[^"]+\.webp[^"]*"[^>]*><img class="art-cover"[^>]*>', h)
         self.assertTrue(m)
         self.assertIn('fetchpriority="high"', m.group(0))
         self.assertNotIn('loading="lazy"', m.group(0))

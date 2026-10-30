@@ -431,7 +431,7 @@ html:lang(hi) body { font-family: "Kohinoor Devanagari", "Noto Sans Devanagari",
 [dir="rtl"] .article-foot .more-link span[aria-hidden="true"] { display: inline-block; transform: scaleX(-1); }
 
 /* home language hint (root "/" only; suggests, never redirects) */
-.lang-hint { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; background: var(--accent); color: #fff; font-size: 14px; }
+.lang-hint { position: fixed; inset-inline: 0; bottom: 0; z-index: 60; box-shadow: 0 -2px 10px rgba(0,0,0,.18); display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; background: var(--accent); color: #fff; font-size: 14px; }
 .lang-hint[hidden] { display: none; }
 .lang-hint a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; }
 .lang-hint button { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: #fff; font-size: 20px; cursor: pointer; }
