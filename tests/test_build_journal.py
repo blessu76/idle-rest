@@ -719,6 +719,16 @@ class SeoLint(unittest.TestCase):
         self.assertTrue(any("future" in m for _, m in bj.lint_warnings([p])))
 
 
+class RobotsMeta(unittest.TestCase):
+    def test_indexable_head_allows_full_snippets_like_ipe_rest(self):
+        sys.path.insert(0, str(REPO / "scripts"))
+        import build_journal as bj
+        h = bj.head("T", "d", "https://idle.ipe.rest/x/", "en", False)
+        self.assertIn('<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">', h)
+        self.assertIn('<meta name="robots" content="noindex, follow">', bj.head("T", "d", "https://idle.ipe.rest/x/", "en", True))
+        self.assertIn(bj.ROBOTS_INDEX, (REPO / "content/home/template.html").read_text(encoding="utf-8"))
+
+
 class SeoLintBodyLength(unittest.TestCase):
     """400 words -> warning; new posts (2026-10-30+) under 300 -> ERROR; older posts under 300 -> warning only."""
 

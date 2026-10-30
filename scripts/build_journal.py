@@ -455,7 +455,7 @@ def with_localtime(html):
 
 def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):
     image = image or SITE + "/og-image.png"
-    robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
+    robots = "noindex, follow" if noindex else ROBOTS_INDEX
     return f"""<!DOCTYPE html>
 <html lang="{esc(lang)}" dir="{LANGS[lang]["dir"]}" data-theme="light" data-ads="{ADS_ATTR}">
 <head>
@@ -742,6 +742,7 @@ def plain_text(html_body):
 
 
 CJK_LANGS = ("ko", "ja", "zh")
+ROBOTS_INDEX = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"  # same as ipe.rest and the idle home template
 LINT_WARN_WORDS = 400  # original (ko/en) body under this -> SEO warning
 LINT_ERROR_WORDS = 300  # a NEW post (LINT_ERROR_FROM or later) under this -> lint ERROR (build / --check exit 1); older posts stay warnings
 LINT_ERROR_FROM = dt.date(2026, 10, 30)  # publish date from which LINT_ERROR_WORDS is enforced (posts up to 10-29 are the known backlog: warn only)
