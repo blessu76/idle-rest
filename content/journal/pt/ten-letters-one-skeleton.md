@@ -1,10 +1,10 @@
 ---
-title: Dez cartas, um só esqueleto — a estrutura das letras de dear(you);
+title: Como o esqueleto da letra se repete em dez músicas
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: pt
-description: O esqueleto de letra compartilhado pelas dez músicas de dear(you); vol.1: seis espaços, o ponto em que surge um sétimo, as versões gêmeas em inglês e coreano e a linha sussurrada que encerra cada música.
+description: Como o esqueleto da letra se repete nas dez músicas de dear(you); vol.1? Seis espaços, um sétimo, versões gêmeas em inglês e coreano e o sussurro final.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -14,7 +14,7 @@ keywords: dear(you);, idle(), ipe(), estrutura da letra, música com IA, Suno, l
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-*dear(you); vol.1* é o primeiro álbum de idle(), com dez músicas. Abra os rascunhos das letras um após o outro e a mesma forma volta sempre. Este texto percorre esse esqueleto por número de faixa, com base nos rascunhos. O que de fato é cantado nas gravações pode ser mais curto do que o rascunho.
+Como um mesmo esqueleto de letra se repete nas dez músicas de *dear(you); vol.1*, o primeiro álbum de idle()? Abra os rascunhos das letras um após o outro e a mesma forma volta sempre. Este texto expõe todo o esqueleto por número de faixa, com base nos rascunhos, e os textos sobre cada música apontam para cá em vez de repeti-lo. O que de fato é cantado nas gravações pode ser mais curto do que o rascunho.
 
 Um aviso logo de início: a música é produzida com IA (Suno). As letras são rascunhadas por uma IA e revisadas por uma pessoa. Preferimos dizer isso desde a primeira linha.
 

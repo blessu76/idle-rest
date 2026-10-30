@@ -1,10 +1,10 @@
 ---
-title: Sepuluh Surat, Satu Kerangka — Struktur Lirik dear(you);
+title: Bagaimana Kerangka Lirik Berulang di Sepuluh Lagu
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: id
-description: Kerangka lirik yang dipakai bersama oleh sepuluh lagu di dear(you); vol.1: enam slot, tempat slot ketujuh muncul, versi kembar bahasa Inggris dan Korea, serta baris bisikan yang menutup setiap lagu.
+description: Bagaimana satu kerangka lirik berulang di sepuluh lagu dear(you); vol.1? Enam slot, slot ketujuh, versi kembar Inggris-Korea, dan bisikan penutup.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -14,7 +14,7 @@ keywords: dear(you);, idle(), ipe(), struktur lirik, musik AI, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-*dear(you); vol.1* adalah album pertama idle(), berisi sepuluh lagu. Buka draf lirik satu per satu, dan bentuk yang sama terus muncul. Tulisan ini menelusuri kerangka itu berdasarkan nomor trek, mengikuti draf. Apa yang benar-benar dinyanyikan dalam rekaman bisa lebih pendek daripada draf.
+Bagaimana satu kerangka lirik yang sama berulang di kesepuluh lagu *dear(you); vol.1*, album pertama idle()? Buka draf lirik satu per satu, dan bentuk yang sama terus muncul. Tulisan ini memaparkan seluruh kerangka itu berdasarkan nomor trek, mengikuti draf, dan tulisan tentang tiap lagu menautkan ke sini alih-alih mengulanginya. Apa yang benar-benar dinyanyikan dalam rekaman bisa lebih pendek daripada draf.
 
 Satu hal di awal: musiknya dibuat dengan AI (Suno). Liriknya didrafkan oleh AI dan ditinjau oleh manusia. Kami lebih suka mengatakannya sejak baris pertama.
 

@@ -1,10 +1,10 @@
 ---
-title: Zehn Briefe, ein Skelett — die Textstruktur von dear(you);
+title: Wie sich das Text-Skelett über zehn Songs wiederholt
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: de
-description: Das gemeinsame Text-Skelett der zehn Songs auf dear(you); vol.1: sechs Plätze, die Stelle, an der ein siebter hinzukommt, die englischen und koreanischen Zwillingsfassungen und die geflüsterte Zeile, die jeden Song beschließt.
+description: Wie wiederholt sich das Text-Skelett über die zehn Songs von dear(you); vol.1? Sechs Plätze, ein siebter, Zwillingsfassungen und das Flüstern am Ende.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -14,7 +14,7 @@ keywords: dear(you);, idle(), ipe(), Textstruktur, KI-Musik, Suno, Lo-Fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-*dear(you); vol.1* ist das erste Album von idle() und umfasst zehn Songs. Öffnet man die Textentwürfe nacheinander, kehrt immer dieselbe Form wieder. Dieser Beitrag geht dieses Skelett Track für Track durch, anhand der Entwürfe. Was auf den Aufnahmen tatsächlich gesungen wird, kann kürzer sein als der Entwurf.
+Wie wiederholt sich ein und dasselbe Text-Skelett über alle zehn Songs von *dear(you); vol.1*, dem ersten Album von idle()? Öffnet man die Textentwürfe nacheinander, kehrt immer dieselbe Form wieder. Dieser Beitrag legt das ganze Skelett Track für Track anhand der Entwürfe dar, und die Beiträge zu einzelnen Songs verweisen hierher, statt es zu wiederholen. Was auf den Aufnahmen tatsächlich gesungen wird, kann kürzer sein als der Entwurf.
 
 Vorab eines: Die Musik wird mit KI (Suno) produziert. Die Texte werden von einer KI entworfen und von einem Menschen geprüft. Das sagen wir lieber gleich in der ersten Zeile.
 

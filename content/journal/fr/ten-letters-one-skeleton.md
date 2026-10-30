@@ -1,10 +1,10 @@
 ---
-title: Dix lettres, un seul squelette — la structure des paroles de dear(you);
+title: Comment le squelette des paroles se répète sur dix chansons
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: fr
-description: Le squelette commun aux dix chansons de dear(you); vol.1 : six emplacements, l'endroit où un septième apparaît, les versions jumelles en anglais et en coréen, et la phrase chuchotée qui clôt chaque chanson.
+description: Comment le squelette des paroles se répète-t-il sur les dix chansons de dear(you); vol.1 ? Six emplacements, un septième, versions jumelles, chuchotement final.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -14,7 +14,7 @@ keywords: dear(you);, idle(), ipe(), structure des paroles, musique IA, Suno, lo
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-*dear(you); vol.1* est le premier album d'idle(), composé de dix chansons. Ouvrez les brouillons de paroles l'un après l'autre et la même forme revient sans cesse. Cet article parcourt ce squelette piste par piste, d'après les brouillons. Ce qui est réellement chanté dans les enregistrements peut être plus court que le brouillon.
+Comment un même squelette de paroles se répète-t-il sur les dix chansons de *dear(you); vol.1*, le premier album d'idle() ? Ouvrez les brouillons de paroles l'un après l'autre et la même forme revient sans cesse. Cet article expose tout le squelette piste par piste, d'après les brouillons, et les articles consacrés à chaque chanson renvoient ici au lieu de le répéter. Ce qui est réellement chanté dans les enregistrements peut être plus court que le brouillon.
 
 Une précision d'emblée : la musique est produite avec l'IA (Suno). Les paroles sont rédigées par une IA, puis relues par une personne. Nous préférons le dire dès la première ligne.
 

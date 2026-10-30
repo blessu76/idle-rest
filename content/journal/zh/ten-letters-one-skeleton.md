@@ -1,10 +1,10 @@
 ---
-title: 十封信，一副骨架 — dear(you); 的歌词结构
+title: 歌词骨架如何在十首歌中反复出现 — dear(you);
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: zh
-description: dear(you); vol.1 十首歌共用的歌词骨架 — 六个位置、第七个位置出现的地方、英语版与韩语版的双生设计，以及结束每一首歌的那句低语。
+description: dear(you); vol.1 十首歌里，同一副歌词骨架是如何反复出现的？六个位置、第七个位置、英语版与韩语版的双生设计，以及最后的低语。
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -14,7 +14,7 @@ keywords: dear(you);, idle(), ipe(), 歌词结构, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
 
-*dear(you); vol.1* 是 idle() 的第一张专辑，共十首歌。把歌词草稿一份份打开，会发现同一种形状反复出现。这篇文章依据草稿，按曲目编号梳理这副骨架。录音中实际演唱的内容，可能比草稿更短。
+在 idle() 的第一张专辑 *dear(you); vol.1* 的十首歌里，同一副歌词骨架是如何反复出现的？把歌词草稿一份份打开，会发现同一种形状反复出现。这篇文章依据草稿，按曲目编号梳理整副骨架；逐曲的文章不再重复这些内容，而是链接到这里。录音中实际演唱的内容，可能比草稿更短。
 
 先说明一点：这些音乐由 AI（Suno）制作。歌词由 AI 起草，再由人审阅。我们希望从第一句话就如实告诉你。
 

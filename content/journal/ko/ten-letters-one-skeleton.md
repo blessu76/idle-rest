@@ -1,10 +1,10 @@
 ---
-title: 열 통의 편지, 하나의 뼈대 — dear(you); 가사는 이렇게 짜여 있다
+title: 가사 뼈대는 열 곡에서 어떻게 반복될까 — dear(you); 가사 구조
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: ko
-description: dear(you); vol.1의 열 곡이 공유하는 가사 뼈대를 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸이 생기는 지점, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.
+description: dear(you); vol.1의 가사 뼈대가 열 곡에서 어떻게 반복되는지 정리했습니다. 여섯 칸의 구성, 일곱 번째 칸, 영어·한국어 두 버전의 설계, 마지막 속삭임까지.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -15,7 +15,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 [Read this in English →](/journal/en/ten-letters-one-skeleton/)
 
-idle()의 첫 앨범 *dear(you); vol.1*은 열 곡이지만, 가사 원고를 차례로 열어 보면 낯익은 모양이 계속 나옵니다. 이 글은 원고를 기준으로 그 뼈대를 곡 번호와 함께 풀어 봅니다. 실제 음원에서 불리는 분량은 원고보다 적을 수 있습니다.
+idle()의 첫 앨범 *dear(you); vol.1*의 가사 뼈대는 열 곡에서 어떻게 반복될까요? 가사 원고를 차례로 열어 보면 낯익은 모양이 계속 나옵니다. 이 글은 그 뼈대 전체를 원고 기준으로 곡 번호와 함께 풀어 보고, 곡별 글은 같은 사실을 되풀이하는 대신 여기로 링크합니다. 실제 음원에서 불리는 분량은 원고보다 적을 수 있습니다.
 
 먼저 밝혀 둘 것이 있습니다. 음악은 AI(Suno)로 만들고, 가사는 AI 초안을 사람이 검토합니다. 숨기지 않고 시작합니다.
 

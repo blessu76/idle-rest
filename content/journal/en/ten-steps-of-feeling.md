@@ -16,7 +16,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 The ten songs of *dear(you); vol.1* are tied together in the album plan as one order of feeling: ten steps that start at empathy and end at peace. [How a Song Gets Made](/journal/en/how-a-song-gets-made/) noted in one paragraph that this order is drawn before any song is written. This post reads the ten steps one song at a time. For each song it asks what the song does at its place and how it connects to the one before, and it writes down only what the design documents and lyric drafts support. Where a single song already has its own post, we link to it.
 
-First, the scope. We read the album plan and the song design documents (the lyric drafts and the notes). Anything said about tempo or sound is a value written in those documents, not an impression from listening. What is actually sung on a recording can be shorter than the draft. And as always: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person.
+First, the scope. We read the album plan and the song design documents (the lyric drafts and the notes). Anything said about tempo or sound is a value written in those documents, not an impression from listening. The lyric structure the ten songs share is not repeated here; it is laid out in [How One Lyric Skeleton Repeats Across Ten Songs](/journal/en/ten-letters-one-skeleton/). What is actually sung on a recording can be shorter than the draft. And as always: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person.
 
 ## The order was written down first
 

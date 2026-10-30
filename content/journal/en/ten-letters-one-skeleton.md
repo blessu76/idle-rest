@@ -1,10 +1,10 @@
 ---
-title: Ten Letters, One Skeleton — The Lyric Structure of dear(you);
+title: How One Lyric Skeleton Repeats Across Ten Songs — dear(you);
 date: 2026-10-21
 time: "23:46"
 slug: ten-letters-one-skeleton
 lang: en
-description: The shared lyric skeleton of the ten songs on dear(you); vol.1 — six slots, where a seventh appears, the English and Korean twin versions, and the whispered line that closes every song.
+description: How does one lyric skeleton repeat across the ten songs of dear(you); vol.1? Six slots, a seventh, English and Korean twin versions, and the closing whisper.
 category: behind-the-music
 updated: 2026-10-30
 draft: false
@@ -16,7 +16,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 [한국어로 읽기 →](/journal/ko/ten-letters-one-skeleton/)
 
-*dear(you); vol.1* is idle()'s first album, ten songs long. Open the lyric drafts one after another and the same shape keeps coming back. This post walks through that skeleton by track number, going by the drafts. What is actually sung on the recordings can be shorter than the draft.
+How does one lyric skeleton repeat across all ten songs of *dear(you); vol.1*, idle()'s first album? Open the lyric drafts one after another and the same shape keeps coming back. This post lays the whole skeleton out by track number, going by the drafts, and the song-by-song posts link back here instead of repeating it. What is actually sung on the recordings can be shorter than the draft.
 
 One thing up front: the music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. We would rather say so from the first line.
 

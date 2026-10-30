@@ -59,7 +59,7 @@ It is much more specific than "I'm tired." It suggests that a tired person may b
 
 *Counted line by line in the lyric draft. Both versions have 59 lines, with identical counts per section. Whispers and the closing signature are included; titles and blank lines are not.*
 
-The six-slot skeleton from the first post looks like this in track 01: Verse 1 has 11 lines, Verse 2 has 12, Pre-Chorus 8, Chorus 12, Bridge 9 and Outro 7. That adds up to 59, and the English and Korean versions match section by section. Of the ten songs, only three (tracks 01, 03 and 09) have the same total line count in both versions.
+How the six-slot skeleton repeats across all ten songs is laid out in [How One Lyric Skeleton Repeats Across Ten Songs](/journal/en/ten-letters-one-skeleton/). Here we only count what is particular to track 01: Verse 1 has 11 lines, Verse 2 has 12, Pre-Chorus 8, Chorus 12, Bridge 9 and Outro 7. That adds up to 59, and the English and Korean versions match section by section. Of the ten songs, only three (tracks 01, 03 and 09) have the same total line count in both versions.
 
 Looking at what each slot does shows the design. The first verse sets the scene and says it will ask first. The second verse goes one layer deeper and ends with permission: it's okay to be a little late today. The Pre-Chorus is the hinge of the song. People may only remember what you made today, it says, but I will remember how much you endured to make it through. It sets result against endurance, sides with endurance, and closes with "That's enough. It really is."
 
