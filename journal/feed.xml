@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 29 Oct 2026 11:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 10:22:00 +0900</lastBuildDate>
+    <item>
+      <title>still compiling — 하룻밤, 두 언어</title>
+      <link>https://idle.ipe.rest/journal/ko/still-compiling-one-night-two-languages/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/still-compiling-one-night-two-languages/</guid>
+      <pubDate>Fri, 30 Oct 2026 10:22:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>late_night.lofi의 첫 곡 「still compiling」의 가사 원안과 두 버전의 입력 가사를 나란히 읽고, 세 줄의 // 주석이 어디로 갔는지 확인합니다.</description>
+    </item>
+    <item>
+      <title>still compiling — One Night, Two Languages</title>
+      <link>https://idle.ipe.rest/journal/en/still-compiling-one-night-two-languages/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/still-compiling-one-night-two-languages/</guid>
+      <pubDate>Fri, 30 Oct 2026 10:22:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>We lay the lyric draft of &quot;still compiling&quot;, the first song of late_night.lofi, beside the entered lyrics of its two versions and follow its three // comments.</description>
+    </item>
     <item>
       <title>한국어 초안 C에서 첫 싱글까지 — 「good morning, world」의 원안과 부르는 가사를 줄마다 맞춰 보기</title>
       <link>https://idle.ipe.rest/journal/ko/from-draft-c-to-good-morning-world/</link>
