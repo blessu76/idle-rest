@@ -1,11 +1,12 @@
 ---
-title: How a Song Gets Made — Five Hand-Offs From Lyric to Release
+title: How an AI Lo-Fi Song Gets Made
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: en
-description: How one idle() song travels from lyric to music, visuals, review and release: who hands what to whom, where we stop to check, and how we say plainly that the music is made with AI.
+description: How one idle() AI lo-fi song goes from lyric to release: who hands what to whom, where we check, and how we say plainly that it is made with AI.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: ko
 keywords: idle(), ipe(), dear(you);, music production, AI music, Suno, lo-fi
@@ -18,7 +19,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *The cover of dear(you); vol.1. The ten songs on it were made following the order described below.*
 
-We are sometimes asked how an idle() song is made. The one-line answer is "with AI", but there are more hand-offs and checks inside that line than you might expect. This post walks through the production order we have set for ourselves, from the first lyric to the release. It describes a procedure we have written down, so it does not mean every song moved through it without a single deviation.
+Is this lo-fi made by AI? Yes, with Suno. Here are the five hand-offs from lyric to release, and where a person steps in. We are sometimes asked how an idle() song is made. The one-line answer is "with AI", but there are more hand-offs and checks inside that line than you might expect. This post walks through the production order we have set for ourselves, from the first lyric to the release. It describes a procedure we have written down, so it does not mean every song moved through it without a single deviation.
 
 First, the sentence that matters most. The music is produced with AI (Suno). Lyrics are AI-drafted and reviewed by a person. The rest of this post is really an explanation of what that sentence looks like as actual work.
 

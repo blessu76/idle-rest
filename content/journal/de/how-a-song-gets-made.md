@@ -1,11 +1,12 @@
 ---
-title: Wie ein Song entsteht — Fünf Übergaben vom Text bis zur Veröffentlichung
+title: Wie ein KI-Lo-Fi-Song entsteht
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: de
-description: Wie ein idle()-Song vom Text über Musik, Visuals und Prüfung bis zur Veröffentlichung wandert: wer was an wen übergibt, wo wir innehalten, um zu prüfen, und wie wir offen sagen, dass die Musik mit KI gemacht ist.
+description: Wie ein idle()-KI-Lo-Fi-Song vom Text zur Veröffentlichung kommt: wer was übergibt, wo wir prüfen und wie wir offen sagen, dass er mit KI gemacht ist.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: en
 keywords: idle(), ipe(), dear(you);, Musikproduktion, KI-Musik, Suno, Lo-Fi
@@ -16,7 +17,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *Das Cover von dear(you); vol.1. Die zehn Songs darauf sind nach der unten beschriebenen Reihenfolge entstanden.*
 
-Manchmal werden wir gefragt, wie ein idle()-Song gemacht wird. Die Antwort in einer Zeile lautet „mit KI“, aber in dieser Zeile stecken mehr Übergaben und Prüfungen, als man vermuten würde. Dieser Beitrag geht die Produktionsreihenfolge durch, die wir uns gesetzt haben, vom ersten Text bis zur Veröffentlichung. Er beschreibt ein Verfahren, das wir aufgeschrieben haben, und bedeutet daher nicht, dass jeder Song es ohne die kleinste Abweichung durchlaufen hat.
+Ist dieses Lo-Fi von KI gemacht? Ja, mit Suno. Hier sind die fünf Übergaben vom Text bis zur Veröffentlichung und die Stelle, an der ein Mensch eingreift. Manchmal werden wir gefragt, wie ein idle()-Song gemacht wird. Die Antwort in einer Zeile lautet „mit KI“, aber in dieser Zeile stecken mehr Übergaben und Prüfungen, als man vermuten würde. Dieser Beitrag geht die Produktionsreihenfolge durch, die wir uns gesetzt haben, vom ersten Text bis zur Veröffentlichung. Er beschreibt ein Verfahren, das wir aufgeschrieben haben, und bedeutet daher nicht, dass jeder Song es ohne die kleinste Abweichung durchlaufen hat.
 
 Zuerst der wichtigste Satz. Die Musik wird mit KI (Suno) produziert. Die Texte werden von einer KI entworfen und von einem Menschen geprüft. Der Rest dieses Beitrags erklärt im Grunde, wie dieser Satz als tatsächliche Arbeit aussieht.
 

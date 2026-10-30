@@ -1,11 +1,12 @@
 ---
-title: Bagaimana Sebuah Lagu Dibuat — Lima Serah Terima dari Lirik hingga Rilis
+title: Bagaimana Lagu Lo-Fi AI Dibuat
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: id
-description: Perjalanan satu lagu idle() dari lirik ke musik, visual, peninjauan, dan rilis: siapa menyerahkan apa kepada siapa, di mana kami berhenti untuk memeriksa, dan bagaimana kami mengatakan dengan jelas bahwa musiknya dibuat dengan AI.
+description: Bagaimana satu lagu lo-fi AI idle() berjalan dari lirik hingga rilis: siapa menyerahkan apa, di mana kami memeriksa, dan bagaimana kami menyatakan musiknya dibuat dengan AI.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: en
 keywords: idle(), ipe(), dear(you);, produksi musik, musik AI, Suno, lo-fi
@@ -16,7 +17,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *Sampul dear(you); vol.1. Kesepuluh lagu di dalamnya dibuat mengikuti urutan yang dijelaskan di bawah.*
 
-Kadang kami ditanya bagaimana sebuah lagu idle() dibuat. Jawaban satu barisnya adalah "dengan AI", tetapi di dalam satu baris itu ada lebih banyak serah terima dan pemeriksaan daripada yang mungkin Anda kira. Tulisan ini menelusuri urutan produksi yang kami tetapkan sendiri, dari lirik pertama sampai rilis. Ini menggambarkan prosedur yang sudah kami tuliskan, jadi tidak berarti setiap lagu melaluinya tanpa satu pun penyimpangan.
+Apakah lo-fi ini dibuat oleh AI? Ya, dengan Suno. Berikut lima serah terima dari lirik hingga rilis, dan di mana seorang manusia turun tangan. Kadang kami ditanya bagaimana sebuah lagu idle() dibuat. Jawaban satu barisnya adalah "dengan AI", tetapi di dalam satu baris itu ada lebih banyak serah terima dan pemeriksaan daripada yang mungkin Anda kira. Tulisan ini menelusuri urutan produksi yang kami tetapkan sendiri, dari lirik pertama sampai rilis. Ini menggambarkan prosedur yang sudah kami tuliskan, jadi tidak berarti setiap lagu melaluinya tanpa satu pun penyimpangan.
 
 Pertama, kalimat yang paling penting. Musiknya diproduksi dengan AI (Suno). Lirik didrafkan oleh AI dan ditinjau oleh manusia. Sisa tulisan ini sebenarnya adalah penjelasan tentang seperti apa kalimat itu dalam bentuk pekerjaan nyata.
 

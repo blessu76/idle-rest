@@ -1,11 +1,12 @@
 ---
-title: Cómo se hace una canción — Cinco traspasos de la letra al lanzamiento
+title: Cómo se hace una canción lo-fi con IA
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: es
-description: Cómo viaja una canción de idle() desde la letra hasta la música, lo visual, la revisión y el lanzamiento: quién le pasa qué a quién, dónde nos detenemos a comprobar y cómo decimos con claridad que la música se hace con IA.
+description: Cómo pasa una canción lo-fi con IA de idle() de la letra al lanzamiento: quién le pasa qué a quién, dónde comprobamos y cómo decimos que se hace con IA.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: en
 keywords: idle(), ipe(), dear(you);, producción musical, música con IA, Suno, lo-fi
@@ -16,7 +17,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *La portada de dear(you); vol.1. Las diez canciones que contiene se hicieron siguiendo el orden que se describe a continuación.*
 
-A veces nos preguntan cómo se hace una canción de idle(). La respuesta en una línea es «con IA», pero dentro de esa línea hay más traspasos y comprobaciones de los que cabría esperar. Este texto recorre el orden de producción que nos hemos fijado, desde la primera letra hasta el lanzamiento. Describe un procedimiento que hemos puesto por escrito, así que no significa que todas las canciones lo hayan seguido sin una sola desviación.
+¿Este lo-fi está hecho con IA? Sí, con Suno. Aquí están los cinco traspasos de la letra al lanzamiento y el lugar donde interviene una persona. A veces nos preguntan cómo se hace una canción de idle(). La respuesta en una línea es «con IA», pero dentro de esa línea hay más traspasos y comprobaciones de los que cabría esperar. Este texto recorre el orden de producción que nos hemos fijado, desde la primera letra hasta el lanzamiento. Describe un procedimiento que hemos puesto por escrito, así que no significa que todas las canciones lo hayan seguido sin una sola desviación.
 
 Primero, la frase que más importa. La música se produce con IA (Suno). Las letras las redacta en borrador una IA y las revisa una persona. El resto de este texto es, en realidad, una explicación de cómo se ve esa frase convertida en trabajo concreto.
 

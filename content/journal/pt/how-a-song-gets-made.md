@@ -1,11 +1,12 @@
 ---
-title: Como uma música é feita — Cinco passagens de bastão, da letra ao lançamento
+title: Como uma música lo-fi com IA é feita
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: pt
-description: O caminho de uma música do idle() da letra à música, ao visual, à revisão e ao lançamento: quem entrega o quê a quem, onde paramos para conferir e como dizemos com clareza que a música é feita com IA.
+description: Como uma música lo-fi com IA do idle() vai da letra ao lançamento: quem entrega o quê, onde conferimos e como dizemos com clareza que é feita com IA.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: en
 keywords: idle(), ipe(), dear(you);, produção musical, música com IA, Suno, lo-fi
@@ -16,7 +17,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *A capa de dear(you); vol.1. As dez músicas que ele reúne foram feitas seguindo a ordem descrita abaixo.*
 
-Às vezes nos perguntam como uma música do idle() é feita. A resposta em uma linha é «com IA», mas dentro dessa linha há mais passagens de bastão e conferências do que se poderia imaginar. Este texto percorre a ordem de produção que estabelecemos para nós mesmos, da primeira letra ao lançamento. Ele descreve um procedimento que deixamos por escrito, portanto não significa que toda música passou por ele sem um único desvio.
+Este lo-fi é feito por IA? Sim, com o Suno. Aqui estão as cinco passagens de bastão, da letra ao lançamento, e onde uma pessoa entra. Às vezes nos perguntam como uma música do idle() é feita. A resposta em uma linha é «com IA», mas dentro dessa linha há mais passagens de bastão e conferências do que se poderia imaginar. Este texto percorre a ordem de produção que estabelecemos para nós mesmos, da primeira letra ao lançamento. Ele descreve um procedimento que deixamos por escrito, portanto não significa que toda música passou por ele sem um único desvio.
 
 Primeiro, a frase mais importante. A música é produzida com IA (Suno). As letras são rascunhadas por uma IA e revisadas por uma pessoa. O restante deste texto é, na verdade, uma explicação de como essa frase se parece quando vira trabalho de verdade.
 

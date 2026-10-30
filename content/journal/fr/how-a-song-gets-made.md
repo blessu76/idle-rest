@@ -1,11 +1,12 @@
 ---
-title: Comment naît une chanson — Cinq passages de relais, des paroles à la sortie
+title: Comment naît une chanson lo-fi IA
 date: 2026-10-22
 time: "13:05"
 slug: how-a-song-gets-made
 lang: fr
-description: Le parcours d'une chanson d'idle() des paroles à la musique, à l'image, à la relecture puis à la sortie : qui transmet quoi à qui, où nous nous arrêtons pour vérifier, et comment nous disons clairement que la musique est faite avec l'IA.
+description: Comment une chanson lo-fi IA d'idle() passe des paroles à la sortie : qui transmet quoi, où nous vérifions, et comment nous disons qu'elle est faite avec l'IA.
 category: behind-the-music
+updated: 2026-10-30
 draft: false
 translation_of: en
 keywords: idle(), ipe(), dear(you);, production musicale, musique IA, Suno, lo-fi
@@ -16,7 +17,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 *La pochette de dear(you); vol.1. Les dix chansons qu'il contient ont été faites en suivant l'ordre décrit ci-dessous.*
 
-On nous demande parfois comment une chanson d'idle() est faite. La réponse en une ligne est « avec l'IA », mais dans cette ligne se cachent plus de passages de relais et de vérifications qu'on ne l'imagine. Ce texte parcourt l'ordre de production que nous nous sommes fixé, de la première parole à la sortie. Il décrit une procédure que nous avons mise par écrit ; cela ne signifie donc pas que chaque chanson l'a suivie sans le moindre écart.
+Ce lo-fi est-il fait par l'IA ? Oui, avec Suno. Voici les cinq passages de relais, des paroles à la sortie, et l'endroit où une personne intervient. On nous demande parfois comment une chanson d'idle() est faite. La réponse en une ligne est « avec l'IA », mais dans cette ligne se cachent plus de passages de relais et de vérifications qu'on ne l'imagine. Ce texte parcourt l'ordre de production que nous nous sommes fixé, de la première parole à la sortie. Il décrit une procédure que nous avons mise par écrit ; cela ne signifie donc pas que chaque chanson l'a suivie sans le moindre écart.
 
 D'abord, la phrase qui compte le plus. La musique est produite avec l'IA (Suno). Les paroles sont ébauchées par une IA, puis relues par une personne. Le reste de ce texte est en réalité une explication de ce que cette phrase donne comme travail concret.
 
