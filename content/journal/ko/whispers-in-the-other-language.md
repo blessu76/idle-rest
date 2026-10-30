@@ -7,6 +7,7 @@ lang: ko
 description: dear(you); vol.1의 열 곡은 영어 메인 버전과 한국어 메인 버전으로 만들어지고, 각 버전의 속삭임 줄은 메인과 반대 언어로 들어갑니다. 가사 원고에서 속삭임 29개를 세어 위치·말·짝을 읽어 봅니다.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 keywords: 속삭임, whisper, 이중 버전, 영어 메인, 한국어 메인, dear(you);, idle(), ipe(), 가사 분석, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 ---
@@ -130,7 +131,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 한 가지는 덧붙여 둡니다. 10번 한국어 버전의 Outro에는 「ipe. be still」 바로 앞에 속삭임 표기 없이 영어로 적힌 「Good night.」 한 줄이 있습니다. 영어 버전에서는 이 줄이 메인 언어입니다. 반대 언어는 속삭임으로 넣는다는 규칙에서 벗어난 줄이라 위의 29개에는 세지 않았습니다.
 
-사이트의 소개 문구에는 dear(you); 앨범부터 모든 곡이 이 속삭임 한 줄로 끝난다고 적혀 있습니다. 앨범 밖에서 발매된 두 곡, 「good morning, world」(U-001)와 「still compiling」(N-001)의 가사 원고에는 속삭임 표기가 아예 없습니다. 반대 언어의 속삭임은 이 앨범의 열 곡에서 확인되는 설계입니다.
+사이트의 소개 문구에는 dear(you); 앨범부터 모든 곡이 이 속삭임 한 줄로 끝난다고 적혀 있습니다. 앨범 밖에서 발매된 두 곡은 이 29개에 포함되지 않았습니다. 「still compiling」(N-001)의 가사 원고에는 Outro에 속삭임 지시가 있습니다. 구역 머리가 「Outro — 속삭이듯」이고, 입력 가사의 Outro 줄에도 (whispered)와 (속삭이듯)이 붙어 있습니다. 「good morning, world」(U-001)에 같은 표기가 있는지는 이 글이 확인하지 않았습니다. 반대 언어의 속삭임은 이 앨범의 열 곡에서 확인되는 설계입니다.
 
 ## 기록에 없는 것
 

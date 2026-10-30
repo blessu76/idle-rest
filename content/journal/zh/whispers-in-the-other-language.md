@@ -7,6 +7,7 @@ lang: zh
 description: dear(you); vol.1 的每首歌都有英文主打版和韩文主打版，各自的低语都使用相反的语言。我们数遍了歌词草稿中全部 29 处低语，读它们出现在哪里、说了什么，以及两个版本如何成对。
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: 低语, 双语歌词, 英文主打, 韩文主打, dear(you);, idle(), ipe(), 歌词分析, AI音乐, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 还有一点需要留意。在曲目 10 韩文版的 Outro 中，紧挨 “ipe. be still” 之前的一行是英语 “Good night.”，没有低语标记；在英文版里它是主语言。它不在“相反的语言以低语放入”的规则之内，所以没有计入上面的 29 处。
 
-网站自己的介绍说，从 dear(you); 专辑开始，每一首歌都以这句低语的一行结尾。在专辑之外发行的两首歌，“good morning, world”（U-001）和 “still compiling”（N-001），歌词草稿里完全没有低语标记。用相反的语言低语，是我们能够在这张专辑的十首歌中确认的设计。
+网站自己的介绍说，从 dear(you); 专辑开始，每一首歌都以这句低语的一行结尾。在专辑之外发行的两首歌不计入这 29 个低语。“still compiling”（N-001）的歌词草稿里，Outro 带有低语的指示：段落标题是“Outro — 속삭이듯”，录入的歌词里 Outro 那一行也标有 (whispered) 和 (속삭이듯)。“good morning, world”（U-001）是否有同样的标记，本文没有核实。用相反的语言低语，是我们能够在这张专辑的十首歌中确认的设计。
 
 ## 没有记录的事
 

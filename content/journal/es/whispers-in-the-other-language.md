@@ -7,6 +7,7 @@ lang: es
 description: Cada canción de dear(you); vol.1 existe en una versión con el inglés como idioma principal y otra con el coreano, y las líneas susurradas de cada una van en el idioma contrario. Contamos los 29 susurros de los borradores de la letra y leímos dónde están, qué dicen y cómo se emparejan las dos versiones.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: susurro, letras bilingües, inglés principal, coreano principal, dear(you);, idle(), ipe(), análisis de letras, música con IA, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ La regla tiene una excepción. La última línea de cada canción, "ipe. be stil
 
 Una cosa más que señalar. En el Outro de la versión en coreano de la pista 10, la línea justo antes de "ipe. be still" es el inglés "Good night.", escrito sin marca de susurro; en la versión en inglés es el idioma principal. Queda fuera de la regla de que el idioma contrario entra como susurro, así que no se cuenta entre los 29 de arriba.
 
-La descripción del propio sitio dice que, desde el álbum dear(you);, todas las pistas terminan con esta línea susurrada. Las dos canciones publicadas fuera del álbum, "good morning, world" (U-001) y "still compiling" (N-001), no tienen ninguna marca de susurro en sus borradores de letra. El susurro en el idioma contrario es un diseño que podemos confirmar para las diez canciones de este álbum.
+La descripción del propio sitio dice que, desde el álbum dear(you);, todas las pistas terminan con esta línea susurrada. Las dos canciones publicadas fuera del álbum no entran en esa cuenta de 29. En el borrador de la letra de "still compiling" (N-001), el Outro lleva una indicación de susurro: el encabezado de la sección dice "Outro — 속삭이듯", y en la letra introducida la línea del Outro está marcada con (whispered) y (속삭이듯). Si "good morning, world" (U-001) tiene marcas así, es algo que este artículo no comprobó. El susurro en el idioma contrario es un diseño que podemos confirmar para las diez canciones de este álbum.
 
 ## Lo que no consta
 

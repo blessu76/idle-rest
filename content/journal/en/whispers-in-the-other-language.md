@@ -7,6 +7,7 @@ lang: en
 description: Every song on dear(you); vol.1 exists in an English-main and a Korean-main version, and the whispered lines in each go in the opposite language. We counted all 29 whispers in the lyric drafts and read where they sit, what they say and how the two versions pair up.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: ko
 keywords: whisper, bilingual lyrics, English main, Korean main, dear(you);, idle(), ipe(), lyric analysis, AI music, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -131,7 +132,7 @@ The rule has one exception. The last line of every song, "ipe. be still", is fix
 
 One more thing to note. In the Outro of the Korean version of track 10, the line right before "ipe. be still" is the English "Good night.", written without a whisper mark; in the English version it is the main language. It falls outside the rule that the opposite language goes in as a whisper, so it is not counted among the 29 above.
 
-The site's own description says that, since the dear(you); album, every track ends on this whispered line. The two songs released outside the album, "good morning, world" (U-001) and "still compiling" (N-001), have no whisper marks in their lyric drafts at all. The whisper in the opposite language is a design we can confirm for the ten songs of this album.
+The site's own description says that, since the dear(you); album, every track ends on this whispered line. The two songs released outside the album are not part of that count. In the lyric drafts of "still compiling" (N-001) the Outro carries a whisper direction: the section header reads "Outro — 속삭이듯", and the entered lyrics mark the Outro line (whispered) and (속삭이듯). Whether "good morning, world" (U-001) has such marks is something this post did not check. The whisper in the opposite language is a design we can confirm for the ten songs of this album.
 
 ## What is not on record
 

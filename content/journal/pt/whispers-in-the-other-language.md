@@ -7,6 +7,7 @@ lang: pt
 description: Toda música de dear(you); vol.1 existe em uma versão com inglês como língua principal e outra com coreano como língua principal, e as linhas sussurradas de cada uma vão na língua oposta. Contamos todos os 29 sussurros nos rascunhos das letras e lemos onde eles ficam, o que dizem e como as duas versões se emparelham.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: sussurro, letras bilíngues, inglês como língua principal, coreano como língua principal, dear(you);, idle(), ipe(), análise de letras, música com IA, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ A regra tem uma exceção. A última linha de toda música, "ipe. be still", é 
 
 Mais uma coisa a registrar. No Outro da versão em coreano da faixa 10, a linha logo antes de "ipe. be still" é o inglês "Good night.", escrito sem marca de sussurro; na versão em inglês, essa é a língua principal. Ela fica fora da regra de que a língua oposta entra como sussurro, por isso não é contada entre os 29 acima.
 
-A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum, "good morning, world" (U-001) e "still compiling" (N-001), não têm nenhuma marca de sussurro em seus rascunhos de letra. O sussurro na língua oposta é uma escolha de projeto que podemos confirmar para as dez músicas deste álbum.
+A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum não entram nessa conta de 29. No rascunho da letra de "still compiling" (N-001), o Outro traz uma indicação de sussurro: o cabeçalho da seção diz "Outro — 속삭이듯", e na letra inserida a linha do Outro está marcada com (whispered) e (속삭이듯). Se "good morning, world" (U-001) tem marcas assim, este texto não verificou. O sussurro na língua oposta é uma escolha de projeto que podemos confirmar para as dez músicas deste álbum.
 
 ## O que não está registrado
 

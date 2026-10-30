@@ -7,6 +7,7 @@ lang: de
 description: Jeder Song auf dear(you); vol.1 existiert in einer Version mit Englisch als Hauptsprache und einer mit Koreanisch als Hauptsprache, und die geflüsterten Zeilen stehen jeweils in der entgegengesetzten Sprache. Wir haben alle 29 Flüsterstellen in den Textentwürfen gezählt und gelesen, wo sie stehen, was sie sagen und wie sich die beiden Versionen paaren.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: Flüstern, zweisprachige Texte, Englisch als Hauptsprache, Koreanisch als Hauptsprache, dear(you);, idle(), ipe(), Textanalyse, KI-Musik, Suno, Lo-Fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ Die Regel hat eine Ausnahme. Die letzte Zeile jedes Songs, „ipe. be still“, 
 
 Noch etwas ist festzuhalten. Im Outro der koreanischen Version von Track 10 ist die Zeile direkt vor „ipe. be still“ das englische „Good night.“, ohne Flüstermarkierung geschrieben; in der englischen Version ist es die Hauptsprache. Das fällt aus der Regel heraus, dass die entgegengesetzte Sprache als Flüstern hineinkommt, und wird deshalb nicht zu den 29 oben gezählt.
 
-Die eigene Beschreibung der Website sagt, dass seit dem Album dear(you); jeder Track mit dieser geflüsterten Zeile endet. Die zwei außerhalb des Albums veröffentlichten Songs, „good morning, world“ (U-001) und „still compiling“ (N-001), haben in ihren Textentwürfen überhaupt keine Flüstermarkierungen. Das Flüstern in der entgegengesetzten Sprache ist ein Gestaltungsprinzip, das wir für die zehn Songs dieses Albums bestätigen können.
+Die eigene Beschreibung der Website sagt, dass seit dem Album dear(you); jeder Track mit dieser geflüsterten Zeile endet. Die zwei außerhalb des Albums veröffentlichten Songs zählen nicht zu diesen 29. Im Textentwurf von „still compiling“ (N-001) trägt das Outro eine Flüsteranweisung: Die Abschnittsüberschrift lautet „Outro — 속삭이듯“, und im eingegebenen Text ist die Outro-Zeile mit (whispered) und (속삭이듯) markiert. Ob „good morning, world“ (U-001) solche Markierungen hat, hat dieser Beitrag nicht geprüft. Das Flüstern in der entgegengesetzten Sprache ist ein Gestaltungsprinzip, das wir für die zehn Songs dieses Albums bestätigen können.
 
 ## Was nicht festgehalten ist
 

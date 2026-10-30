@@ -7,6 +7,7 @@ lang: id
 description: Setiap lagu di dear(you); vol.1 ada dalam versi utama Inggris dan versi utama Korea, dan baris yang dibisikkan di tiap versi memakai bahasa sebaliknya. Kami menghitung seluruh 29 bisikan dalam draf lirik dan membaca letaknya, isinya, serta bagaimana kedua versi berpasangan.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: bisikan, lirik dwibahasa, utama Inggris, utama Korea, dear(you);, idle(), ipe(), analisis lirik, musik AI, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ Aturan ini punya satu pengecualian. Baris terakhir setiap lagu, "ipe. be still",
 
 Satu hal lagi yang perlu dicatat. Di Outro versi Korea trek 10, baris tepat sebelum "ipe. be still" adalah bahasa Inggris "Good night.", ditulis tanpa tanda bisikan; di versi Inggris itu bahasa utama. Baris ini berada di luar aturan bahwa bahasa sebaliknya masuk sebagai bisikan, sehingga tidak dihitung di antara 29 di atas.
 
-Deskripsi situs sendiri menyebutkan bahwa sejak album dear(you); setiap trek berakhir pada baris bisikan ini. Dua lagu yang dirilis di luar album, "good morning, world" (U-001) dan "still compiling" (N-001), sama sekali tidak memiliki tanda bisikan dalam draf liriknya. Bisikan dalam bahasa sebaliknya adalah rancangan yang dapat kami pastikan untuk kesepuluh lagu album ini.
+Deskripsi situs sendiri menyebutkan bahwa sejak album dear(you); setiap trek berakhir pada baris bisikan ini. Dua lagu yang dirilis di luar album tidak termasuk dalam 29 itu. Dalam draf lirik "still compiling" (N-001), Outro membawa petunjuk bisikan: judul bagiannya "Outro — 속삭이듯", dan pada lirik yang dimasukkan baris Outro ditandai (whispered) dan (속삭이듯). Apakah "good morning, world" (U-001) punya tanda serupa, tulisan ini tidak memeriksanya. Bisikan dalam bahasa sebaliknya adalah rancangan yang dapat kami pastikan untuk kesepuluh lagu album ini.
 
 ## Yang tidak tercatat
 

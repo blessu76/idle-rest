@@ -7,6 +7,7 @@ lang: fr
 description: Chaque morceau de dear(you); vol.1 existe en une version à dominante anglaise et une version à dominante coréenne, et les lignes murmurées de chacune sont dans la langue opposée. Nous avons compté les 29 murmures des premiers jets de paroles et lu où ils se placent, ce qu'ils disent et comment les deux versions s'apparient.
 category: behind-the-music
 draft: false
+updated: 2026-10-30
 translation_of: en
 keywords: murmure, paroles bilingues, dominante anglaise, dominante coréenne, dear(you);, idle(), ipe(), analyse de paroles, musique IA, Suno, lo-fi, 속삭임
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
@@ -129,7 +130,7 @@ La règle a une exception. La dernière ligne de chaque morceau, « ipe. be stil
 
 Une dernière chose à noter. Dans l'Outro de la version coréenne de la piste 10, la ligne juste avant « ipe. be still » est l'anglais « Good night. », écrit sans marque de murmure ; dans la version anglaise, c'est la langue principale. Elle sort de la règle selon laquelle la langue opposée entre en murmure, elle n'est donc pas comptée parmi les 29 ci-dessus.
 
-La description du site lui-même dit que, depuis l'album dear(you);, chaque piste se termine sur cette ligne murmurée. Les deux morceaux sortis hors de l'album, « good morning, world » (U-001) et « still compiling » (N-001), n'ont aucune marque de murmure dans leurs premiers jets de paroles. Le murmure dans la langue opposée est un parti pris que nous pouvons confirmer pour les dix morceaux de cet album.
+La description du site lui-même dit que, depuis l'album dear(you);, chaque piste se termine sur cette ligne murmurée. Les deux morceaux sortis hors de l'album ne comptent pas dans ces 29. Dans le premier jet des paroles de « still compiling » (N-001), l'Outro porte une indication de murmure : l'en-tête de la section est « Outro — 속삭이듯 », et dans les paroles saisies la ligne de l'Outro est marquée (whispered) et (속삭이듯). Savoir si « good morning, world » (U-001) a de telles marques, cet article ne l'a pas vérifié. Le murmure dans la langue opposée est un parti pris que nous pouvons confirmer pour les dix morceaux de cet album.
 
 ## Ce qui n'est pas consigné
 
