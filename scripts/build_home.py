@@ -21,7 +21,7 @@ from pathlib import Path
 import build_journal as bj
 
 SITE = bj.SITE
-HOME_UPDATED = "2026-10-28"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
+HOME_UPDATED = "2026-10-30"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
 TEMPLATE = Path("content") / "home" / "template.html"
 STRINGS = Path("content") / "home" / "i18n.json"
 LANG_ATTR = re.compile(r'(<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\sdata-i18n="(?P<key>[^"]+)"[^>]*)>)(?P<inner>.*?)(</(?P=tag)>)', re.S)
@@ -66,6 +66,15 @@ def lang_url(lang):
 def card_posts(lang, posts):
     """journal cards on a home page: the latest 3 posts of that language (posts are sorted newest first); never another language's."""
     return [p for p in posts if p["lang"] == lang][:3]
+
+
+def faq_jsonld(d):
+    """FAQPage structured data from the same faq_q*/faq_a* strings the page shows (tags stripped, so text matches the visible copy)."""
+    items = []
+    for i in range(1, 5):
+        a = re.sub(r"<[^>]+>", "", d["faq_a%d" % i])
+        items.append({"@type": "Question", "name": d["faq_q%d" % i], "acceptedAnswer": {"@type": "Answer", "text": a}})
+    return json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": items}, ensure_ascii=False, indent=2)
 
 
 def render_page(tpl, strings, lang, root, posts):
@@ -116,6 +125,7 @@ def render_page(tpl, strings, lang, root, posts):
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
         "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT", "PRIVACY")},
+        "HOW_HREF": "/journal/%s/how-a-song-gets-made/" % ("en" if root else lang), "FAQ_JSONLD": faq_jsonld(d),
         "LEGACY_SCRIPT": LEGACY_JS % "|".join(bj.LANGS), "PAGE_SCRIPT": page_script,
         "LANG_HINT": '<div class="lang-hint" id="langHint" hidden></div>\n' if root else "",
         "NAV_SCRIPT": NAV_SCRIPT % (HINT_JS % names if root else ""),
