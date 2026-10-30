@@ -248,7 +248,9 @@
   "faq_q3": "どこで聴けますか？",
   "faq_a3": "すべての曲はYouTube @ipe-rest に英語版と韓国語版であります。サイトから各曲へ直接移動できます。",
   "faq_q4": "長い夜のコーディングには何を流せばいいですか？",
-  "faq_a4": "シングル still compiling から始めて、アルバム dear(you); vol.1 を01から聴いてみてください。"
+  "faq_a4": "シングル still compiling から始めて、アルバム dear(you); vol.1 を01から聴いてみてください。",
+  "u001_desc": "ipe() 初のシングル — 明るく、希望に満ちたローファイ。",
+  "n001_desc": "ビルドが終わるまで帰れなかった夜のためのローファイ。"
  },
  "zh": {
   "meta_title": "写代码时听的 AI Lo-Fi — 为疲惫开发者打造的 idle()",
@@ -325,7 +327,9 @@
   "faq_q3": "在哪里可以听？",
   "faq_a3": "每首歌都在 YouTube @ipe-rest 上，分英文版和韩文版。网站会直接带你到每一首。",
   "faq_q4": "写代码熬夜时该听什么？",
-  "faq_a4": "先听单曲 still compiling，再从第 01 首开始听专辑 dear(you); vol.1。"
+  "faq_a4": "先听单曲 still compiling，再从第 01 首开始听专辑 dear(you); vol.1。",
+  "u001_desc": "ipe() 的第一支单曲——明亮、充满希望的 lo-fi。",
+  "n001_desc": "献给那个构建没跑完、走不了的夜晚的 lo-fi。"
  },
  "es": {
   "meta_title": "idle() — lo-fi con IA para programar y concentrarte",
@@ -402,7 +406,9 @@
   "faq_q3": "¿Dónde puedo escucharla?",
   "faq_a3": "Todas las canciones están en YouTube, en @ipe-rest, en versión inglesa y coreana. El sitio te lleva directo a cada tema.",
   "faq_q4": "¿Qué pongo para una larga noche de programación?",
-  "faq_a4": "Empieza por el sencillo still compiling y sigue con el álbum dear(you); vol.1 desde la pista 01."
+  "faq_a4": "Empieza por el sencillo still compiling y sigue con el álbum dear(you); vol.1 desde la pista 01.",
+  "u001_desc": "El primer sencillo de ipe(): lo-fi luminoso y esperanzador.",
+  "n001_desc": "Lo-fi para la noche en que no pudiste irte antes de que terminara el build."
  },
  "fr": {
   "meta_title": "idle() — lo-fi IA pour coder et se concentrer la nuit",
@@ -479,7 +485,9 @@
   "faq_q3": "Où l'écouter ?",
   "faq_a3": "Chaque titre est sur YouTube, @ipe-rest, en version anglaise et coréenne. Le site mène directement à chaque morceau.",
   "faq_q4": "Que mettre pour une longue nuit de code ?",
-  "faq_a4": "Commencez par le single still compiling, puis l'album dear(you); vol.1 dès le titre 01."
+  "faq_a4": "Commencez par le single still compiling, puis l'album dear(you); vol.1 dès le titre 01.",
+  "u001_desc": "Le premier single d'ipe() : une lo-fi lumineuse et pleine d'espoir.",
+  "n001_desc": "De la lo-fi pour la nuit où tu n'as pas pu partir avant la fin du build."
  },
  "de": {
   "meta_title": "idle() — KI-Lo-Fi zum Programmieren & für späte Nächte",
@@ -556,7 +564,9 @@
   "faq_q3": "Wo kann ich sie hören?",
   "faq_a3": "Jeder Song ist auf YouTube unter @ipe-rest, in englischer und koreanischer Fassung. Die Seite führt dich direkt zu jedem Titel.",
   "faq_q4": "Was spiele ich in einer langen Programmiernacht?",
-  "faq_a4": "Beginne mit der Single still compiling, dann das Album dear(you); vol.1 ab Track 01."
+  "faq_a4": "Beginne mit der Single still compiling, dann das Album dear(you); vol.1 ab Track 01.",
+  "u001_desc": "Die erste ipe()-Single – helles, hoffnungsvolles Lo-Fi.",
+  "n001_desc": "Lo-Fi für die Nacht, in der du nicht gehen konntest, bevor der Build durch war."
  },
  "pt": {
   "meta_title": "idle() — lo-fi com IA para programar e focar à noite",
@@ -633,7 +643,9 @@
   "faq_q3": "Onde posso ouvir?",
   "faq_a3": "Todas as músicas estão no YouTube, em @ipe-rest, nas versões em inglês e coreano. O site leva direto a cada faixa.",
   "faq_q4": "O que tocar para uma longa noite de programação?",
-  "faq_a4": "Comece pelo single still compiling e depois o álbum dear(you); vol.1 a partir da faixa 01."
+  "faq_a4": "Comece pelo single still compiling e depois o álbum dear(you); vol.1 a partir da faixa 01.",
+  "u001_desc": "O primeiro single de ipe(): lo-fi luminoso e esperançoso.",
+  "n001_desc": "Lo-fi para a noite em que você não pôde sair antes de o build terminar."
  },
  "ru": {
   "meta_title": "idle() — AI lo-fi для кодинга и ночной концентрации",
@@ -710,7 +722,9 @@
   "faq_q3": "Где послушать?",
   "faq_a3": "Все песни есть на YouTube, @ipe-rest, в английской и корейской версиях. С сайта можно сразу перейти к каждому треку.",
   "faq_q4": "Что включить на долгую ночь кодинга?",
-  "faq_a4": "Начните с сингла still compiling, затем альбом dear(you); vol.1 с трека 01."
+  "faq_a4": "Начните с сингла still compiling, затем альбом dear(you); vol.1 с трека 01.",
+  "u001_desc": "Первый сингл ipe() — светлое, полное надежды lo-fi.",
+  "n001_desc": "Lo-fi для ночи, когда нельзя было уйти, пока не закончилась сборка."
  },
  "ar": {
   "meta_title": "idle() — لو-فاي بالذكاء الاصطناعي للبرمجة والتركيز",
@@ -787,7 +801,9 @@
   "faq_q3": "أين أستمع؟",
   "faq_a3": "كل أغنية على يوتيوب عبر @ipe-rest بنسختين إنجليزية وكورية. يقودك الموقع مباشرة إلى كل مقطوعة.",
   "faq_q4": "ماذا أشغّل لليلة برمجة طويلة؟",
-  "faq_a4": "ابدأ بالأغنية المنفردة still compiling ثم ألبوم dear(you); vol.1 من المقطوعة 01."
+  "faq_a4": "ابدأ بالأغنية المنفردة still compiling ثم ألبوم dear(you); vol.1 من المقطوعة 01.",
+  "u001_desc": "أول سينغل من ipe() — لو-فاي مشرق ومفعم بالأمل.",
+  "n001_desc": "لو-فاي لليلة التي لم تستطع فيها المغادرة قبل انتهاء البناء."
  },
  "hi": {
   "meta_title": "idle() — कोडिंग और देर रात फ़ोकस के लिए AI लो-फ़ाई",
@@ -864,7 +880,9 @@
   "faq_q3": "मैं कहाँ सुन सकता हूँ?",
   "faq_a3": "हर गाना YouTube पर @ipe-rest में अंग्रेज़ी और कोरियाई संस्करणों में है। साइट आपको सीधे हर ट्रैक तक ले जाती है।",
   "faq_q4": "कोडिंग की लंबी रात में क्या सुनूँ?",
-  "faq_a4": "सिंगल still compiling से शुरू करें, फिर एल्बम dear(you); vol.1 ट्रैक 01 से।"
+  "faq_a4": "सिंगल still compiling से शुरू करें, फिर एल्बम dear(you); vol.1 ट्रैक 01 से।",
+  "u001_desc": "ipe() का पहला सिंगल — उजला, उम्मीद भरा लो-फ़ाई।",
+  "n001_desc": "उस रात के लिए लो-फ़ाई, जब बिल्ड पूरा होने से पहले आप निकल नहीं सकते थे।"
  },
  "id": {
   "meta_title": "idle() — lo-fi AI untuk ngoding & fokus larut malam",
@@ -941,6 +959,8 @@
   "faq_q3": "Di mana saya bisa mendengarkan?",
   "faq_a3": "Setiap lagu ada di YouTube @ipe-rest, dalam versi Inggris dan Korea. Situs ini menautkan langsung ke setiap lagu.",
   "faq_q4": "Apa yang diputar untuk malam panjang ngoding?",
-  "faq_a4": "Mulai dari single still compiling, lalu album dear(you); vol.1 dari lagu 01."
+  "faq_a4": "Mulai dari single still compiling, lalu album dear(you); vol.1 dari lagu 01.",
+  "u001_desc": "Single pertama ipe() — lo-fi yang cerah dan penuh harapan.",
+  "n001_desc": "Lo-fi untuk malam saat kamu tak bisa pulang sebelum build selesai."
  }
 }
