@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), आराम, एल्बम की बनावट, गीत विश्लेषण, AI संगीत, Suno, लो-फ़ाई
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 ![दस गाने बाएँ से दाएँ भावना के नाम और गानों के डिज़ाइन दस्तावेज़ों के टेम्पो के अनुसार रखे गए हैं। पहले चार हैं 01 सहानुभूति 68 से 72, 02 समझ 70, 03 चिंता 72 और 04 आश्वासन 74। ट्रैक 05, आराम, 66 से 70 पर पीले डिब्बे में है। अंतिम पाँच हैं 06 जुड़ाव 70, 07 कृतज्ञता 72, 08 स्वीकृति 68, 09 आशा 72 और 10 शांति 64। एक टिप्पणी कहती है कि टेम्पो डिज़ाइन-दस्तावेज़ के मान हैं, सुनकर बने अनुभव नहीं](/assets/journal/rest-at-the-center/center-arc.jpg)

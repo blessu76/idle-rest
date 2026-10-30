@@ -10,6 +10,7 @@ category: behind-the-music
 draft: false
 keywords: dear(you);, idle(), ipe(), 64 BPM, album closer, last song, You Did So Well Today, tempo, sound design, lyric analysis, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 [한국어로 읽기 →](/journal/ko/closing-with-the-slowest-song/)

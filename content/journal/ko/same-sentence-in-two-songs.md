@@ -9,6 +9,7 @@ category: behind-the-music
 draft: false
 keywords: dear(you);, idle(), ipe(), 브릿지 리프레인, 너는 아직 빛나고 있어, 네가 있어서 다행이야, 가사 분석, 앨범 구성, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 [Read this in English →](/journal/en/same-sentence-in-two-songs/)

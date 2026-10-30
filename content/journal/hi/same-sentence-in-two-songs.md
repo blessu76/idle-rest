@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), ब्रिज रिफ़्रेन, You're Still Shining, I'm Glad You're Here, गीत विश्लेषण, एल्बम की बनावट, AI संगीत, Suno, लो-फ़ाई
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 *dear(you); vol.1* की एल्बम योजना में चार युक्तियाँ गिनाई गई हैं जो एल्बम को आपस में बाँधे रखती हैं। पहली है हर ट्रैक की अंतिम पंक्ति, *ipe. be still*। दूसरी है "ब्रिज रिफ़्रेन"। तीसरी है कोरस में शीर्षक-वाक्य का दोहराव, और चौथी है "it's okay", "slowly" और "enough" जैसे शब्दों की साझा शब्दावली। आज का विषय दूसरी युक्ति है। योजना के अनुसार ट्रैक 04, "You're Still Shining.", और ट्रैक 07, "I'm Glad You're Here.", के ब्रिज में एक ही वाक्य है, जो अंग्रेज़ी और कोरियाई में एकरूप किया गया है। यह लेख पढ़ता है कि यह एक वाक्य दोनों गानों में कैसे एक-सा है और कहाँ से अलग होने लगता है।

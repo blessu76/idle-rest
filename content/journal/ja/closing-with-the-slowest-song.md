@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 64 BPM, アルバムの最後の曲, ラストソング, You Did So Well Today, テンポ, サウンドデザイン, 歌詞分析, AI音楽, Suno, ローファイ
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 *dear(you); vol.1* の10曲目「You Did So Well Today.」(韓国語タイトル 「오늘도... 정말 고생했어.」)について、アルバム企画書と曲の設計書は、同じ言葉で紹介しています。10曲のなかでいちばん遅い、という言葉です。この曲は、すでに[問いかけで始まり、慰めで終わる](/journal/ja/open-with-a-question-close-with-comfort/)で最初の曲と対にして読みました。そこで述べたこと(Pre-Chorus の時制、「もう少し」の大きさ、窓、ささやきの順序)は、ここでは繰り返しません。この記事は向きを変えます。最後の曲を、その前の9曲すべてと並べて、「いちばん遅い」が文書と歌詞シートのなかで実際に何でできているのかを問います。

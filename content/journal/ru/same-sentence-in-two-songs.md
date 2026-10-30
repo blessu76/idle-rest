@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), рефрен бриджа, You're Still Shining, I'm Glad You're Here, анализ текстов, структура альбома, музыка с ИИ, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 План альбома *dear(you); vol.1* перечисляет четыре приёма, которые скрепляют альбом. Первый — заключительная строка каждого трека, *ipe. be still*. Второй — «рефрен бриджа». Третий — повторение названия-фразы в припеве, а четвёртый — общий словарь из слов вроде «всё в порядке», «медленно» и «достаточно». Сегодняшняя тема — второй приём. План говорит, что бриджи трека 04, «You're Still Shining.», и трека 07, «I'm Glad You're Here.», несут одну и ту же фразу, единую в английской и корейской версиях. Эта статья читает, в чём эта фраза совпадает в обеих песнях и где они начинают различаться.

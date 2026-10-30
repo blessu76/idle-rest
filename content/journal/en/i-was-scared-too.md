@@ -10,6 +10,7 @@ draft: false
 translation_of: ko
 keywords: I Was Scared Too, 나도 무서웠어, dear(you);, idle(), ipe(), developer anxiety, AI era, lyric analysis, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
 [한국어로 읽기 →](/journal/ko/i-was-scared-too/)

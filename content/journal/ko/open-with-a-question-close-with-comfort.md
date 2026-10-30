@@ -9,6 +9,7 @@ category: behind-the-music
 draft: false
 keywords: dear(you);, idle(), ipe(), 수미상관, 오늘도 많이 힘들었지?, 오늘도 정말 고생했어, 앨범 구성, 가사 분석, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ | You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 [Read this in English →](/journal/en/open-with-a-question-close-with-comfort/)

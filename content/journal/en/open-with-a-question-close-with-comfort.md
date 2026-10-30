@@ -10,6 +10,7 @@ draft: false
 translation_of: ko
 keywords: dear(you);, idle(), ipe(), album structure, bookend, Hard Day Again Wasn't It, You Did So Well Today, lyric analysis, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ | You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 [한국어로 읽기 →](/journal/ko/open-with-a-question-close-with-comfort/)

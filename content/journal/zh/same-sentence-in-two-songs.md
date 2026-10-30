@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), Bridge 复现句, You're Still Shining, I'm Glad You're Here, 歌词解读, 专辑结构, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 《*dear(you); vol.1*》的专辑企划列出了把整张专辑系在一起的四种手法。第一种是每首歌的最后一句 *ipe. be still*。第二种是"Bridge 复现句"。第三种是在副歌里重复标题句，第四种是共用一套词汇，比如 "it's okay"、"slowly"、"enough"。今天的主题是第二种。企划写明，第 04 首 "You're Still Shining." 与第 07 首 "I'm Glad You're Here." 的 Bridge 带有同一句话，并且在英语与韩语之间保持一致。本文要读的是：这一句话在两首歌里如何相同，又从哪里开始不同。

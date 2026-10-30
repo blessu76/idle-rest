@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 64 BPM, clôture de l'album, dernière chanson, You Did So Well Today, tempo, design sonore, analyse de paroles, musique IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 Le plan de l'album et le document de conception de la dixième chanson de *dear(you); vol.1*, « You Did So Well Today. » (titre coréen 「오늘도... 정말 고생했어.」), la présentent avec les mêmes mots : la plus lente des dix. Nous avons déjà lu cette chanson en paire avec la première dans [Ouvrir sur une question, fermer sur du réconfort](/journal/fr/open-with-a-question-close-with-comfort/), et les points soulevés là-bas (le temps du Pre-Chorus, l'échelle de « un peu plus », la fenêtre, l'ordre des murmures) ne sont pas repris ici. Cet article change de direction. Il met la dernière chanson en regard des neuf qui la précèdent et demande de quoi est réellement faite la « plus lente » dans les documents et les feuilles de paroles.

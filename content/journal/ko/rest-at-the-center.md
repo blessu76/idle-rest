@@ -9,6 +9,7 @@ category: behind-the-music
 draft: false
 keywords: dear(you);, idle(), ipe(), 잠깐 쉬어가도 돼, It's Okay to Rest a While, 쉼, 앨범 구성, 가사 분석, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 [Read this in English →](/journal/en/rest-at-the-center/)

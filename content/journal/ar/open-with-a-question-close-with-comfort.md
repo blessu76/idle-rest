@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), بنية الألبوم, طرفا الألبوم, Hard Day Again Wasn't It, You Did So Well Today, تحليل الكلمات, موسيقى بالذكاء الاصطناعي, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ | You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 ![بطاقتان جنبًا إلى جنب: S1A1.01 بالعنوان الكوري 오늘도 많이 힘들었지? وHard Day Again, Wasn't It?، وS1A1.10 بالعنوان 오늘도... 정말 고생했어. وYou Did So Well Today.، يصل بينهما سهم. وتحتهما جدول يقارن كلمة الشعور والإيقاع وعدد الأقسام وعدد علامات الاستفهام في الكلمات الكورية](/assets/journal/open-with-a-question-close-with-comfort/bookends.jpg)

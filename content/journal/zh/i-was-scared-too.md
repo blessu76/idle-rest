@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: I Was Scared Too, 나도 무서웠어, dear(you);, idle(), ipe(), 开发者的焦虑, AI 时代, 歌词分析, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
 *dear(you); vol.1* 的第 3 首 "I Was Scared, Too."（韩文标题：나도 무서웠어.），是专辑里最直接谈论自身所处时代的歌曲之一。它的主题，是在 AI 能写代码、写文档、甚至做审查的时代，开发者所感受到的恐惧。我们想根据歌词草稿，看看这首歌是如何对待这种恐惧的。和以往一样，录音里实际唱出的内容，可能比草稿更短。

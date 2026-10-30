@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 64 BPM, 专辑收尾曲, 最后一首歌, You Did So Well Today, 速度, 声音设计, 歌词解读, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 专辑企划和歌曲设计文档在介绍《*dear(you); vol.1*》的第十首歌"You Did So Well Today."（韩语标题「오늘도... 정말 고생했어.」）时，用的是同一句话：十首里最慢的一首。这首歌我们已经在[以提问开场，以安慰收尾](/journal/zh/open-with-a-question-close-with-comfort/)里与第一首配成一对读过，那里谈到的几点（Pre-Chorus 的时态、"再多一点"的分量、窗户、低语的顺序）在此不再重复。本文换一个方向：把最后一首与前面的九首全部放在一起，问问"最慢"在文档和歌词稿里到底是由什么构成的。

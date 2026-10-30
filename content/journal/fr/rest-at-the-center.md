@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), repos, structure d'album, analyse de paroles, musique IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 ![Les dix chansons disposées de gauche à droite selon le nom de leur émotion et le tempo des documents de conception des chansons. Les quatre premières sont 01 empathie 68 à 72, 02 compréhension 70, 03 anxiété 72 et 04 réconfort 74. La piste 05, repos, est dans une case jaune à 66 à 70. Les cinq dernières sont 06 lien 70, 07 gratitude 72, 08 reconnaissance 68, 09 espoir 72 et 10 paix 64. Une note précise que les tempos sont des valeurs des documents de conception, non des impressions d'écoute](/assets/journal/rest-at-the-center/center-arc.jpg)

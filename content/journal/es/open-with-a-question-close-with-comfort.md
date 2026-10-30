@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), estructura del álbum, bookend, Hard Day Again Wasn't It, You Did So Well Today, análisis de letras, música con IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ | You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 ![Dos tarjetas una al lado de la otra: S1A1.01, con el título coreano 오늘도 많이 힘들었지? y Hard Day Again, Wasn't It?, y S1A1.10, con 오늘도... 정말 고생했어. y You Did So Well Today., unidas por una flecha. Una tabla debajo compara la palabra clave de la emoción, el tempo, el número de slots y el número de signos de interrogación en la letra coreana](/assets/journal/open-with-a-question-close-with-comfort/bookends.jpg)

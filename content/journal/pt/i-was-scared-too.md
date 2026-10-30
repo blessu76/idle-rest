@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: I Was Scared Too, 나도 무서웠어, dear(you);, idle(), ipe(), ansiedade do desenvolvedor, era da IA, análise de letras, música com IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
 A faixa 03 de *dear(you); vol.1*, "I Was Scared, Too." (título coreano: 나도 무서웠어.), é uma das canções do álbum que falam de forma mais direta sobre o seu próprio tempo. O tema é o medo que um desenvolvedor sente numa era em que a IA escreve código, escreve documentação e até a revisa. Queremos acompanhar como a canção lida com esse medo, guiando-nos pelo rascunho da letra. Como sempre, o que de fato é cantado na gravação pode ser mais curto do que o rascunho.

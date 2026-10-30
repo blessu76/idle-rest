@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 64 BPM, Albumabschluss, letzter Song, You Did So Well Today, Tempo, Sounddesign, Songtextanalyse, KI-Musik, Suno, Lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 Der Albumplan und das Songdesign-Dokument zum zehnten Song von *dear(you); vol.1*, „You Did So Well Today.“ (koreanischer Titel 「오늘도... 정말 고생했어.」), stellen ihn mit denselben Worten vor: der langsamste der zehn. Diesen Song haben wir bereits als Paar mit dem ersten gelesen, in [Mit einer Frage beginnen, mit Trost enden](/journal/de/open-with-a-question-close-with-comfort/), und was dort gesagt wurde (die Zeitform des Pre-Chorus, das Maß von „ein bisschen mehr“, das Fenster, die Reihenfolge der Flüstertexte), wird hier nicht wiederholt. Dieser Beitrag ändert die Richtung. Er stellt den letzten Song allen neun davor gegenüber und fragt, woraus „langsamste“ in den Dokumenten und Textblättern tatsächlich besteht.

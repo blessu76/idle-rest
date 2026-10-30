@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), لازمة الجسر, You're Still Shining, I'm Glad You're Here, تحليل الكلمات, بنية الألبوم, موسيقى بالذكاء الاصطناعي, Suno, لو-فاي
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 تذكر خطة ألبوم *dear(you); vol.1* أربع أدوات تشدّ الألبوم بعضه إلى بعض. الأولى هي السطر الختامي في كل مقطوعة، *ipe. be still*. والثانية هي «لازمة الجسر». والثالثة هي تكرار جملة العنوان في الكورَس، والرابعة هي مفردات مشتركة من كلمات مثل "it's okay" و"slowly" و"enough". موضوع اليوم هو الثانية. تقول الخطة إن جسرَي المقطوعة 04، "You're Still Shining."، والمقطوعة 07، "I'm Glad You're Here."، يحملان الجملة نفسها، موحَّدةً بين الإنجليزية والكورية. يقرأ هذا المقال كيف تكون هذه الجملة الواحدة هي نفسها في الأغنيتين، وأين تبدأ في الاختلاف.

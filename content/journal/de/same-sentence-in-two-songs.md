@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), Bridge-Refrain, You're Still Shining, I'm Glad You're Here, Songtextanalyse, Albumstruktur, KI-Musik, Suno, Lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 Der Albumplan von *dear(you); vol.1* nennt vier Mittel, die das Album zusammenhalten. Das erste ist die Schlusszeile jedes Tracks, *ipe. be still*. Das zweite ist der „Bridge-Refrain“. Das dritte ist die Wiederholung des Titelsatzes im Chorus, und das vierte ist ein gemeinsamer Wortschatz aus Wörtern wie „it's okay“, „slowly“ und „enough“. Heute geht es um das zweite. Laut Plan tragen die Bridges von Track 04, „You're Still Shining.“, und Track 07, „I'm Glad You're Here.“, denselben Satz, vereinheitlicht zwischen Englisch und Koreanisch. Dieser Beitrag liest, wie dieser eine Satz in beiden Songs derselbe ist und wo er sich zu unterscheiden beginnt.

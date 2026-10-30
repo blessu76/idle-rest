@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), 休息, 专辑结构, 歌词解读, AI 音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 ![十首歌按情绪名称和歌曲设计文档中的速度从左到右排开。前四首是 01 共鸣 68 至 72、02 理解 70、03 不安 72、04 安心 74。第 05 首"休息"位于黄色方框中，速度 66 至 70。后五首是 06 联结 70、07 感谢 72、08 认可 68、09 希望 72、10 平和 64。一条注释写明这些速度是设计文档中的数值，不是听感印象](/assets/journal/rest-at-the-center/center-arc.jpg)

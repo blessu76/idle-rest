@@ -10,6 +10,7 @@ draft: false
 translation_of: ko
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), rest, album structure, lyric analysis, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 [한국어로 읽기 →](/journal/ko/rest-at-the-center/)

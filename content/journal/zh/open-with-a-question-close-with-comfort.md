@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 专辑结构, 首尾呼应, Hard Day Again Wasn't It, You Did So Well Today, 歌词分析, AI音乐, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: Hard Day Again, Wasn't It? @ https://youtu.be/Y8pLkgO2HlQ | You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 ![并排的两张卡片：S1A1.01，韩文标题 오늘도 많이 힘들었지? 与 Hard Day Again, Wasn't It?；S1A1.10，오늘도... 정말 고생했어. 与 You Did So Well Today.，两者以箭头相连。下方的表格比较了情感关键词、速度、段落（slot）数量和韩文歌词中的问号数量](/assets/journal/open-with-a-question-close-with-comfort/bookends.jpg)

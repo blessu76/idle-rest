@@ -9,6 +9,7 @@ category: behind-the-music
 draft: false
 keywords: 나도 무서웠어, I Was Scared Too, dear(you);, idle(), ipe(), AI 시대 개발자, 가사 분석, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
 [Read this in English →](/journal/en/i-was-scared-too/)

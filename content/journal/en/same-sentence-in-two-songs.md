@@ -10,6 +10,7 @@ draft: false
 translation_of: ko
 keywords: dear(you);, idle(), ipe(), bridge refrain, You're Still Shining, I'm Glad You're Here, lyric analysis, album structure, AI music, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 [한국어로 읽기 →](/journal/ko/same-sentence-in-two-songs/)

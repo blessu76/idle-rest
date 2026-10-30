@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), 休息, アルバム構成, 歌詞分析, AI音楽, Suno, ローファイ
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 ![10曲を、感情名と曲の設計書にあるテンポで左から右に並べた図。最初の4曲は 01 共感 68〜72、02 理解 70、03 不安 72、04 安心 74。トラック05の休息は黄色の枠に入っていて 66〜70。最後の5曲は 06 つながり 70、07 感謝 72、08 承認 68、09 希望 72、10 平穏 64。テンポは設計書の値であり、聴いた印象ではないという注記がある](/assets/journal/rest-at-the-center/center-arc.jpg)

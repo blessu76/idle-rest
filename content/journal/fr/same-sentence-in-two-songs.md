@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), refrain de Bridge, You're Still Shining, I'm Glad You're Here, analyse de paroles, structure d'album, musique IA, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 Le plan de l'album *dear(you); vol.1* énumère quatre procédés qui tiennent l'album ensemble. Le premier est la dernière ligne de chaque morceau, *ipe. be still*. Le deuxième est le « refrain de Bridge ». Le troisième consiste à répéter dans le refrain la phrase du titre, et le quatrième est un vocabulaire commun fait de mots comme « it's okay », « slowly » et « enough ». Le sujet du jour est le deuxième. Selon le plan, les Bridges de la piste 04, « You're Still Shining. », et de la piste 07, « I'm Glad You're Here. », portent la même phrase, unifiée entre l'anglais et le coréen. Cet article lit comment cette phrase unique est la même dans les deux chansons et où elle commence à différer.

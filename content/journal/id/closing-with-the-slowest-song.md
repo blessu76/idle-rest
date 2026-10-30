@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), 64 BPM, lagu penutup album, lagu terakhir, You Did So Well Today, tempo, desain suara, analisis lirik, musik AI, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 Rencana album dan dokumen desain lagu kesepuluh *dear(you); vol.1*, "You Did So Well Today." (judul Korea 「오늘도... 정말 고생했어.」), memperkenalkannya dengan kata-kata yang sama: yang paling lambat dari sepuluh. Lagu ini sudah kami baca berpasangan dengan lagu pertama dalam [Dibuka dengan Pertanyaan, Ditutup dengan Penghiburan](/journal/id/open-with-a-question-close-with-comfort/), dan hal-hal yang dibahas di sana (kala Pre-Chorus, skala "sedikit lagi", jendela, urutan bisikan) tidak diulang di sini. Tulisan ini berganti arah. Ia menyandingkan lagu terakhir dengan kesembilan lagu sebelumnya dan bertanya terbuat dari apa sebenarnya "paling lambat" itu dalam dokumen dan lembar lirik.

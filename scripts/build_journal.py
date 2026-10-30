@@ -800,7 +800,7 @@ def print_lint(posts, verbose=False):
 
 
 def thing(kind, title, url):
-    o = {"@type": kind, "name": title, "byArtist": {"@type": "MusicGroup", "name": "ipe()", "url": "https://ipe.rest/"}}
+    o = {"@type": kind, "name": title, "byArtist": {"@id": ORG_ID, "name": "ipe()"}}  # ipe() = the page's one Organization node (author/publisher)
     if url:
         o["url" if url.startswith(SITE) else "sameAs"] = url
     return o

@@ -9,6 +9,7 @@ category: behind-the-music
 draft: false
 keywords: dear(you);, idle(), ipe(), 64 BPM, 앨범 마지막 곡, 클로저, 오늘도 정말 고생했어, 템포, 사운드 디자인, 가사 분석, AI 음악, Suno, 로파이
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You Did So Well Today. @ https://youtu.be/lvyLfiBzMLg
 ---
 
 [Read this in English →](/journal/en/closing-with-the-slowest-song/)

@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: dear(you);, idle(), ipe(), ブリッジ・リフレイン, You're Still Shining, I'm Glad You're Here, 歌詞分析, アルバム構成, AI音楽, Suno, ローファイ
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: You're Still Shining. @ https://youtu.be/rOjN7tVcsrI | I'm Glad You're Here. @ https://youtu.be/jQswl5-uS-c
 ---
 
 *dear(you); vol.1* のアルバム企画書には、アルバムをひとつにまとめる4つの仕掛けが挙げられています。ひとつ目は、全曲の最後の一行 *ipe. be still*。ふたつ目が「ブリッジ・リフレイン」です。3つ目はコーラスでタイトルの文を繰り返すこと、4つ目は「大丈夫」「ゆっくり」「十分」のような言葉を共有することです。今日の主題はふたつ目です。企画書によると、トラック04 "You're Still Shining." とトラック07 "I'm Glad You're Here." のブリッジには、英語と韓国語をそろえた同じ一文が入っています。この記事では、その一文が2曲でどのように同じで、どこから違い始めるのかを読みます。

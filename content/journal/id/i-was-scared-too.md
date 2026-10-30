@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: I Was Scared Too, 나도 무서웠어, dear(you);, idle(), ipe(), kecemasan pengembang, era AI, analisis lirik, musik AI, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
 Trek 03 dari *dear(you); vol.1*, "I Was Scared, Too." (judul Korea: 나도 무서웠어.), adalah salah satu lagu di album yang paling langsung berbicara tentang zamannya sendiri. Temanya adalah rasa takut yang dirasakan seorang pengembang di zaman ketika AI menulis kode, menulis dokumentasi, bahkan meninjaunya. Kami ingin menelusuri bagaimana lagu ini memperlakukan rasa takut itu, berpegang pada draf liriknya. Seperti biasa, apa yang benar-benar dinyanyikan dalam rekaman bisa lebih pendek daripada draf.

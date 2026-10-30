@@ -10,6 +10,7 @@ draft: false
 translation_of: en
 keywords: It's Okay to Rest a While, 잠깐 쉬어가도 돼, dear(you);, idle(), ipe(), istirahat, struktur album, analisis lirik, musik AI, Suno, lo-fi
 album: dear(you); vol.1 @ https://idle.ipe.rest/#album
+songs: It's Okay to Rest a While. @ https://youtu.be/N7FVtphBmBg
 ---
 
 ![Sepuluh lagu disusun dari kiri ke kanan menurut nama emosi dan tempo dalam dokumen desain lagu. Empat yang pertama adalah 01 empati 68 sampai 72, 02 pemahaman 70, 03 kecemasan 72, dan 04 penenangan 74. Lagu 05, istirahat, berada dalam kotak kuning pada 66 sampai 70. Lima yang terakhir adalah 06 keterhubungan 70, 07 rasa syukur 72, 08 pengakuan 68, 09 harapan 72, dan 10 kedamaian 64. Sebuah catatan menyebut bahwa tempo adalah nilai dokumen desain, bukan kesan mendengarkan](/assets/journal/rest-at-the-center/center-arc.jpg)
