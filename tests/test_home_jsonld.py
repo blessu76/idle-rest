@@ -19,8 +19,12 @@ def blocks(path):
 class HomeMusicJsonLd(unittest.TestCase):
     def setUp(self):
         data = blocks("index.html")
-        self.album = next(b for b in data if b.get("@type") == "MusicAlbum")
-        self.singles = next(b for b in data if b.get("@type") == "ItemList")
+        self.album = next((b for b in data if b.get("@type") == "MusicAlbum"), None)
+        self.singles = next((b for b in data if b.get("@type") == "ItemList"), None)
+        self.assertIsNotNone(self.album, "홈에 MusicAlbum JSON-LD 없음")
+        self.assertIsNotNone(self.singles, "홈에 싱글 ItemList JSON-LD 없음")
+        self.assertGreater(len(self.album["track"]), 0, "앨범 track 이 비어 있음")
+        self.assertGreater(len(self.singles["itemListElement"]), 0, "싱글 itemListElement 가 비어 있음")
         self.album_urls = [t["url"] for t in self.album["track"]]
         self.single_urls = [i["item"]["url"] for i in self.singles["itemListElement"]]
 
