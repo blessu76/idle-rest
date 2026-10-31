@@ -55,7 +55,7 @@ class BuildHome(unittest.TestCase):
             self.assertEqual(set(got), set(LANGS) | {"x-default"}, l)
             self.assertEqual(got["x-default"], "https://idle.ipe.rest/")
             self.assertTrue(all(got[x] == "https://idle.ipe.rest/%s/" % x for x in LANGS), l)
-            self.assertNotIn("?lang=", h.replace("get('lang')", "").replace("location.replace", ""), l)
+            self.assertNotIn("?lang=", h.replace("get('lang')", "").replace("location.replace", "").replace("ipe.rest/?lang=en", ""), l)
             self.assertEqual(h.count('rel="canonical"'), 1)
             self.assertNotIn("{{", h)
             self.assertIn('property="og:locale" content="', h)
@@ -84,13 +84,33 @@ class BuildHome(unittest.TestCase):
         h = self.page()
         self.assertIn('<link rel="canonical" href="https://idle.ipe.rest/">', h)
         self.assertIn('<html lang="en"', h)
-        self.assertIn('id="langHint" hidden', h)  # hint only: hidden until JS decides, never a redirect
-        self.assertNotIn('http-equiv="refresh"', h)
-        self.assertNotIn("langHint", self.page("ja").replace("lang-hint", ""))  # only the root has the hint
+        self.assertNotIn('http-equiv="refresh"', h)  # no server/meta redirect: the language rule runs in JS, crawlers see English
+        self.assertNotIn("langHint", h)
 
-    def test_legacy_query_redirect_script_everywhere(self):
-        for l in (None, "ko"):
-            self.assertIn("get('lang')", self.page(l))
+    def test_language_rule_script_root_only(self):
+        # ?lang=xx -> stored ipe_lang -> navigator.languages (ko-KR -> ko) -> stay on English; /xx/ pages never redirect
+        h = self.page()
+        self.assertEqual(h.count("location.replace("), 1)
+        self.assertIn("localStorage.getItem('ipe_lang')", h)
+        self.assertIn("navigator.languages", h)
+        self.assertIn(".split('-')[0]", h)
+        self.assertIn("pick !== 'en'", h)
+        self.assertIn('T = "/%s/"', h)
+        self.assertLess(h.index("localStorage.getItem('ipe_lang')"), h.index("navigator.languages"))
+        self.assertLess(h.index("get('lang')"), h.index("localStorage.getItem('ipe_lang')"))
+        for l in LANGS:
+            self.assertNotIn("location.replace(", self.page(l), l)
+
+    def test_ipe_rest_link_carries_language(self):
+        self.assertIn('href="https://ipe.rest/?lang=en"', self.page())
+        self.assertIn('href="https://ipe.rest/?lang=en"', self.page("en"))
+        for l in LANGS:
+            if l != "en":
+                self.assertIn('href="https://ipe.rest/%s/"' % l, self.page(l), l)
+                self.assertNotIn('href="https://ipe.rest/"', self.page(l), l)
+
+    def test_legacy_query_redirect_script_root(self):
+        self.assertIn("get('lang')", self.page())
 
     def test_journal_cards_per_language(self):
         ja = self.page("ja")

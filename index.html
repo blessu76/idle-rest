@@ -4,7 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <!-- Theme before first paint: stored choice wins, otherwise LIGHT (Davy 10-18). -->
-<script>(function(){try{var l=new URLSearchParams(location.search).get('lang');if(l&&/^(en|ko|ja|zh|es|fr|de|pt|ru|ar|hi|id)$/.test(l))location.replace('/'+l+'/'+location.hash);}catch(e){}})();</script>
+<script>
+(function () {
+  var T = "/%s/", L = ["en", "ko", "ja", "zh", "es", "fr", "de", "pt", "ru", "ar", "hi", "id"];
+  try {
+    var u = new URLSearchParams(location.search), q = u.get('lang'), pick = null;
+    var go = function (l) { u.delete('lang'); var qs = u.toString(); location.replace(T.replace('%s', l) + (qs ? '?' + qs : '') + location.hash); };
+    if (q) { if (L.indexOf(q) > -1) go(q); return; }
+    try { var s = localStorage.getItem('ipe_lang'); if (s && L.indexOf(s) > -1) pick = s; } catch (e) {}
+    if (!pick) { var list = navigator.languages || [navigator.language || '']; for (var i = 0; i < list.length && !pick; i++) { var c = String(list[i]).toLowerCase().split('-')[0]; if (L.indexOf(c) > -1) pick = c; } }
+    if (pick && pick !== 'en') go(pick);
+  } catch (e) {}
+})();
+</script>
 <script>
 (function () {
   var t = 'light';
@@ -217,7 +229,6 @@
 <!-- End Cloudflare Web Analytics -->
 </head>
 <body>
-<div class="lang-hint" id="langHint" hidden></div>
 <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
 <div class="band">
@@ -505,7 +516,7 @@
       <li><a href="/about/" data-i18n="nav_about">About</a></li>
       <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
       <li><a href="/privacy/" data-i18n="nav_privacy">Privacy Policy</a></li>
-      <li><a href="https://ipe.rest/" class="ltr">ipe.rest</a></li>
+      <li><a href="https://ipe.rest/?lang=en" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="footer-links footer-langs" aria-labelledby="langlabel">
       <li><a href="https://idle.ipe.rest/en/" hreflang="en" lang="en">English</a></li>
@@ -528,7 +539,7 @@
     </ul>
   </div>
   <div class="shell footer-bottom">
-    <span class="ltr">© 2026 <a href="https://ipe.rest/">ipe studio</a></span>
+    <span class="ltr">© 2026 <a href="https://ipe.rest/?lang=en">ipe studio</a></span>
     <span class="ltr">ipe(); // be still</span>
   </div>
 </footer>
@@ -612,21 +623,6 @@ if ('serviceWorker' in navigator) {
     try { localStorage.setItem('ipe_lang', this.value); } catch (e) {}
     location.href = '/' + this.value + '/';
   });
-  // root only: suggest (never force) the visitor's language — stored choice first, then the browser's list
-  var hint = document.getElementById('langHint');
-  var NAMES = {"en": "English", "ko": "한국어", "ja": "日本語", "zh": "简体中文", "es": "Español", "fr": "Français", "de": "Deutsch", "pt": "Português", "ru": "Русский", "ar": "العربية", "hi": "हिन्दी", "id": "Bahasa Indonesia"};
-  if (hint) {
-    var off = false; try { off = sessionStorage.getItem('ipe_hint_off') === '1'; } catch (e) {}
-    var pick = null, stored = null;
-    try { stored = localStorage.getItem('ipe_lang'); } catch (e) {}
-    if (stored && NAMES[stored]) pick = stored;
-    else { try { var list = navigator.languages || [navigator.language || '']; for (var i = 0; i < list.length && !pick; i++) { var c = String(list[i]).toLowerCase().split('-')[0]; if (NAMES[c]) pick = c; } } catch (e) {} }
-    if (pick && pick !== 'en' && !off) {
-      hint.innerHTML = '<a href="/' + pick + '/" hreflang="' + pick + '" lang="' + pick + '">' + NAMES[pick] + ' <span aria-hidden="true">→</span></a><button type="button" aria-label="×">×</button>';
-      hint.hidden = false;
-      hint.querySelector('button').addEventListener('click', function () { hint.hidden = true; try { sessionStorage.setItem('ipe_hint_off', '1'); } catch (e) {} });
-    }
-  }
 })();
 </script>
 <script>/* ipe-localtime v2 · 정본 ipe-rest/shared/ipe-localtime.js · 사본은 바이트 그대로 */

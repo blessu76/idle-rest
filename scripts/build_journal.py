@@ -445,6 +445,35 @@ def time_html(p):
     return '<time datetime="%s" data-ipe-time%s>%04d-%02d-%02d %s KST</time>' % (p["_pub"], ltr, p["_date"].year, p["_date"].month, p["_date"].day, p["time"])
 
 
+LANG_REDIRECT_JS = """<script>
+(function () {
+  var T = %s, L = %s;
+  try {
+    var u = new URLSearchParams(location.search), q = u.get('lang'), pick = null;
+    var go = function (l) { u.delete('lang'); var qs = u.toString(); location.replace(T.replace('%%s', l) + (qs ? '?' + qs : '') + location.hash); };
+    if (q) { if (L.indexOf(q) > -1) go(q); return; }
+    try { var s = localStorage.getItem('ipe_lang'); if (s && L.indexOf(s) > -1) pick = s; } catch (e) {}
+    if (!pick) { var list = navigator.languages || [navigator.language || '']; for (var i = 0; i < list.length && !pick; i++) { var c = String(list[i]).toLowerCase().split('-')[0]; if (L.indexOf(c) > -1) pick = c; } }
+    if (pick && pick !== 'en') go(pick);
+  } catch (e) {}
+})();
+</script>
+"""
+
+
+def ipe_href(lang):
+    """link to the company site carries the current language (site-wide rule): ipe.rest has /<lang>/ for every language but English,
+    whose root would re-detect the browser language — so English asks for it explicitly with ?lang=en."""
+    return "https://ipe.rest/?lang=en" if lang == "en" else "https://ipe.rest/%s/" % lang
+
+
+def lang_redirect(path_tpl, langs=None):
+    """head script for pages WITHOUT a language path (/, /about/ … and the /journal/ hub). Order = site-wide language rule:
+    ?lang=xx (explicit URL: go there, never overridden) -> stored ipe_lang -> navigator.languages (ko-KR -> ko) -> English (stay).
+    path_tpl has one %s for the language; langs = those that really have the target (default all 12). Targets are /xx/ pages that carry no such script, so it cannot loop."""
+    return LANG_REDIRECT_JS % (json.dumps(path_tpl), json.dumps(list(langs or LANGS)))
+
+
 def with_localtime(html):
     """pages that show a timed <time data-ipe-time> get the shared script inlined (byte for byte) before </body>."""
     if "data-ipe-time" not in html:
@@ -453,7 +482,7 @@ def with_localtime(html):
     return html[:i] + "<script>" + LOCALTIME_JS + "</script>\n" + html[i:]
 
 
-def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK):
+def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/journal/*.md and rebuild", image=None, alternates="", locales=(), gen=GEN_MARK, redirect=None):
     image = image or SITE + "/og-image.png"
     robots = "noindex, follow" if noindex else ROBOTS_INDEX
     return f"""<!DOCTYPE html>
@@ -462,7 +491,7 @@ def head(title, desc, canonical, lang, noindex, extra="", hint="edit content/jou
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <!-- {gen} — do not hand-edit; {hint} -->
-<script>
+{redirect or ""}<script>
 (function () {{
   var t = 'light';
   try {{ if (localStorage.getItem('idle-theme') === 'dark') t = 'dark'; }} catch (e) {{}}
@@ -563,7 +592,7 @@ def footer(lang, default=False):
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
       <li><a href="{pre}/privacy/">{esc(t['privacy'])}</a></li>
-      <li><a href="https://ipe.rest/" class="ltr">ipe.rest</a></li>
+      <li><a href="{ipe_href(lang)}" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
       <li><a href="https://www.youtube.com/@ipe-rest" rel="noopener">YouTube</a></li>
@@ -572,7 +601,7 @@ def footer(lang, default=False):
     </ul>
   </div>
   <div class="shell footer-bottom">
-    <span class="ltr">© 2026 <a href="https://ipe.rest/">ipe studio</a></span>
+    <span class="ltr">© 2026 <a href="{ipe_href(lang)}">ipe studio</a></span>
     <span class="ltr">ipe(); // be still</span>
   </div>
 </footer>
@@ -1019,7 +1048,8 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
     ai = (f'    <p class="ai-note"><span class="ai-badge">AI</span> {esc(t["ai_note"])}</p>\n' if lang and lang not in MAIN_LANGS else "")
     ttl = "%s%s — idle() · the music of ipe()" % (label, "" if lang else " (all languages)")  # x-default hub != /en/ title
     return (head(ttl, desc, url, loc, not posts,
-                 ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url, SITE + "/journal/" if not lang else None)), alternates=alts, locales=list(pages))
+                 ld(data) + ld(itemlist) + ld(breadcrumb(loc, None, url, SITE + "/journal/" if not lang else None)), alternates=alts, locales=list(pages),
+                 redirect=lang_redirect("/journal/%s/", list(pages)) if not lang and page == 1 else None)
             + header(loc, targets={l: lang_path(l) for l in pages}) + f"""<main id="main" class="shell">
   <div class="page-head">
     <h1>{esc(t['journal'])}</h1>

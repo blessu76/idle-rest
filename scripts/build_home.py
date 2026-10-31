@@ -33,26 +33,8 @@ NAV_SCRIPT = """<script>
     try { localStorage.setItem('ipe_lang', this.value); } catch (e) {}
     location.href = '/' + this.value + '/';
   });
-%s})();
+})();
 </script>"""
-HINT_JS = """  // root only: suggest (never force) the visitor's language — stored choice first, then the browser's list
-  var hint = document.getElementById('langHint');
-  var NAMES = %s;
-  if (hint) {
-    var off = false; try { off = sessionStorage.getItem('ipe_hint_off') === '1'; } catch (e) {}
-    var pick = null, stored = null;
-    try { stored = localStorage.getItem('ipe_lang'); } catch (e) {}
-    if (stored && NAMES[stored]) pick = stored;
-    else { try { var list = navigator.languages || [navigator.language || '']; for (var i = 0; i < list.length && !pick; i++) { var c = String(list[i]).toLowerCase().split('-')[0]; if (NAMES[c]) pick = c; } } catch (e) {} }
-    if (pick && pick !== 'en' && !off) {
-      hint.innerHTML = '<a href="/' + pick + '/" hreflang="' + pick + '" lang="' + pick + '">' + NAMES[pick] + ' <span aria-hidden="true">→</span></a><button type="button" aria-label="×">×</button>';
-      hint.hidden = false;
-      hint.querySelector('button').addEventListener('click', function () { hint.hidden = true; try { sessionStorage.setItem('ipe_hint_off', '1'); } catch (e) {} });
-    }
-  }
-"""
-LEGACY_JS = ("<script>(function(){try{var l=new URLSearchParams(location.search).get('lang');"
-             "if(l&&/^(%s)$/.test(l))location.replace('/'+l+'/'+location.hash);}catch(e){}})();</script>\n")
 
 
 def esc(s):
@@ -129,16 +111,14 @@ def render_page(tpl, strings, lang, root, posts):
                    "if(v!=null)el.setAttribute('aria-label',v);};</script>" % json.dumps({"lang": lang, "dict": page_dict}, ensure_ascii=False))
     lang_links = "\n".join('      <li><a href="%s" hreflang="%s" lang="%s"%s>%s</a></li>' % (
         lang_url(l), l, l, ' aria-current="true"' if l == lang and not root else "", esc(bj.LANGS[l]["name"])) for l in bj.LANGS)
-    names = json.dumps({l: bj.LANGS[l]["name"] for l in bj.LANGS}, ensure_ascii=False)
     subs = {
         "CSS_INLINE": css_inline(),
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
         "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT", "PRIVACY")},
         "HOW_HREF": "/journal/%s/how-a-song-gets-made/" % ("en" if root else lang), "FAQ_JSONLD": faq_jsonld(d),
-        "LEGACY_SCRIPT": LEGACY_JS % "|".join(bj.LANGS), "PAGE_SCRIPT": page_script,
-        "LANG_HINT": '<div class="lang-hint" id="langHint" hidden></div>\n' if root else "",
-        "NAV_SCRIPT": NAV_SCRIPT % (HINT_JS % names if root else ""),
+        "LEGACY_SCRIPT": bj.lang_redirect("/%s/") if root else "", "PAGE_SCRIPT": page_script,
+        "NAV_SCRIPT": NAV_SCRIPT, "IPE_HREF": bj.ipe_href(lang),
         "meta_title": esc(d["meta_title_root"] if root and "meta_title_root" in d else d["meta_title"]),
         "meta_desc": esc(d["meta_desc_root"] if root and "meta_desc_root" in d else d["meta_desc"]),
     }

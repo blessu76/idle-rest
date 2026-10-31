@@ -152,14 +152,14 @@ class Pages(Built):
             grid = re.search(r'<ul class="lang-grid">(.*?)</ul>', h, re.S).group(1)
             self.assertEqual(re.findall(r'<a class="lang-card" href="([^"]+)" hreflang="([^"]+)"', grid),
                              [("/%s/%s/" % (l, slug), l) for l in LANGS])  # plain links, visible without JS
-            self.assertIn("location.replace('/' + q + '/' + SLUG + '/'", h)  # old ?lang=xx
-            self.assertEqual(h.count("location.replace("), 1)  # nothing else redirects: the browser language is only suggested
-            self.assertIn('id="langHint" hidden', h)
-            self.assertIn("ipe_hint_off", h)
-            self.assertNotIn("NAMES[q]", h)  # ?lang=constructor must not match an Object.prototype key
-            self.assertIn("hasOwnProperty.call(NAMES, q)", h)
+            self.assertIn('T = "/%%s/%s/"' % slug, h)  # target keeps the slug
+            self.assertEqual(h.count("location.replace("), 1)
+            self.assertIn("get('lang')", h)  # ?lang=xx first, then stored ipe_lang, then navigator.languages
+            self.assertLess(h.index("localStorage.getItem('ipe_lang')"), h.index("navigator.languages"))
+            self.assertIn("L.indexOf(q) > -1", h)  # ?lang=constructor must not match an Object.prototype key
+            self.assertNotIn("langHint", h)
         for lang in LANGS:
-            self.assertNotIn("langHint", self.page(lang, "about"))
+            self.assertNotIn("location.replace(", self.page(lang, "about"))  # URL language wins: /xx/ pages never redirect
 
     def test_generated_comment_names_build_pages(self):
         for slug in SLUGS:

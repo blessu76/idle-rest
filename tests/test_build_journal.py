@@ -141,6 +141,9 @@ class BuildJournal(Site):
         hub = self.read("journal/index.html")
         self.assertIn('hreflang="x-default" href="https://idle.ipe.rest/journal/"', hub)
         self.assertIn('href="/journal/ko/a/"', hub)
+        self.assertIn('T = "/journal/%s/"', hub)  # language-less hub follows the site language rule; language lists never redirect
+        self.assertNotIn("location.replace(", self.read("journal/ko/index.html"))
+        self.assertIn('href="https://ipe.rest/ko/"', self.read("journal/ko/index.html"))
         root = ET.parse(self.tmp / "sitemap.xml").getroot()
         ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9", "x": "http://www.w3.org/1999/xhtml",
               "i": "http://www.google.com/schemas/sitemap-image/1.1"}
