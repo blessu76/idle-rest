@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Ten Titles, Read as Sentences](https://idle.ipe.rest/journal/en/ten-titles-as-sentences/) — The ten titles of dear(you); vol.1 are full sentences. Read by tense, speaker and tone, they show where the album speaks of the past, now and tomorrow. (en, 2026-10-31)
 - [One Day, Four Albums: Laying Out Season 1](https://idle.ipe.rest/journal/en/one-day-in-four-albums/) — ipe() splits a developer's day into four Season 1 albums. Only the first, dear(you); vol.1, is out. What the plan says, and what is open. (en, 2026-10-31)
 - [82 Draft Lines, 15 Cues: What a Clip Keeps](https://idle.ipe.rest/journal/en/how-much-of-the-draft-reaches-the-screen/) — Track 3's lyric draft runs 82 lines per version; its English clip subtitle file holds 15 cues in 58 seconds. We count what the clip files keep and change. (en, 2026-10-30)
 - [still compiling — One Night, Two Languages](https://idle.ipe.rest/journal/en/still-compiling-one-night-two-languages/) — We lay the lyric draft of "still compiling", the first song of late_night.lofi, beside the entered lyrics of its two versions and follow its three // comments. (en, 2026-10-30)
@@ -110,6 +111,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [열 개의 제목을 문장으로 읽기](https://idle.ipe.rest/journal/ko/ten-titles-as-sentences/) — dear(you); vol.1의 열 곡 제목은 모두 완결된 문장입니다. 시제와 말하는 사람, 말투로 읽으면 앨범이 과거와 현재, 내일을 어디서 말하는지 보입니다. (ko, 2026-10-31)
 - [하루를 네 장의 앨범으로 — 시즌 1의 구성](https://idle.ipe.rest/journal/ko/one-day-in-four-albums/) — ipe() 시즌 1은 하루를 네 장의 앨범으로 나눕니다. 발매된 것은 첫 앨범뿐이며, 계획이 말하는 것과 열린 것을 정리했습니다. (ko, 2026-10-31)
 - [원고 82줄, 자막 15칸 — 클립이 남기는 것](https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/) — 3번 곡의 가사 원고는 버전마다 82줄인데, 영어 클립 자막 파일에는 58초 안에 15칸이 있습니다. 클립 파일이 무엇을 남기고 바꾸는지 세어 봅니다. (ko, 2026-10-30)
 - [still compiling — 하룻밤, 두 언어](https://idle.ipe.rest/journal/ko/still-compiling-one-night-two-languages/) — late_night.lofi의 첫 곡 「still compiling」의 가사 원안과 두 버전의 입력 가사를 나란히 읽고, 세 줄의 // 주석이 어디로 갔는지 확인합니다. (ko, 2026-10-30)
@@ -130,6 +132,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 日本語 (ja) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ja/
 
+- [十のタイトルを文として読む](https://idle.ipe.rest/journal/ja/ten-titles-as-sentences/) — dear(you); vol.1の十曲のタイトルはすべて完結した文です。時制、話し手、口調で読むと、アルバムが過去・現在・明日をどこで語るかが見えてきます。 (ja, 2026-10-31, AI translation)
 - [1日、4枚のアルバム — シーズン1の並べ方](https://idle.ipe.rest/journal/ja/one-day-in-four-albums/) — ipe() は開発者の1日をシーズン1の4枚のアルバムに分けています。リリース済みなのは最初の dear(you); vol.1 だけ。計画の内容と、まだ決まっていないことを整理します。 (ja, 2026-10-31, AI translation)
 - [下書き82行、字幕15カット — クリップの中身](https://idle.ipe.rest/journal/ja/how-much-of-the-draft-reaches-the-screen/) — 3曲目の歌詞の下書きは1バージョン82行、英語クリップの字幕ファイルは58秒に15カット。クリップのファイルに何が残り、何が変わるのかを数えます。 (ja, 2026-10-30, AI translation)
 - [still compiling — 一夜、二言語](https://idle.ipe.rest/journal/ja/still-compiling-one-night-two-languages/) — late_night.lofi の最初の曲「still compiling」の歌詞の下書きを、2つのバージョンに入力された歌詞と並べ、3つの // コメント行の行方を追います。 (ja, 2026-10-30, AI translation)
@@ -150,6 +153,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 简体中文 (zh) · AI translations of the originals · Index: https://idle.ipe.rest/journal/zh/
 
+- [把十个标题当作句子来读](https://idle.ipe.rest/journal/zh/ten-titles-as-sentences/) — dear(you); vol.1 的十首歌名都是完整的句子。按时态、说话人和语气来读，能看出专辑在哪里谈过去、现在和明天。 (zh, 2026-10-31, AI translation)
 - [一天,四张专辑 — 第一季的排布](https://idle.ipe.rest/journal/zh/one-day-in-four-albums/) — ipe() 把开发者的一天分成第一季的四张专辑,目前只有第一张 dear(you); vol.1 已发行。这里说明计划的内容,以及哪些还没有定。 (zh, 2026-10-31, AI translation)
 - [82行草稿,15条字幕:片段留下了什么](https://idle.ipe.rest/journal/zh/how-much-of-the-draft-reaches-the-screen/) — 第3首的歌词草稿每个版本有82行,而它的英文片段字幕文件在58秒内只有15条字幕。我们来数一数片段文件保留了什么、改动了什么。 (zh, 2026-10-30, AI translation)
 - [still compiling — 一夜,两种语言](https://idle.ipe.rest/journal/zh/still-compiling-one-night-two-languages/) — 我们把 late_night.lofi 的第一首歌《still compiling》的歌词草稿,与两个版本实际输入的歌词并排对照,追踪草稿中三行 // 注释的去向。 (zh, 2026-10-30, AI translation)
@@ -170,6 +174,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Español (es) · AI translations of the originals · Index: https://idle.ipe.rest/journal/es/
 
+- [Diez títulos leídos como frases](https://idle.ipe.rest/journal/es/ten-titles-as-sentences/) — Los diez títulos de dear(you); vol.1 son frases completas. Leídos por tiempo, hablante y tono, muestran dónde el álbum habla del pasado, hoy y mañana. (es, 2026-10-31, AI translation)
 - [Un día, cuatro álbumes: cómo se organiza la Temporada 1](https://idle.ipe.rest/journal/es/one-day-in-four-albums/) — ipe() divide el día de un desarrollador en cuatro álbumes de la Temporada 1. Solo el primero, dear(you); vol.1, está publicado. Qué dice el plan y qué sigue abierto. (es, 2026-10-31, AI translation)
 - [82 líneas, 15 cues: lo que guarda un clip](https://idle.ipe.rest/journal/es/how-much-of-the-draft-reaches-the-screen/) — El borrador de la pista 3 tiene 82 líneas por versión; el subtítulo en inglés de su clip, 15 cues en 58 segundos. Contamos qué conservan los clips. (es, 2026-10-30, AI translation)
 - [still compiling — Una noche, dos idiomas](https://idle.ipe.rest/journal/es/still-compiling-one-night-two-languages/) — Ponemos el borrador de "still compiling", primera canción de late_night.lofi, junto a las letras de sus dos versiones y seguimos sus tres comentarios //. (es, 2026-10-30, AI translation)
@@ -190,6 +195,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Français (fr) · AI translations of the originals · Index: https://idle.ipe.rest/journal/fr/
 
+- [Dix titres lus comme des phrases](https://idle.ipe.rest/journal/fr/ten-titles-as-sentences/) — Les dix titres de dear(you); vol.1 sont des phrases entières. Lus par temps, locuteur et ton, ils montrent où l'album parle d'hier, d'aujourd'hui et de demain. (fr, 2026-10-31, AI translation)
 - [Un jour, quatre albums : l'agencement de la Saison 1](https://idle.ipe.rest/journal/fr/one-day-in-four-albums/) — ipe() découpe la journée d'un développeur en quatre albums de la Saison 1. Seul le premier, dear(you); vol.1, est sorti. Ce que dit le plan, et ce qui reste ouvert. (fr, 2026-10-31, AI translation)
 - [82 lignes, 15 cues : ce que garde un clip](https://idle.ipe.rest/journal/fr/how-much-of-the-draft-reaches-the-screen/) — Le brouillon du morceau 3 compte 82 lignes par version ; le sous-titre anglais de son clip, 15 cues en 58 secondes. On compte ce que les clips gardent. (fr, 2026-10-30, AI translation)
 - [still compiling — Une nuit, deux langues](https://idle.ipe.rest/journal/fr/still-compiling-one-night-two-languages/) — Nous comparons le brouillon de « still compiling », première chanson de late_night.lofi, aux paroles de ses deux versions et suivons ses 3 commentaires //. (fr, 2026-10-30, AI translation)
@@ -210,6 +216,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Deutsch (de) · AI translations of the originals · Index: https://idle.ipe.rest/journal/de/
 
+- [Zehn Titel, als Sätze gelesen](https://idle.ipe.rest/journal/de/ten-titles-as-sentences/) — Die zehn Titel von dear(you); vol.1 sind ganze Sätze. Nach Zeit, Sprecher und Ton gelesen zeigen sie, wo das Album von Gestern, Heute und Morgen spricht. (de, 2026-10-31, AI translation)
 - [Ein Tag, vier Alben: Wie Staffel 1 aufgebaut ist](https://idle.ipe.rest/journal/de/one-day-in-four-albums/) — ipe() teilt den Tag eines Entwicklers auf vier Alben der Staffel 1 auf. Nur das erste, dear(you); vol.1, ist erschienen. Was der Plan sagt und was offen ist. (de, 2026-10-31, AI translation)
 - [82 Zeilen, 15 Cues: Was ein Clip behält](https://idle.ipe.rest/journal/de/how-much-of-the-draft-reaches-the-screen/) — Der Textentwurf von Track 3 hat 82 Zeilen pro Version; die englische Untertiteldatei des Clips 15 Cues in 58 Sekunden. Wir zählen, was Clips behalten. (de, 2026-10-30, AI translation)
 - [still compiling — Eine Nacht, zwei Sprachen](https://idle.ipe.rest/journal/de/still-compiling-one-night-two-languages/) — Der Textentwurf von „still compiling“, dem ersten Song von late_night.lofi, neben den eingegebenen Texten beider Fassungen — und seine drei //-Kommentare. (de, 2026-10-30, AI translation)
@@ -230,6 +237,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Português (pt) · AI translations of the originals · Index: https://idle.ipe.rest/journal/pt/
 
+- [Dez títulos lidos como frases](https://idle.ipe.rest/journal/pt/ten-titles-as-sentences/) — Os dez títulos de dear(you); vol.1 são frases inteiras. Lidos por tempo verbal, quem fala e tom, mostram onde o álbum fala do passado, do presente e do amanhã. (pt, 2026-10-31, AI translation)
 - [Um dia, quatro álbuns: como a Temporada 1 está organizada](https://idle.ipe.rest/journal/pt/one-day-in-four-albums/) — O ipe() divide o dia de um desenvolvedor em quatro álbuns da Temporada 1. Só o primeiro, dear(you); vol.1, foi lançado. O que o plano diz e o que está em aberto. (pt, 2026-10-31, AI translation)
 - [82 linhas, 15 cues: o que um clipe guarda](https://idle.ipe.rest/journal/pt/how-much-of-the-draft-reaches-the-screen/) — O rascunho da faixa 3 tem 82 linhas por versão; as legendas em inglês do clipe têm 15 cues em 58 segundos. Contamos o que os clipes mantêm e mudam. (pt, 2026-10-30, AI translation)
 - [still compiling — Uma noite, dois idiomas](https://idle.ipe.rest/journal/pt/still-compiling-one-night-two-languages/) — O rascunho da letra de "still compiling", primeira canção de late_night.lofi, ao lado das letras das duas versões, e o destino de seus três comentários //. (pt, 2026-10-30, AI translation)
@@ -250,6 +258,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Русский (ru) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ru/
 
+- [Десять названий, прочитанных как фразы](https://idle.ipe.rest/journal/ru/ten-titles-as-sentences/) — Десять названий песен dear(you); vol.1 — законченные фразы. По времени, говорящему и тону видно, где альбом говорит о прошлом, настоящем и завтрашнем дне. (ru, 2026-10-31, AI translation)
 - [Один день, четыре альбома: как устроен Сезон 1](https://idle.ipe.rest/journal/ru/one-day-in-four-albums/) — ipe() делит день разработчика на четыре альбома Сезона 1. Вышел только первый, dear(you); vol.1. Что говорит план и что остаётся открытым. (ru, 2026-10-31, AI translation)
 - [82 строки, 15 реплик: что хранит клип](https://idle.ipe.rest/journal/ru/how-much-of-the-draft-reaches-the-screen/) — В черновике текста трека 3 по 82 строки на версию; в английском файле субтитров клипа 15 реплик за 58 секунд. Считаем, что файлы клипа сохраняют и что меняют. (ru, 2026-10-30, AI translation)
 - [still compiling — Одна ночь, два языка](https://idle.ipe.rest/journal/ru/still-compiling-one-night-two-languages/) — Кладём черновик текста «still compiling», первой песни late_night.lofi, рядом с введёнными текстами двух версий и прослеживаем его три комментария //. (ru, 2026-10-30, AI translation)
@@ -270,6 +279,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — العربية (ar) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ar/
 
+- [عشرة عناوين تُقرأ كجمل](https://idle.ipe.rest/journal/ar/ten-titles-as-sentences/) — عناوين أغاني dear(you); vol.1 العشرة جمل كاملة. تُقرأ بحسب الزمن والمتكلم والنبرة فتُظهر أين يتحدث الألبوم عن الماضي والحاضر والغد. (ar, 2026-10-31, AI translation)
 - [يوم واحد، أربعة ألبومات — ترتيب الموسم 1](https://idle.ipe.rest/journal/ar/one-day-in-four-albums/) — يقسّم ipe() يوم المطوّر إلى أربعة ألبومات في الموسم 1. الأول فقط، dear(you); vol.1، صدر. ما تقوله الخطة، وما بقي مفتوحًا. (ar, 2026-10-31, AI translation)
 - [82 سطرًا و15 ترجمة: ما يحتفظ به المقطع](https://idle.ipe.rest/journal/ar/how-much-of-the-draft-reaches-the-screen/) — مسودة كلمات الأغنية 3 فيها 82 سطرًا لكل نسخة، وملف الترجمة الإنجليزية لمقطعه فيه 15 ترجمة نصية في 58 ثانية. نعدّ ما تحتفظ به ملفات المقاطع وما تغيّره. (ar, 2026-10-30, AI translation)
 - [still compiling — ليلة واحدة، لغتان](https://idle.ipe.rest/journal/ar/still-compiling-one-night-two-languages/) — نضع مسودة كلمات "still compiling"، أولى أغاني late_night.lofi، بجانب كلمات نسختيها المُدخلتين، ونتتبّع أسطر تعليقاتها الثلاثة //. (ar, 2026-10-30, AI translation)
@@ -290,6 +300,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — हिन्दी (hi) · AI translations of the originals · Index: https://idle.ipe.rest/journal/hi/
 
+- [दस शीर्षक, वाक्यों की तरह पढ़े गए](https://idle.ipe.rest/journal/hi/ten-titles-as-sentences/) — dear(you); vol.1 के दस गीत-शीर्षक पूरे वाक्य हैं। काल, बोलने वाले और लहजे से पढ़ें तो दिखता है कि एल्बम अतीत, वर्तमान और कल की बात कहाँ करता है। (hi, 2026-10-31, AI translation)
 - [एक दिन, चार एल्बम — सीज़न 1 की रूपरेखा](https://idle.ipe.rest/journal/hi/one-day-in-four-albums/) — ipe() एक डेवलपर के दिन को सीज़न 1 के चार एल्बमों में बाँटता है। अभी सिर्फ़ पहला, dear(you); vol.1, रिलीज़ हुआ है। योजना क्या कहती है, और क्या खुला है। (hi, 2026-10-31, AI translation)
 - [82 पंक्तियाँ, 15 क्यू: क्लिप क्या रखती है](https://idle.ipe.rest/journal/hi/how-much-of-the-draft-reaches-the-screen/) — ट्रैक 3 के ड्राफ़्ट में हर संस्करण की 82 पंक्तियाँ हैं; उसकी अंग्रेज़ी क्लिप के सबटाइटल में 58 सेकंड में 15 क्यू। हम गिनते हैं कि क्लिप क्या रखती है। (hi, 2026-10-30, AI translation)
 - [still compiling — एक रात, दो भाषाएँ](https://idle.ipe.rest/journal/hi/still-compiling-one-night-two-languages/) — late_night.lofi के पहले गीत "still compiling" के लिरिक ड्राफ़्ट को हम उसके दोनों संस्करणों के दर्ज बोलों के साथ रखकर पढ़ते हैं और तीन // कमेंट देखते हैं। (hi, 2026-10-30, AI translation)
@@ -310,6 +321,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Bahasa Indonesia (id) · AI translations of the originals · Index: https://idle.ipe.rest/journal/id/
 
+- [Sepuluh Judul, Dibaca sebagai Kalimat](https://idle.ipe.rest/journal/id/ten-titles-as-sentences/) — Sepuluh judul dear(you); vol.1 adalah kalimat utuh. Dibaca lewat kala, pembicara, dan nada, judul itu menunjukkan kapan album bicara soal lalu, kini, dan esok. (id, 2026-10-31, AI translation)
 - [Satu Hari, Empat Album — Tata Letak Musim 1](https://idle.ipe.rest/journal/id/one-day-in-four-albums/) — ipe() membagi satu hari seorang developer ke dalam empat album Musim 1. Baru yang pertama, dear(you); vol.1, yang rilis. Apa kata rencananya, dan apa yang masih terbuka. (id, 2026-10-31, AI translation)
 - [82 Baris, 15 Cue: Isi Sebuah Klip](https://idle.ipe.rest/journal/id/how-much-of-the-draft-reaches-the-screen/) — Draf lirik trek 3 berisi 82 baris per versi; subtitle klip bahasa Inggrisnya 15 cue dalam 58 detik. Kami menghitung apa yang disimpan dan diubah klip. (id, 2026-10-30, AI translation)
 - [still compiling — Satu Malam, Dua Bahasa](https://idle.ipe.rest/journal/id/still-compiling-one-night-two-languages/) — Draf lirik "still compiling", lagu pertama late_night.lofi, kami baca bersama lirik kedua versinya dan tiga komentar // di dalamnya. (id, 2026-10-30, AI translation)

@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 10:35:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 14:47:00 +0900</lastBuildDate>
+    <item>
+      <title>열 개의 제목을 문장으로 읽기</title>
+      <link>https://idle.ipe.rest/journal/ko/ten-titles-as-sentences/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/ten-titles-as-sentences/</guid>
+      <pubDate>Sat, 31 Oct 2026 14:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 열 곡 제목은 모두 완결된 문장입니다. 시제와 말하는 사람, 말투로 읽으면 앨범이 과거와 현재, 내일을 어디서 말하는지 보입니다.</description>
+    </item>
+    <item>
+      <title>Ten Titles, Read as Sentences</title>
+      <link>https://idle.ipe.rest/journal/en/ten-titles-as-sentences/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/ten-titles-as-sentences/</guid>
+      <pubDate>Sat, 31 Oct 2026 14:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The ten titles of dear(you); vol.1 are full sentences. Read by tense, speaker and tone, they show where the album speaks of the past, now and tomorrow.</description>
+    </item>
     <item>
       <title>하루를 네 장의 앨범으로 — 시즌 1의 구성</title>
       <link>https://idle.ipe.rest/journal/ko/one-day-in-four-albums/</link>
