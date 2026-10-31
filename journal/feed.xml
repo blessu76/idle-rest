@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 14:47:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 10:27:00 +0900</lastBuildDate>
+    <item>
+      <title>말해 보라고 하고, 대답은 안 해도 된다고 — 듣는 노래 02번을 읽기</title>
+      <link>https://idle.ipe.rest/journal/ko/tell-me-you-dont-have-to-answer/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/tell-me-you-dont-have-to-answer/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:27:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 두 번째 곡은 질문을 한 번만 던지고, 후렴에서 대답하지 않아도 괜찮다고 말합니다. 가사지에서 질문과 허락의 문장이 놓인 자리를 세어 읽었습니다.</description>
+    </item>
+    <item>
+      <title>Tell Me, and You Needn&#x27;t Answer</title>
+      <link>https://idle.ipe.rest/journal/en/tell-me-you-dont-have-to-answer/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/tell-me-you-dont-have-to-answer/</guid>
+      <pubDate>Sun, 01 Nov 2026 10:27:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The second song of dear(you); vol.1 asks one question, then says in the chorus you needn&#x27;t answer. We count where questions and permissions sit in the lyrics.</description>
+    </item>
     <item>
       <title>열 개의 제목을 문장으로 읽기</title>
       <link>https://idle.ipe.rest/journal/ko/ten-titles-as-sentences/</link>
