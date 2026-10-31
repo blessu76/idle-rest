@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 14:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 10:35:00 +0900</lastBuildDate>
+    <item>
+      <title>하루를 네 장의 앨범으로 — 시즌 1의 구성</title>
+      <link>https://idle.ipe.rest/journal/ko/one-day-in-four-albums/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/one-day-in-four-albums/</guid>
+      <pubDate>Sat, 31 Oct 2026 10:35:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>ipe() 시즌 1은 하루를 네 장의 앨범으로 나눕니다. 발매된 것은 첫 앨범뿐이며, 계획이 말하는 것과 열린 것을 정리했습니다.</description>
+    </item>
+    <item>
+      <title>One Day, Four Albums: Laying Out Season 1</title>
+      <link>https://idle.ipe.rest/journal/en/one-day-in-four-albums/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/one-day-in-four-albums/</guid>
+      <pubDate>Sat, 31 Oct 2026 10:35:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>ipe() splits a developer&#x27;s day into four Season 1 albums. Only the first, dear(you); vol.1, is out. What the plan says, and what is open.</description>
+    </item>
     <item>
       <title>원고 82줄, 자막 15칸 — 클립이 남기는 것</title>
       <link>https://idle.ipe.rest/journal/ko/how-much-of-the-draft-reaches-the-screen/</link>
