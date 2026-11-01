@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Two Lists, One Day](https://idle.ipe.rest/journal/en/two-lists-one-day/) — The lyric sheet of "You Were Enough Today." holds two lists: what was left unfinished, and who smiled because of you. We count each and ask whose eyes wrote it. (en, 2026-11-01)
 - [Tell Me, and You Needn't Answer](https://idle.ipe.rest/journal/en/tell-me-you-dont-have-to-answer/) — The second song of dear(you); vol.1 asks one question, then says in the chorus you needn't answer. We count where questions and permissions sit in the lyrics. (en, 2026-11-01)
 - [Ten Titles, Read as Sentences](https://idle.ipe.rest/journal/en/ten-titles-as-sentences/) — The ten titles of dear(you); vol.1 are full sentences. Read by tense, speaker and tone, they show where the album speaks of the past, now and tomorrow. (en, 2026-10-31)
 - [One Day, Four Albums: Laying Out Season 1](https://idle.ipe.rest/journal/en/one-day-in-four-albums/) — ipe() splits a developer's day into four Season 1 albums. Only the first, dear(you); vol.1, is out. What the plan says, and what is open. (en, 2026-10-31)
@@ -112,6 +113,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [두 개의 목록, 하루 하나 — 오늘도 충분했어 읽기](https://idle.ipe.rest/journal/ko/two-lists-one-day/) — 「오늘도 충분했어.」의 가사지에는 끝내지 못한 일의 목록과 누군가 네 덕분에 웃은 목록, 두 개가 있습니다. 어느 쪽이 몇 줄이고 누구의 눈으로 적혔는지 셉니다. (ko, 2026-11-01)
 - [말해 보라고 하고, 대답은 안 해도 된다고 — 듣는 노래 02번을 읽기](https://idle.ipe.rest/journal/ko/tell-me-you-dont-have-to-answer/) — dear(you); vol.1의 두 번째 곡은 질문을 한 번만 던지고, 후렴에서 대답하지 않아도 괜찮다고 말합니다. 가사지에서 질문과 허락의 문장이 놓인 자리를 세어 읽었습니다. (ko, 2026-11-01)
 - [열 개의 제목을 문장으로 읽기](https://idle.ipe.rest/journal/ko/ten-titles-as-sentences/) — dear(you); vol.1의 열 곡 제목은 모두 완결된 문장입니다. 시제와 말하는 사람, 말투로 읽으면 앨범이 과거와 현재, 내일을 어디서 말하는지 보입니다. (ko, 2026-10-31)
 - [하루를 네 장의 앨범으로 — 시즌 1의 구성](https://idle.ipe.rest/journal/ko/one-day-in-four-albums/) — ipe() 시즌 1은 하루를 네 장의 앨범으로 나눕니다. 발매된 것은 첫 앨범뿐이며, 계획이 말하는 것과 열린 것을 정리했습니다. (ko, 2026-10-31)
@@ -134,6 +136,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 日本語 (ja) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ja/
 
+- [二つのリスト、ひとつの一日](https://idle.ipe.rest/journal/ja/two-lists-one-day/) — 「오늘도 충분했어.」の歌詞シートには、終えられなかったことと、あなたのおかげで誰かが笑ったこと、二つのリストがあります。何行で誰の目で書かれたかを数えます。 (ja, 2026-11-01, AI translation)
 - [話してみて、答えなくてもいい](https://idle.ipe.rest/journal/ja/tell-me-you-dont-have-to-answer/) — dear(you); vol.1の二曲目は、問いかけを一度だけ投げ、サビで「答えなくてもいい」と言います。歌詞シートで問いと許しの文がどこにあるかを数えました。 (ja, 2026-11-01, AI translation)
 - [十のタイトルを文として読む](https://idle.ipe.rest/journal/ja/ten-titles-as-sentences/) — dear(you); vol.1の十曲のタイトルはすべて完結した文です。時制、話し手、口調で読むと、アルバムが過去・現在・明日をどこで語るかが見えてきます。 (ja, 2026-10-31, AI translation)
 - [1日、4枚のアルバム — シーズン1の並べ方](https://idle.ipe.rest/journal/ja/one-day-in-four-albums/) — ipe() は開発者の1日をシーズン1の4枚のアルバムに分けています。リリース済みなのは最初の dear(you); vol.1 だけ。計画の内容と、まだ決まっていないことを整理します。 (ja, 2026-10-31, AI translation)
@@ -156,6 +159,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 简体中文 (zh) · AI translations of the originals · Index: https://idle.ipe.rest/journal/zh/
 
+- [两份清单,同一天](https://idle.ipe.rest/journal/zh/two-lists-one-day/) — 《오늘도 충분했어.》的歌词页里有两份清单:没做完的事,和因为你而微笑的人。我们数一数各有几行、是谁的眼睛写下的。 (zh, 2026-11-01, AI translation)
 - [先说说看,不回答也可以](https://idle.ipe.rest/journal/zh/tell-me-you-dont-have-to-answer/) — dear(you); vol.1的第二首歌只问了一次问题,副歌里还说不必回答。我们在歌词表里数了问句和允许的句子分别在哪里。 (zh, 2026-11-01, AI translation)
 - [把十个标题当作句子来读](https://idle.ipe.rest/journal/zh/ten-titles-as-sentences/) — dear(you); vol.1 的十首歌名都是完整的句子。按时态、说话人和语气来读，能看出专辑在哪里谈过去、现在和明天。 (zh, 2026-10-31, AI translation)
 - [一天,四张专辑 — 第一季的排布](https://idle.ipe.rest/journal/zh/one-day-in-four-albums/) — ipe() 把开发者的一天分成第一季的四张专辑,目前只有第一张 dear(you); vol.1 已发行。这里说明计划的内容,以及哪些还没有定。 (zh, 2026-10-31, AI translation)
@@ -178,6 +182,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Español (es) · AI translations of the originals · Index: https://idle.ipe.rest/journal/es/
 
+- [Dos listas, un solo día](https://idle.ipe.rest/journal/es/two-lists-one-day/) — La letra de "You Were Enough Today." tiene dos listas: lo que quedó sin hacer y quién sonrió gracias a ti. Contamos cada una y de quién son los ojos. (es, 2026-11-01, AI translation)
 - [Cuéntame, y no hace falta responder](https://idle.ipe.rest/journal/es/tell-me-you-dont-have-to-answer/) — La segunda canción de dear(you); vol.1 pregunta una vez y en el estribillo dice que no hace falta responder. Contamos dónde están preguntas y permisos. (es, 2026-11-01, AI translation)
 - [Diez títulos leídos como frases](https://idle.ipe.rest/journal/es/ten-titles-as-sentences/) — Los diez títulos de dear(you); vol.1 son frases completas. Leídos por tiempo, hablante y tono, muestran dónde el álbum habla del pasado, hoy y mañana. (es, 2026-10-31, AI translation)
 - [Un día, cuatro álbumes: cómo se organiza la Temporada 1](https://idle.ipe.rest/journal/es/one-day-in-four-albums/) — ipe() divide el día de un desarrollador en cuatro álbumes de la Temporada 1. Solo el primero, dear(you); vol.1, está publicado. Qué dice el plan y qué sigue abierto. (es, 2026-10-31, AI translation)
@@ -200,6 +205,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Français (fr) · AI translations of the originals · Index: https://idle.ipe.rest/journal/fr/
 
+- [Deux listes, une seule journée](https://idle.ipe.rest/journal/fr/two-lists-one-day/) — Les paroles de "You Were Enough Today." contiennent deux listes : le reste à faire et qui a souri grâce à toi. On compte chacune, puis on voit par quels yeux. (fr, 2026-11-01, AI translation)
 - [Dis-moi, et tu n'as pas à répondre](https://idle.ipe.rest/journal/fr/tell-me-you-dont-have-to-answer/) — La deuxième chanson de dear(you); vol.1 pose une seule question, puis dit au refrain qu'on n'a pas à répondre. On compte où sont questions et permissions. (fr, 2026-11-01, AI translation)
 - [Dix titres lus comme des phrases](https://idle.ipe.rest/journal/fr/ten-titles-as-sentences/) — Les dix titres de dear(you); vol.1 sont des phrases entières. Lus par temps, locuteur et ton, ils montrent où l'album parle d'hier, d'aujourd'hui et de demain. (fr, 2026-10-31, AI translation)
 - [Un jour, quatre albums : l'agencement de la Saison 1](https://idle.ipe.rest/journal/fr/one-day-in-four-albums/) — ipe() découpe la journée d'un développeur en quatre albums de la Saison 1. Seul le premier, dear(you); vol.1, est sorti. Ce que dit le plan, et ce qui reste ouvert. (fr, 2026-10-31, AI translation)
@@ -222,6 +228,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Deutsch (de) · AI translations of the originals · Index: https://idle.ipe.rest/journal/de/
 
+- [Zwei Listen, ein Tag](https://idle.ipe.rest/journal/de/two-lists-one-day/) — Der Liedtext von "You Were Enough Today." enthält zwei Listen: was unfertig blieb und wer deinetwegen lächelte. Wir zählen beide und fragen, durch wessen Augen. (de, 2026-11-01, AI translation)
 - [Erzähl, und du musst nicht antworten](https://idle.ipe.rest/journal/de/tell-me-you-dont-have-to-answer/) — Das zweite Lied von dear(you); vol.1 fragt nur einmal und sagt im Refrain, du musst nicht antworten. Wir zählen, wo Fragen und Erlaubnisse stehen. (de, 2026-11-01, AI translation)
 - [Zehn Titel, als Sätze gelesen](https://idle.ipe.rest/journal/de/ten-titles-as-sentences/) — Die zehn Titel von dear(you); vol.1 sind ganze Sätze. Nach Zeit, Sprecher und Ton gelesen zeigen sie, wo das Album von Gestern, Heute und Morgen spricht. (de, 2026-10-31, AI translation)
 - [Ein Tag, vier Alben: Wie Staffel 1 aufgebaut ist](https://idle.ipe.rest/journal/de/one-day-in-four-albums/) — ipe() teilt den Tag eines Entwicklers auf vier Alben der Staffel 1 auf. Nur das erste, dear(you); vol.1, ist erschienen. Was der Plan sagt und was offen ist. (de, 2026-10-31, AI translation)
@@ -244,6 +251,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Português (pt) · AI translations of the originals · Index: https://idle.ipe.rest/journal/pt/
 
+- [Duas listas, um só dia](https://idle.ipe.rest/journal/pt/two-lists-one-day/) — A letra de "You Were Enough Today." tem duas listas: o que ficou por fazer e quem sorriu por sua causa. Contamos cada uma e vemos por quais olhos nasceram. (pt, 2026-11-01, AI translation)
 - [Conte-me, e você não precisa responder](https://idle.ipe.rest/journal/pt/tell-me-you-dont-have-to-answer/) — A segunda canção de dear(you); vol.1 faz uma só pergunta e diz no refrão que não é preciso responder. Contamos onde estão perguntas e permissões. (pt, 2026-11-01, AI translation)
 - [Dez títulos lidos como frases](https://idle.ipe.rest/journal/pt/ten-titles-as-sentences/) — Os dez títulos de dear(you); vol.1 são frases inteiras. Lidos por tempo verbal, quem fala e tom, mostram onde o álbum fala do passado, do presente e do amanhã. (pt, 2026-10-31, AI translation)
 - [Um dia, quatro álbuns: como a Temporada 1 está organizada](https://idle.ipe.rest/journal/pt/one-day-in-four-albums/) — O ipe() divide o dia de um desenvolvedor em quatro álbuns da Temporada 1. Só o primeiro, dear(you); vol.1, foi lançado. O que o plano diz e o que está em aberto. (pt, 2026-10-31, AI translation)
@@ -266,6 +274,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Русский (ru) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ru/
 
+- [Два списка, один день](https://idle.ipe.rest/journal/ru/two-lists-one-day/) — В тексте «You Were Enough Today.» два списка: что осталось несделанным и кто улыбнулся благодаря тебе. Считаем каждый и смотрим, чьими глазами он написан. (ru, 2026-11-01, AI translation)
 - [Расскажи, а отвечать не обязательно](https://idle.ipe.rest/journal/ru/tell-me-you-dont-have-to-answer/) — Вторая песня dear(you); vol.1 задаёт всего один вопрос, а в припеве говорит, что отвечать не нужно. Мы посчитали, где в текстах стоят вопросы и разрешения. (ru, 2026-11-01, AI translation)
 - [Десять названий, прочитанных как фразы](https://idle.ipe.rest/journal/ru/ten-titles-as-sentences/) — Десять названий песен dear(you); vol.1 — законченные фразы. По времени, говорящему и тону видно, где альбом говорит о прошлом, настоящем и завтрашнем дне. (ru, 2026-10-31, AI translation)
 - [Один день, четыре альбома: как устроен Сезон 1](https://idle.ipe.rest/journal/ru/one-day-in-four-albums/) — ipe() делит день разработчика на четыре альбома Сезона 1. Вышел только первый, dear(you); vol.1. Что говорит план и что остаётся открытым. (ru, 2026-10-31, AI translation)
@@ -288,6 +297,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — العربية (ar) · AI translations of the originals · Index: https://idle.ipe.rest/journal/ar/
 
+- [قائمتان في يوم واحد](https://idle.ipe.rest/journal/ar/two-lists-one-day/) — في كلمات «You Were Enough Today.» قائمتان: ما بقي دون إنجاز ومن ابتسم بسببك. نعدّ كلًّا منهما وننظر بعيني من كُتبت. (ar, 2026-11-01, AI translation)
 - [احكِ لي، ولا داعي لأن تجيب](https://idle.ipe.rest/journal/ar/tell-me-you-dont-have-to-answer/) — الأغنية الثانية في dear(you); vol.1 تطرح سؤالًا واحدًا فقط، ثم تقول في الكورس إنه لا داعي للإجابة. عددنا أين تقع الأسئلة وجمل السماح في كلمات الأغنية. (ar, 2026-11-01, AI translation)
 - [عشرة عناوين تُقرأ كجمل](https://idle.ipe.rest/journal/ar/ten-titles-as-sentences/) — عناوين أغاني dear(you); vol.1 العشرة جمل كاملة. تُقرأ بحسب الزمن والمتكلم والنبرة فتُظهر أين يتحدث الألبوم عن الماضي والحاضر والغد. (ar, 2026-10-31, AI translation)
 - [يوم واحد، أربعة ألبومات — ترتيب الموسم 1](https://idle.ipe.rest/journal/ar/one-day-in-four-albums/) — يقسّم ipe() يوم المطوّر إلى أربعة ألبومات في الموسم 1. الأول فقط، dear(you); vol.1، صدر. ما تقوله الخطة، وما بقي مفتوحًا. (ar, 2026-10-31, AI translation)
@@ -310,6 +320,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — हिन्दी (hi) · AI translations of the originals · Index: https://idle.ipe.rest/journal/hi/
 
+- [दो सूचियाँ, एक दिन](https://idle.ipe.rest/journal/hi/two-lists-one-day/) — "You Were Enough Today." के बोलों में दो सूचियाँ हैं: जो अधूरा रहा और जो तुम्हारी वजह से मुस्कुराया। हम दोनों गिनते हैं और देखते हैं कि किसकी नज़र से लिखी गईं। (hi, 2026-11-01, AI translation)
 - [बताओ, और जवाब देना ज़रूरी नहीं](https://idle.ipe.rest/journal/hi/tell-me-you-dont-have-to-answer/) — dear(you); vol.1 का दूसरा गीत सिर्फ़ एक सवाल पूछता है और कोरस में कहता है कि जवाब देना ज़रूरी नहीं। हमने गिना कि बोलों में सवाल और इजाज़त वाले वाक्य कहाँ हैं। (hi, 2026-11-01, AI translation)
 - [दस शीर्षक, वाक्यों की तरह पढ़े गए](https://idle.ipe.rest/journal/hi/ten-titles-as-sentences/) — dear(you); vol.1 के दस गीत-शीर्षक पूरे वाक्य हैं। काल, बोलने वाले और लहजे से पढ़ें तो दिखता है कि एल्बम अतीत, वर्तमान और कल की बात कहाँ करता है। (hi, 2026-10-31, AI translation)
 - [एक दिन, चार एल्बम — सीज़न 1 की रूपरेखा](https://idle.ipe.rest/journal/hi/one-day-in-four-albums/) — ipe() एक डेवलपर के दिन को सीज़न 1 के चार एल्बमों में बाँटता है। अभी सिर्फ़ पहला, dear(you); vol.1, रिलीज़ हुआ है। योजना क्या कहती है, और क्या खुला है। (hi, 2026-10-31, AI translation)
@@ -332,6 +343,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Bahasa Indonesia (id) · AI translations of the originals · Index: https://idle.ipe.rest/journal/id/
 
+- [Dua daftar, satu hari](https://idle.ipe.rest/journal/id/two-lists-one-day/) — Lirik "You Were Enough Today." memuat dua daftar: yang belum selesai dan siapa yang tersenyum karenamu. Kami hitung keduanya dan lihat lewat mata siapa. (id, 2026-11-01, AI translation)
 - [Ceritakan, dan Kamu Tak Perlu Menjawab](https://idle.ipe.rest/journal/id/tell-me-you-dont-have-to-answer/) — Lagu kedua dear(you); vol.1 bertanya sekali, lalu di refrain berkata tak perlu menjawab. Kami menghitung letak pertanyaan dan izin dalam lirik. (id, 2026-11-01, AI translation)
 - [Sepuluh Judul, Dibaca sebagai Kalimat](https://idle.ipe.rest/journal/id/ten-titles-as-sentences/) — Sepuluh judul dear(you); vol.1 adalah kalimat utuh. Dibaca lewat kala, pembicara, dan nada, judul itu menunjukkan kapan album bicara soal lalu, kini, dan esok. (id, 2026-10-31, AI translation)
 - [Satu Hari, Empat Album — Tata Letak Musim 1](https://idle.ipe.rest/journal/id/one-day-in-four-albums/) — ipe() membagi satu hari seorang developer ke dalam empat album Musim 1. Baru yang pertama, dear(you); vol.1, yang rilis. Apa kata rencananya, dan apa yang masih terbuka. (id, 2026-10-31, AI translation)
