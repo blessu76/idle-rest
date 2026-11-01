@@ -31,7 +31,7 @@ Das Prädikat von Titel und Refrain ist „warst genug“. Im koreanischen Blatt
 
 ## Das „mehr“ der Welt, das „mehr“ des Liedes
 
-Die Bridge schreibt, was die Welt sagt, als vier Forderungen: besser, schneller, mehr, perfekter. Das Lied antwortet: „Aber ich möchte, zumindest heute, etwas anderes sagen“, und fährt fort mit „Du darfst langsam kommen“, „Du darfst dich ein wenig ausruhen“, „So wie du bist, bist du ein wirklich guter Mensch“. Der letzte Refrain enthält zwei „mehr“, beide verneint: „Du musst nichts mehr beweisen“, „Du musst dich nicht mehr anstrengen“. Im koreanischen Blatt sind es 「더 증명하지 않아도 돼」 und 「더 애쓰지 않아도 돼」.
+Die Bridge schreibt, was die Welt sagt, als vier Forderungen: besser, schneller, mehr, perfekter. Das Lied antwortet: „Aber ich möchte, zumindest heute, etwas anderes sagen“, und fährt fort mit „Du darfst langsam kommen“, „Du darfst dich ein wenig ausruhen“, „So wie du bist, bist du ein wirklich guter Mensch“. Der letzte Refrain enthält zwei „mehr“, beide verneint: „Du musst nichts mehr beweisen“, „Du musst dich nicht noch mehr anstrengen“. Im koreanischen Blatt sind es 「더 증명하지 않아도 돼」 und 「더 애쓰지 않아도 돼」.
 
 ## Wo das Flüstern steht
 

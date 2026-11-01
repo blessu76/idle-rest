@@ -33,7 +33,7 @@ The predicate of the title and the chorus is "were enough." In the Korean sheet 
 
 ## The world's "more," the song's "more"
 
-The bridge writes what the world says as four demands: do better, faster, more, more perfectly. The song takes this up with "but I, for today at least, want to say something different," and goes on with "It's okay to come slowly," "It's okay to rest a little," and "just as you are, a truly good person." The final chorus has two "more"s and both are negated: "You don't have to prove anything more," "You don't have to try any harder." In the Korean sheet the same two are 「더 증명하지 않아도 돼」 and 「더 애쓰지 않아도 돼」.
+The bridge writes what the world says as four demands: do better, faster, more, more perfectly. The song takes this up with "but I, for today at least, want to say something different," and goes on with "It's okay to come slowly," "It's okay to rest a little," and "just as you are, a truly good person." The final chorus negates two things, and the Korean sheet has two "more"s (더), one in each: "You don't have to prove anything more," "You don't have to try any harder." In the Korean sheet the same two are 「더 증명하지 않아도 돼」 and 「더 애쓰지 않아도 돼」.
 
 ## Where the whispers sit
 
