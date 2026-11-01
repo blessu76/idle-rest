@@ -132,7 +132,7 @@ The rule has one exception. The last line of every song, "ipe. be still", is fix
 
 One more thing to note. In the Outro of the Korean version of track 10, the line right before "ipe. be still" is the English "Good night.", written without a whisper mark; in the English version it is the main language. It falls outside the rule that the opposite language goes in as a whisper, so it is not counted among the 29 above.
 
-The site's own description says that, since the dear(you); album, every track ends on this whispered line. The two songs released outside the album are not part of that count. In "still compiling" (N-001) the Outro section header reads "Outro — 속삭이듯" (whispered), and in "good morning, world" (U-001) the lyrics entered into Suno carry "(soft, almost whispered)" on the Intro. Neither follows the album's opposite-language whisper rule. The whisper in the opposite language is a design we can confirm for the ten songs of this album.
+The site's own description says that, since the dear(you); album, every track ends on this whispered line. The two songs released outside the album are not part of that count. In "still compiling" (N-001) the Outro section header reads "Outro — 속삭이듯" (whispered), and the lyrics entered into Suno mark the Outro (whispered) in the English version and (속삭이듯) in the Korean version; in "good morning, world" (U-001) the English version's lyrics entered into Suno carry "(soft, almost whispered)" on the Intro. Neither follows the album's opposite-language whisper rule. The whisper in the opposite language is a design we can confirm for the ten songs of this album.
 
 ## What is not on record
 

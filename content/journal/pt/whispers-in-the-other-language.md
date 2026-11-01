@@ -130,7 +130,7 @@ A regra tem uma exceção. A última linha de toda música, "ipe. be still", é 
 
 Mais uma coisa a registrar. No Outro da versão em coreano da faixa 10, a linha logo antes de "ipe. be still" é o inglês "Good night.", escrito sem marca de sussurro; na versão em inglês, essa é a língua principal. Ela fica fora da regra de que a língua oposta entra como sussurro, por isso não é contada entre os 29 acima.
 
-A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum não entram nessa conta de 29. Em "still compiling" (N-001), o cabeçalho da seção Outro diz "Outro — 속삭이듯" (sussurrando), e em "good morning, world" (U-001), a letra inserida no Suno traz "(soft, almost whispered)" no Intro. Nenhuma das duas segue a regra do álbum de sussurrar na língua oposta. O sussurro na língua oposta é uma escolha de projeto que podemos confirmar para as dez músicas deste álbum.
+A própria descrição do site diz que, desde o álbum dear(you);, toda faixa termina nessa linha sussurrada. As duas músicas lançadas fora do álbum não entram nessa conta de 29. Em "still compiling" (N-001), o cabeçalho da seção Outro diz "Outro — 속삭이듯" (sussurrando), e a letra inserida no Suno marca o Outro com (whispered) na versão em inglês e com (속삭이듯) na versão em coreano; em "good morning, world" (U-001), a letra da versão em inglês inserida no Suno traz "(soft, almost whispered)" no Intro. Nenhuma das duas segue a regra do álbum de sussurrar na língua oposta. O sussurro na língua oposta é uma escolha de projeto que podemos confirmar para as dez músicas deste álbum.
 
 ## O que não está registrado
 

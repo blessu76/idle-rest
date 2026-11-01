@@ -130,7 +130,7 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 
 还有一点需要留意。在曲目 10 韩文版的 Outro 中，紧挨 “ipe. be still” 之前的一行是英语 “Good night.”，没有低语标记；在英文版里它是主语言。它不在“相反的语言以低语放入”的规则之内，所以没有计入上面的 29 处。
 
-网站自己的介绍说，从 dear(you); 专辑开始，每一首歌都以这句低语的一行结尾。在专辑之外发行的两首歌不计入这 29 个低语。“still compiling”（N-001）的 Outro 段落标题带有“Outro — 속삭이듯”（低声地）的指示，“good morning, world”（U-001）输入 Suno 的歌词在 Intro 处标有 (soft, almost whispered)。不过，这两首歌的标记都与专辑“用相反语言低语”的规则不同。用相反的语言低语，是我们能够在这张专辑的十首歌中确认的设计。
+网站自己的介绍说，从 dear(you); 专辑开始，每一首歌都以这句低语的一行结尾。在专辑之外发行的两首歌不计入这 29 个低语。“still compiling”（N-001）的 Outro 段落标题是“Outro — 속삭이듯”（低声地），输入 Suno 的歌词在 Outro 处，英文版标有 (whispered)，韩文版标有 (속삭이듯)。“good morning, world”（U-001）的英文版 Suno 输入歌词在 Intro 处标有 (soft, almost whispered)。不过，这两首歌的标记都与专辑“用相反语言低语”的规则不同。用相反的语言低语，是我们能够在这张专辑的十首歌中确认的设计。
 
 ## 没有记录的事
 

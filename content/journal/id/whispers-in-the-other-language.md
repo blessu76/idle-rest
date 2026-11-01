@@ -130,7 +130,7 @@ Aturan ini punya satu pengecualian. Baris terakhir setiap lagu, "ipe. be still",
 
 Satu hal lagi yang perlu dicatat. Di Outro versi Korea trek 10, baris tepat sebelum "ipe. be still" adalah bahasa Inggris "Good night.", ditulis tanpa tanda bisikan; di versi Inggris itu bahasa utama. Baris ini berada di luar aturan bahwa bahasa sebaliknya masuk sebagai bisikan, sehingga tidak dihitung di antara 29 di atas.
 
-Deskripsi situs sendiri menyebutkan bahwa sejak album dear(you); setiap trek berakhir pada baris bisikan ini. Dua lagu yang dirilis di luar album tidak termasuk dalam 29 itu. Pada "still compiling" (N-001), judul bagian Outro berbunyi "Outro — 속삭이듯" (berbisik), dan pada "good morning, world" (U-001), lirik yang dimasukkan ke Suno membawa "(soft, almost whispered)" pada Intro. Keduanya tidak mengikuti aturan bisikan berbahasa sebaliknya di album ini. Bisikan dalam bahasa sebaliknya adalah rancangan yang dapat kami pastikan untuk kesepuluh lagu album ini.
+Deskripsi situs sendiri menyebutkan bahwa sejak album dear(you); setiap trek berakhir pada baris bisikan ini. Dua lagu yang dirilis di luar album tidak termasuk dalam 29 itu. Pada "still compiling" (N-001), judul bagian Outro berbunyi "Outro — 속삭이듯" (berbisik), dan lirik yang dimasukkan ke Suno menandai Outro dengan (whispered) pada versi bahasa Inggris dan (속삭이듯) pada versi bahasa Korea; pada "good morning, world" (U-001), lirik versi bahasa Inggris yang dimasukkan ke Suno membawa "(soft, almost whispered)" pada Intro. Keduanya tidak mengikuti aturan bisikan berbahasa sebaliknya di album ini. Bisikan dalam bahasa sebaliknya adalah rancangan yang dapat kami pastikan untuk kesepuluh lagu album ini.
 
 ## Yang tidak tercatat
 
