@@ -1,7 +1,7 @@
 ---
 title: 말해 보라고 하고, 대답은 안 해도 된다고 — 듣는 노래 02번을 읽기
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: ko
 description: dear(you); vol.1의 두 번째 곡은 질문을 한 번만 던지고, 후렴에서 대답하지 않아도 괜찮다고 말합니다. 가사지에서 질문과 허락의 문장이 놓인 자리를 세어 읽었습니다.

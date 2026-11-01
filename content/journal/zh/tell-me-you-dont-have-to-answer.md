@@ -1,7 +1,7 @@
 ---
 title: 先说说看,不回答也可以
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: zh
 description: dear(you); vol.1的第二首歌只问了一次问题,副歌里还说不必回答。我们在歌词表里数了问句和允许的句子分别在哪里。

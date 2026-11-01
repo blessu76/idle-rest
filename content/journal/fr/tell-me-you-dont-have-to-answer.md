@@ -1,7 +1,7 @@
 ---
 title: Dis-moi, et tu n'as pas à répondre
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: fr
 description: La deuxième chanson de dear(you); vol.1 pose une seule question, puis dit au refrain qu'on n'a pas à répondre. On compte où sont questions et permissions.

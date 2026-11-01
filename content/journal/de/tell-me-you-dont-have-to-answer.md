@@ -1,7 +1,7 @@
 ---
 title: Erzähl, und du musst nicht antworten
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: de
 description: Das zweite Lied von dear(you); vol.1 fragt nur einmal und sagt im Refrain, du musst nicht antworten. Wir zählen, wo Fragen und Erlaubnisse stehen.

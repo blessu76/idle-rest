@@ -1,7 +1,7 @@
 ---
 title: 話してみて、答えなくてもいい
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: ja
 description: dear(you); vol.1の二曲目は、問いかけを一度だけ投げ、サビで「答えなくてもいい」と言います。歌詞シートで問いと許しの文がどこにあるかを数えました。

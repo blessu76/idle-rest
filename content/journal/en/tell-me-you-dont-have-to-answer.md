@@ -1,7 +1,7 @@
 ---
 title: Tell Me, and You Needn't Answer
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: en
 translation_of: ko

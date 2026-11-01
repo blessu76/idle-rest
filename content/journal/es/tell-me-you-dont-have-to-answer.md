@@ -1,7 +1,7 @@
 ---
 title: Cuéntame, y no hace falta responder
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: es
 description: La segunda canción de dear(you); vol.1 pregunta una vez y en el estribillo dice que no hace falta responder. Contamos dónde están preguntas y permisos.

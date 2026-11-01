@@ -1,7 +1,7 @@
 ---
 title: Conte-me, e você não precisa responder
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: pt
 description: A segunda canção de dear(you); vol.1 faz uma só pergunta e diz no refrão que não é preciso responder. Contamos onde estão perguntas e permissões.

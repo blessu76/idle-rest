@@ -1,7 +1,7 @@
 ---
 title: Ceritakan, dan Kamu Tak Perlu Menjawab
 date: 2026-11-01
-time: "10:27"
+time: "10:24"
 slug: tell-me-you-dont-have-to-answer
 lang: id
 description: Lagu kedua dear(you); vol.1 bertanya sekali, lalu di refrain berkata tak perlu menjawab. Kami menghitung letak pertanyaan dan izin dalam lirik.
