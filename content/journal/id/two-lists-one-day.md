@@ -1,7 +1,7 @@
 ---
 title: Dua daftar, satu hari
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: id
 description: Lirik "You Were Enough Today." memuat dua daftar: yang belum selesai dan siapa yang tersenyum karenamu. Kami hitung keduanya dan lihat lewat mata siapa.

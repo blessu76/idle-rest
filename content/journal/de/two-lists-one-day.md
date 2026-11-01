@@ -1,7 +1,7 @@
 ---
 title: Zwei Listen, ein Tag
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: de
 description: Der Liedtext von "You Were Enough Today." enthält zwei Listen: was unfertig blieb und wer deinetwegen lächelte. Wir zählen beide und fragen, durch wessen Augen.

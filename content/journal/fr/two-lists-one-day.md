@@ -1,7 +1,7 @@
 ---
 title: Deux listes, une seule journée
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: fr
 description: Les paroles de "You Were Enough Today." contiennent deux listes : le reste à faire et qui a souri grâce à toi. On compte chacune, puis on voit par quels yeux.

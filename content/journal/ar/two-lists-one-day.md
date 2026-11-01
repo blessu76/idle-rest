@@ -1,7 +1,7 @@
 ---
 title: قائمتان في يوم واحد
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: ar
 description: في كلمات «You Were Enough Today.» قائمتان: ما بقي دون إنجاز ومن ابتسم بسببك. نعدّ كلًّا منهما وننظر بعيني من كُتبت.

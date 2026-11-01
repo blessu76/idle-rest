@@ -1,7 +1,7 @@
 ---
 title: Two Lists, One Day
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: en
 translation_of: ko

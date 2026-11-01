@@ -1,7 +1,7 @@
 ---
 title: 两份清单,同一天
 date: 2026-11-01
-time: "14:24"
+time: "14:41"
 slug: two-lists-one-day
 lang: zh
 description: 《오늘도 충분했어.》的歌词页里有两份清单:没做完的事,和因为你而微笑的人。我们数一数各有几行、是谁的眼睛写下的。
