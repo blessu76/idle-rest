@@ -1033,7 +1033,9 @@ def render_list(posts, lang=None, list_langs=("en",), page=1, counts=None):
     if page > 1:
         desc += " · %s %d" % (pw, page)
     desc = desc.rstrip(".")
-    for p in shown:  # fill the snippet toward 70–160 chars with this page's newest titles (whole titles only)
+    # fill the snippet toward 70–160 chars with this page's newest titles (whole titles only); a short last page
+    # (e.g. one post with a short CJK title) continues with the other posts of the list so it still reaches the minimum
+    for p in shown + [q for q in posts if q not in shown]:
         if len(desc) >= LIST_DESC_MIN:
             break
         if len(desc) + 3 + len(p["title"]) <= LIST_DESC_MAX:
