@@ -806,3 +806,45 @@ class SeoLintBodyLength(unittest.TestCase):
             self.assertEqual(r.returncode, 0, r.stderr)
             self.assertIn("body 280 words < 400", r.stderr)
             self.assertTrue((tmp / "journal/index.html").exists())
+
+
+class ListDescriptionFallback(unittest.TestCase):
+    """A short last list page (one post, short title) fills its meta description with other posts' titles of the same language."""
+
+    def setUp(self):
+        sys.path.insert(0, str(REPO / "scripts"))
+        import build_journal as bj
+        self.bj = bj
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+
+    def posts(self, n):
+        out = []
+        for i in range(n):
+            f = self.tmp / ("p%02d.md" % i)
+            f.write_text("---\ntitle: Post number %02d\ndate: 2026-10-%02d\nslug: p%02d\nlang: en\ndescription: d\ncategory: notes\n---\n\nbody\n" % (i, i + 1, i), encoding="utf-8")
+            out.append(self.bj.parse_post(f))
+        self.bj.assign_numbers(out)
+        return sorted(out, key=lambda p: p["_date"], reverse=True)
+
+    def desc(self, html):
+        return re.search(r'<meta name="description" content="([^"]*)"', html).group(1)
+
+    def test_short_last_page_uses_other_posts_titles(self):
+        posts = self.posts(self.bj.PER_PAGE + 1)
+        page2 = self.bj.render_list(posts, "en", ("en",), 2, {"en": 2})
+        d = self.desc(page2)
+        self.assertEqual(page2.count("<li "), 1)  # the one post on page 2 is listed
+        own, other = posts[-1]["title"], posts[0]["title"]  # page 2 shows only the oldest post; the newest sits on page 1
+        self.assertIn(own, d)  # this page's own title comes first...
+        self.assertIn(other, d)  # ...and the too-short description continues with a title from the other page
+        self.assertLess(d.index(own), d.index(other))
+        self.assertTrue(self.bj.LIST_DESC_MIN <= len(d) <= self.bj.LIST_DESC_MAX, len(d))
+        for t in re.findall(r"Post number \d+", d):  # whole titles only
+            self.assertEqual(len(t), len("Post number 00"))
+
+    def test_full_page_uses_its_own_titles_first(self):
+        posts = self.posts(self.bj.PER_PAGE + 1)
+        d = self.desc(self.bj.render_list(posts, "en", ("en",), 1, {"en": 2}))
+        self.assertIn(posts[0]["title"], d)
+        self.assertLessEqual(len(d), self.bj.LIST_DESC_MAX)
