@@ -42,7 +42,7 @@ Le mot 괜찮 (« ça va ») mérite le même regard. La racine apparaît six fo
 
 ## Je, tu, nous
 
-Les murmures mis à part, les paroles anglaises ont "I" cinq fois : "I'm okay." dans le Verse 1 (entre guillemets), "I… I wasn't alone after all." dans le Verse 2 et "I thought I was holding on alone" dans le pré-refrain (deux fois). "Me" apparaît une fois, dans "beside me". À partir du refrain, il n'y a plus ni "I" ni "me". Les paroles coréennes n'ont pas non plus de première personne du singulier après 「나…」 dans le Verse 2 et 「내 옆」 dans le pré-refrain. Après le refrain, c'est « tu », et le premier « nous » arrive au pont : "we lived through the same day, together" (en coréen, 「우리」). Deux « nous » de plus viennent dans le refrain final, et l'Outro s'achève sur "let's walk together."
+Les murmures mis à part, les paroles anglaises ont "I" cinq fois : "I'm okay." dans le Verse 1 (entre guillemets), "I… I wasn't alone after all." dans le Verse 2 et "I thought I was holding on alone" dans le pré-refrain (deux fois). "Me" apparaît une fois, dans "beside me". À partir du refrain, il n'y a plus ni "I" ni "me". Les paroles coréennes n'ont pas non plus de première personne du singulier après 「나…」 dans le Verse 2 et 「내 옆」 dans le pré-refrain. Après le refrain, c'est « tu », et le premier « nous » arrive au pont : "we lived through the same day, together" (en coréen, 「우리」). Deux « nous » de plus viennent dans le refrain final, et l'Outro, après "let's walk together.", s'éteint sur Slowly. / Little by little. / Together.
 
 ## « Seul » est toujours nié
 
@@ -50,7 +50,7 @@ Dans les paroles coréennes, 「혼자」 (« seul ») apparaît quatre fois, et
 
 ## Ce que montre la spécification sonore
 
-Le tempo est de 70 BPM et le genre Ambient Lo-fi · Emotional Chill. Le champ des instruments liste Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle et Soft Rain Texture. La version anglaise est une voix féminine douce et chaleureuse avec des murmures en coréen (「괜찮아…」, 「같이 있어…」) ; la version coréenne, une voix masculine chaleureuse avec des murmures en anglais ("It's okay...", "Stay with me..."). Le refrain final reçoit une harmonie du genre opposé, et les deux versions se terminent sur le murmure `ipe. be still`. Le champ du mixage indique Minimal Dynamics. Tout cela est la spécification demandée.
+Le tempo est de 70 BPM et le genre Ambient Lo-fi · Emotional Chill. Le champ des instruments liste Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle et Soft Rain Texture. La version anglaise est une voix féminine douce et chaleureuse avec des murmures en coréen (「괜찮아…」, 「같이 있어…」) ; la version coréenne, une voix masculine chaleureuse avec des murmures en anglais ("It's okay...", "Stay with me..."). Le refrain final reçoit une harmonie du genre opposé, et les deux versions se terminent sur le murmure `ipe. be still`. Le champ du mixage compte quatre entrées, dont l'une est Minimal Dynamics. Tout cela est la spécification demandée.
 
 ## Ce que nous n'affirmons pas
 

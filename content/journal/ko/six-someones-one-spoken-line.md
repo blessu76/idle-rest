@@ -43,7 +43,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## 나, 너, 우리
 
-속삭임을 빼고 본 줄 가운데, 영어 가사지의 "I"는 다섯 번입니다. 첫 절의 "I'm okay."(따옴표 안), 둘째 절의 "I… I wasn't alone after all.", 프리코러스의 "I thought I was holding on alone"(두 번). "me"는 "beside me" 하나입니다. 후렴부터는 "I"도 "me"도 없습니다. 한국어도 「나…」(둘째 절)와 「내 옆」(프리코러스) 뒤로는 일인칭 단수가 없습니다. 후렴 이후에는 "you"가 이어지고, 다리에서 처음 "we"가 나옵니다("we lived through the same day, together"). 한국어로는 「우리」입니다. 마지막 후렴에서 "we"가 두 번 더 나오고, 아웃트로는 "let's walk together."로 끝납니다.
+속삭임을 빼고 본 줄 가운데, 영어 가사지의 "I"는 다섯 번입니다. 첫 절의 "I'm okay."(따옴표 안), 둘째 절의 "I… I wasn't alone after all.", 프리코러스의 "I thought I was holding on alone"(두 번). "me"는 "beside me" 하나입니다. 후렴부터는 "I"도 "me"도 없습니다. 한국어도 「나…」(둘째 절)와 「내 옆」(프리코러스) 뒤로는 일인칭 단수가 없습니다. 후렴 이후에는 "you"가 이어지고, 다리에서 처음 "we"가 나옵니다("we lived through the same day, together"). 한국어로는 「우리」입니다. 마지막 후렴에서 "we"가 두 번 더 나오고, 아웃트로는 "let's walk together." 뒤에 Slowly. / Little by little. / Together.로 잦아듭니다.
 
 ## 「혼자」는 늘 부정으로
 
@@ -51,7 +51,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## 소리 사양에서 보이는 것
 
-템포는 70 BPM, 장르는 Ambient Lo-fi · Emotional Chill입니다. 악기 칸에는 Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle, Soft Rain Texture가 있습니다. 영어판은 감미로운 여성 보컬에 한국어 속삭임(「괜찮아…」, 「같이 있어…」), 한국어판은 다정한 남성 보컬에 영어 속삭임("It's okay...", "Stay with me...")입니다. 마지막 후렴에는 반대 성별의 하모니를 얹고, 두 버전 모두 끝은 속삭임 `ipe. be still`입니다. 믹스 칸은 Minimal Dynamics입니다. 모두 요청한 사양입니다.
+템포는 70 BPM, 장르는 Ambient Lo-fi · Emotional Chill입니다. 악기 칸에는 Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle, Soft Rain Texture가 있습니다. 영어판은 감미로운 여성 보컬에 한국어 속삭임(「괜찮아…」, 「같이 있어…」), 한국어판은 다정한 남성 보컬에 영어 속삭임("It's okay...", "Stay with me...")입니다. 마지막 후렴에는 반대 성별의 하모니를 얹고, 두 버전 모두 끝은 속삭임 `ipe. be still`입니다. 믹스 칸 네 항목 중 하나가 Minimal Dynamics입니다. 모두 요청한 사양입니다.
 
 ## 말하지 않는 것
 

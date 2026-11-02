@@ -44,7 +44,7 @@ The word 괜찮 ("okay") deserves the same look. The root appears six times in t
 
 ## I, you, we
 
-Setting the whispers aside, the English sheet has "I" five times: "I'm okay." in Verse 1 (inside the quotation marks), "I… I wasn't alone after all." in Verse 2, and "I thought I was holding on alone" in the pre-chorus (two). "Me" appears once, in "beside me." From the chorus on there is no "I" and no "me." The Korean sheet likewise has no first-person singular after 「나…」 in Verse 2 and 「내 옆」 in the pre-chorus. After the chorus it is "you," and the first "we" arrives in the bridge: "we lived through the same day, together" (Korean 「우리」). Two more "we"s come in the final chorus, and the outro ends with "let's walk together."
+Setting the whispers aside, the English sheet has "I" five times: "I'm okay." in Verse 1 (inside the quotation marks), "I… I wasn't alone after all." in Verse 2, and "I thought I was holding on alone" in the pre-chorus (two). "Me" appears once, in "beside me." From the chorus on there is no "I" and no "me." The Korean sheet likewise has no first-person singular after 「나…」 in Verse 2 and 「내 옆」 in the pre-chorus. After the chorus it is "you," and the first "we" arrives in the bridge: "we lived through the same day, together" (Korean 「우리」). Two more "we"s come in the final chorus, and the outro, after "let's walk together.", trails off into Slowly. / Little by little. / Together.
 
 ## "Alone" is always negated
 
@@ -52,7 +52,7 @@ In the Korean sheet 「혼자」 appears four times, and every time it is negate
 
 ## What the sound spec shows
 
-The tempo is 70 BPM and the genre is Ambient Lo-fi · Emotional Chill. The instrument field lists Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle and Soft Rain Texture. The English version is a sweet female vocal with Korean whispers (「괜찮아…」, 「같이 있어…」); the Korean version is a warm male vocal with English whispers ("It's okay...", "Stay with me..."). The final chorus gets a harmony from the opposite gender, and both versions end on the whisper `ipe. be still`. The mix field says Minimal Dynamics. All of this is the requested specification.
+The tempo is 70 BPM and the genre is Ambient Lo-fi · Emotional Chill. The instrument field lists Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle and Soft Rain Texture. The English version is a sweet female vocal with Korean whispers (「괜찮아…」, 「같이 있어…」); the Korean version is a warm male vocal with English whispers ("It's okay...", "Stay with me..."). The final chorus gets a harmony from the opposite gender, and both versions end on the whisper `ipe. be still`. The mix field has four entries, and one of them is Minimal Dynamics. All of this is the requested specification.
 
 ## What we are not claiming
 

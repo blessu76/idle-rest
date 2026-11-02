@@ -42,7 +42,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## Я, ты, мы
 
-Если оставить шёпот в стороне, в английском тексте "I" встречается пять раз: "I'm okay." в Verse 1 (в кавычках), "I… I wasn't alone after all." в Verse 2 и "I thought I was holding on alone" в пред-припеве (два раза). "Me" встречается один раз, в "beside me". Начиная с припева нет ни "I", ни "me". В корейском тексте тоже нет первого лица единственного числа после 「나…」 в Verse 2 и 「내 옆」 в пред-припеве. После припева это «ты», а первое «мы» приходит в бридже: "we lived through the same day, together" (по-корейски 「우리」). Ещё два «мы» в финальном припеве, а Outro заканчивается словами "let's walk together."
+Если оставить шёпот в стороне, в английском тексте "I" встречается пять раз: "I'm okay." в Verse 1 (в кавычках), "I… I wasn't alone after all." в Verse 2 и "I thought I was holding on alone" в пред-припеве (два раза). "Me" встречается один раз, в "beside me". Начиная с припева нет ни "I", ни "me". В корейском тексте тоже нет первого лица единственного числа после 「나…」 в Verse 2 и 「내 옆」 в пред-припеве. После припева это «ты», а первое «мы» приходит в бридже: "we lived through the same day, together" (по-корейски 「우리」). Ещё два «мы» в финальном припеве, а Outro после "let's walk together." затихает словами Slowly. / Little by little. / Together.
 
 ## «Один» всегда отрицается
 
@@ -50,7 +50,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## Что показывает звуковая спецификация
 
-Темп 70 BPM, жанр Ambient Lo-fi · Emotional Chill. В поле инструментов перечислены Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle и Soft Rain Texture. Английская версия это нежный тёплый женский вокал с корейским шёпотом (「괜찮아…」, 「같이 있어…」); корейская тёплый мужской вокал с английским шёпотом ("It's okay...", "Stay with me..."). В финальный припев добавлена гармония противоположного пола, и обе версии заканчиваются шёпотом `ipe. be still`. В поле микса указано Minimal Dynamics. Всё это заказанная спецификация.
+Темп 70 BPM, жанр Ambient Lo-fi · Emotional Chill. В поле инструментов перечислены Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle и Soft Rain Texture. Английская версия это нежный тёплый женский вокал с корейским шёпотом (「괜찮아…」, 「같이 있어…」); корейская тёплый мужской вокал с английским шёпотом ("It's okay...", "Stay with me..."). В финальный припев добавлена гармония противоположного пола, и обе версии заканчиваются шёпотом `ipe. be still`. В поле микса четыре пункта, и один из них Minimal Dynamics. Всё это заказанная спецификация.
 
 ## Чего мы не утверждаем
 

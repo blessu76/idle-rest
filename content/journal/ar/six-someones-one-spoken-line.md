@@ -42,7 +42,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## أنا، أنت، نحن
 
-إذا تركنا الهمسات جانبًا، ففي الكلمات الإنجليزية "I" خمس مرات: "I'm okay." في Verse 1 (داخل علامات الاقتباس)، و"I… I wasn't alone after all." في Verse 2، و"I thought I was holding on alone" في ما قبل الكورَس (مرتان). و"me" مرة واحدة، في "beside me". ومنذ الكورَس لا يوجد "I" ولا "me". وكذلك لا يوجد ضمير المتكلم المفرد في الكلمات الكورية بعد 「나…」 في Verse 2 و「내 옆」 في ما قبل الكورَس. بعد الكورَس يأتي «أنت»، ويصل أول «نحن» في الجسر: "we lived through the same day, together" (بالكورية 「우리」). ثم «نحن» مرتان أخريان في الكورَس الأخير، وتنتهي الخاتمة بـ "let's walk together."
+إذا تركنا الهمسات جانبًا، ففي الكلمات الإنجليزية "I" خمس مرات: "I'm okay." في Verse 1 (داخل علامات الاقتباس)، و"I… I wasn't alone after all." في Verse 2، و"I thought I was holding on alone" في ما قبل الكورَس (مرتان). و"me" مرة واحدة، في "beside me". ومنذ الكورَس لا يوجد "I" ولا "me". وكذلك لا يوجد ضمير المتكلم المفرد في الكلمات الكورية بعد 「나…」 في Verse 2 و「내 옆」 في ما قبل الكورَس. بعد الكورَس يأتي «أنت»، ويصل أول «نحن» في الجسر: "we lived through the same day, together" (بالكورية 「우리」). ثم «نحن» مرتان أخريان في الكورَس الأخير، وتخفت الخاتمة بعد "let's walk together." في Slowly. / Little by little. / Together.
 
 ## «وحدك» تُنفى دائمًا
 
@@ -50,7 +50,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## ما تُظهره مواصفات الصوت
 
-السرعة 70 BPM والنوع Ambient Lo-fi · Emotional Chill. ويسرد حقل الآلات Soft Felt Piano وWarm Acoustic Guitar وGentle Strings وAmbient Pads وVinyl Crackle وSoft Rain Texture. النسخة الإنجليزية بصوت نسائي حلو دافئ مع همسات كورية (「괜찮아…」، 「같이 있어…」)؛ والنسخة الكورية بصوت رجالي دافئ مع همسات إنجليزية ("It's okay..."، "Stay with me..."). ويُضاف إلى الكورَس الأخير تناغم من الجنس الآخر، وتنتهي النسختان بالهمسة `ipe. be still`. ويقول حقل المزج Minimal Dynamics. كل هذا هو المواصفات المطلوبة.
+السرعة 70 BPM والنوع Ambient Lo-fi · Emotional Chill. ويسرد حقل الآلات Soft Felt Piano وWarm Acoustic Guitar وGentle Strings وAmbient Pads وVinyl Crackle وSoft Rain Texture. النسخة الإنجليزية بصوت نسائي حلو دافئ مع همسات كورية (「괜찮아…」، 「같이 있어…」)؛ والنسخة الكورية بصوت رجالي دافئ مع همسات إنجليزية ("It's okay..."، "Stay with me..."). ويُضاف إلى الكورَس الأخير تناغم من الجنس الآخر، وتنتهي النسختان بالهمسة `ipe. be still`. ولحقل المزج أربعة بنود، أحدها Minimal Dynamics. كل هذا هو المواصفات المطلوبة.
 
 ## ما لا ندّعيه
 

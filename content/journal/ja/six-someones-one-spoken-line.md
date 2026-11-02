@@ -42,7 +42,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## 私、あなた、私たち
 
-ささやきを除くと、英語のシートには "I" が5回あります。Verse 1の "I'm okay."(引用符の中)、Verse 2の "I… I wasn't alone after all."、プレコーラスの "I thought I was holding on alone"(2回)。"me" は "beside me" の1回です。コーラス以降は "I" も "me" もありません。韓国語シートも、Verse 2の「나…」とプレコーラスの「내 옆」のあとに一人称単数はありません。コーラスのあとは "you" で、最初の "we" はブリッジに現れます。"we lived through the same day, together"(韓国語は「우리」)です。Final Chorusでさらに2回 "we" が出て、アウトロは "let's walk together." で終わります。
+ささやきを除くと、英語のシートには "I" が5回あります。Verse 1の "I'm okay."(引用符の中)、Verse 2の "I… I wasn't alone after all."、プレコーラスの "I thought I was holding on alone"(2回)。"me" は "beside me" の1回です。コーラス以降は "I" も "me" もありません。韓国語シートも、Verse 2の「나…」とプレコーラスの「내 옆」のあとに一人称単数はありません。コーラスのあとは "you" で、最初の "we" はブリッジに現れます。"we lived through the same day, together"(韓国語は「우리」)です。Final Chorusでさらに2回 "we" が出て、アウトロは "let's walk together." のあと、Slowly. / Little by little. / Together. と静まっていきます。
 
 ## 「ひとり」はいつも打ち消される
 
@@ -50,7 +50,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## サウンド仕様から見えること
 
-テンポは70 BPM、ジャンルはAmbient Lo-fi · Emotional Chillです。楽器欄にはSoft Felt Piano、Warm Acoustic Guitar、Gentle Strings、Ambient Pads、Vinyl Crackle、Soft Rain Textureが並びます。英語版は甘く温かい女性ボーカルに韓国語のささやき(「괜찮아…」、「같이 있어…」)、韓国語版は温かい男性ボーカルに英語のささやき("It's okay..."、"Stay with me...")です。Final Chorusには逆の性別のハーモニーを重ね、どちらの版も最後は `ipe. be still` のささやきで終わります。ミックス欄はMinimal Dynamicsです。以上はすべて依頼した仕様です。
+テンポは70 BPM、ジャンルはAmbient Lo-fi · Emotional Chillです。楽器欄にはSoft Felt Piano、Warm Acoustic Guitar、Gentle Strings、Ambient Pads、Vinyl Crackle、Soft Rain Textureが並びます。英語版は甘く温かい女性ボーカルに韓国語のささやき(「괜찮아…」、「같이 있어…」)、韓国語版は温かい男性ボーカルに英語のささやき("It's okay..."、"Stay with me...")です。Final Chorusには逆の性別のハーモニーを重ね、どちらの版も最後は `ipe. be still` のささやきで終わります。ミックス欄は4項目あり、そのうちの1つがMinimal Dynamicsです。以上はすべて依頼した仕様です。
 
 ## 私たちが主張しないこと
 

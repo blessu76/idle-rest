@@ -42,7 +42,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## 我、你、我们
 
-不算低语,英语歌词表里的"I"出现五次:Verse 1的"I'm okay."(在引号内)、Verse 2的"I… I wasn't alone after all."、Pre-Chorus的"I thought I was holding on alone"(两次)。"me"只有一次,在"beside me"里。从Chorus起,既没有"I"也没有"me"。韩语歌词表同样如此:Verse 2的「나…」和Pre-Chorus的「내 옆」之后再没有第一人称单数。副歌之后是"you",第一个"we"出现在Bridge:"we lived through the same day, together"(韩语是「우리」)。Final Chorus里又有两个"we",Outro以"let's walk together."结束。
+不算低语,英语歌词表里的"I"出现五次:Verse 1的"I'm okay."(在引号内)、Verse 2的"I… I wasn't alone after all."、Pre-Chorus的"I thought I was holding on alone"(两次)。"me"只有一次,在"beside me"里。从Chorus起,既没有"I"也没有"me"。韩语歌词表同样如此:Verse 2的「나…」和Pre-Chorus的「내 옆」之后再没有第一人称单数。副歌之后是"you",第一个"we"出现在Bridge:"we lived through the same day, together"(韩语是「우리」)。Final Chorus里又有两个"we",Outro在"let's walk together."之后,以Slowly. / Little by little. / Together.渐渐收尾。
 
 ## “独自”总是被否定
 
@@ -50,7 +50,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## 声音规格里能看到什么
 
-速度是70 BPM,风格是Ambient Lo-fi · Emotional Chill。乐器栏列有Soft Felt Piano、Warm Acoustic Guitar、Gentle Strings、Ambient Pads、Vinyl Crackle和Soft Rain Texture。英语版是甜美温暖的女声,带韩语低语(「괜찮아…」、「같이 있어…」);韩语版是温暖的男声,带英语低语("It's okay..."、"Stay with me...")。Final Chorus加入异性和声,两个版本都以低语 `ipe. be still` 结尾。混音栏写的是Minimal Dynamics。以上全部是当时提出的规格。
+速度是70 BPM,风格是Ambient Lo-fi · Emotional Chill。乐器栏列有Soft Felt Piano、Warm Acoustic Guitar、Gentle Strings、Ambient Pads、Vinyl Crackle和Soft Rain Texture。英语版是甜美温暖的女声,带韩语低语(「괜찮아…」、「같이 있어…」);韩语版是温暖的男声,带英语低语("It's okay..."、"Stay with me...")。Final Chorus加入异性和声,两个版本都以低语 `ipe. be still` 结尾。混音栏有四项,其中一项是Minimal Dynamics。以上全部是当时提出的规格。
 
 ## 我们不主张的事
 

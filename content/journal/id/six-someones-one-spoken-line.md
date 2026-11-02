@@ -42,7 +42,7 @@ Kata 괜찮 («tidak apa-apa») pantas dilihat dengan cara yang sama. Akar kata 
 
 ## Aku, kamu, kita
 
-Kalau bisikan dikesampingkan, lirik Inggris punya "I" lima kali: "I'm okay." di Verse 1 (di dalam tanda kutip), "I… I wasn't alone after all." di Verse 2, dan "I thought I was holding on alone" di Pre-Chorus (dua kali). "Me" muncul sekali, di "beside me". Dari Chorus dan seterusnya tidak ada "I" maupun "me". Lirik Korea juga tidak punya orang pertama tunggal setelah 「나…」 di Verse 2 dan 「내 옆」 di Pre-Chorus. Setelah Chorus adalah «kamu», dan «kita» pertama tiba di Bridge: "we lived through the same day, together" (dalam bahasa Korea 「우리」). Dua «kita» lagi datang di Final Chorus, dan Outro ditutup dengan "let's walk together."
+Kalau bisikan dikesampingkan, lirik Inggris punya "I" lima kali: "I'm okay." di Verse 1 (di dalam tanda kutip), "I… I wasn't alone after all." di Verse 2, dan "I thought I was holding on alone" di Pre-Chorus (dua kali). "Me" muncul sekali, di "beside me". Dari Chorus dan seterusnya tidak ada "I" maupun "me". Lirik Korea juga tidak punya orang pertama tunggal setelah 「나…」 di Verse 2 dan 「내 옆」 di Pre-Chorus. Setelah Chorus adalah «kamu», dan «kita» pertama tiba di Bridge: "we lived through the same day, together" (dalam bahasa Korea 「우리」). Dua «kita» lagi datang di Final Chorus, dan Outro, setelah "let's walk together.", mereda lewat Slowly. / Little by little. / Together.
 
 ## «Sendirian» selalu disangkal
 
@@ -50,7 +50,7 @@ Di lirik Korea 「혼자」 («sendirian») muncul empat kali, dan setiap kali d
 
 ## Apa yang ditunjukkan spesifikasi suara
 
-Tempo-nya 70 BPM dan genrenya Ambient Lo-fi · Emotional Chill. Kolom instrumen mencantumkan Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle dan Soft Rain Texture. Versi Inggris adalah vokal wanita yang manis dan hangat dengan bisikan Korea (「괜찮아…」, 「같이 있어…」); versi Korea adalah vokal pria yang hangat dengan bisikan Inggris ("It's okay...", "Stay with me..."). Final Chorus mendapat harmoni dari gender yang berlawanan, dan kedua versi berakhir dengan bisikan `ipe. be still`. Kolom mix berbunyi Minimal Dynamics. Semua ini adalah spesifikasi yang diminta.
+Tempo-nya 70 BPM dan genrenya Ambient Lo-fi · Emotional Chill. Kolom instrumen mencantumkan Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle dan Soft Rain Texture. Versi Inggris adalah vokal wanita yang manis dan hangat dengan bisikan Korea (「괜찮아…」, 「같이 있어…」); versi Korea adalah vokal pria yang hangat dengan bisikan Inggris ("It's okay...", "Stay with me..."). Final Chorus mendapat harmoni dari gender yang berlawanan, dan kedua versi berakhir dengan bisikan `ipe. be still`. Kolom mix punya empat butir, dan salah satunya Minimal Dynamics. Semua ini adalah spesifikasi yang diminta.
 
 ## Yang tidak kami klaim
 

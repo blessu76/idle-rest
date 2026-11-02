@@ -42,7 +42,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## मैं, तुम, हम
 
-फुसफुसाहटों को छोड़ दें तो अंग्रेज़ी बोलों में "I" पाँच बार है: Verse 1 में "I'm okay." (उद्धरण-चिह्नों के भीतर), Verse 2 में "I… I wasn't alone after all." और Pre-Chorus में "I thought I was holding on alone" (दो बार)। "Me" एक बार है, "beside me" में। Chorus से आगे न "I" है, न "me"। कोरियाई बोलों में भी Verse 2 के 「나…」 और Pre-Chorus के 「내 옆」 के बाद उत्तम पुरुष एकवचन नहीं है। Chorus के बाद "तुम" है, और पहला «हम» Bridge में आता है: "we lived through the same day, together" (कोरियाई में 「우리」)। Final Chorus में दो «हम» और आते हैं, और Outro "let's walk together." पर ख़त्म होता है।
+फुसफुसाहटों को छोड़ दें तो अंग्रेज़ी बोलों में "I" पाँच बार है: Verse 1 में "I'm okay." (उद्धरण-चिह्नों के भीतर), Verse 2 में "I… I wasn't alone after all." और Pre-Chorus में "I thought I was holding on alone" (दो बार)। "Me" एक बार है, "beside me" में। Chorus से आगे न "I" है, न "me"। कोरियाई बोलों में भी Verse 2 के 「나…」 और Pre-Chorus के 「내 옆」 के बाद उत्तम पुरुष एकवचन नहीं है। Chorus के बाद "तुम" है, और पहला «हम» Bridge में आता है: "we lived through the same day, together" (कोरियाई में 「우리」)। Final Chorus में दो «हम» और आते हैं, और Outro "let's walk together." के बाद Slowly. / Little by little. / Together. में धीमा होकर थम जाता है।
 
 ## «अकेले» हमेशा नकारा जाता है
 
@@ -50,7 +50,7 @@ songs: You're Not Alone. @ https://youtu.be/-ubb0jO9j6A
 
 ## ध्वनि की विशिष्टता क्या दिखाती है
 
-टेम्पो 70 BPM है और शैली Ambient Lo-fi · Emotional Chill। वाद्य वाले खाने में Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle और Soft Rain Texture दर्ज हैं। अंग्रेज़ी संस्करण मधुर, गर्म महिला स्वर है जिसमें कोरियाई फुसफुसाहटें हैं (「괜찮아…」, 「같이 있어…」); कोरियाई संस्करण गर्म पुरुष स्वर है जिसमें अंग्रेज़ी फुसफुसाहटें हैं ("It's okay...", "Stay with me...")। Final Chorus में विपरीत लिंग का सामंजस्य जुड़ता है, और दोनों संस्करण फुसफुसाहट `ipe. be still` पर ख़त्म होते हैं। मिक्स वाला खाना Minimal Dynamics कहता है। यह सब माँगी गई विशिष्टता है।
+टेम्पो 70 BPM है और शैली Ambient Lo-fi · Emotional Chill। वाद्य वाले खाने में Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle और Soft Rain Texture दर्ज हैं। अंग्रेज़ी संस्करण मधुर, गर्म महिला स्वर है जिसमें कोरियाई फुसफुसाहटें हैं (「괜찮아…」, 「같이 있어…」); कोरियाई संस्करण गर्म पुरुष स्वर है जिसमें अंग्रेज़ी फुसफुसाहटें हैं ("It's okay...", "Stay with me...")। Final Chorus में विपरीत लिंग का सामंजस्य जुड़ता है, और दोनों संस्करण फुसफुसाहट `ipe. be still` पर ख़त्म होते हैं। मिक्स वाले खाने में चार प्रविष्टियाँ हैं, और उनमें से एक Minimal Dynamics है। यह सब माँगी गई विशिष्टता है।
 
 ## हम क्या दावा नहीं करते
 

@@ -234,7 +234,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — Deutsch (de) · AI translations of the originals · Index: https://idle.ipe.rest/journal/de/
 
-- [Sechs „Jemand“, ein gesprochener Satz](https://idle.ipe.rest/journal/de/six-someones-one-spoken-line/) — Wir zählen die „Jemand" im Liedtext von „You're Not Alone.": was jeder der sechs tut und wessen Worte als einzige wörtlich zitiert werden. (de, 2026-11-02, AI translation)
+- [Sechs „Jemand“, ein gesprochener Satz](https://idle.ipe.rest/journal/de/six-someones-one-spoken-line/) — Wir zählen die „Jemand“ im Liedtext von „You're Not Alone.": was jeder der sechs tut und wessen Worte als einzige wörtlich zitiert werden. (de, 2026-11-02, AI translation)
 - [Zwei Listen, ein Tag](https://idle.ipe.rest/journal/de/two-lists-one-day/) — Der Liedtext von "You Were Enough Today." enthält zwei Listen: was unfertig blieb und wer deinetwegen lächelte. Wir zählen beide und fragen, durch wessen Augen. (de, 2026-11-01, AI translation)
 - [Erzähl, und du musst nicht antworten](https://idle.ipe.rest/journal/de/tell-me-you-dont-have-to-answer/) — Das zweite Lied von dear(you); vol.1 fragt nur einmal und sagt im Refrain, du musst nicht antworten. Wir zählen, wo Fragen und Erlaubnisse stehen. (de, 2026-11-01, AI translation)
 - [Zehn Titel, als Sätze gelesen](https://idle.ipe.rest/journal/de/ten-titles-as-sentences/) — Die zehn Titel von dear(you); vol.1 sind ganze Sätze. Nach Zeit, Sprecher und Ton gelesen zeigen sie, wo das Album von Gestern, Heute und Morgen spricht. (de, 2026-10-31, AI translation)

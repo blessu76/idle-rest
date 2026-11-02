@@ -4,7 +4,7 @@ date: 2026-11-02
 time: "10:41"
 slug: six-someones-one-spoken-line
 lang: de
-description: Wir zählen die „Jemand" im Liedtext von „You're Not Alone.": was jeder der sechs tut und wessen Worte als einzige wörtlich zitiert werden.
+description: Wir zählen die „Jemand“ im Liedtext von „You're Not Alone.": was jeder der sechs tut und wessen Worte als einzige wörtlich zitiert werden.
 category: behind-the-music
 draft: false
 translation_of: en
@@ -17,7 +17,7 @@ Das Designdokument zum sechsten Lied von *dear(you); vol.1*, „You're Not Alone
 
 Zuerst der Umfang. Wir haben den Liedtext im Designdokument des Lieds (koreanische und englische Fassung) und seine Stilnotizen gelesen. Das Dokument entstand am 2026-07-04, als das Lied in Auftrag gegeben wurde; was tatsächlich gesungen wird, kann also abweichen. Alles, was über den Klang gesagt wird, ist eine angeforderte Spezifikation; was wir mit den Untertiteln verglichen haben und dass wir nicht mit dem Audio verglichen haben, steht weiter unten. Die Musik wird mit KI (Suno) erzeugt. Die Texte entwirft eine KI als Rohfassung, ein Mensch prüft sie.
 
-## Sechs „Jemand"
+## Sechs „Jemand“
 
 Im koreanischen Liedtext kommt 「누군가」 („jemand") genau sechsmal vor.
 
@@ -42,7 +42,7 @@ Das Wort 괜찮 („in Ordnung") verdient denselben Blick. Die Wurzel kommt im k
 
 ## Ich, du, wir
 
-Lässt man das Flüstern beiseite, hat der englische Text "I" fünfmal: "I'm okay." im Verse 1 (in Anführungszeichen), "I… I wasn't alone after all." im Verse 2 und "I thought I was holding on alone" im Pre-Chorus (zweimal). "Me" kommt einmal vor, in "beside me". Ab dem Chorus gibt es weder "I" noch "me". Auch der koreanische Text hat nach 「나…」 im Verse 2 und 「내 옆」 im Pre-Chorus keine erste Person Singular mehr. Nach dem Chorus ist es „du", und das erste „wir" kommt in der Bridge: "we lived through the same day, together" (koreanisch 「우리」). Zwei weitere „wir" folgen im Final Chorus, und das Outro endet mit "let's walk together."
+Lässt man das Flüstern beiseite, hat der englische Text "I" fünfmal: "I'm okay." im Verse 1 (in Anführungszeichen), "I… I wasn't alone after all." im Verse 2 und "I thought I was holding on alone" im Pre-Chorus (zweimal). "Me" kommt einmal vor, in "beside me". Ab dem Chorus gibt es weder "I" noch "me". Auch der koreanische Text hat nach 「나…」 im Verse 2 und 「내 옆」 im Pre-Chorus keine erste Person Singular mehr. Nach dem Chorus ist es „du", und das erste „wir" kommt in der Bridge: "we lived through the same day, together" (koreanisch 「우리」). Zwei weitere „wir" folgen im Final Chorus, und das Outro läuft nach "let's walk together." in Slowly. / Little by little. / Together. aus.
 
 ## „Allein" wird immer verneint
 
@@ -50,11 +50,11 @@ Im koreanischen Text kommt 「혼자」 („allein") viermal vor, und jedes Mal 
 
 ## Was die Klangspezifikation zeigt
 
-Das Tempo ist 70 BPM, das Genre Ambient Lo-fi · Emotional Chill. Das Instrumentenfeld nennt Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle und Soft Rain Texture. Die englische Fassung ist eine süße, warme Frauenstimme mit koreanischem Flüstern (「괜찮아…」, 「같이 있어…」); die koreanische eine warme Männerstimme mit englischem Flüstern ("It's okay...", "Stay with me..."). Der Final Chorus erhält eine Harmonie des anderen Geschlechts, und beide Fassungen enden mit dem Flüstern `ipe. be still`. Das Mix-Feld sagt Minimal Dynamics. All das ist die angeforderte Spezifikation.
+Das Tempo ist 70 BPM, das Genre Ambient Lo-fi · Emotional Chill. Das Instrumentenfeld nennt Soft Felt Piano, Warm Acoustic Guitar, Gentle Strings, Ambient Pads, Vinyl Crackle und Soft Rain Texture. Die englische Fassung ist eine süße, warme Frauenstimme mit koreanischem Flüstern (「괜찮아…」, 「같이 있어…」); die koreanische eine warme Männerstimme mit englischem Flüstern ("It's okay...", "Stay with me..."). Der Final Chorus erhält eine Harmonie des anderen Geschlechts, und beide Fassungen enden mit dem Flüstern `ipe. be still`. Das Mix-Feld hat vier Einträge, einer davon ist Minimal Dynamics. All das ist die angeforderte Spezifikation.
 
 ## Was wir nicht behaupten
 
-- Das Zählen der „Jemand" ist eine Art zu lesen. Ob diese Anordnung beabsichtigt war, steht nicht im Dokument.
+- Das Zählen der „Jemand“ ist eine Art zu lesen. Ob diese Anordnung beabsichtigt war, steht nicht im Dokument.
 - Die Bewegung von Taten zu Herzenswünschen und das Arbeits- gegenüber dem Freundesregister sind unsere Lesarten.
 - Im Studio-Repository liegen kurze Untertiteldateien zu diesem Lied. Sie decken das Ende des Verse 2 bis zum Chorus ab (die englische reicht auch bis zum Beginn der Bridge), und die Zeilen lesen sich wie der Text, abgesehen von einem Tippfehler in den englischen Untertiteln. Die koreanische enthält 「오늘도 고생 많으셨어요」. Aber Untertitel sind Text, und wir haben das Audio nicht zum Vergleich angehört.
 
