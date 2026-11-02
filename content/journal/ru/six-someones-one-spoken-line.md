@@ -1,7 +1,7 @@
 ---
 title: Шесть «кто-то», одна прямая речь
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: ru
 description: Считаем «кто-то» в тексте песни «You're Not Alone.»: что делает каждый из шести и чьи слова единственные приведены дословно.

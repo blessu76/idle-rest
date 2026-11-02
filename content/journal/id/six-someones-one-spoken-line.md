@@ -1,7 +1,7 @@
 ---
 title: Enam «seseorang», satu ucapan
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: id
 description: Kami menghitung kata «seseorang» di lirik «You're Not Alone.»: apa yang dilakukan keenamnya, dan siapa satu-satunya yang ucapannya dikutip langsung.

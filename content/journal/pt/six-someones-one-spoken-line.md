@@ -1,7 +1,7 @@
 ---
 title: Seis «alguém», uma só fala
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: pt
 description: Contamos os «alguém» da letra de «You're Not Alone.»: o que cada um dos seis faz e quem é a única pessoa cujas palavras aparecem citadas.

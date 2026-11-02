@@ -1,7 +1,7 @@
 ---
 title: छह «कोई», एक बोली हुई पंक्ति
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: hi
 description: «You're Not Alone.» के बोलों में «कोई» को गिनते हैं: छहों क्या करते हैं, और किसके शब्द अकेले सीधे उद्धृत हैं।

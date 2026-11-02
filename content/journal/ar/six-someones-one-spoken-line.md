@@ -1,7 +1,7 @@
 ---
 title: ستة «أحدٌ»، وكلمة واحدة منطوقة
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: ar
 description: نعدّ كلمة «أحدٌ» في كلمات أغنية «You're Not Alone.»: ماذا يفعل كل واحد من الستة، ومن هو الوحيد الذي نُقل كلامه بنصّه.

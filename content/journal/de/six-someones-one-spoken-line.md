@@ -1,7 +1,7 @@
 ---
 title: Sechs „Jemand“, ein gesprochener Satz
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: de
 description: Wir zählen die „Jemand“ im Liedtext von „You're Not Alone.“ – was jeder der sechs tut und wessen Worte als einzige wörtlich zitiert werden.

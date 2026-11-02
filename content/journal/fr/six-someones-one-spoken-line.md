@@ -1,7 +1,7 @@
 ---
 title: Six « quelqu'un », une seule parole
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: fr
 description: Nous comptons les « quelqu'un » des paroles de « You're Not Alone. » : ce que fait chacun des six, et la seule personne dont la parole est citée.

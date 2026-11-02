@@ -1,7 +1,7 @@
 ---
 title: 「誰か」が六人、言葉は一行
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: ja
 description: 「You're Not Alone.」の歌詞シートにある「誰か」を数えます。六人がそれぞれ何をするのか、その中で言葉が直接引用されるのは誰かを読みます。

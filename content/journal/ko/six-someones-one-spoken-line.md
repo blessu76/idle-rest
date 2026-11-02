@@ -1,7 +1,7 @@
 ---
 title: 누군가 여섯, 말은 한 줄
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: ko
 description: 「혼자가 아니야.」 가사지의 「누군가」를 셉니다. 여섯 명이 각각 무엇을 하는지, 그중 말이 따옴표로 나오는 사람은 몇인지 읽습니다.

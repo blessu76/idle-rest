@@ -1,7 +1,7 @@
 ---
 title: Six Someones, One Spoken Line
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: en
 description: We count the "someone"s in the lyric sheet of "You're Not Alone.": what each of the six does, and which one is the only person whose words are quoted.

@@ -1,7 +1,7 @@
 ---
 title: 六个“有人”，一句话
 date: 2026-11-02
-time: "10:41"
+time: "16:57"
 slug: six-someones-one-spoken-line
 lang: zh
 description: 我们数了《You're Not Alone.》歌词表里的“有人”：六个人各做了什么，其中谁的话被直接引用。
