@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 16:57:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 21:08:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡의 템포 사다리</title>
+      <link>https://idle.ipe.rest/journal/ko/tempo-ladder-of-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/tempo-ladder-of-ten-songs/</guid>
+      <pubDate>Tue, 03 Nov 2026 21:08:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>열 곡, 열 개의 템포가 모두 10 BPM 안에 있습니다. dear(you); vol.1의 곡마다 적힌 BPM을 순서대로 세워 보고, 문서끼리 다르게 적은 곳을 짚습니다.</description>
+    </item>
+    <item>
+      <title>The Tempo Ladder of Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/tempo-ladder-of-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/tempo-ladder-of-ten-songs/</guid>
+      <pubDate>Tue, 03 Nov 2026 21:08:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Ten songs, ten tempo values, all inside a 10 BPM band. We line up the BPM written for each song of dear(you); vol.1 and note where documents differ.</description>
+    </item>
     <item>
       <title>누군가 여섯, 말은 한 줄</title>
       <link>https://idle.ipe.rest/journal/ko/six-someones-one-spoken-line/</link>

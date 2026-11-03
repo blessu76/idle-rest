@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [The Tempo Ladder of Ten Songs](https://idle.ipe.rest/journal/en/tempo-ladder-of-ten-songs/) — Ten songs, ten tempo values, all inside a 10 BPM band. We line up the BPM written for each song of dear(you); vol.1 and note where documents differ. (en, 2026-11-03)
 - [Six Someones, One Spoken Line](https://idle.ipe.rest/journal/en/six-someones-one-spoken-line/) — We count the "someone"s in the lyric sheet of "You're Not Alone.": what each of the six does, and which one is the only person whose words are quoted. (en, 2026-11-02)
 - [Two Lists, One Day](https://idle.ipe.rest/journal/en/two-lists-one-day/) — The lyric sheet of "You Were Enough Today." holds two lists: what was left unfinished, and who smiled because of you. We count each and ask whose eyes wrote it. (en, 2026-11-01)
 - [Tell Me, and You Needn't Answer](https://idle.ipe.rest/journal/en/tell-me-you-dont-have-to-answer/) — The second song of dear(you); vol.1 asks one question, then says in the chorus you needn't answer. We count where questions and permissions sit in the lyrics. (en, 2026-11-01)
@@ -114,6 +115,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [열 곡의 템포 사다리](https://idle.ipe.rest/journal/ko/tempo-ladder-of-ten-songs/) — 열 곡, 열 개의 템포가 모두 10 BPM 안에 있습니다. dear(you); vol.1의 곡마다 적힌 BPM을 순서대로 세워 보고, 문서끼리 다르게 적은 곳을 짚습니다. (ko, 2026-11-03)
 - [누군가 여섯, 말은 한 줄](https://idle.ipe.rest/journal/ko/six-someones-one-spoken-line/) — 「혼자가 아니야.」 가사지의 「누군가」를 셉니다. 여섯 명이 각각 무엇을 하는지, 그중 말이 따옴표로 나오는 사람은 몇인지 읽습니다. (ko, 2026-11-02)
 - [두 개의 목록, 하루 하나 — 오늘도 충분했어 읽기](https://idle.ipe.rest/journal/ko/two-lists-one-day/) — 「오늘도 충분했어.」의 가사지에는 끝내지 못한 일의 목록과 누군가 네 덕분에 웃은 목록, 두 개가 있습니다. 어느 쪽이 몇 줄이고 누구의 눈으로 적혔는지 셉니다. (ko, 2026-11-01)
 - [말해 보라고 하고, 대답은 안 해도 된다고 — 듣는 노래 02번을 읽기](https://idle.ipe.rest/journal/ko/tell-me-you-dont-have-to-answer/) — dear(you); vol.1의 두 번째 곡은 질문을 한 번만 던지고, 후렴에서 대답하지 않아도 괜찮다고 말합니다. 가사지에서 질문과 허락의 문장이 놓인 자리를 세어 읽었습니다. (ko, 2026-11-01)
