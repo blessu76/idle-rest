@@ -1,5 +1,5 @@
 ---
-title: Angst zugeben, statt sie zu beheben — Wie wir "I Was Scared, Too." gestaltet haben
+title: Angst zugeben, statt sie zu beheben — Wie wir „I Was Scared, Too.“ gestaltet haben
 date: 2026-10-23
 time: "13:34"
 slug: i-was-scared-too
@@ -13,13 +13,13 @@ album: dear(you); vol.1 @ https://idle.ipe.rest/#album
 songs: I Was Scared, Too. @ https://youtu.be/rXwAwZ2cu2g
 ---
 
-Track 03 von *dear(you); vol.1*, "I Was Scared, Too." (koreanischer Titel: 나도 무서웠어.), ist eines der Lieder auf dem Album, die am direktesten über ihre eigene Zeit sprechen. Sein Thema ist die Angst, die ein Entwickler in einer Zeit spürt, in der KI Code schreibt, Dokumentation schreibt und sie sogar prüft. Wir wollen anhand des Textentwurfs verfolgen, wie das Lied mit dieser Angst umgeht. Wie immer kann das, was auf der Aufnahme tatsächlich gesungen wird, kürzer sein als der Entwurf.
+Track 03 von *dear(you); vol.1*, „I Was Scared, Too.“ (koreanischer Titel: 나도 무서웠어.), ist eines der Lieder auf dem Album, die am direktesten über ihre eigene Zeit sprechen. Sein Thema ist die Angst, die ein Entwickler in einer Zeit spürt, in der KI Code schreibt, Dokumentation schreibt und sie sogar prüft. Wir wollen anhand des Textentwurfs verfolgen, wie das Lied mit dieser Angst umgeht. Wie immer kann das, was auf der Aufnahme tatsächlich gesungen wird, kürzer sein als der Entwurf.
 
 Eines vorweg. Dies ist ein Lied über KI, und das Lied selbst wurde mit KI gemacht. Die Musik wird mit KI (Suno) produziert. Die Texte werden von einer KI entworfen und von einem Menschen geprüft. Es wäre seltsamer, das zu verschweigen, während man darüber singt.
 
 ## Ein Lied, das Angst zugibt, statt sie zu beseitigen
 
-Das Themenfeld des Entwurfsdokuments beginnt so: eine Angst, die jeder, der im KI-Zeitalter als Entwickler lebt, mindestens einmal gespürt hat. Es heißt weiter, dass das Lied nicht versucht, diese Angst loszuwerden. Es erkennt das Gefühl zuerst an, und es ist ein Lied, das einen einzigen Satz weitergibt: „Ich war auch dort." Das emotionale Schlüsselwort reicht von Angst bis Empathie, und die Stimmung wird als nachdenklich, sanft, gefühlvoll und hoffnungsvoll angegeben.
+Das Themenfeld des Entwurfsdokuments beginnt so: eine Angst, die jeder, der im KI-Zeitalter als Entwickler lebt, mindestens einmal gespürt hat. Es heißt weiter, dass das Lied nicht versucht, diese Angst loszuwerden. Es erkennt das Gefühl zuerst an, und es ist ein Lied, das einen einzigen Satz weitergibt: „Ich war auch dort.“ Das emotionale Schlüsselwort reicht von Angst bis Empathie, und die Stimmung wird als nachdenklich, sanft, gefühlvoll und hoffnungsvoll angegeben.
 
 Der Albumplan hält dieselbe Haltung als emotionales Zentrum der gesamten Platte fest: die Angst des Entwicklers im KI-Zeitalter anzuerkennen, statt sie auslöschen zu wollen. Wenn die ersten beiden Lieder zuerst fragten und dann bis zum Ende zuhörten, berührt das dritte zum ersten Mal die unangenehmste Stelle der Hörenden. Eine Lösung gibt es trotzdem nicht. Das Story-Feld des Entwurfsdokuments endet so: Das Lied beantwortet diese Frage nicht. Stattdessen sagt es, dass jemand, der sich so fühlt, nicht allein ist.
 
@@ -61,9 +61,9 @@ Er liest Angst als Zeichen von Fürsorge statt als Schwäche. Wer Angst hat, hat
 
 ## Der Chorus: Ich hatte auch Angst, also geh es langsam an
 
-Der Chorus beginnt mit einem Flüstern und nennt dann den Titel. In der englischen Fassung lautet er „I was scared too." Es ist das Geständnis dessen, der tröstet und sagt, er sei durch dieselbe Angst gegangen. Die Stimme, die den Chorus trägt, gehört nicht jemandem, der die Antwort kennt, sondern jemandem, der denselben Weg gegangen ist. Die folgenden Zeilen: Also ist es in Ordnung, langsam zu kommen. Denn wer bis zum Ende geht, hält länger durch als der, der am schnellsten rennt. Du, der du heute noch lernst, tust mehr als genug. Und der Chorus schließt mit einer einzigen Zeile: Ich glaube an den, der du heute bist.
+Der Chorus beginnt mit einem Flüstern und nennt dann den Titel. In der englischen Fassung lautet er „I was scared too.“ Es ist das Geständnis dessen, der tröstet und sagt, er sei durch dieselbe Angst gegangen. Die Stimme, die den Chorus trägt, gehört nicht jemandem, der die Antwort kennt, sondern jemandem, der denselben Weg gegangen ist. Die folgenden Zeilen: Also ist es in Ordnung, langsam zu kommen. Denn wer bis zum Ende geht, hält länger durch als der, der am schnellsten rennt. Du, der du heute noch lernst, tust mehr als genug. Und der Chorus schließt mit einer einzigen Zeile: Ich glaube an den, der du heute bist.
 
-Das Wort, auf das man achten sollte, ist „hält länger durch". Der Chorus hat sich von einer Geschichte über Geschwindigkeit zu einer über Ausdauer gewendet. Wenn die Ursache der Angst Geschwindigkeit ist, muss Trost einen anderen Maßstab als Geschwindigkeit bieten, und der Chorus bietet das Gehen bis zum Ende.
+Das Wort, auf das man achten sollte, ist „hält länger durch“. Der Chorus hat sich von einer Geschichte über Geschwindigkeit zu einer über Ausdauer gewendet. Wenn die Ursache der Angst Geschwindigkeit ist, muss Trost einen anderen Maßstab als Geschwindigkeit bieten, und der Chorus bietet das Gehen bis zum Ende.
 
 ## Die Bridge: Was nur ein Mensch tun kann
 
@@ -81,11 +81,11 @@ Der Abschnitt gibt zuerst zu, dass die Welt morgen wieder schneller wird. Er sag
 
 ## Flüstern, Klang und die letzte Zeile
 
-Auch das Flüstern ist hier kurz. Die englische Fassung enthält 괜찮아 („it's okay"), 걱정 마 („don't worry") und 천천히 („slowly"), die koreanische Fassung enthält *It's okay*, *Don't worry* und *Take your time*. Keines davon ist ein Rat; alle helfen, Atem zu holen. Die beiden Fassungen haben außerdem gleich viele Zeilen, nämlich je 82.
+Auch das Flüstern ist hier kurz. Die englische Fassung enthält 괜찮아 („it's okay“), 걱정 마 („don't worry“) und 천천히 („slowly“), die koreanische Fassung enthält *It's okay*, *Don't worry* und *Take your time*. Keines davon ist ein Rat; alle helfen, Atem zu holen. Die beiden Fassungen haben außerdem gleich viele Zeilen, nämlich je 82.
 
 Der Klang folgt dem Text. Das Genre ist Ambient-Lo-Fi mit einer Prise emotionalem Chill, bei 72 BPM. Das Entwurfsdokument nennt sanftes Klavier, warmes E-Piano und behutsame Gitarre, dazu Vinylrauschen, eine weiche Regentextur und Ambient-Pads. Im Gesamtklangplan des Albums sind Track 03 und 04 als der Abschnitt des emotionalen Chills angelegt, in dem sanfte Streicher einsetzen: einen Schritt weiter von der Wärme eines regnerischen Abends, wo sich das Gefühl ein wenig öffnet.
 
-Der Outro schließt mit Dank: Danke, dass du auch heute still durchgehalten hast, lass uns dieses ängstliche Herz für heute Nacht ein Stück weit ablegen, morgen auch, langsam. Und wie jedes Lied des Albums endet er mit einem einzeiligen Flüstern, „ipe. be still". Nach den Worten über das Ablegen der Angst kommt das Wort für Stille.
+Der Outro schließt mit Dank: Danke, dass du auch heute still durchgehalten hast, lass uns dieses ängstliche Herz für heute Nacht ein Stück weit ablegen, morgen auch, langsam. Und wie jedes Lied des Albums endet er mit einem einzeiligen Flüstern, „ipe. be still“. Nach den Worten über das Ablegen der Angst kommt das Wort für Stille.
 
 ## Anhören
 

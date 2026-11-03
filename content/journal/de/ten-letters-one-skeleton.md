@@ -34,7 +34,7 @@ Zwei Songs mit sechs und acht mit sieben Plätzen ergeben 68 Textplätze pro Fas
 
 Jeder Song entsteht in zwei Fassungen: eine mit Englisch als Hauptsprache (weibliche Stimme), eine mit Koreanisch als Hauptsprache (männliche Stimme). Beide Fassungen teilen dieselben Abschnitte, und ihre Zeilenzahlen unterscheiden sich pro Abschnitt um 0 bis 1. Eine Fassung hat 56 bis 82 Zeilen, einschließlich Geflüster und Schluss-Signatur (ohne Titel und Leerzeilen). Die englische Seite ist adaptiert, nicht Wort für Wort übersetzt, denn eine wörtliche Übersetzung zerstört Rhythmus und Gefühl.
 
-Ein kleiner Kniff verbindet die beiden Fassungen: das Flüstern. Die englische Fassung enthält ein, zwei koreanische Wörter, die koreanische ein englisches. In der englischen Fassung von Track 1 taucht in der ersten Strophe ein geflüstertes *괜찮아…* („es ist okay") auf. Geflüstertes steht in allen zehn Songs im Verse 1 und im Chorus, nie in einem Pre-Chorus. Jede Fassung hat 29 solcher Zeilen, an denselben Plätzen.
+Ein kleiner Kniff verbindet die beiden Fassungen: das Flüstern. Die englische Fassung enthält ein, zwei koreanische Wörter, die koreanische ein englisches. In der englischen Fassung von Track 1 taucht in der ersten Strophe ein geflüstertes *괜찮아…* („es ist okay“) auf. Geflüstertes steht in allen zehn Songs im Verse 1 und im Chorus, nie in einem Pre-Chorus. Jede Fassung hat 29 solcher Zeilen, an denselben Plätzen.
 
 Track 3 zeigt diese Paarung am deutlichsten. Die englische Fassung flüstert *괜찮아…*, *걱정 마…* („mach dir keine Sorgen“) und *천천히…* („langsam“) im Verse 1, im Chorus und im Final Chorus. Die koreanische Fassung flüstert an denselben drei Stellen *It's okay...*, *Don't worry...* und *Take your time...*. Nur Sprache und Stimme wechseln.
 
