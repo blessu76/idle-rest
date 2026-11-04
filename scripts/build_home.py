@@ -21,7 +21,7 @@ from pathlib import Path
 import build_journal as bj
 
 SITE = bj.SITE
-HOME_UPDATED = "2026-10-30"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
+HOME_UPDATED = "2026-11-04"  # bump when template/i18n copy changes (sitemap lastmod = max(this, newest post date))
 TEMPLATE = Path("content") / "home" / "template.html"
 STRINGS = Path("content") / "home" / "i18n.json"
 LANG_ATTR = re.compile(r'(<(?P<tag>[a-zA-Z0-9]+)(?P<attrs>[^>]*?\sdata-i18n="(?P<key>[^"]+)"[^>]*)>)(?P<inner>.*?)(</(?P=tag)>)', re.S)

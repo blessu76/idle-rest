@@ -216,6 +216,15 @@ class BuildHome(unittest.TestCase):
             n = len(html.unescape(re.search(r'name="description" content="([^"]*)"', f.read_text(encoding="utf-8")).group(1)))
             self.assertTrue(70 <= n <= 160, (str(f.relative_to(REPO)), n))
 
+    def test_ga_skipped_on_local_hosts(self):
+        for lang in (None, *LANGS):
+            html_ = self.page(lang)
+            guard = re.search(r"var h = location\.hostname;.*?\n  if \((.*?)\) \{", html_, re.S)
+            self.assertIsNotNone(guard, lang)
+            for token in ("'file:'", "'localhost'", "'127.0.0.1'", "'0.0.0.0'", "'::1'", "!isLocal"):
+                self.assertIn(token, html_[guard.start():guard.end() + 20], (lang, token))
+            self.assertEqual(html_.count("googletagmanager.com/gtag/js"), 1, lang)
+
     def test_idempotent(self):
         before = {p: p.read_bytes() for p in self.tmp.rglob("*") if p.is_file()}
         self.build()
