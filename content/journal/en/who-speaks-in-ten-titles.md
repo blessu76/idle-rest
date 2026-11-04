@@ -1,7 +1,7 @@
 ---
 title: Who Speaks in the Ten Titles?
 date: 2026-11-04
-time: "14:34"
+time: "17:09"
 slug: who-speaks-in-ten-titles
 lang: en
 translation_of: ko

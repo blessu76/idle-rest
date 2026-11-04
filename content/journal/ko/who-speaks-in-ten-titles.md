@@ -1,7 +1,7 @@
 ---
 title: 열 개의 제목에서 말하는 사람은 누구일까
 date: 2026-11-04
-time: "14:34"
+time: "17:09"
 slug: who-speaks-in-ten-titles
 lang: ko
 description: dear(you); vol.1에서 "You"는 04번부터 짝수 번호 제목마다 맨 앞에 오고, "I"는 두 제목, "우리"는 09번에서 한 번 나옵니다. 열 제목의 대명사를 세어 봅니다.
