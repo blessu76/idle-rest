@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [One Entry, Twelve Languages](https://idle.ipe.rest/journal/en/one-entry-twelve-languages/) — How an idle() journal entry becomes twelve pages: two languages written by hand, ten AI translations, and a few things we deliberately leave untranslated. (en, 2026-11-04)
 - [Who Speaks in the Ten Titles?](https://idle.ipe.rest/journal/en/who-speaks-in-ten-titles/) — In dear(you); vol.1, "You" opens every even-numbered title from track 04, "I" opens two titles, and the only "us" arrives at track 09. We count the pronouns. (en, 2026-11-04)
 - [The Tempo Ladder of Ten Songs](https://idle.ipe.rest/journal/en/tempo-ladder-of-ten-songs/) — Ten songs, ten tempo values, all inside a 10 BPM band. We line up the BPM written for each song of dear(you); vol.1 and note where documents differ. (en, 2026-11-03)
 - [Six Someones, One Spoken Line](https://idle.ipe.rest/journal/en/six-someones-one-spoken-line/) — We count the "someone"s in the lyric sheet of "You're Not Alone.": what each of the six does, and which one is the only person whose words are quoted. (en, 2026-11-02)
@@ -116,6 +117,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [글 한 편, 열두 개의 언어](https://idle.ipe.rest/journal/ko/one-entry-twelve-languages/) — idle() 저널 글 한 편이 열두 개 언어의 페이지가 되는 방식. 직접 쓴 두 언어, AI로 옮긴 열 언어, 그리고 일부러 옮기지 않는 것들. (ko, 2026-11-04)
 - [열 개의 제목에서 말하는 사람은 누구일까](https://idle.ipe.rest/journal/ko/who-speaks-in-ten-titles/) — dear(you); vol.1에서 "You"는 04번부터 짝수 번호 제목마다 맨 앞에 오고, "I"는 두 제목, "우리"는 09번에서 한 번 나옵니다. 열 제목의 대명사를 세어 봅니다. (ko, 2026-11-04)
 - [열 곡의 템포 사다리](https://idle.ipe.rest/journal/ko/tempo-ladder-of-ten-songs/) — 열 곡, 열 개의 템포가 모두 10 BPM 안에 있습니다. dear(you); vol.1의 곡마다 적힌 BPM을 순서대로 세워 보고, 문서끼리 다르게 적은 곳을 짚습니다. (ko, 2026-11-03)
 - [누군가 여섯, 말은 한 줄](https://idle.ipe.rest/journal/ko/six-someones-one-spoken-line/) — 「혼자가 아니야.」 가사지의 「누군가」를 셉니다. 여섯 명이 각각 무엇을 하는지, 그중 말이 따옴표로 나오는 사람은 몇인지 읽습니다. (ko, 2026-11-02)
