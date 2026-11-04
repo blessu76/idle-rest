@@ -6,12 +6,12 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 21:10:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 21:11:00 +0900</lastBuildDate>
     <item>
       <title>글 한 편, 열두 개의 언어</title>
       <link>https://idle.ipe.rest/journal/ko/one-entry-twelve-languages/</link>
       <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/one-entry-twelve-languages/</guid>
-      <pubDate>Wed, 04 Nov 2026 21:10:00 +0900</pubDate>
+      <pubDate>Wed, 04 Nov 2026 21:11:00 +0900</pubDate>
       <category>behind-the-music</category>
       <description>idle() 저널 글 한 편이 열두 개 언어의 페이지가 되는 방식. 직접 쓴 두 언어, AI로 옮긴 열 언어, 그리고 일부러 옮기지 않는 것들.</description>
     </item>
@@ -19,7 +19,7 @@
       <title>One Entry, Twelve Languages</title>
       <link>https://idle.ipe.rest/journal/en/one-entry-twelve-languages/</link>
       <guid isPermaLink="true">https://idle.ipe.rest/journal/en/one-entry-twelve-languages/</guid>
-      <pubDate>Wed, 04 Nov 2026 21:10:00 +0900</pubDate>
+      <pubDate>Wed, 04 Nov 2026 21:11:00 +0900</pubDate>
       <category>behind-the-music</category>
       <description>How an idle() journal entry becomes twelve pages: two languages written by hand, ten AI translations, and a few things we deliberately leave untranslated.</description>
     </item>

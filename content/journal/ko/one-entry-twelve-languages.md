@@ -1,7 +1,7 @@
 ---
 title: 글 한 편, 열두 개의 언어
 date: 2026-11-04
-time: "21:10"
+time: "21:11"
 slug: one-entry-twelve-languages
 lang: ko
 description: idle() 저널 글 한 편이 열두 개 언어의 페이지가 되는 방식. 직접 쓴 두 언어, AI로 옮긴 열 언어, 그리고 일부러 옮기지 않는 것들.

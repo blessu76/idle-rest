@@ -1,7 +1,7 @@
 ---
 title: One Entry, Twelve Languages
 date: 2026-11-04
-time: "21:10"
+time: "21:11"
 slug: one-entry-twelve-languages
 lang: en
 translation_of: ko
