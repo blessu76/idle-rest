@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 21:08:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 14:34:00 +0900</lastBuildDate>
+    <item>
+      <title>열 개의 제목에서 말하는 사람은 누구일까</title>
+      <link>https://idle.ipe.rest/journal/ko/who-speaks-in-ten-titles/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/who-speaks-in-ten-titles/</guid>
+      <pubDate>Wed, 04 Nov 2026 14:34:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1에서 &quot;You&quot;는 04번부터 짝수 번호 제목마다 맨 앞에 오고, &quot;I&quot;는 두 제목, &quot;우리&quot;는 09번에서 한 번 나옵니다. 열 제목의 대명사를 세어 봅니다.</description>
+    </item>
+    <item>
+      <title>Who Speaks in the Ten Titles?</title>
+      <link>https://idle.ipe.rest/journal/en/who-speaks-in-ten-titles/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/who-speaks-in-ten-titles/</guid>
+      <pubDate>Wed, 04 Nov 2026 14:34:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In dear(you); vol.1, &quot;You&quot; opens every even-numbered title from track 04, &quot;I&quot; opens two titles, and the only &quot;us&quot; arrives at track 09. We count the pronouns.</description>
+    </item>
     <item>
       <title>열 곡의 템포 사다리</title>
       <link>https://idle.ipe.rest/journal/ko/tempo-ladder-of-ten-songs/</link>
