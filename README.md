@@ -15,6 +15,7 @@
 | `assets/idle.css` · `assets/idle.js` | 홈·저널 공용 스타일 / 테마 토글·모바일 메뉴 (바꾸면 각 페이지의 `?v=` 와 `scripts/build_journal.py` 의 `ASSET_V` 를 같이 올림) |
 | `content/journal/*.md` | 저널 원고 (front matter + Markdown) |
 | `scripts/build_journal.py` | 저널 빌드 → `journal/` · `journal/feed.xml` · `sitemap.xml` · 홈 저널 카드 |
+| `scripts/publish_next.py` | **저널 자동 발행기**(stdlib). 레포 밖 큐(`~/.ipe/queue/idle/<NN-이름>/{en,ko}.md`)에서 1편을 꺼내 오늘 날짜·실제 push 분을 찍고 빌드→`--check`→`check_sitemap`→unittest→커밋→push→라이브 200. 큐가 비면 push 없이 경고. `--status` / `--dry-run`. 금지 push 시간(10–11, 13–14:30 KST) 가드. 테스트 `tests/test_publish_next.py`. 설치·운영 문서는 `_ipe/foundry/F-015_idle/web/PUBLISHER.md` |
 | `scripts/build_pages.py` | 소개·문의·개인정보처리방침 12개 언어 36쪽 + x-default 3쪽(`/about/` `/contact/` `/privacy/`) 빌드 → `/<lang>/<slug>/`. **정본은 `content/pages/<lang>/<slug>.html`**(머리 `title/desc/h1/sub[/ai]` + `---` + 본문; en·ko 원문, 나머지 10개는 AI 번역이라 `ai:` 줄 필수). `python3 scripts/build_pages.py --check` 가 번역이 영어와 같은 구조(태그·링크·자리표시·번호 섹션)인지, 운영자·이메일을 직접 쓰지 않았는지 검사. 문구를 고치면 **`PAGES_UPDATED`(사이트맵 lastmod)를 손으로 올린다**. `build_journal.py` 가 함께 호출 |
 | `journal/` | **생성물** — 손으로 고치지 않음 |
 | `robots.txt` | 검색/AI 크롤러 허용 + 사이트맵 위치 |
