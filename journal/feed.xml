@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 08:45:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 11:39:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡에서 「오늘」을 세어 보면</title>
+      <link>https://idle.ipe.rest/journal/ko/the-word-today-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/the-word-today-in-ten-songs/</guid>
+      <pubDate>Fri, 06 Nov 2026 11:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1의 가사지에서 영어 &quot;today&quot;는 66번, 한국어 오늘은 76번 나옵니다. 곡별·구간별로 세어 보니 모든 Outro에 들어 있습니다.</description>
+    </item>
+    <item>
+      <title>Counting &quot;Today&quot; in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/the-word-today-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/the-word-today-in-ten-songs/</guid>
+      <pubDate>Fri, 06 Nov 2026 11:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>&quot;Today&quot; appears 66 times in the English sheets and 오늘 76 times in the Korean ones of dear(you); vol.1. We count it by song and section; every Outro has it.</description>
+    </item>
     <item>
       <title>idle() 저널 읽는 길잡이</title>
       <link>https://idle.ipe.rest/journal/ko/reading-map-of-the-journal/</link>

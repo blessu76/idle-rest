@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Counting "Today" in Ten Songs](https://idle.ipe.rest/journal/en/the-word-today-in-ten-songs/) — "Today" appears 66 times in the English sheets and 오늘 76 times in the Korean ones of dear(you); vol.1. We count it by song and section; every Outro has it. (en, 2026-11-06)
 - [A Reading Map for the idle() Journal](https://idle.ipe.rest/journal/en/reading-map-of-the-journal/) — Twenty-four entries so far, grouped by the question each one asks. A map of where to start in the idle() journal, depending on what you want to know. (en, 2026-11-05)
 - [One Entry, Twelve Languages](https://idle.ipe.rest/journal/en/one-entry-twelve-languages/) — How an idle() journal entry becomes twelve pages: two languages written by hand, ten AI translations, and a few things we deliberately leave untranslated. (en, 2026-11-04)
 - [Who Speaks in the Ten Titles?](https://idle.ipe.rest/journal/en/who-speaks-in-ten-titles/) — In dear(you); vol.1, "You" opens every even-numbered title from track 04, "I" opens two titles, and the only "us" arrives at track 09. We count the pronouns. (en, 2026-11-04)
@@ -118,6 +119,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [열 곡에서 「오늘」을 세어 보면](https://idle.ipe.rest/journal/ko/the-word-today-in-ten-songs/) — dear(you); vol.1의 가사지에서 영어 "today"는 66번, 한국어 오늘은 76번 나옵니다. 곡별·구간별로 세어 보니 모든 Outro에 들어 있습니다. (ko, 2026-11-06)
 - [idle() 저널 읽는 길잡이](https://idle.ipe.rest/journal/ko/reading-map-of-the-journal/) — 지금까지 스물네 편을, 각 글이 던지는 물음별로 묶었습니다. 알고 싶은 것에 따라 idle() 저널 어디서 시작하면 좋은지 가리키는 지도입니다. (ko, 2026-11-05)
 - [글 한 편, 열두 개의 언어](https://idle.ipe.rest/journal/ko/one-entry-twelve-languages/) — idle() 저널 글 한 편이 열두 개 언어의 페이지가 되는 방식. 직접 쓴 두 언어, AI로 옮긴 열 언어, 그리고 일부러 옮기지 않는 것들. (ko, 2026-11-04)
 - [열 개의 제목에서 말하는 사람은 누구일까](https://idle.ipe.rest/journal/ko/who-speaks-in-ten-titles/) — dear(you); vol.1에서 "You"는 04번부터 짝수 번호 제목마다 맨 앞에 오고, "I"는 두 제목, "우리"는 09번에서 한 번 나옵니다. 열 제목의 대명사를 세어 봅니다. (ko, 2026-11-04)
