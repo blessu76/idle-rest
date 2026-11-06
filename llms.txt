@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Counting "Tomorrow" and "A Little"](https://idle.ipe.rest/journal/en/counting-tomorrow-and-a-little/) — Songs 09 and 10 hold half of the "tomorrow" in dear(you); vol.1, and song 09 says "a little" 12 times. We count both words and show where they sit. (en, 2026-11-06)
 - [Counting "Today" in Ten Songs](https://idle.ipe.rest/journal/en/the-word-today-in-ten-songs/) — "Today" appears 66 times in the English sheets and 오늘 76 times in the Korean ones of dear(you); vol.1. We count it by song and section; every Outro has it. (en, 2026-11-06)
 - [A Reading Map for the idle() Journal](https://idle.ipe.rest/journal/en/reading-map-of-the-journal/) — Twenty-four entries so far, grouped by the question each one asks. A map of where to start in the idle() journal, depending on what you want to know. (en, 2026-11-05)
 - [One Entry, Twelve Languages](https://idle.ipe.rest/journal/en/one-entry-twelve-languages/) — How an idle() journal entry becomes twelve pages: two languages written by hand, ten AI translations, and a few things we deliberately leave untranslated. (en, 2026-11-04)
@@ -119,6 +120,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [「내일」과 「조금」을 열 곡에서 세어 보면](https://idle.ipe.rest/journal/ko/counting-tomorrow-and-a-little/) — 「내일」의 절반은 9·10번에 몰려 있고, 9번은 「조금」을 열네 번 말합니다. 열 곡의 가사지에서 두 낱말을 세고 어디에 놓였는지 봅니다. (ko, 2026-11-06)
 - [열 곡에서 「오늘」을 세어 보면](https://idle.ipe.rest/journal/ko/the-word-today-in-ten-songs/) — dear(you); vol.1의 가사지에서 영어 "today"는 66번, 한국어 오늘은 76번 나옵니다. 곡별·구간별로 세어 보니 모든 Outro에 들어 있습니다. (ko, 2026-11-06)
 - [idle() 저널 읽는 길잡이](https://idle.ipe.rest/journal/ko/reading-map-of-the-journal/) — 지금까지 스물네 편을, 각 글이 던지는 물음별로 묶었습니다. 알고 싶은 것에 따라 idle() 저널 어디서 시작하면 좋은지 가리키는 지도입니다. (ko, 2026-11-05)
 - [글 한 편, 열두 개의 언어](https://idle.ipe.rest/journal/ko/one-entry-twelve-languages/) — idle() 저널 글 한 편이 열두 개 언어의 페이지가 되는 방식. 직접 쓴 두 언어, AI로 옮긴 열 언어, 그리고 일부러 옮기지 않는 것들. (ko, 2026-11-04)

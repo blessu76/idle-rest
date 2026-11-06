@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 11:39:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 15:52:00 +0900</lastBuildDate>
+    <item>
+      <title>「내일」과 「조금」을 열 곡에서 세어 보면</title>
+      <link>https://idle.ipe.rest/journal/ko/counting-tomorrow-and-a-little/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/counting-tomorrow-and-a-little/</guid>
+      <pubDate>Fri, 06 Nov 2026 15:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>「내일」의 절반은 9·10번에 몰려 있고, 9번은 「조금」을 열네 번 말합니다. 열 곡의 가사지에서 두 낱말을 세고 어디에 놓였는지 봅니다.</description>
+    </item>
+    <item>
+      <title>Counting &quot;Tomorrow&quot; and &quot;A Little&quot;</title>
+      <link>https://idle.ipe.rest/journal/en/counting-tomorrow-and-a-little/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/counting-tomorrow-and-a-little/</guid>
+      <pubDate>Fri, 06 Nov 2026 15:52:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Songs 09 and 10 hold half of the &quot;tomorrow&quot; in dear(you); vol.1, and song 09 says &quot;a little&quot; 12 times. We count both words and show where they sit.</description>
+    </item>
     <item>
       <title>열 곡에서 「오늘」을 세어 보면</title>
       <link>https://idle.ipe.rest/journal/ko/the-word-today-in-ten-songs/</link>
