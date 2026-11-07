@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 15:52:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 12:45:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡에서 「괜찮아」는 몇 번 말해질까</title>
+      <link>https://idle.ipe.rest/journal/ko/okay-counted-across-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/okay-counted-across-ten-songs/</guid>
+      <pubDate>Sat, 07 Nov 2026 12:45:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 가사지에서 영어 &quot;okay&quot;는 38번, 한국어 괜찮은 49번 나옵니다. 후렴과 Bridge에 많고 Outro에는 거의 없습니다.</description>
+    </item>
+    <item>
+      <title>How Often &quot;Okay&quot; Is Said in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/okay-counted-across-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/okay-counted-across-ten-songs/</guid>
+      <pubDate>Sat, 07 Nov 2026 12:45:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>&quot;Okay&quot; appears 38 times in the English sheets and 괜찮 49 times in the Korean ones of dear(you); vol.1, mostly in choruses and bridges, almost never in an Outro.</description>
+    </item>
     <item>
       <title>「내일」과 「조금」을 열 곡에서 세어 보면</title>
       <link>https://idle.ipe.rest/journal/ko/counting-tomorrow-and-a-little/</link>
