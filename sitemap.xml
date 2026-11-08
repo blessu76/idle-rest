@@ -1096,6 +1096,9 @@
     <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/4/"/>
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/page/5/</loc>
@@ -1105,6 +1108,12 @@
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/page/6/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/page/7/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.3</priority>
@@ -1164,6 +1173,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/3/"/>
   </url>
   <url>
+    <loc>https://idle.ipe.rest/journal/en/page/4/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/4/"/>
+  </url>
+  <url>
     <loc>https://idle.ipe.rest/journal/ko/</loc>
     <lastmod>2026-11-08</lastmod>
     <priority>0.4</priority>
@@ -1216,6 +1233,14 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/page/3/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/page/3/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/3/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ko/page/4/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/page/4/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/4/"/>
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/ja/</loc>
@@ -1756,6 +1781,28 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://idle.ipe.rest/journal/ru/page/3/"/>
     <xhtml:link rel="alternate" hreflang="zh" href="https://idle.ipe.rest/journal/zh/page/3/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/3/"/>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/slowly-in-ten-songs/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/slowly-in-ten-songs/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/en/slowly-in-ten-songs/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/slowly-in-ten-songs/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/slowly-in-ten-songs/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/</loc>

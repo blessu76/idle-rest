@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 11:43:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 15:56:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡의 「천천히」, 그리고 빠진 자리</title>
+      <link>https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/</guid>
+      <pubDate>Sun, 08 Nov 2026 15:56:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 가사지에서 영어 slow(ly)는 21번, 한국어 천천히는 20번 나옵니다. 낱말이 빠지는 두 곡도 함께 봅니다.</description>
+    </item>
+    <item>
+      <title>Counting &quot;Slowly&quot; in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/slowly-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/slowly-in-ten-songs/</guid>
+      <pubDate>Sun, 08 Nov 2026 15:56:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>&quot;Slow&quot; or &quot;slowly&quot; appears 21 times in the English sheets of dear(you); vol.1 and 천천히 20 times in the Korean ones. Two songs show where the word is missing.</description>
+    </item>
     <item>
       <title>열 장의 사양서에 모두 있는 피아노·패드·바이닐</title>
       <link>https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/</link>
