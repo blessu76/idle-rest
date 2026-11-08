@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Piano, Pads and Vinyl in Every Spec Sheet](https://idle.ipe.rest/journal/en/piano-pads-vinyl-in-every-spec-sheet/) — Ten spec sheets, ten different songs, and a few phrases that never change: a piano, pads, vinyl and a mix tag. Here is what stays fixed and what moves. (en, 2026-11-08)
 - [What the Ten Theme Lines Set Aside](https://idle.ipe.rest/journal/en/what-ten-theme-lines-set-aside/) — Seven of the ten theme lines in the design documents of dear(you); vol.1 name something to put down before saying what the song does. We read them side by side. (en, 2026-11-07)
 - [How Often "Okay" Is Said in Ten Songs](https://idle.ipe.rest/journal/en/okay-counted-across-ten-songs/) — "Okay" appears 38 times in the English sheets and 괜찮 49 times in the Korean ones of dear(you); vol.1, mostly in choruses and bridges, almost never in an Outro. (en, 2026-11-07)
 - [Counting "Tomorrow" and "A Little"](https://idle.ipe.rest/journal/en/counting-tomorrow-and-a-little/) — Songs 09 and 10 hold half of the "tomorrow" in dear(you); vol.1, and song 09 says "a little" 12 times. We count both words and show where they sit. (en, 2026-11-06)
@@ -122,6 +123,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [열 장의 사양서에 모두 있는 피아노·패드·바이닐](https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/) — 사양서 열 장, 서로 다른 열 곡. 그래도 바뀌지 않는 피아노, 패드, 바이닐, 믹스 태그와 움직이는 것들을 정리했습니다. (ko, 2026-11-08)
 - [열 개의 테마 줄이 내려놓는 것](https://idle.ipe.rest/journal/ko/what-ten-theme-lines-set-aside/) — 설계 문서의 열 개 테마 줄 가운데 일곱은 곡이 하는 일보다 먼저 내려놓을 것을 말합니다. 열 줄을 나란히 놓고 읽습니다. (ko, 2026-11-07)
 - [열 곡에서 「괜찮아」는 몇 번 말해질까](https://idle.ipe.rest/journal/ko/okay-counted-across-ten-songs/) — dear(you); vol.1 가사지에서 영어 "okay"는 38번, 한국어 괜찮은 49번 나옵니다. 후렴과 Bridge에 많고 Outro에는 거의 없습니다. (ko, 2026-11-07)
 - [「내일」과 「조금」을 열 곡에서 세어 보면](https://idle.ipe.rest/journal/ko/counting-tomorrow-and-a-little/) — 「내일」의 절반은 9·10번에 몰려 있고, 9번은 「조금」을 열네 번 말합니다. 열 곡의 가사지에서 두 낱말을 세고 어디에 놓였는지 봅니다. (ko, 2026-11-06)

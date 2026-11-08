@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 16:52:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 11:43:00 +0900</lastBuildDate>
+    <item>
+      <title>열 장의 사양서에 모두 있는 피아노·패드·바이닐</title>
+      <link>https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/</guid>
+      <pubDate>Sun, 08 Nov 2026 11:43:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>사양서 열 장, 서로 다른 열 곡. 그래도 바뀌지 않는 피아노, 패드, 바이닐, 믹스 태그와 움직이는 것들을 정리했습니다.</description>
+    </item>
+    <item>
+      <title>Piano, Pads and Vinyl in Every Spec Sheet</title>
+      <link>https://idle.ipe.rest/journal/en/piano-pads-vinyl-in-every-spec-sheet/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/piano-pads-vinyl-in-every-spec-sheet/</guid>
+      <pubDate>Sun, 08 Nov 2026 11:43:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Ten spec sheets, ten different songs, and a few phrases that never change: a piano, pads, vinyl and a mix tag. Here is what stays fixed and what moves.</description>
+    </item>
     <item>
       <title>열 개의 테마 줄이 내려놓는 것</title>
       <link>https://idle.ipe.rest/journal/ko/what-ten-theme-lines-set-aside/</link>
