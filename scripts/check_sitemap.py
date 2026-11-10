@@ -59,6 +59,7 @@ def check(root):
     want.update("%s/%s/" % (bj.SITE, l) for l in bj.LANGS)
     for slug in bp.SLUGS:  # trust pages: x-default + one per language
         want.update(bp.page_url(l, slug) for l in (None,) + tuple(bj.LANGS))
+    want.update(bp.page_url(None, slug) for slug in bp.EN_ONLY)  # English-only legal pages (/terms/)
     for p in posts:
         want.add(bj.post_url(p))
     per = {}  # list pages: page 1 of each language + /journal/page/N/ ... for lists longer than PER_PAGE

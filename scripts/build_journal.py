@@ -592,6 +592,7 @@ def footer(lang, default=False):
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
       <li><a href="{pre}/privacy/">{esc(t['privacy'])}</a></li>
+      <li><a href="/terms/">Terms</a></li>
       <li><a href="{ipe_href(lang)}" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
