@@ -17,6 +17,8 @@
 | `scripts/build_journal.py` | 저널 빌드 → `journal/` · `journal/feed.xml` · `sitemap.xml` · 홈 저널 카드 |
 | `scripts/publish_next.py` | **저널 자동 발행기**(stdlib). 레포 밖 큐(`~/.ipe/queue/idle/<NN-이름>/{en,ko}.md`)에서 1편을 꺼내 오늘 날짜·실제 push 분을 찍고 빌드→`--check`→`check_sitemap`→unittest→커밋→push→라이브 200. 큐가 비면 push 없이 경고. `--status` / `--dry-run`. 금지 push 시간(10–11, 13–14:30 KST) 가드. 테스트 `tests/test_publish_next.py`. 설치·운영 문서는 `_ipe/foundry/F-015_idle/web/PUBLISHER.md` |
 | `scripts/build_pages.py` | 소개·문의·개인정보처리방침 12개 언어 36쪽 + x-default 3쪽(`/about/` `/contact/` `/privacy/`) 빌드 → `/<lang>/<slug>/`. **정본은 `content/pages/<lang>/<slug>.html`**(머리 `title/desc/h1/sub[/ai]` + `---` + 본문; en·ko 원문, 나머지 10개는 AI 번역이라 `ai:` 줄 필수). `python3 scripts/build_pages.py --check` 가 번역이 영어와 같은 구조(태그·링크·자리표시·번호 섹션)인지, 운영자·이메일을 직접 쓰지 않았는지 검사. 문구를 고치면 **`PAGES_UPDATED`(사이트맵 lastmod)를 손으로 올린다**. `build_journal.py` 가 함께 호출 |
+| `vendor/ipe_web_kit.lock` · `scripts/kit_lock.py` | 회사 웹 킷(비공개 F-024) 버전 고정(태그·커밋·매니페스트 해시). 이 repo 는 공개라 킷 소스는 커밋하지 않는다(`vendor/ipe_web_kit/` 은 gitignore). 클론마다 한 번 `python3 scripts/kit_lock.py sync --kit ~/Developer/ipe_web_kit`. 빌드·배포에는 쓰지 않음(현재 로컬 시간 스크립트가 킷 자산과 바이트 동일한지 시험만) |
+| `scripts/check.sh` | **그린 게이트** — 킷 고정·소스·단위시험·빌드 최신 여부·사이트맵. 커밋 전에 돌려 `GREEN` 을 본다 |
 | `journal/` | **생성물** — 손으로 고치지 않음 |
 | `robots.txt` | 검색/AI 크롤러 허용 + 사이트맵 위치 |
 | `sitemap.xml` | 검색엔진용 사이트맵(언어별 hreflang 포함) |

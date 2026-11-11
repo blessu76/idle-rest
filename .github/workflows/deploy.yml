@@ -28,10 +28,10 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Assemble site (repo root minus sources)
-        # content/ (journal .md drafts + sources), scripts/ and tests/ are build-time only — never public raw URLs.
+        # content/ (journal .md drafts + sources), scripts/, tests/ and vendor/ (kit pin; the private kit source is never committed) are build-time only — never public raw URLs.
         run: |
           mkdir -p "$RUNNER_TEMP/site"
-          rsync -a --exclude='.git' --exclude='.github' --exclude='content' --exclude='scripts' --exclude='tests' ./ "$RUNNER_TEMP/site/"
+          rsync -a --exclude='.git' --exclude='.github' --exclude='content' --exclude='scripts' --exclude='tests' --exclude='vendor' ./ "$RUNNER_TEMP/site/"
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
