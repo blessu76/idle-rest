@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 15:56:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 11:39:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡의 무드 태그, 마흔 개 중 열세 개</title>
+      <link>https://idle.ipe.rest/journal/ko/mood-tags-of-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/mood-tags-of-ten-songs/</guid>
+      <pubDate>Wed, 11 Nov 2026 11:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 열 곡의 설계 문서에는 곡마다 무드 단어가 네 개씩 있습니다. 모두 세면 마흔 개 중 서로 다른 말은 열세 개이고, Warm과 Gentle이 아홉 곡씩에 있습니다.</description>
+    </item>
+    <item>
+      <title>Thirteen Words in Forty Mood Slots</title>
+      <link>https://idle.ipe.rest/journal/en/mood-tags-of-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/mood-tags-of-ten-songs/</guid>
+      <pubDate>Wed, 11 Nov 2026 11:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Each of the ten design documents for dear(you); vol.1 lists four mood words. Counted together, forty slots hold only thirteen different words, and Warm and Gentle each appear in nine songs.</description>
+    </item>
     <item>
       <title>열 곡의 「천천히」, 그리고 빠진 자리</title>
       <link>https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/</link>
