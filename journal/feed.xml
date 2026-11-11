@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 11:39:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 15:57:00 +0900</lastBuildDate>
+    <item>
+      <title>영어 가사지의 you, I, we</title>
+      <link>https://idle.ipe.rest/journal/ko/you-i-we-in-the-english-lyrics/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/you-i-we-in-the-english-lyrics/</guid>
+      <pubDate>Wed, 11 Nov 2026 15:57:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어판 가사지에서 you 계열 낱말은 137번, I 계열은 55번, we 계열은 28번 나옵니다. 열 곡 중 아홉 곡에서 you가 I보다 많습니다.</description>
+    </item>
+    <item>
+      <title>You, I and We in the English Lyrics</title>
+      <link>https://idle.ipe.rest/journal/en/you-i-we-in-the-english-lyrics/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/you-i-we-in-the-english-lyrics/</guid>
+      <pubDate>Wed, 11 Nov 2026 15:57:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In the English lyric sheets of dear(you); vol.1, you-words appear 137 times, I-words 55 times and we-words 28 times. In nine of ten songs, you outnumbers I.</description>
+    </item>
     <item>
       <title>열 곡의 무드 태그, 마흔 개 중 열세 개</title>
       <link>https://idle.ipe.rest/journal/ko/mood-tags-of-ten-songs/</link>

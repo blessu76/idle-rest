@@ -90,6 +90,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [You, I and We in the English Lyrics](https://idle.ipe.rest/journal/en/you-i-we-in-the-english-lyrics/) — In the English lyric sheets of dear(you); vol.1, you-words appear 137 times, I-words 55 times and we-words 28 times. In nine of ten songs, you outnumbers I. (en, 2026-11-11)
 - [Thirteen Words in Forty Mood Slots](https://idle.ipe.rest/journal/en/mood-tags-of-ten-songs/) — Each of the ten design documents for dear(you); vol.1 lists four mood words. Counted together, forty slots hold only thirteen different words, and Warm and Gentle each appear in nine songs. (en, 2026-11-11)
 - [Counting "Slowly" in Ten Songs](https://idle.ipe.rest/journal/en/slowly-in-ten-songs/) — "Slow" or "slowly" appears 21 times in the English sheets of dear(you); vol.1 and 천천히 20 times in the Korean ones. Two songs show where the word is missing. (en, 2026-11-08)
 - [Piano, Pads and Vinyl in Every Spec Sheet](https://idle.ipe.rest/journal/en/piano-pads-vinyl-in-every-spec-sheet/) — Ten spec sheets, ten different songs, and a few phrases that never change: a piano, pads, vinyl and a mix tag. Here is what stays fixed and what moves. (en, 2026-11-08)
@@ -125,6 +126,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [영어 가사지의 you, I, we](https://idle.ipe.rest/journal/ko/you-i-we-in-the-english-lyrics/) — dear(you); vol.1 영어판 가사지에서 you 계열 낱말은 137번, I 계열은 55번, we 계열은 28번 나옵니다. 열 곡 중 아홉 곡에서 you가 I보다 많습니다. (ko, 2026-11-11)
 - [열 곡의 무드 태그, 마흔 개 중 열세 개](https://idle.ipe.rest/journal/ko/mood-tags-of-ten-songs/) — dear(you); vol.1 열 곡의 설계 문서에는 곡마다 무드 단어가 네 개씩 있습니다. 모두 세면 마흔 개 중 서로 다른 말은 열세 개이고, Warm과 Gentle이 아홉 곡씩에 있습니다. (ko, 2026-11-11)
 - [열 곡의 「천천히」, 그리고 빠진 자리](https://idle.ipe.rest/journal/ko/slowly-in-ten-songs/) — dear(you); vol.1 가사지에서 영어 slow(ly)는 21번, 한국어 천천히는 20번 나옵니다. 낱말이 빠지는 두 곡도 함께 봅니다. (ko, 2026-11-08)
 - [열 장의 사양서에 모두 있는 피아노·패드·바이닐](https://idle.ipe.rest/journal/ko/piano-pads-vinyl-in-every-spec-sheet/) — 사양서 열 장, 서로 다른 열 곡. 그래도 바뀌지 않는 피아노, 패드, 바이닐, 믹스 태그와 움직이는 것들을 정리했습니다. (ko, 2026-11-08)
