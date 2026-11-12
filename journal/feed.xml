@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 15:57:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 11:03:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡 제목의 길이, 한글 여섯에서 아홉 음절</title>
+      <link>https://idle.ipe.rest/journal/ko/ten-title-lengths/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/ten-title-lengths/</guid>
+      <pubDate>Thu, 12 Nov 2026 11:03:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 열 곡의 제목은 한글 6~9음절, 영어 3~6단어로 짧습니다. 가장 짧은 제목은 03번(한글)과 06번(영어)입니다.</description>
+    </item>
+    <item>
+      <title>How Long Are Ten Song Titles?</title>
+      <link>https://idle.ipe.rest/journal/en/ten-title-lengths/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/ten-title-lengths/</guid>
+      <pubDate>Thu, 12 Nov 2026 11:03:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The ten song titles of dear(you); vol.1 are short, six to nine Korean syllables and three to six English words. The shortest are song 03 in Korean and song 06 in English.</description>
+    </item>
     <item>
       <title>영어 가사지의 you, I, we</title>
       <link>https://idle.ipe.rest/journal/ko/you-i-we-in-the-english-lyrics/</link>
