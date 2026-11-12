@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 11:03:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 15:16:00 +0900</lastBuildDate>
+    <item>
+      <title>쇼츠 클립은 곡의 어디에서 시작할까, 약 30% 지점</title>
+      <link>https://idle.ipe.rest/journal/ko/where-the-shorts-clip-starts/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/where-the-shorts-clip-starts/</guid>
+      <pubDate>Thu, 12 Nov 2026 15:16:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 쇼츠 클립 21개 중 18개는 시작 시각이 곡 길이의 30%를 내림한 값과 정확히 같습니다. 예외 세 개도 함께 봅니다.</description>
+    </item>
+    <item>
+      <title>Where a Shorts Clip Starts in the Song</title>
+      <link>https://idle.ipe.rest/journal/en/where-the-shorts-clip-starts/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/where-the-shorts-clip-starts/</guid>
+      <pubDate>Thu, 12 Nov 2026 15:16:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Of 21 Shorts clips for dear(you); vol.1, 18 start exactly at 30% of the song length, rounded down. Three exceptions are listed too.</description>
+    </item>
     <item>
       <title>열 곡 제목의 길이, 한글 여섯에서 아홉 음절</title>
       <link>https://idle.ipe.rest/journal/ko/ten-title-lengths/</link>

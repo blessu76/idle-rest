@@ -91,6 +91,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Where a Shorts Clip Starts in the Song](https://idle.ipe.rest/journal/en/where-the-shorts-clip-starts/) — Of 21 Shorts clips for dear(you); vol.1, 18 start exactly at 30% of the song length, rounded down. Three exceptions are listed too. (en, 2026-11-12)
 - [How Long Are Ten Song Titles?](https://idle.ipe.rest/journal/en/ten-title-lengths/) — The ten song titles of dear(you); vol.1 are short, six to nine Korean syllables and three to six English words. The shortest are song 03 in Korean and song 06 in English. (en, 2026-11-12)
 - [You, I and We in the English Lyrics](https://idle.ipe.rest/journal/en/you-i-we-in-the-english-lyrics/) — In the English lyric sheets of dear(you); vol.1, you-words appear 137 times, I-words 55 times and we-words 28 times. In nine of ten songs, you outnumbers I. (en, 2026-11-11)
 - [Thirteen Words in Forty Mood Slots](https://idle.ipe.rest/journal/en/mood-tags-of-ten-songs/) — Each of the ten design documents for dear(you); vol.1 lists four mood words. Counted together, forty slots hold only thirteen different words, and Warm and Gentle each appear in nine songs. (en, 2026-11-11)
@@ -128,6 +129,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [쇼츠 클립은 곡의 어디에서 시작할까, 약 30% 지점](https://idle.ipe.rest/journal/ko/where-the-shorts-clip-starts/) — dear(you); vol.1 쇼츠 클립 21개 중 18개는 시작 시각이 곡 길이의 30%를 내림한 값과 정확히 같습니다. 예외 세 개도 함께 봅니다. (ko, 2026-11-12)
 - [열 곡 제목의 길이, 한글 여섯에서 아홉 음절](https://idle.ipe.rest/journal/ko/ten-title-lengths/) — dear(you); vol.1 열 곡의 제목은 한글 6~9음절, 영어 3~6단어로 짧습니다. 가장 짧은 제목은 03번(한글)과 06번(영어)입니다. (ko, 2026-11-12)
 - [영어 가사지의 you, I, we](https://idle.ipe.rest/journal/ko/you-i-we-in-the-english-lyrics/) — dear(you); vol.1 영어판 가사지에서 you 계열 낱말은 137번, I 계열은 55번, we 계열은 28번 나옵니다. 열 곡 중 아홉 곡에서 you가 I보다 많습니다. (ko, 2026-11-11)
 - [열 곡의 무드 태그, 마흔 개 중 열세 개](https://idle.ipe.rest/journal/ko/mood-tags-of-ten-songs/) — dear(you); vol.1 열 곡의 설계 문서에는 곡마다 무드 단어가 네 개씩 있습니다. 모두 세면 마흔 개 중 서로 다른 말은 열세 개이고, Warm과 Gentle이 아홉 곡씩에 있습니다. (ko, 2026-11-11)
