@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 12:17:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 21:18:00 +0900</lastBuildDate>
+    <item>
+      <title>영어 가사지 열 곡의 서로 다른 낱말 522개</title>
+      <link>https://idle.ipe.rest/journal/ko/vocabulary-of-ten-english-lyric-sheets/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/vocabulary-of-ten-english-lyric-sheets/</guid>
+      <pubDate>Fri, 13 Nov 2026 21:18:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지에는 낱말이 모두 2,554개 나오지만 서로 다른 낱말은 522개뿐입니다. 244개는 딱 한 번만 나오고, 가장 많이 반복되는 말은 가장 평범한 말들입니다.</description>
+    </item>
+    <item>
+      <title>522 Different Words in Ten English Lyric Sheets</title>
+      <link>https://idle.ipe.rest/journal/en/vocabulary-of-ten-english-lyric-sheets/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/vocabulary-of-ten-english-lyric-sheets/</guid>
+      <pubDate>Fri, 13 Nov 2026 21:18:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The English lyric sheets of dear(you); vol.1 hold 2,554 words, but only 522 of them are different. 244 appear exactly once, and the most repeated words are the plainest ones.</description>
+    </item>
     <item>
       <title>열 곡의 설계 문서는 같은 날 쓰였다</title>
       <link>https://idle.ipe.rest/journal/ko/ten-songs-written-in-one-day/</link>

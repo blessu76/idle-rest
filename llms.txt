@@ -89,6 +89,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [522 Different Words in Ten English Lyric Sheets](https://idle.ipe.rest/journal/en/vocabulary-of-ten-english-lyric-sheets/) — The English lyric sheets of dear(you); vol.1 hold 2,554 words, but only 522 of them are different. 244 appear exactly once, and the most repeated words are the plainest ones. (en, 2026-11-13)
 - [Ten Song Designs, One Date](https://idle.ipe.rest/journal/en/ten-songs-written-in-one-day/) — The ten design documents of dear(you); vol.1 were all last updated on 2026-07-04, while the dates in the creation logs cluster on two days, 07-06 and 07-07. (en, 2026-11-13)
 - [Where a Shorts Clip Starts in the Song](https://idle.ipe.rest/journal/en/where-the-shorts-clip-starts/) — Of 21 Shorts clips for dear(you); vol.1, 18 start exactly at 30% of the song length, rounded down. Three exceptions are listed too. (en, 2026-11-12)
 - [How Long Are Ten Song Titles?](https://idle.ipe.rest/journal/en/ten-title-lengths/) — The ten song titles of dear(you); vol.1 are short, six to nine Korean syllables and three to six English words. The shortest are song 03 in Korean and song 06 in English. (en, 2026-11-12)
@@ -128,6 +129,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [영어 가사지 열 곡의 서로 다른 낱말 522개](https://idle.ipe.rest/journal/ko/vocabulary-of-ten-english-lyric-sheets/) — dear(you); vol.1 영어 가사지에는 낱말이 모두 2,554개 나오지만 서로 다른 낱말은 522개뿐입니다. 244개는 딱 한 번만 나오고, 가장 많이 반복되는 말은 가장 평범한 말들입니다. (ko, 2026-11-13)
 - [열 곡의 설계 문서는 같은 날 쓰였다](https://idle.ipe.rest/journal/ko/ten-songs-written-in-one-day/) — dear(you); vol.1 열 곡의 설계 문서는 모두 2026-07-04에 마지막으로 고쳐졌고, 창작 일지의 작성일은 07-06과 07-07 이틀에 모여 있습니다. (ko, 2026-11-13)
 - [쇼츠 클립은 곡의 어디에서 시작할까, 약 30% 지점](https://idle.ipe.rest/journal/ko/where-the-shorts-clip-starts/) — dear(you); vol.1 쇼츠 클립 21개 중 18개는 시작 시각이 곡 길이의 30%를 내림한 값과 정확히 같습니다. 예외 세 개도 함께 봅니다. (ko, 2026-11-12)
 - [열 곡 제목의 길이, 한글 여섯에서 아홉 음절](https://idle.ipe.rest/journal/ko/ten-title-lengths/) — dear(you); vol.1 열 곡의 제목은 한글 6~9음절, 영어 3~6단어로 짧습니다. 가장 짧은 제목은 03번(한글)과 06번(영어)입니다. (ko, 2026-11-12)
