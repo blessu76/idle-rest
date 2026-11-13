@@ -10,7 +10,8 @@ Offline checks:
      and every post page (content/journal/<lang>/<slug>.md). Nothing journal-ish is listed that is not published
      (redirect stubs for old URLs must NOT be listed).
   3. Home: / (x-default) and /<lang>/ for all 12 languages are listed (static pages, no ?lang=).
-  4. Pages: /about/ /contact/ /privacy/ (x-default) and /<lang>/<slug>/ for all 12 languages are listed (3 x 13 = 39 URLs).
+  4. Pages: /about/ /contact/ (x-default) and /<lang>/<slug>/ for all 12 languages are listed (2 x 13 = 26 URLs).
+     Privacy and terms are redirect stubs (noindex) and must NOT be listed.
   5. Every <loc> maps to a file on disk (index.html of that path).
   6. hreflang (every <url> that has alternates): lists itself + x-default; every hreflang target is itself a <loc> in the sitemap;
      references are reciprocal (if A lists B under lang L, B lists A under A's lang).
@@ -59,7 +60,6 @@ def check(root):
     want.update("%s/%s/" % (bj.SITE, l) for l in bj.LANGS)
     for slug in bp.SLUGS:  # trust pages: x-default + one per language
         want.update(bp.page_url(l, slug) for l in (None,) + tuple(bj.LANGS))
-    want.update(bp.page_url(None, slug) for slug in bp.EN_ONLY)  # English-only legal pages (/terms/)
     for p in posts:
         want.add(bj.post_url(p))
     per = {}  # list pages: page 1 of each language + /journal/page/N/ ... for lists longer than PER_PAGE
@@ -78,6 +78,8 @@ def check(root):
             errs.append("no file for sitemap URL (expected %sindex.html): %s" % (u[len(bj.SITE) + 1:], u))
     for u in sorted(u for u in urls if "/journal/" in u and u not in want):
         errs.append("in sitemap but not a published journal page: %s" % u)
+    for u in sorted(u for u in urls if any(u.endswith("/%s/" % s) for s in bp.REDIRECTS)):
+        errs.append("redirect stub in sitemap (it is noindex): %s" % u)
     for loc, links in urls.items():
         if not links:  # a page without alternates (single language) needs no hreflang
             continue

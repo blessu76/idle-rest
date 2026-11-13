@@ -1,4 +1,4 @@
-"""Tests for scripts/build_pages.py (About / Contact / Privacy in 12 languages) — run: python3 -m unittest discover -s tests"""
+"""Tests for scripts/build_pages.py (About / Contact in 12 languages + Privacy / Terms redirect stubs) — run: python3 -m unittest discover -s tests"""
 import re
 import shutil
 import subprocess
@@ -52,10 +52,31 @@ class Built(unittest.TestCase):
 
 
 class Pages(Built):
-    def test_all_39_pages_exist(self):
+    def test_all_26_pages_exist(self):
         for slug in SLUGS:
             for lang in [None] + LANGS:
                 self.assertTrue((self.tmp / (lang or "") / slug / "index.html").is_file(), (lang, slug))
+
+    def test_privacy_and_terms_are_noindex_redirects_to_ipe_rest(self):
+        for slug in bp.REDIRECTS:
+            for lang in [None] + LANGS:
+                h = self.page(lang, slug)
+                target = "https://ipe.rest/%s/legal/%s/" % ("ko" if lang == "ko" else "en", slug)
+                self.assertIn('<meta name="robots" content="noindex, follow">', h, (lang, slug))
+                self.assertEqual(CANON.findall(h), [target], (lang, slug))
+                self.assertIn('<meta http-equiv="refresh" content="0; url=%s">' % target, h, (lang, slug))
+                self.assertIn('<a href="%s">' % target, h, (lang, slug))
+                self.assertNotIn("hreflang", h, (lang, slug))
+
+    def test_redirect_stubs_are_not_in_the_sitemap(self):
+        locs = [u.findtext("s:loc", namespaces=NS) for u in ET.parse(self.tmp / "sitemap.xml").getroot().findall("s:url", NS)]
+        for slug in bp.REDIRECTS:
+            self.assertEqual([u for u in locs if u.rstrip("/").endswith("/" + slug)], [], slug)
+
+    def test_footer_links_point_to_ipe_rest_legal(self):
+        self.assertIn('<li><a href="https://ipe.rest/ko/legal/privacy/">', self.page("ko", "about"))
+        self.assertIn('<li><a href="https://ipe.rest/en/legal/terms/">', self.page("ja", "about"))
+        self.assertIn('<li><a href="https://ipe.rest/en/legal/privacy/">', self.page(None, "contact"))
 
     def test_canonical_is_itself_and_hreflang_is_absolute_and_symmetric(self):
         want_langs = LANGS + ["x-default"]
@@ -94,30 +115,12 @@ class Pages(Built):
                     self.assertNotIn("ai-note", h, (lang, slug))
             self.assertNotIn("ai-note", self.page(None, slug))
 
-    def test_privacy_notice_says_originals_prevail(self):
-        # the privacy notice carries one more sentence than the about/contact one
-        for lang in TRANSLATED:
-            notes = {}
-            for slug in SLUGS:
-                m = re.search(r'<p class="ai-note">(.*?)</p>', self.page(lang, slug), re.S)
-                notes[slug] = len(re.sub(r"<[^>]+>", "", m.group(1)))
-            self.assertGreater(notes["privacy"], notes["about"] + 20, lang)
-
-    def test_privacy_has_app_section_12_and_contact_13(self):
-        for lang in LANGS:
-            h = self.page(lang, "privacy")
-            nums = re.findall(r"<h2>(\d+)\.", h)
-            self.assertEqual(nums, [str(n) for n in range(1, 14)], lang)
-            self.assertIn("idle()", re.search(r"<h2>12\.(.*?)</h2>", h).group(1), lang)
-            self.assertIn("sessionStorage", h, lang)
-            self.assertIn("2026-10-24", h, lang)
-
     def test_operator_and_email_are_filled_not_translated(self):
         for slug in SLUGS:
             for lang in LANGS:
                 h = self.page(lang, slug)
                 self.assertNotIn("{{", h, (lang, slug))
-                if slug in ("contact", "privacy"):
+                if slug == "contact":
                     self.assertIn("Davy Kim (ipe Studio)", h)
                     self.assertIn('href="mailto:ipe.haven@gmail.com"', h)
         self.assertIn('<bdi class="ltr">Davy Kim (ipe Studio)</bdi>', self.page("ar", "contact"))
@@ -170,9 +173,8 @@ class Pages(Built):
         self.assertIn("About idle()", self.page("en", "about"))
         self.assertIn("idle() 소개", self.page("ko", "about"))
         self.assertIn("<h1>About idle()</h1>", self.page(None, "about"))
-        self.assertIn("개인정보처리방침", self.page("ko", "privacy"))
 
-    def test_sitemap_has_39_page_urls_and_check_passes(self):
+    def test_sitemap_has_26_page_urls_and_check_passes(self):
         locs = [u.findtext("s:loc", namespaces=NS) for u in ET.parse(self.tmp / "sitemap.xml").getroot().findall("s:url", NS)]
         for slug in SLUGS:
             for lang in [None] + LANGS:
@@ -181,13 +183,24 @@ class Pages(Built):
         self.assertEqual(r.returncode, 0, r.stderr)
 
     def test_check_sitemap_fails_for_a_missing_page_file(self):
-        (self.tmp / "ja" / "privacy" / "index.html").rename(self.tmp / "ja" / "privacy" / "gone.html")
+        (self.tmp / "ja" / "about" / "index.html").rename(self.tmp / "ja" / "about" / "gone.html")
         try:
             r = self.run_script("check_sitemap.py")
             self.assertEqual(r.returncode, 1)
             self.assertIn("no file for sitemap URL", r.stderr)
         finally:
-            (self.tmp / "ja" / "privacy" / "gone.html").rename(self.tmp / "ja" / "privacy" / "index.html")
+            (self.tmp / "ja" / "about" / "gone.html").rename(self.tmp / "ja" / "about" / "index.html")
+
+    def test_check_sitemap_fails_when_a_redirect_stub_is_listed(self):
+        sm = self.tmp / "sitemap.xml"
+        original = sm.read_text(encoding="utf-8")
+        try:
+            sm.write_text(original.replace("</urlset>", "  <url><loc>https://idle.ipe.rest/ja/privacy/</loc></url>\n</urlset>"), encoding="utf-8")
+            r = self.run_script("check_sitemap.py")
+            self.assertEqual(r.returncode, 1)
+            self.assertIn("redirect stub in sitemap", r.stderr)
+        finally:
+            sm.write_text(original, encoding="utf-8")
 
     def test_llms_lists_all_pages(self):
         t = (self.tmp / "llms.txt").read_text(encoding="utf-8")
@@ -237,7 +250,7 @@ class Sources(unittest.TestCase):
         self.assertIn("tags differ from English", r.stderr)
 
     def test_translation_with_a_changed_link_fails(self):
-        self.edit("es/privacy.html", lambda t: t.replace("https://adssettings.google.com", "https://example.com", 1))
+        self.edit("es/about.html", lambda t: t.replace('href="{{CONTACT}}"', 'href="{{CONTACT}}/x"', 1))
         self.assertIn("links differ from English", self.check().stderr)
 
     def test_translation_dropping_a_placeholder_fails(self):
@@ -253,7 +266,7 @@ class Sources(unittest.TestCase):
         self.assertIn("needs an ai: line", self.check().stderr)
 
     def test_ai_notice_must_link_the_originals(self):
-        self.edit("id/privacy.html", lambda t: t.replace("{{ORIGINALS}}", "", 1))
+        self.edit("id/about.html", lambda t: t.replace("{{ORIGINALS}}", "", 1))
         self.assertIn("ai: line must contain {{ORIGINALS}}", self.check().stderr)
 
     def test_original_must_not_have_an_ai_notice(self):

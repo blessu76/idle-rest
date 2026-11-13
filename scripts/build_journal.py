@@ -467,6 +467,11 @@ def ipe_href(lang):
     return "https://ipe.rest/?lang=en" if lang == "en" else "https://ipe.rest/%s/" % lang
 
 
+def legal_url(lang, slug):
+    """canonical ipe.rest policy page (privacy · terms): Korean original for ko, English for everything else (lang=None: x-default)."""
+    return "https://ipe.rest/%s/legal/%s/" % ("ko" if lang == "ko" else "en", slug)
+
+
 def lang_redirect(path_tpl, langs=None):
     """head script for pages WITHOUT a language path (/, /about/ … and the /journal/ hub). Order = site-wide language rule:
     ?lang=xx (explicit URL: go there, never overridden) -> stored ipe_lang -> navigator.languages (ko-KR -> ko) -> English (stay).
@@ -591,8 +596,8 @@ def footer(lang, default=False):
       <li><a href="/journal/feed.xml">{esc(t['rss'])}</a></li>
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
-      <li><a href="{pre}/privacy/">{esc(t['privacy'])}</a></li>
-      <li><a href="/terms/">Terms</a></li>
+      <li><a href="{legal_url(lang, 'privacy')}">{esc(t['privacy'])}</a></li>
+      <li><a href="{legal_url(lang, 'terms')}">Terms</a></li>
       <li><a href="{ipe_href(lang)}" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
