@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 15:16:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:17:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡의 설계 문서는 같은 날 쓰였다</title>
+      <link>https://idle.ipe.rest/journal/ko/ten-songs-written-in-one-day/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/ten-songs-written-in-one-day/</guid>
+      <pubDate>Fri, 13 Nov 2026 12:17:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 열 곡의 설계 문서는 모두 2026-07-04에 마지막으로 고쳐졌고, 창작 일지의 작성일은 07-06과 07-07 이틀에 모여 있습니다.</description>
+    </item>
+    <item>
+      <title>Ten Song Designs, One Date</title>
+      <link>https://idle.ipe.rest/journal/en/ten-songs-written-in-one-day/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/ten-songs-written-in-one-day/</guid>
+      <pubDate>Fri, 13 Nov 2026 12:17:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The ten design documents of dear(you); vol.1 were all last updated on 2026-07-04, while the dates in the creation logs cluster on two days, 07-06 and 07-07.</description>
+    </item>
     <item>
       <title>쇼츠 클립은 곡의 어디에서 시작할까, 약 30% 지점</title>
       <link>https://idle.ipe.rest/journal/ko/where-the-shorts-clip-starts/</link>
