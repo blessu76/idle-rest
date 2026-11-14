@@ -257,6 +257,34 @@ class PostTime(Site):
             self.fails("time must be HH:MM")
 
 
+class CopyReview(Site):
+    def dated(self, date, extra=""):
+        self.post("rev", extra='time: "13:00"\n' + extra, body=" ".join(["word"] * 320))
+        f = self.tmp / "content/journal/en/rev.md"
+        f.write_text(f.read_text().replace("date: 2026-10-22", "date: " + date), encoding="utf-8")
+
+    def test_post_from_nov_14_needs_iris_review(self):
+        self.dated("2026-11-14")
+        self.fails("copy_review: iris is required")
+
+    def test_review_needs_a_date(self):
+        self.dated("2026-11-14", "copy_review: iris\n")
+        self.fails("copy_review_date: YYYY-MM-DD is required")
+
+    def test_iris_reviewed_post_builds(self):
+        self.dated("2026-11-14", "copy_review: iris\ncopy_review_date: 2026-11-14\n")
+        self.build()
+        self.assertTrue((self.tmp / "journal/en/rev/index.html").is_file())
+
+    def test_legacy_post_is_exempt(self):
+        self.dated("2026-11-13")
+        self.build()
+
+    def test_draft_is_exempt(self):
+        self.dated("2026-11-14", "draft: true\n")
+        self.build()
+
+
 class Validation(Site):
     def test_post_without_optional_fields(self):
         self.post("plain")

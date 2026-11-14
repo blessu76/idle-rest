@@ -28,10 +28,13 @@ def slot(day=6, yesterday=()):
     return at(day, pn.day_target(dt.date(2026, 11, day), list(yesterday)).strftime("%H:%M"))
 
 
+REVIEW = "copy_review: iris\ncopy_review_date: 2026-11-14\n"
+
+
 def entry(lang, slug="a-slug", title="A Title", extra=""):
     tr = "translation_of: ko\n" if lang == "en" else ""
-    return ("---\ntitle: %s\ndate: 2026-01-01\nslug: %s\nlang: %s\n%sdescription: d\ncategory: behind-the-music\n%s---\n\nbody %s\n"
-            % (title, slug, lang, tr, extra, lang))
+    return ("---\ntitle: %s\ndate: 2026-01-01\nslug: %s\nlang: %s\n%sdescription: d\ncategory: behind-the-music\n%s%s---\n\nbody %s\n"
+            % (title, slug, lang, tr, REVIEW, extra, lang))
 
 
 class Rhythm(unittest.TestCase):
@@ -185,6 +188,9 @@ class QueueAndGuards(unittest.TestCase):
             "slug differs": dict(ko=entry("ko", slug="other")),
             "bad slug": dict(en=entry("en", slug="Bad_Slug"), ko=entry("ko", slug="Bad_Slug")),
             "lang mismatch": dict(ko=entry("ko").replace("lang: ko", "lang: en")),
+            "no copy_review": dict(en=entry("en").replace(REVIEW, "")),
+            "copy_review by someone else": dict(en=entry("en").replace("copy_review: iris", "copy_review: dane")),
+            "no copy_review_date": dict(ko=entry("ko").replace("copy_review_date: 2026-11-14\n", "")),
         }
         for i, (what, kw) in enumerate(cases.items()):
             with self.assertRaises(pn.HardFail, msg=what):

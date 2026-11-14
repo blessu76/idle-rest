@@ -221,6 +221,12 @@ def load_item(folder):
             raise HardFail("%s/%s.md: lang is %r" % (folder.name, lang, m["lang"]))
         if m.get("draft", "false").lower() in ("true", "yes", "1"):
             raise HardFail("%s/%s.md: draft: true — a queued entry must be ready" % (folder.name, lang))
+        if m.get("copy_review") != "iris":
+            raise HardFail("%s/%s.md: copy_review: iris is required (Iris copy review before publish)" % (folder.name, lang))
+        try:
+            dt.date.fromisoformat(m.get("copy_review_date", ""))
+        except ValueError:
+            raise HardFail("%s/%s.md: copy_review_date: YYYY-MM-DD is required next to copy_review: iris" % (folder.name, lang))
     slug = metas["en"]["slug"]
     if metas["ko"]["slug"] != slug:
         raise HardFail("%s: en and ko slugs differ" % folder.name)
