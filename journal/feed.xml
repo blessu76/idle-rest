@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 11:13:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 15:21:00 +0900</lastBuildDate>
+    <item>
+      <title>가장 긴 섹션은 어디일까</title>
+      <link>https://idle.ipe.rest/journal/ko/which-section-runs-longest/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/which-section-runs-longest/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:21:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지에서 후렴은 평균 9.9줄로 1절·2절·브리지보다 짧습니다. 앞의 네 곡은 후렴이 더 길고, 뒤의 네 곡은 모두 정확히 아홉 줄입니다.</description>
+    </item>
+    <item>
+      <title>Which Section Runs Longest</title>
+      <link>https://idle.ipe.rest/journal/en/which-section-runs-longest/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/which-section-runs-longest/</guid>
+      <pubDate>Sat, 14 Nov 2026 15:21:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In the English lyric sheets of dear(you); vol.1 the Chorus averages 9.9 lines, shorter than both Verses and the Bridge. The first four songs have longer choruses, and the last four all have exactly nine lines.</description>
+    </item>
     <item>
       <title>열 곡에 나오는 낱말 하나짜리 줄</title>
       <link>https://idle.ipe.rest/journal/ko/one-word-lines-in-ten-songs/</link>

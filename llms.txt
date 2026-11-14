@@ -89,6 +89,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Which Section Runs Longest](https://idle.ipe.rest/journal/en/which-section-runs-longest/) — In the English lyric sheets of dear(you); vol.1 the Chorus averages 9.9 lines, shorter than both Verses and the Bridge. The first four songs have longer choruses, and the last four all have exactly nine lines. (en, 2026-11-14)
 - [One-Word Lines in Ten Songs](https://idle.ipe.rest/journal/en/one-word-lines-in-ten-songs/) — 79 of the 673 lines in the English lyric sheets of dear(you); vol.1 are a single word. "Today" stands alone nine times, "someone" eight, and one song has fifteen such lines. (en, 2026-11-14)
 - [522 Different Words in Ten English Lyric Sheets](https://idle.ipe.rest/journal/en/vocabulary-of-ten-english-lyric-sheets/) — The English lyric sheets of dear(you); vol.1 hold 2,554 words, but only 522 of them are different. 244 appear exactly once, and the most repeated words are the plainest ones. (en, 2026-11-13)
 - [Ten Song Designs, One Date](https://idle.ipe.rest/journal/en/ten-songs-written-in-one-day/) — The ten design documents of dear(you); vol.1 were all last updated on 2026-07-04, while the dates in the creation logs cluster on two days, 07-06 and 07-07. (en, 2026-11-13)
@@ -130,6 +131,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [가장 긴 섹션은 어디일까](https://idle.ipe.rest/journal/ko/which-section-runs-longest/) — dear(you); vol.1 영어 가사지에서 후렴은 평균 9.9줄로 1절·2절·브리지보다 짧습니다. 앞의 네 곡은 후렴이 더 길고, 뒤의 네 곡은 모두 정확히 아홉 줄입니다. (ko, 2026-11-14)
 - [열 곡에 나오는 낱말 하나짜리 줄](https://idle.ipe.rest/journal/ko/one-word-lines-in-ten-songs/) — dear(you); vol.1 영어 가사지의 673줄 가운데 79줄은 낱말 하나뿐입니다. "today"가 혼자 서는 줄이 아홉 번, "someone"이 여덟 번이고, 한 곡에는 그런 줄이 열다섯 개 있습니다. (ko, 2026-11-14)
 - [영어 가사지 열 곡의 서로 다른 낱말 522개](https://idle.ipe.rest/journal/ko/vocabulary-of-ten-english-lyric-sheets/) — dear(you); vol.1 영어 가사지에는 낱말이 모두 2,554개 나오지만 서로 다른 낱말은 522개뿐입니다. 244개는 딱 한 번만 나오고, 가장 많이 반복되는 말은 가장 평범한 말들입니다. (ko, 2026-11-13)
 - [열 곡의 설계 문서는 같은 날 쓰였다](https://idle.ipe.rest/journal/ko/ten-songs-written-in-one-day/) — dear(you); vol.1 열 곡의 설계 문서는 모두 2026-07-04에 마지막으로 고쳐졌고, 창작 일지의 작성일은 07-06과 07-07 이틀에 모여 있습니다. (ko, 2026-11-13)

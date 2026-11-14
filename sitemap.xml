@@ -1542,6 +1542,28 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/page/3/"/>
   </url>
   <url>
+    <loc>https://idle.ipe.rest/journal/ko/which-section-runs-longest/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/which-section-runs-longest/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/which-section-runs-longest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/which-section-runs-longest/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://idle.ipe.rest/journal/en/which-section-runs-longest/</loc>
+    <lastmod>2026-11-14</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idle.ipe.rest/journal/en/which-section-runs-longest/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://idle.ipe.rest/journal/ko/which-section-runs-longest/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idle.ipe.rest/journal/en/which-section-runs-longest/"/>
+    <image:image>
+      <image:loc>https://idle.ipe.rest/og-image.png</image:loc>
+    </image:image>
+  </url>
+  <url>
     <loc>https://idle.ipe.rest/journal/ko/one-word-lines-in-ten-songs/</loc>
     <lastmod>2026-11-14</lastmod>
     <priority>0.5</priority>
