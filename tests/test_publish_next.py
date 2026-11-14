@@ -1,6 +1,8 @@
-"""scripts/publish_next.py — slot rhythm, forbidden windows, stamping, queue validation, guards, and the whole tick against a
+"""scripts/publish_next.py — daily slot rhythm, forbidden windows, stamping, queue validation, guards, and the whole tick against a
 temporary bare git remote (build/check/tests stubbed out, no network, no notifications)."""
+import contextlib
 import datetime as dt
+import io
 import os
 import shutil
 import subprocess
@@ -21,6 +23,10 @@ def at(day, hm):
     return dt.datetime(2026, 11, day, h, m, tzinfo=KST)
 
 
+def slot(day=6, yesterday=()):
+    return at(day, pn.day_target(dt.date(2026, 11, day), list(yesterday)).strftime("%H:%M"))
+
+
 def entry(lang, slug="a-slug", title="A Title", extra=""):
     tr = "translation_of: ko\n" if lang == "en" else ""
     return ("---\ntitle: %s\ndate: 2026-01-01\nslug: %s\nlang: %s\n%sdescription: d\ncategory: behind-the-music\n%s---\n\nbody %s\n"
@@ -33,48 +39,57 @@ class Rhythm(unittest.TestCase):
                         ("12:59", False), ("13:00", True), ("14:29", True), ("14:30", False)):
             self.assertEqual(pn.in_forbidden(dt.time.fromisoformat(hm)), bad, hm)
 
-    def test_next_allowed_skips_window(self):
-        self.assertEqual(pn.next_allowed(at(6, "10:20")), at(6, "11:00"))
-        self.assertEqual(pn.next_allowed(at(6, "13:05")), at(6, "14:30"))
-        self.assertEqual(pn.next_allowed(at(6, "12:00")), at(6, "12:00"))
-
-    def test_morning_slot_is_stable_and_never_forbidden(self):
+    def test_slot_is_stable_inside_the_window_and_never_forbidden(self):
         for d in range(1, 29):
             day = dt.date(2026, 11, d)
-            t = pn.morning_target(day)
-            self.assertEqual(t, pn.morning_target(day))
-            self.assertTrue(dt.time(11, 0) <= t.timetz().replace(tzinfo=None) <= dt.time(12, 59))
+            t = pn.day_target(day, [])
+            self.assertEqual(t, pn.day_target(day, []))
+            self.assertTrue(dt.time(12, 0) <= t < dt.time(18, 0))
+            self.assertFalse(pn.in_forbidden(t))
 
-    def test_afternoon_is_four_hours_after_the_real_first_publish(self):
+    def test_slot_varies_across_days(self):
+        self.assertGreater(len({pn.day_target(dt.date(2026, 11, d), []) for d in range(1, 29)}), 10)
+
+    def test_slot_avoids_yesterdays_hour(self):
         for d in range(1, 29):
             day = dt.date(2026, 11, d)
-            first = dt.time(11, 37)
-            t = pn.afternoon_target(day, first)
-            self.assertGreaterEqual(t, at(d, "15:37"))
-            self.assertLess(t, at(d, "15:37") + dt.timedelta(minutes=pn.AFTERNOON_SPREAD_MIN))
-            self.assertFalse(pn.in_forbidden(t.timetz().replace(tzinfo=None)))
+            for h in range(12, 18):
+                self.assertNotEqual(pn.day_target(day, [dt.time(h, 40)]).hour, h)
 
-    def test_decide_morning(self):
-        target = pn.morning_target(dt.date(2026, 11, 6))
-        self.assertFalse(pn.decide(target - dt.timedelta(minutes=1), [])[0])
-        self.assertTrue(pn.decide(target, [])[0])
-        self.assertTrue(pn.decide(at(6, "20:00"), [])[0])  # late first slot is allowed (catch-up of today, never of yesterday)
+    def test_no_hour_is_avoided_when_yesterday_was_outside_the_window(self):
+        self.assertEqual(pn.slot_candidates(None), pn.slot_candidates(21))
 
-    def test_decide_never_inside_a_forbidden_window_even_forced(self):
-        self.assertFalse(pn.decide(at(6, "10:30"), [], force=True)[0])
-        self.assertFalse(pn.decide(at(6, "13:30"), [dt.time(11, 0)], force=True)[0])
+    def test_decide_waits_for_the_slot_then_publishes(self):
+        target = slot()
+        self.assertFalse(pn.decide(target - dt.timedelta(minutes=1), [], [])[0])
+        self.assertTrue(pn.decide(target, [], [])[0])
+        self.assertTrue(pn.decide(at(6, "17:59"), [], [])[0])
 
-    def test_decide_afternoon_and_limit(self):
-        first = dt.time(11, 30)
-        target = pn.afternoon_target(dt.date(2026, 11, 6), first)
-        self.assertFalse(pn.decide(target - dt.timedelta(minutes=1), [first])[0])
-        self.assertTrue(pn.decide(target, [first])[0])
-        self.assertFalse(pn.decide(at(6, "23:00"), [first, dt.time(16, 0)])[0])  # 2 per day
+    def test_nothing_before_noon_and_nothing_at_or_after_18(self):
+        self.assertFalse(pn.decide(at(6, "09:00"), [], [])[0])
+        self.assertFalse(pn.decide(at(6, "18:00"), [], [])[0])
+        self.assertFalse(pn.decide(at(6, "23:30"), [], [])[0])
 
-    def test_afternoon_slot_past_midnight_is_not_today(self):
-        ok, why = pn.decide(at(6, "23:59"), [dt.time(22, 30)])
+    def test_one_per_day(self):
+        ok, why = pn.decide(at(6, "17:00"), [dt.time(12, 30)], [])
         self.assertFalse(ok)
-        self.assertIn("tomorrow", why)
+        self.assertIn("already published today", why)
+
+    def test_forced_is_flagged_and_still_respects_forbidden_windows_and_daily_limit(self):
+        ok, why = pn.decide(at(6, "09:00"), [], [], force=True)
+        self.assertTrue(ok)
+        self.assertIn("forced", why)
+        self.assertFalse(pn.decide(at(6, "10:30"), [], [], force=True)[0])
+        self.assertFalse(pn.decide(at(6, "13:30"), [], [], force=True)[0])
+        self.assertFalse(pn.decide(at(6, "17:00"), [dt.time(12, 30)], [], force=True)[0])
+
+    def test_next_publish(self):
+        self.assertEqual(pn.next_publish(at(6, "09:00"), [], []), slot(6))
+        published = dt.time(15, 10)
+        nxt = pn.next_publish(at(6, "16:00"), [published], [])
+        self.assertEqual(nxt, slot(7, [published]))
+        self.assertNotEqual(nxt.hour, 15)
+        self.assertEqual(pn.next_publish(at(6, "18:30"), [], []), slot(7, []))
 
     def test_now_needs_an_offset(self):
         with self.assertRaises(ValueError):
@@ -110,8 +125,11 @@ class QueueAndGuards(unittest.TestCase):
         d = self.tmp / name
         d.mkdir()
         (d / "en.md").write_text(kw.get("en", entry("en")), encoding="utf-8")
-        if kw.get("ko", True):
-            (d / "ko.md").write_text(entry("ko") if kw.get("ko") in (True, None) else kw["ko"], encoding="utf-8")
+        ko = kw.get("ko", True)
+        if ko is True:
+            (d / "ko.md").write_text(entry("ko"), encoding="utf-8")
+        elif ko:
+            (d / "ko.md").write_text(ko, encoding="utf-8")
         return d
 
     def test_valid_item(self):
@@ -151,7 +169,7 @@ class QueueAndGuards(unittest.TestCase):
     def test_today_published_times_ignores_drafts_and_other_days(self):
         d = self.tmp / "content" / "journal" / "en"
         d.mkdir(parents=True)
-        (d / "a.md").write_text(entry("en", slug="a").replace("2026-01-01", "2026-11-06") .replace("---\n\nbody", 'time: "12:05"\n---\n\nbody'), encoding="utf-8")
+        (d / "a.md").write_text(entry("en", slug="a").replace("2026-01-01", "2026-11-06").replace("---\n\nbody", 'time: "12:05"\n---\n\nbody'), encoding="utf-8")
         (d / "b.md").write_text(entry("en", slug="b").replace("2026-01-01", "2026-11-06").replace("---\n\nbody", 'time: "16:10"\ndraft: true\n---\n\nbody'), encoding="utf-8")
         (d / "c.md").write_text(entry("en", slug="c").replace("2026-01-01", "2026-11-05").replace("---\n\nbody", 'time: "09:00"\n---\n\nbody'), encoding="utf-8")
         self.assertEqual(pn.today_published_times(self.tmp, dt.date(2026, 11, 6)), [dt.time(12, 5)])
@@ -209,18 +227,18 @@ class Tick(unittest.TestCase):
         for n, s in (("01-first", "first"), ("02-second", "second"), ("03-third", "third"), ("04-fourth", "fourth")):
             self.add(n, s)
         before = self.head()
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 0)
+        self.assertEqual(self.pub(slot()).locked_tick(), 0)
         self.assertNotEqual(self.head(), before)
         files = self.remote_files()
         self.assertIn("content/journal/en/first.md", files)
         self.assertIn("content/journal/ko/first.md", files)
         self.assertNotIn("content/journal/en/second.md", files)
         meta = pn.front_meta(self.remote_show("content/journal/en/first.md"))
-        self.assertEqual((meta["date"], meta["time"]), ("2026-11-06", "12:59"))
+        self.assertEqual((meta["date"], meta["time"]), ("2026-11-06", slot().strftime("%H:%M")))
         self.assertIn("idle-v11", self.remote_show("sw.js"))
         self.assertTrue((self.queue / ".published" / "01-first").is_dir())
         self.assertEqual([p.name for p in pn.queue_items(self.queue)], ["02-second", "03-third", "04-fourth"])
-        self.assertFalse((self.tmp / "base" / "STOCK_ALERT").exists())
+        self.assertFalse((self.tmp / "base" / "low_queue").exists())
 
     def test_nothing_due_before_the_slot_pushes_nothing(self):
         self.add("01-a", "a")
@@ -238,36 +256,44 @@ class Tick(unittest.TestCase):
 
     def test_empty_queue_when_due_does_not_push_and_warns(self):
         before = self.head()
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 3)
+        self.assertEqual(self.pub(slot()).locked_tick(), 3)
         self.assertEqual(self.head(), before)
-        self.assertIn("EMPTY", (self.tmp / "base" / "STOCK_ALERT").read_text())
+        self.assertIn("EMPTY", (self.tmp / "base" / "low_queue").read_text())
 
-    def test_low_stock_warns_once_a_day(self):
+    def test_low_stock_warns_on_stderr_at_publish_time_and_notifies_once(self):
         self.add("01-a", "a")
-        p = self.pub(at(6, "09:00"))
-        p.locked_tick()
-        first = (self.tmp / "base" / "STOCK_ALERT").read_text()
-        notices = [l for l in self.logs if "NOTIFY" in l]
-        self.assertEqual(len(notices), 1)
-        p.locked_tick()
-        self.assertEqual([l for l in self.logs if "NOTIFY" in l], notices)  # same day, same level: no second notification
-        self.assertEqual((self.tmp / "base" / "STOCK_ALERT").read_text(), first)
+        self.add("02-b", "b")
+        self.assertEqual(self.pub(at(6, "09:00")).locked_tick(), 0)
+        self.assertFalse((self.tmp / "base" / "low_queue").exists())
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err):
+            self.assertEqual(self.pub(slot()).locked_tick(), 0)
+        self.assertIn("LOW", (self.tmp / "base" / "low_queue").read_text())
+        self.assertIn("WARNING", err.getvalue())
+        self.assertEqual(len([l for l in self.logs if "NOTIFY" in l]), 1)
 
-    def test_second_slot_is_four_hours_after_the_first_and_third_never(self):
+    def test_one_per_day_and_the_next_day_avoids_the_previous_hour(self):
         for n in range(1, 5):
             self.add("0%d-x" % n, "x%d" % n)
-        self.pub(at(6, "12:05")).locked_tick()
-        self.assertEqual(self.pub(at(6, "15:00")).locked_tick(), 0)  # < 16:05
+        first = slot(6)
+        self.assertEqual(self.pub(first).locked_tick(), 0)
+        self.assertEqual(self.pub(at(6, "17:50")).locked_tick(), 0)
         self.assertNotIn("content/journal/en/x2.md", self.remote_files())
-        self.pub(at(6, "16:30")).locked_tick()
+        self.assertEqual(self.pub(slot(7, [first.time()])).locked_tick(), 0)
         self.assertIn("content/journal/en/x2.md", self.remote_files())
-        self.pub(at(6, "22:00")).locked_tick()
-        self.assertNotIn("content/journal/en/x3.md", self.remote_files())
+        self.assertNotEqual(slot(7, [first.time()]).hour, first.hour)
+
+    def test_status_reports_the_next_publish(self):
+        self.add("01-a", "a")
+        p = self.pub(at(6, "09:00"))
+        self.assertEqual(p.status(), 0)
+        expected = "next publish: 2026-11-06 %s KST" % slot().strftime("%H:%M")
+        self.assertTrue(any(expected in l for l in self.logs), self.logs)
 
     def test_dry_run_changes_nothing(self):
         self.add("01-a", "a")
         before = self.head()
-        self.assertEqual(self.pub(at(6, "12:59"), dry_run=True).locked_tick(), 0)
+        self.assertEqual(self.pub(slot(), dry_run=True).locked_tick(), 0)
         self.assertEqual(self.head(), before)
         self.assertTrue((self.queue / "01-a").is_dir())
         self.assertFalse((self.queue / ".published").exists())
@@ -276,35 +302,32 @@ class Tick(unittest.TestCase):
         self.add("01-a", "a")
         before = self.head()
         red = [[sys.executable, "-c", "import sys; sys.exit(1)"]]
-        self.assertEqual(self.pub(at(6, "12:59"), check_cmds=red).locked_tick(), 1)
+        self.assertEqual(self.pub(slot(), check_cmds=red).locked_tick(), 1)
         self.assertEqual(self.head(), before)
         self.assertTrue((self.tmp / "base" / "FAILED").exists())
         self.assertTrue((self.queue / "01-a").is_dir())  # manuscript not lost
-        self.assertEqual(self.pub(at(6, "13:00")).locked_tick(), 0)  # FAILED present: waits for a human
+        self.assertEqual(self.pub(at(6, "17:00")).locked_tick(), 0)  # FAILED present: waits for a human
         self.assertEqual(self.head(), before)
 
     def test_bad_manuscript_is_a_hard_fail(self):
         self.add("01-a", "a")
         (self.queue / "01-a" / "ko.md").unlink()
         before = self.head()
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 1)
+        self.assertEqual(self.pub(slot()).locked_tick(), 1)
         self.assertEqual(self.head(), before)
 
-    def test_no_backdating_time_is_re_stamped_to_the_push_minute(self):
-        """verification takes time: the stamp must follow the clock, not the minute the run started."""
+    def test_time_is_re_stamped_to_the_push_minute_not_the_start_minute(self):
         self.add("01-a", "a")
-        clock = iter([at(6, "12:00"), at(6, "12:00"), at(6, "12:00"), at(6, "12:02"), at(6, "12:02"), at(6, "12:02"), at(6, "12:02")])
-        last = [at(6, "12:02")]
+        clock = [at(6, "12:00")]
 
-        def now():
-            try:
-                last[0] = next(clock)
-            except StopIteration:
-                pass
-            return last[0]
+        class Slow(pn.Publisher):
+            def steps(self, cmds, what):
+                if what == "tests":
+                    clock[0] = at(6, "12:02")  # verification takes two minutes
+                super().steps(cmds, what)
 
-        p = pn.Publisher(self.tmp / "base", self.queue, str(self.remote), "http://invalid.invalid", now_fn=now, verify=False,
-                         build_cmds=[], check_cmds=[], test_cmds=[], min_stock=0, log=self.logs.append)
+        p = Slow(self.tmp / "base", self.queue, str(self.remote), "http://invalid.invalid", now_fn=lambda: clock[0],
+                 verify=False, build_cmds=[], check_cmds=[], test_cmds=[], min_stock=0, force=True, log=self.logs.append)
         self.assertEqual(p.locked_tick(), 0)
         meta = pn.front_meta(self.remote_show("content/journal/en/a.md"))
         self.assertEqual(meta["time"], "12:02")
@@ -312,20 +335,20 @@ class Tick(unittest.TestCase):
     def test_already_published_folder_self_heals_without_a_second_push(self):
         self.add("01-old", "old", title="Old")
         self.add("02-next", "next")
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 0)
+        self.assertEqual(self.pub(slot()).locked_tick(), 0)
         self.assertTrue((self.queue / ".published" / "01-old").is_dir())
         self.assertIn("content/journal/en/next.md", self.remote_files())
 
     def test_same_slug_different_title_is_a_hard_fail(self):
         self.add("01-old", "old", title="Something Else")
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 1)
+        self.assertEqual(self.pub(slot()).locked_tick(), 1)
 
     def test_stale_lock_is_taken_over(self):
         self.add("01-a", "a")
         lock = self.tmp / "base" / "lock"
         lock.mkdir(parents=True)
         (lock / "pid").write_text("999999")
-        self.assertEqual(self.pub(at(6, "12:59")).locked_tick(), 0)
+        self.assertEqual(self.pub(slot()).locked_tick(), 0)
         self.assertIn("content/journal/en/a.md", self.remote_files())
 
 

@@ -7,22 +7,22 @@ Nothing is ever back-dated: the date is today (KST) and `time:` is the minute of
 
   python3 scripts/publish_next.py              # normal tick (launchd runs this every 5 min; nothing due -> exits quietly)
   python3 scripts/publish_next.py --dry-run    # everything except the real push and the queue move (git push --dry-run)
-  python3 scripts/publish_next.py --status     # queue stock + today's schedule, touches nothing
-  python3 scripts/publish_next.py --force      # ignore the slot times (still never inside a forbidden window / 2 per day)
+  python3 scripts/publish_next.py --status     # queue stock + today's slot + next publish, touches nothing
+  python3 scripts/publish_next.py --force      # ignore the slot time (still never inside a forbidden window / 1 per day; logged as forced)
 
 Queue (default ~/.ipe/queue/idle, outside the repo so unpublished drafts never reach the public GitHub repo):
   <queue>/<NN-anything>/en.md     front matter + body; `date:` and `time:` are overwritten at publish time
   <queue>/<NN-anything>/ko.md     same slug; en has `translation_of: ko`
 Folders go out in name order. A published folder moves to <queue>/.published/. Queue empty when something is due ->
-NO push, STOCK_ALERT file + macOS notification, exit 3. Fewer than --min-stock left -> same warning, once a day.
+NO push, low_queue flag + stderr + macOS notification, exit 3. Fewer than --min-stock left after a publish -> same warning.
 
-Rhythm (see SLOT constants): 2 per day. First slot = MORNING_START + a stable per-day random minute offset; second slot = actual
-first publish + 4 h (+ small random minutes). Davy's original morning window was 10:00-10:59, but pushes are forbidden 10:00-11:00 and
-13:00-14:30 KST (web push guard), so the morning slot starts at 11:00. Change the constants if that rule changes.
+Rhythm: 1 per day. The day's slot is a stable random minute in 12:00-17:54 KST (seeded by the date), skipping the forbidden
+push windows 10:00-11:00 and 13:00-14:30 (web push guard) and the hour the previous day went out. Nothing goes out at or after
+18:00 KST; a run after 18:00 waits for tomorrow.
 
 Guards: lock · FAILED file stops everything until a human deletes it · dedicated clone = origin/main exactly · no deleted files ·
 only allow-listed paths staged · no leftovers · push must fast-forward (otherwise soft retry from a clean clone, 3 in a row -> SOFT_ALERT).
-State dir: --base (default ~/.ipe/idle-publish): repo/ lock/ FAILED SOFT_ALERT STOCK_ALERT.
+State dir: --base (default ~/.ipe/idle-publish): repo/ lock/ FAILED SOFT_ALERT low_queue.
 Test knobs: --now ISO · --remote · --base · --queue · --no-verify · IDLE_PUBLISH_NO_NOTIFY=1.
 """
 import argparse
@@ -38,12 +38,9 @@ import urllib.request
 from pathlib import Path
 
 KST = dt.timezone(dt.timedelta(hours=9))
-MORNING_START = dt.time(11, 0)          # first slot opens here (10:00-11:00 is a forbidden push window)
-MORNING_SPREAD_MIN = 120                # + stable random 0..119 min -> 11:00-12:59
-AFTERNOON_GAP = dt.timedelta(hours=4)   # second slot = actual first publish + 4 h
-AFTERNOON_SPREAD_MIN = 15               # + stable random 0..14 min
+WINDOW_START = dt.time(12, 0)           # publish window KST, [start, end)
+WINDOW_END = dt.time(18, 0)
 FORBIDDEN = [(dt.time(10, 0), dt.time(11, 0)), (dt.time(13, 0), dt.time(14, 30))]  # [start, end) KST — never push inside
-MAX_PER_DAY = 2
 MIN_STOCK = 3
 SLUG_RE = re.compile(r"^[a-z0-9-]+$")
 MAIN_LANGS = ("en", "ko")
@@ -75,51 +72,62 @@ def in_forbidden(t):
     return any(a <= t < b for a, b in FORBIDDEN)
 
 
-def next_allowed(moment):
-    """first instant >= moment (aware KST datetime) that is outside every forbidden window."""
-    changed = True
-    while changed:
-        changed = False
-        for a, b in FORBIDDEN:
-            if a <= moment.timetz().replace(tzinfo=None) < b:
-                moment = dt.datetime.combine(moment.date(), b, tzinfo=KST)
-                changed = True
-    return moment
-
-
 def jitter(tag, day, spread):
     """stable per-day pseudo-random integer in [0, spread) — the same on every tick of that day."""
     h = hashlib.sha256(("%s|%s" % (tag, day.isoformat())).encode()).hexdigest()
     return int(h[:8], 16) % spread
 
 
-def morning_target(day):
-    base = dt.datetime.combine(day, MORNING_START, tzinfo=KST)
-    return next_allowed(base + dt.timedelta(minutes=jitter("morning", day, MORNING_SPREAD_MIN)))
+def prev_hour(times):
+    return times[-1].hour if times else None
 
 
-def afternoon_target(day, first_time):
-    first = dt.datetime.combine(day, first_time, tzinfo=KST)
-    return next_allowed(first + AFTERNOON_GAP + dt.timedelta(minutes=jitter("afternoon", day, AFTERNOON_SPREAD_MIN)))
+def slot_candidates(avoid_hour):
+    """KST minutes a day may publish at: 12:00-17:54, outside the forbidden windows, never in avoid_hour. The last 5 minutes
+    of an hour are left out so a 5-minute launchd tick cannot carry the push into the next hour."""
+    out = []
+    for h in range(WINDOW_START.hour, WINDOW_END.hour):
+        if h == avoid_hour:
+            continue
+        for m in range(55):
+            t = dt.time(h, m)
+            if not in_forbidden(t):
+                out.append(t)
+    return out
 
 
-def decide(now, today_times, force=False):
-    """-> (due: bool, reason: str). today_times = sorted datetime.time of posts already published today (KST)."""
+def day_target(day, yesterday_times):
+    cands = slot_candidates(prev_hour(yesterday_times))
+    return cands[jitter("publish", day, len(cands))]
+
+
+def decide(now, today_times, yesterday_times, force=False):
+    """-> (due: bool, reason: str). times = sorted datetime.time of posts already published that KST day."""
     now = to_kst(now)
-    n = len(today_times)
-    if n >= MAX_PER_DAY:
-        return False, "daily limit reached (%d published today)" % n
-    if in_forbidden(now.timetz().replace(tzinfo=None)):
+    t = now.time()
+    if today_times:
+        return False, "already published today at %s" % today_times[-1].strftime("%H:%M")
+    if in_forbidden(t):
         return False, "inside a forbidden push window (%s KST)" % now.strftime("%H:%M")
-    target = morning_target(now.date()) if n == 0 else afternoon_target(now.date(), today_times[-1])
-    if target.date() != now.date():
-        return False, "next slot would be tomorrow (%s)" % target.strftime("%m-%d %H:%M")
-    label = "morning slot" if n == 0 else "afternoon slot"
+    target = day_target(now.date(), yesterday_times)
     if force:
-        return True, "forced (%s was %s)" % (label, target.strftime("%H:%M"))
-    if now >= target:
-        return True, "%s due since %s" % (label, target.strftime("%H:%M"))
-    return False, "%s opens at %s" % (label, target.strftime("%H:%M"))
+        return True, "forced (today's slot was %s)" % target.strftime("%H:%M")
+    if t >= WINDOW_END:
+        return False, "after %s KST — next publish tomorrow" % WINDOW_END.strftime("%H:%M")
+    if t >= target:
+        return True, "slot due since %s" % target.strftime("%H:%M")
+    return False, "slot opens at %s" % target.strftime("%H:%M")
+
+
+def next_publish(now, today_times, yesterday_times):
+    """-> aware KST datetime of the next publish: today's slot while nothing has gone out today, else tomorrow's."""
+    now = to_kst(now)
+    if not today_times:
+        target = dt.datetime.combine(now.date(), day_target(now.date(), yesterday_times), tzinfo=KST)
+        if now < target or now.time() < WINDOW_END:
+            return max(now, target)
+    tomorrow = now.date() + dt.timedelta(days=1)
+    return dt.datetime.combine(tomorrow, day_target(tomorrow, today_times), tzinfo=KST)
 
 
 def split_front(text):
@@ -300,17 +308,18 @@ class Publisher:
 
     # -- stock
     def check_stock(self, n):
-        """warn when the queue runs low — at most one notification per day per level."""
+        """called at publish time: stderr warning whenever low, macOS notification at most once per day per level."""
+        flag = self.f("low_queue")
         if n >= self.min_stock:
-            self.f("STOCK_ALERT").unlink(missing_ok=True)
+            flag.unlink(missing_ok=True)
             return
         level = "EMPTY" if n == 0 else "LOW"
         marker = "%s %s" % (self.now().date().isoformat(), level)
-        flag = self.f("STOCK_ALERT")
         prev = flag.read_text(encoding="utf-8").splitlines()[1:2] if flag.exists() else []
         msg = "queue %s: %d entr%s left (min %d) — write more ko+en entries into %s" % (level, n, "y" if n == 1 else "ies", self.min_stock, self.queue)
+        self.write_flag("low_queue", marker, msg)
+        print("WARNING " + msg, file=sys.stderr)
         if prev != [marker]:
-            self.write_flag("STOCK_ALERT", marker, msg)
             self.notify(msg)
         else:
             self.say("stock: " + msg)
@@ -481,10 +490,10 @@ class Publisher:
             self.sync_clone()
             now = self.now()
             day = now.date()
-            times = today_published_times(self.clone, day)
-            due, why = decide(now, times, self.force)
+            today = today_published_times(self.clone, day)
+            yesterday = today_published_times(self.clone, day - dt.timedelta(days=1))
+            due, why = decide(now, today, yesterday, self.force)
             items = queue_items(self.queue)
-            self.check_stock(len(items))
             if not due:
                 self.say("nothing due: " + why)
                 self.f("SOFT_FAILS").unlink(missing_ok=True)
@@ -492,7 +501,8 @@ class Publisher:
             self.say("due: " + why)
             valid = self.self_heal(items)
             if not valid:
-                self.say("queue EMPTY while a slot was due — nothing pushed (STOCK_ALERT written by the stock check)")
+                self.check_stock(0)
+                self.say("queue EMPTY while a slot was due — nothing pushed (low_queue written)")
                 return 3
             item = valid[0]
             self.say("publishing %s (%s)" % (item["slug"], item["folder"].name))
@@ -553,13 +563,16 @@ class Publisher:
             except HardFail as e:
                 self.say("  %s -> INVALID: %s" % (p.name, e))
         now = self.now()
-        if (self.clone / ".git").is_dir():
-            times = today_published_times(self.clone, now.date())
-            self.say("today (from clone content/): %s" % (", ".join(t.strftime("%H:%M") for t in times) or "none"))
-            self.say("decision now: %s" % (decide(now, times, self.force),))
-        else:
-            self.say("no clone yet at %s (first tick clones it)" % self.clone)
-        for flag in ("FAILED", "SOFT_ALERT", "STOCK_ALERT", "LIVE_CHECK_FAILED"):
+        if not (self.clone / ".git").is_dir():
+            self.say("no clone yet at %s (first tick clones it) — schedule below is computed from an empty history" % self.clone)
+        today = today_published_times(self.clone, now.date())
+        yesterday = today_published_times(self.clone, now.date() - dt.timedelta(days=1))
+        self.say("published today (from clone content/): %s" % (", ".join(t.strftime("%H:%M") for t in today) or "none"))
+        self.say("today's slot: %s KST (yesterday's hour avoided: %s)" % (
+            day_target(now.date(), yesterday).strftime("%H:%M"), prev_hour(yesterday)))
+        self.say("decision now: %s" % (decide(now, today, yesterday, self.force),))
+        self.say("next publish: %s KST" % next_publish(now, today, yesterday).strftime("%Y-%m-%d %H:%M"))
+        for flag in ("FAILED", "SOFT_ALERT", "low_queue", "LIVE_CHECK_FAILED"):
             if self.f(flag).exists():
                 self.say("%s: %s" % (flag, " | ".join(self.f(flag).read_text().strip().splitlines())))
         return 0
@@ -573,7 +586,7 @@ def main(argv=None):
     ap.add_argument("--live-base", default=os.environ.get("IDLE_PUBLISH_LIVE", DEFAULT_LIVE))
     ap.add_argument("--now", help="ISO time with offset (test knob), e.g. 2026-11-06T11:30:00+09:00")
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--force", action="store_true", help="ignore slot times (never the forbidden windows or the 2/day limit)")
+    ap.add_argument("--force", action="store_true", help="ignore the slot time (never the forbidden windows or the 1/day limit); logged as forced")
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--no-verify", action="store_true", help="skip the live 200 wait after push")
     ap.add_argument("--min-stock", type=int, default=MIN_STOCK)
