@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 21:18:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 11:13:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡에 나오는 낱말 하나짜리 줄</title>
+      <link>https://idle.ipe.rest/journal/ko/one-word-lines-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/one-word-lines-in-ten-songs/</guid>
+      <pubDate>Sat, 14 Nov 2026 11:13:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지의 673줄 가운데 79줄은 낱말 하나뿐입니다. &quot;today&quot;가 혼자 서는 줄이 아홉 번, &quot;someone&quot;이 여덟 번이고, 한 곡에는 그런 줄이 열다섯 개 있습니다.</description>
+    </item>
+    <item>
+      <title>One-Word Lines in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/one-word-lines-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/one-word-lines-in-ten-songs/</guid>
+      <pubDate>Sat, 14 Nov 2026 11:13:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>79 of the 673 lines in the English lyric sheets of dear(you); vol.1 are a single word. &quot;Today&quot; stands alone nine times, &quot;someone&quot; eight, and one song has fifteen such lines.</description>
+    </item>
     <item>
       <title>영어 가사지 열 곡의 서로 다른 낱말 522개</title>
       <link>https://idle.ipe.rest/journal/ko/vocabulary-of-ten-english-lyric-sheets/</link>
