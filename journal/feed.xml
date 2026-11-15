@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 15:21:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 12:12:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡 가사지에는 느낌표가 하나도 없다</title>
+      <link>https://idle.ipe.rest/journal/ko/no-exclamation-marks-in-ten-lyric-sheets/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/no-exclamation-marks-in-ten-lyric-sheets/</guid>
+      <pubDate>Sun, 15 Nov 2026 12:12:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 열 곡 가사지에는 두 판을 통틀어 느낌표가 하나도 없습니다. 영어 줄에는 물음표 14개, 줄표 29개, 말줄임표 5개가 있고, 세 곡은 아무것도 묻지 않습니다.</description>
+    </item>
+    <item>
+      <title>No Exclamation Marks in Ten Lyric Sheets</title>
+      <link>https://idle.ipe.rest/journal/en/no-exclamation-marks-in-ten-lyric-sheets/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/no-exclamation-marks-in-ten-lyric-sheets/</guid>
+      <pubDate>Sun, 15 Nov 2026 12:12:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Across both versions of the ten lyric sheets of dear(you); vol.1 there is no exclamation mark at all. The English lines hold 14 question marks, 29 dashes and 5 ellipses, and three songs ask nothing.</description>
+    </item>
     <item>
       <title>가장 긴 섹션은 어디일까</title>
       <link>https://idle.ipe.rest/journal/ko/which-section-runs-longest/</link>
