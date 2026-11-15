@@ -8,6 +8,7 @@ Nothing is ever back-dated: the date is today (KST) and `time:` is the minute of
   python3 scripts/publish_next.py              # normal tick (launchd runs this every 5 min; nothing due -> exits quietly)
   python3 scripts/publish_next.py --dry-run    # everything except the real push and the queue move (git push --dry-run)
   python3 scripts/publish_next.py --status     # queue stock + today's slot + next publish, touches nothing
+  python3 scripts/publish_next.py --check-queue  # lint every queued ko/en original with the publish rules (word floor), exit 1 on any
   python3 scripts/publish_next.py --force      # ignore the slot time (still never inside a forbidden window / 1 per day; logged as forced)
 
 Queue (default ~/.ipe/queue/idle, outside the repo so unpublished drafts never reach the public GitHub repo):
@@ -33,9 +34,12 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.request
 from pathlib import Path
+
+import build_journal as bj
 
 KST = dt.timezone(dt.timedelta(hours=9))
 WINDOW_START = dt.time(12, 0)           # publish window KST, [start, end)
@@ -225,6 +229,42 @@ def load_item(folder):
     if metas["en"].get("translation_of") != "ko":
         raise HardFail("%s/en.md: `translation_of: ko` is required" % folder.name)
     return {"slug": slug, "title": metas["en"]["title"], "en": texts["en"], "ko": texts["ko"], "folder": folder}
+
+
+def queue_lint(queue):
+    """build_journal's publish lint (lint_errors: body under LINT_ERROR_WORDS) applied to queued originals -> (low, invalid).
+    Each original is stamped with today's date so the same rule applies as at publish time. low = [(src, msg)], invalid = [(src, why)]."""
+    today = dt.datetime.now(KST).date()
+    low, invalid, posts = [], [], []
+    with tempfile.TemporaryDirectory() as tmp:
+        for folder in queue_items(queue):
+            for lang in MAIN_LANGS:
+                src = "%s/%s.md" % (folder.name, lang)
+                try:
+                    text = stamp((folder / (lang + ".md")).read_text(encoding="utf-8"), today, "12:00")
+                    tmp_file = Path(tmp) / ("%s-%s.md" % (folder.name, lang))
+                    tmp_file.write_text(text, encoding="utf-8")
+                    p = bj.parse_post(tmp_file)
+                except (OSError, ValueError, HardFail) as e:
+                    invalid.append((src, str(e)))
+                    continue
+                p["_src"] = src
+                p["_html"] = bj.markdown(p["_body"])
+                posts.append(p)
+    low = [(p["_src"], msg) for p, msg in bj.lint_errors(posts)]
+    return low, invalid
+
+
+def check_queue(queue):
+    low, invalid = queue_lint(queue)
+    for src, why in invalid:
+        print("INVALID %s: %s" % (src, why))
+    for src, why in low:
+        print("LOW WORDS %s: %s" % (src, why))
+    if low or invalid:
+        return 1
+    print("queue lint: ok (%d folder(s) in %s)" % (len(queue_items(queue)), queue))
+    return 0
 
 
 def check_staged(name_status, untracked_or_unstaged=""):
@@ -562,6 +602,9 @@ class Publisher:
                 self.say("  %s -> %s" % (p.name, load_item(p)["slug"]))
             except HardFail as e:
                 self.say("  %s -> INVALID: %s" % (p.name, e))
+        low, _ = queue_lint(self.queue)
+        if low:
+            self.say("LOW WORDS (under %d, publish will FAIL): %s" % (bj.LINT_ERROR_WORDS, ", ".join(src for src, _ in low)))
         now = self.now()
         if not (self.clone / ".git").is_dir():
             self.say("no clone yet at %s (first tick clones it) — schedule below is computed from an empty history" % self.clone)
@@ -588,9 +631,12 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="ignore the slot time (never the forbidden windows or the 1/day limit); logged as forced")
     ap.add_argument("--status", action="store_true")
+    ap.add_argument("--check-queue", action="store_true", help="lint every queued ko/en original with the publish rules; exit 1 on any problem")
     ap.add_argument("--no-verify", action="store_true", help="skip the live 200 wait after push")
     ap.add_argument("--min-stock", type=int, default=MIN_STOCK)
     a = ap.parse_args(argv)
+    if a.check_queue:
+        return check_queue(a.queue)
     now_fn = (lambda: dt.datetime.fromisoformat(a.now)) if a.now else None
     pub = Publisher(a.base, a.queue, a.remote, a.live_base, now_fn=now_fn, dry_run=a.dry_run, force=a.force,
                     verify=not a.no_verify, min_stock=a.min_stock)

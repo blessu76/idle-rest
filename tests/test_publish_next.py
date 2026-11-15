@@ -12,6 +12,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
+import build_journal as bj  # noqa: E402
 import publish_next as pn  # noqa: E402
 
 os.environ["IDLE_PUBLISH_NO_NOTIFY"] = "1"
@@ -94,6 +95,46 @@ class Rhythm(unittest.TestCase):
     def test_now_needs_an_offset(self):
         with self.assertRaises(ValueError):
             pn.to_kst(dt.datetime(2026, 11, 6, 12, 0))
+
+
+class QueueLint(unittest.TestCase):
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+
+    def write(self, name, words):
+        d = self.tmp / name
+        d.mkdir()
+        body = " ".join(["word"] * words)
+        (d / "en.md").write_text(entry("en").replace("body en", body), encoding="utf-8")
+        (d / "ko.md").write_text(entry("ko").replace("body ko", body), encoding="utf-8")
+        return d
+
+    def test_short_original_is_listed_and_check_exits_1(self):
+        self.write("05-short", bj.LINT_ERROR_WORDS - 1)
+        low, invalid = pn.queue_lint(self.tmp)
+        self.assertEqual(sorted(src for src, _ in low), ["05-short/en.md", "05-short/ko.md"])
+        self.assertEqual(invalid, [])
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(pn.main(["--queue", str(self.tmp), "--check-queue"]), 1)
+        self.assertIn("LOW WORDS 05-short/ko.md", out.getvalue())
+
+    def test_enough_words_passes_and_check_exits_0(self):
+        self.write("06-long", bj.LINT_ERROR_WORDS)
+        self.assertEqual(pn.queue_lint(self.tmp), ([], []))
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(pn.main(["--queue", str(self.tmp), "--check-queue"]), 0)
+        self.assertIn("queue lint: ok", out.getvalue())
+
+    def test_status_shows_low_words_line(self):
+        self.write("07-short", 10)
+        pub = pn.Publisher(self.tmp / "base", self.tmp, "unused", "unused", now_fn=lambda: at(15, "12:30"), verify=False)
+        lines = []
+        pub.log = lines.append
+        pub.status()
+        self.assertTrue(any("LOW WORDS" in line and "07-short/ko.md" in line for line in lines), lines)
 
 
 class Stamping(unittest.TestCase):
