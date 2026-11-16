@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2026 12:12:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 16:25:00 +0900</lastBuildDate>
+    <item>
+      <title>한국어 가사 줄은 어떤 글자로 끝나나</title>
+      <link>https://idle.ipe.rest/journal/ko/how-korean-lyric-lines-end/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/how-korean-lyric-lines-end/</guid>
+      <pubDate>Mon, 16 Nov 2026 16:25:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 열 곡의 한국어 679줄 중 존댓말 &quot;요&quot;로 끝나는 줄은 단 세 줄, &quot;다&quot;로 끝나는 줄은 15줄입니다. 가장 흔한 끝 글자는 80줄의 &quot;도&quot;입니다.</description>
+    </item>
+    <item>
+      <title>How Korean Lyric Lines End</title>
+      <link>https://idle.ipe.rest/journal/en/how-korean-lyric-lines-end/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/how-korean-lyric-lines-end/</guid>
+      <pubDate>Mon, 16 Nov 2026 16:25:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>Of 679 Korean lines in the ten lyric sheets of dear(you); vol.1, only three end in the polite 요 and 15 in 다. The most common last syllable is 도, with 80 lines.</description>
+    </item>
     <item>
       <title>열 곡 가사지에는 느낌표가 하나도 없다</title>
       <link>https://idle.ipe.rest/journal/ko/no-exclamation-marks-in-ten-lyric-sheets/</link>
