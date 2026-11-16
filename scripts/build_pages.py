@@ -7,13 +7,14 @@ Source   content/pages/<lang>/<slug>.html     lang: en ko ja zh es fr de pt ru a
          ai: line (shown at the very top, with links to the originals through {{ORIGINALS}}).
          Placeholders {{OPERATOR}} {{EMAIL}} {{EFFECTIVE}} {{REPLY_DAYS}} {{ABOUT}} {{CONTACT}} {{PRIVACY}} {{JOURNAL}}
          {{SOCIAL_LI}} {{SOCIAL_LINKS}} are filled from this file — never write the operator or e-mail in a source file.
-         privacy and terms are redirect sources: header + a link {{LEGAL}} to the ipe.rest policy page
-         (ko -> /ko/legal/, the rest -> /en/legal/). The policy text itself is not kept here.
+         privacy and terms have a body in en + ko only (no ai: line). Their other 10 source files are redirect sources:
+         header + a link {{LEGAL}} to the English body (/en/<slug>/).
 Writes   /<lang>/<slug>/index.html            about contact: 26 pages — canonical = itself, hreflang 12 + x-default (absolute URLs),
                                               language <select> top right (idle.js), no bottom language list
          /<slug>/index.html                   x-default: English text + a no-JS list of the 12 language pages;
                                               old ?lang=xx goes to /xx/<slug>/; the browser language is only *suggested*
-         /<lang>/{privacy,terms}/index.html   redirect stub, 26 pages (noindex, meta refresh + canonical to ipe.rest)
+         /<lang>/{privacy,terms}/index.html   en, ko, x-default: the policy body (canonical = itself, hreflang en ko x-default)
+                                              the other 10 languages: redirect stub (noindex, meta refresh + canonical to /en/<slug>/)
          sitemap.xml                          between <!-- pages:start --> / <!-- pages:end -->
          llms.txt                             between <!-- pages:llms:start --> / <!-- pages:llms:end -->
 
@@ -36,13 +37,14 @@ OPERATOR = "Davy Kim (ipe Studio)"
 EMAIL = "ipe.haven@gmail.com"
 EFFECTIVE = "2026-10-24"
 REPLY_DAYS = 10
-PAGES_UPDATED = "2026-11-13"  # sitemap lastmod of the page URLs; bump when any content/pages text changes
+PAGES_UPDATED = "2026-11-16"  # sitemap lastmod of the page URLs; bump when any content/pages text changes
 SLUGS = ("about", "contact")
-REDIRECTS = ("privacy", "terms")  # policy text lives on ipe.rest/<lang>/legal/; these URLs only point there
+POLICY = ("privacy", "terms")  # real pages in en + ko (x-default = English); the other ten languages are redirect stubs
+POLICY_LANGS = ("en", "ko")
 SRC = Path("content") / "pages"
 HEADER_KEYS = ("title", "desc", "h1", "sub", "ai")
 PLACEHOLDER = re.compile(r"\{\{([A-Z_]+)\}\}")
-SCHEMA = {"about": "AboutPage", "contact": "ContactPage"}
+SCHEMA = {"about": "AboutPage", "contact": "ContactPage", "privacy": "WebPage", "terms": "WebPage"}
 
 SOCIAL = (
     ("YouTube", "https://www.youtube.com/@ipe-rest"),
@@ -111,7 +113,7 @@ def load(root):
     """-> ({(lang, slug): (meta, body)}, [errors]). Checks every file; translations must mirror the English one."""
     pages, errs = {}, []
     for lang in bj.LANGS:
-        for slug in SLUGS + REDIRECTS:
+        for slug in SLUGS + POLICY:
             f = root / SRC / lang / (slug + ".html")
             where = "content/pages/%s/%s.html" % (lang, slug)
             if not f.is_file():
@@ -130,8 +132,8 @@ def load(root):
             for ph in PLACEHOLDER.findall(raw):
                 if ph not in PH_NAMES:
                     errs.append("%s: unknown placeholder {{%s}}" % (where, ph))
-            if slug in REDIRECTS:
-                continue
+            if slug in POLICY and lang not in POLICY_LANGS:
+                continue  # redirect stub: header + {{LEGAL}} only
             if lang in bj.MAIN_LANGS:
                 if "ai" in meta:
                     errs.append("%s: an original (en/ko) must not carry an ai: line" % where)
@@ -160,6 +162,11 @@ def load(root):
                 if a != b:
                     errs.append("%s: %s differ from English (add/remove nothing — translate sentence for sentence)" % (where, label))
     return pages, errs
+
+
+def page_langs(slug):
+    """languages (None = x-default) a slug is published in: about/contact in all 12; privacy/terms in en + ko only."""
+    return bj.LANGS if slug in SLUGS else POLICY_LANGS
 
 
 PH_NAMES = {"OPERATOR", "EMAIL", "EFFECTIVE", "REPLY_DAYS", "ABOUT", "CONTACT", "PRIVACY", "LEGAL", "JOURNAL", "SOCIAL_LI", "SOCIAL_LINKS", "ORIGINALS"}
@@ -196,7 +203,7 @@ def render(pages, lang, slug):
         title += " (all languages)"
         desc += " Pick your language."
     canonical = page_url(lang, slug)
-    alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, page_url(l, slug)) for l in bj.LANGS)
+    alts = "".join('<link rel="alternate" hreflang="%s" href="%s">\n' % (l, page_url(l, slug)) for l in page_langs(slug))
     alts += '<link rel="alternate" hreflang="x-default" href="%s">\n' % page_url(None, slug)
     ldobj = {
         "@context": "https://schema.org", "@type": SCHEMA[slug], "name": title, "url": canonical, "inLanguage": src_lang,
@@ -204,7 +211,7 @@ def render(pages, lang, slug):
         "publisher": dict(bj.ORG),
     }
     out = bj.head(title, desc, canonical, src_lang, False, extra=bj.ld(ldobj), hint="edit content/pages/*/*.html and rebuild",
-                  alternates=alts, locales=list(bj.LANGS), gen="generated by scripts/build_pages.py",
+                  alternates=alts, locales=list(page_langs(slug)), gen="generated by scripts/build_pages.py",
                   redirect=bj.lang_redirect("/%s/" + slug + "/") if lang is None else None)
     out += bj.header(src_lang, current=slug, targets={l: page_path(l, slug) for l in bj.LANGS})
     out += '<main id="main" class="shell">\n<div class="doc">\n'
@@ -223,10 +230,10 @@ def render(pages, lang, slug):
 
 
 def render_redirect(pages, lang, slug):
-    """noindex stub at a retired URL: canonical + meta refresh + link to the ipe.rest policy page (no policy text here)."""
+    """noindex stub at a privacy/terms URL of a language without its own body: canonical + meta refresh + link to the English body."""
     src_lang = lang or "en"
     meta, body = pages[(src_lang, slug)]
-    target = bj.esc(bj.legal_url(lang, slug))
+    target = bj.esc(bj.SITE + bj.legal_url(lang, slug))
     return ('<!DOCTYPE html>\n<html lang="%s">\n<head>\n<meta charset="utf-8">\n'
             '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
             '<!-- generated by scripts/build_pages.py — redirect stub; edit content/pages/*/%s.html and rebuild -->\n'
@@ -240,22 +247,26 @@ def render_redirect(pages, lang, slug):
 
 def sitemap_block():
     rows = []
-    for slug in SLUGS:
-        links = "".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n' % (l, page_url(l, slug)) for l in bj.LANGS)
+    for slug in SLUGS + POLICY:
+        links = "".join('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>\n' % (l, page_url(l, slug)) for l in page_langs(slug))
         links += '    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>\n' % page_url(None, slug)
-        for lang in (None,) + tuple(bj.LANGS):
+        for lang in (None,) + tuple(page_langs(slug)):
             rows.append("  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>%s</priority>\n%s  </url>"
                         % (page_url(lang, slug), PAGES_UPDATED, "0.6" if lang in (None, "en", "ko") else "0.5", links))
     return "\n".join(rows) + "\n"
 
 
 def llms_block():
-    label = {"about": "About (operator and how the music is made)", "contact": "Contact"}
+    label = {"about": "About (operator and how the music is made)", "contact": "Contact",
+             "privacy": "Privacy Policy (idle.ipe.rest; full ipe.rest policy linked from the page)", "terms": "Terms of Use (idle.ipe.rest)"}
     lines = []
     for slug in SLUGS:
         langs = " · ".join("%s: %s" % (bj.LANGS[l]["name"], page_url(l, slug)) for l in bj.LANGS)
         lines.append("- %s: %s — in 12 languages (English and Korean are the originals; the other ten are AI translations, the originals prevail): %s"
                      % (label[slug], page_url(None, slug), langs))
+    for slug in POLICY:
+        langs = " · ".join("%s: %s" % (bj.LANGS[l]["name"], page_url(l, slug)) for l in POLICY_LANGS)
+        lines.append("- %s: %s — English and Korean (the originals): %s" % (label[slug], page_url(None, slug), langs))
     return "\n".join(lines) + "\n"
 
 
@@ -280,11 +291,12 @@ def build(root, list_langs=None):
             d.mkdir(parents=True, exist_ok=True)
             (d / "index.html").write_text(render(pages, lang, slug), encoding="utf-8")
             n += 1
-    for slug in REDIRECTS:
+    for slug in POLICY:
         for lang in (None,) + tuple(bj.LANGS):
             d = root / (lang or "") / slug
             d.mkdir(parents=True, exist_ok=True)
-            (d / "index.html").write_text(render_redirect(pages, lang, slug), encoding="utf-8")
+            html_out = render(pages, lang, slug) if lang in (None,) + POLICY_LANGS else render_redirect(pages, lang, slug)
+            (d / "index.html").write_text(html_out, encoding="utf-8")
             n += 1
     sm = root / "sitemap.xml"
     sm.write_text(bj.replace_between(sm.read_text(encoding="utf-8"), r"<!-- pages:start[^>]*-->", "  <!-- pages:end -->",

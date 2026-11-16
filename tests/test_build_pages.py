@@ -57,26 +57,42 @@ class Pages(Built):
             for lang in [None] + LANGS:
                 self.assertTrue((self.tmp / (lang or "") / slug / "index.html").is_file(), (lang, slug))
 
-    def test_privacy_and_terms_are_noindex_redirects_to_ipe_rest(self):
-        for slug in bp.REDIRECTS:
-            for lang in [None] + LANGS:
+    def test_policy_bodies_only_for_en_ko_and_x_default(self):
+        for slug in bp.POLICY:
+            for lang in [None, "en", "ko"]:
                 h = self.page(lang, slug)
-                target = "https://ipe.rest/%s/legal/%s/" % ("ko" if lang == "ko" else "en", slug)
+                self.assertNotIn('name="robots" content="noindex', h, (lang, slug))
+                self.assertNotIn("http-equiv=\"refresh\"", h, (lang, slug))
+                self.assertEqual(CANON.findall(h), [bp.page_url(lang, slug)], (lang, slug))
+                self.assertIn("<h1>", h, (lang, slug))
+
+    def test_other_languages_policy_are_noindex_redirects_to_en_body(self):
+        for slug in bp.POLICY:
+            for lang in LANGS:
+                if lang in bp.POLICY_LANGS:
+                    continue
+                h = self.page(lang, slug)
+                target = "https://idle.ipe.rest/en/%s/" % slug
                 self.assertIn('<meta name="robots" content="noindex, follow">', h, (lang, slug))
                 self.assertEqual(CANON.findall(h), [target], (lang, slug))
                 self.assertIn('<meta http-equiv="refresh" content="0; url=%s">' % target, h, (lang, slug))
-                self.assertIn('<a href="%s">' % target, h, (lang, slug))
+                self.assertIn('<a href="/en/%s/">' % slug, h, (lang, slug))
                 self.assertNotIn("hreflang", h, (lang, slug))
 
-    def test_redirect_stubs_are_not_in_the_sitemap(self):
+    def test_redirect_stubs_are_not_in_the_sitemap_and_policy_bodies_are(self):
         locs = [u.findtext("s:loc", namespaces=NS) for u in ET.parse(self.tmp / "sitemap.xml").getroot().findall("s:url", NS)]
-        for slug in bp.REDIRECTS:
-            self.assertEqual([u for u in locs if u.rstrip("/").endswith("/" + slug)], [], slug)
+        for slug in bp.POLICY:
+            for lang in LANGS:
+                if lang not in bp.POLICY_LANGS:
+                    self.assertNotIn(bp.page_url(lang, slug), locs, (lang, slug))
+            for lang in [None] + list(bp.POLICY_LANGS):
+                self.assertIn(bp.page_url(lang, slug), locs, (lang, slug))
 
-    def test_footer_links_point_to_ipe_rest_legal(self):
-        self.assertIn('<li><a href="https://ipe.rest/ko/legal/privacy/">', self.page("ko", "about"))
-        self.assertIn('<li><a href="https://ipe.rest/en/legal/terms/">', self.page("ja", "about"))
-        self.assertIn('<li><a href="https://ipe.rest/en/legal/privacy/">', self.page(None, "contact"))
+    def test_footer_legal_links_point_to_idle_own_policy_pages(self):
+        self.assertIn('<li><a href="/ko/privacy/">', self.page("ko", "about"))
+        self.assertIn('<li><a href="/en/terms/">', self.page("ja", "about"))
+        self.assertIn('<li><a href="/en/privacy/">', self.page("fr", "contact"))
+        self.assertIn('<li><a href="/privacy/">', self.page(None, "contact"))
 
     def test_canonical_is_itself_and_hreflang_is_absolute_and_symmetric(self):
         want_langs = LANGS + ["x-default"]
