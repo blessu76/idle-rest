@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 16:25:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 12:53:00 +0900</lastBuildDate>
+    <item>
+      <title>쇼츠 클립의 자막 큐를 세어 보면</title>
+      <link>https://idle.ipe.rest/journal/ko/subtitle-cues-in-the-shorts-clips/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/subtitle-cues-in-the-shorts-clips/</guid>
+      <pubDate>Tue, 17 Nov 2026 12:53:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 쇼츠 클립에는 58초 안팎의 자막 파일이 붙습니다. 영어판 열 개에서 128개의 큐가 521초를 채우고, 가장 긴 큐 하나는 05번의 10.9초입니다.</description>
+    </item>
+    <item>
+      <title>Subtitle Cues in the Shorts Clips</title>
+      <link>https://idle.ipe.rest/journal/en/subtitle-cues-in-the-shorts-clips/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/subtitle-cues-in-the-shorts-clips/</guid>
+      <pubDate>Tue, 17 Nov 2026 12:53:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The Shorts clips of dear(you); vol.1 come with subtitle files of about 58 seconds. In the ten English ones, 128 cues cover 521 seconds, and the longest single cue, 10.9 seconds, is in song 05.</description>
+    </item>
     <item>
       <title>한국어 가사 줄은 어떤 글자로 끝나나</title>
       <link>https://idle.ipe.rest/journal/ko/how-korean-lyric-lines-end/</link>

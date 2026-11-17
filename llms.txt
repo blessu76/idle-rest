@@ -89,6 +89,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Subtitle Cues in the Shorts Clips](https://idle.ipe.rest/journal/en/subtitle-cues-in-the-shorts-clips/) — The Shorts clips of dear(you); vol.1 come with subtitle files of about 58 seconds. In the ten English ones, 128 cues cover 521 seconds, and the longest single cue, 10.9 seconds, is in song 05. (en, 2026-11-17)
 - [How Korean Lyric Lines End](https://idle.ipe.rest/journal/en/how-korean-lyric-lines-end/) — Of 679 Korean lines in the ten lyric sheets of dear(you); vol.1, only three end in the polite 요 and 15 in 다. The most common last syllable is 도, with 80 lines. (en, 2026-11-16)
 - [No Exclamation Marks in Ten Lyric Sheets](https://idle.ipe.rest/journal/en/no-exclamation-marks-in-ten-lyric-sheets/) — Across both versions of the ten lyric sheets of dear(you); vol.1 there is no exclamation mark at all. The English lines hold 14 question marks, 29 dashes and 5 ellipses, and three songs ask nothing. (en, 2026-11-15)
 - [Which Section Runs Longest](https://idle.ipe.rest/journal/en/which-section-runs-longest/) — In the English lyric sheets of dear(you); vol.1 the Chorus averages 9.9 lines, shorter than both Verses and the Bridge. The first four songs have longer choruses, and the last four all have exactly nine lines. (en, 2026-11-14)
@@ -133,6 +134,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [쇼츠 클립의 자막 큐를 세어 보면](https://idle.ipe.rest/journal/ko/subtitle-cues-in-the-shorts-clips/) — dear(you); vol.1 쇼츠 클립에는 58초 안팎의 자막 파일이 붙습니다. 영어판 열 개에서 128개의 큐가 521초를 채우고, 가장 긴 큐 하나는 05번의 10.9초입니다. (ko, 2026-11-17)
 - [한국어 가사 줄은 어떤 글자로 끝나나](https://idle.ipe.rest/journal/ko/how-korean-lyric-lines-end/) — dear(you); vol.1 열 곡의 한국어 679줄 중 존댓말 "요"로 끝나는 줄은 단 세 줄, "다"로 끝나는 줄은 15줄입니다. 가장 흔한 끝 글자는 80줄의 "도"입니다. (ko, 2026-11-16)
 - [열 곡 가사지에는 느낌표가 하나도 없다](https://idle.ipe.rest/journal/ko/no-exclamation-marks-in-ten-lyric-sheets/) — dear(you); vol.1 열 곡 가사지에는 두 판을 통틀어 느낌표가 하나도 없습니다. 영어 줄에는 물음표 14개, 줄표 29개, 말줄임표 5개가 있고, 세 곡은 아무것도 묻지 않습니다. (ko, 2026-11-15)
 - [가장 긴 섹션은 어디일까](https://idle.ipe.rest/journal/ko/which-section-runs-longest/) — dear(you); vol.1 영어 가사지에서 후렴은 평균 9.9줄로 1절·2절·브리지보다 짧습니다. 앞의 네 곡은 후렴이 더 길고, 뒤의 네 곡은 모두 정확히 아홉 줄입니다. (ko, 2026-11-14)
