@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 12:53:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:09:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡에서 다시 돌아오는 줄들</title>
+      <link>https://idle.ipe.rest/journal/ko/lines-that-come-back-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/lines-that-come-back-in-ten-songs/</guid>
+      <pubDate>Wed, 18 Nov 2026 15:09:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사 673줄 중 서로 다른 줄은 630줄입니다. 다시 나오는 43줄은 대부분 한두 단어짜리이고, 가장 많은 곡은 06번입니다.</description>
+    </item>
+    <item>
+      <title>Lines That Come Back in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/lines-that-come-back-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/lines-that-come-back-in-ten-songs/</guid>
+      <pubDate>Wed, 18 Nov 2026 15:09:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In the English lyric sheets of dear(you); vol.1, 630 of 673 lines are distinct. The 43 extra repeats are mostly one- or two-word lines, and song 06 has the most.</description>
+    </item>
     <item>
       <title>쇼츠 클립의 자막 큐를 세어 보면</title>
       <link>https://idle.ipe.rest/journal/ko/subtitle-cues-in-the-shorts-clips/</link>
