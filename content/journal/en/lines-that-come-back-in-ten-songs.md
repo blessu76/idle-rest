@@ -8,7 +8,8 @@ translation_of: ko
 description: In the English lyric sheets of dear(you); vol.1, 630 of 673 lines are distinct. The 43 extra repeats are mostly one- or two-word lines, and song 06 has the most.
 category: behind-the-music
 draft: false
-copy_review: pending
+copy_review: iris
+copy_review_date: 2026-11-19
 keywords: dear(you);, repeated lines, lyrics, refrain, today too, idle(), ipe(), AI music, Suno
 ---
 

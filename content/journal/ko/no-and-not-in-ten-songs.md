@@ -7,7 +7,8 @@ lang: ko
 description: dear(you); vol.1 영어 가사 2,554단어에는 부정어가 50개 있습니다. "don't"가 13개로 가장 많고, 그중 11개가 "you don't have to"입니다.
 category: behind-the-music
 draft: false
-copy_review: pending
+copy_review: iris
+copy_review_date: 2026-11-19
 keywords: dear(you);, 부정어, don't have to, 가사, never, nothing, idle(), ipe(), AI 음악, Suno
 ---
 
@@ -33,7 +34,7 @@ keywords: dear(you);, 부정어, don't have to, 가사, never, nothing, idle(), 
 | 06 | 263 | 4 | 1.5 |
 | 07 | 250 | 2 | 0.8 |
 | 08 | 250 | 6 | 2.4 |
-| 09 | 243 | 4 | 1.7 |
+| 09 | 243 | 4 | 1.6 |
 | 10 | 241 | 4 | 1.7 |
 
 비율로 보면 01번 "Hard Day Again, Wasn't It?"이 100단어당 3.0으로 가장 부정어가 많습니다. 04번도 같은 7개이지만 가사지가 더 길어서 비율은 낮습니다. 가장 적은 곡은 07번 "I'm Glad You're Here."로, 250단어에 두 개, 100단어당 0.8입니다.

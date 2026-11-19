@@ -7,7 +7,8 @@ lang: ko
 description: dear(you); vol.1 영어 가사 673줄 중 서로 다른 줄은 630줄입니다. 다시 나오는 43줄은 대부분 한두 단어짜리이고, 가장 많은 곡은 06번입니다.
 category: behind-the-music
 draft: false
-copy_review: pending
+copy_review: iris
+copy_review_date: 2026-11-19
 keywords: dear(you);, 반복되는 줄, 가사, 후렴, today too, idle(), ipe(), AI 음악, Suno
 ---
 

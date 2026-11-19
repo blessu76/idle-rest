@@ -8,7 +8,8 @@ translation_of: ko
 description: The English lyric sheets of dear(you); vol.1 hold 50 negative words in 2,554. "Don't" leads with 13, and 11 of those are the phrase "you don't have to".
 category: behind-the-music
 draft: false
-copy_review: pending
+copy_review: iris
+copy_review_date: 2026-11-19
 keywords: dear(you);, negation, don't have to, lyrics, never, nothing, idle(), ipe(), AI music, Suno
 ---
 
@@ -34,7 +35,7 @@ There are 50 negative words in 2,554, about 2.0%, or one in every 51 words. The 
 | 06 | 263 | 4 | 1.5 |
 | 07 | 250 | 2 | 0.8 |
 | 08 | 250 | 6 | 2.4 |
-| 09 | 243 | 4 | 1.7 |
+| 09 | 243 | 4 | 1.6 |
 | 10 | 241 | 4 | 1.7 |
 
 Song 01, "Hard Day Again, Wasn't It?", is the most negative by rate at 3.0 per 100 words, and song 04 has the same count of seven in a longer sheet. Song 07, "I'm Glad You're Here.", is the least negative: two words in 250, which is 0.8 per 100.
