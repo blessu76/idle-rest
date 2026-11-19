@@ -552,12 +552,15 @@ def lang_select(lang, targets):
     targets = {lang: path}; only languages that really have this page. idle.js navigates on change ([data-nav])."""
     opts = "\n".join('            <option value="%s"%s>%s</option>' % (esc(targets[l]), " selected" if l == lang else "", l.upper())
                      for l in LANGS if l in targets)
+    fallback = " · ".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (esc(targets[l]), l, l, esc(LANGS[l]["name"]))
+                          for l in LANGS if l in targets)
     return f"""<label class="locale">
           <span class="visually-hidden" id="langlabel">{esc(ui(lang)['other_langs'])}</span>
           <select class="lang" id="lang" aria-labelledby="langlabel" data-nav>
 {opts}
           </select>
         </label>
+        <noscript><span class="lang-fallback">{fallback}</span></noscript>
         """
 
 

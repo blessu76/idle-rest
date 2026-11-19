@@ -111,8 +111,12 @@ def render_page(tpl, strings, lang, root, posts):
                    "if(v!=null)el.setAttribute('aria-label',v);};</script>" % json.dumps({"lang": lang, "dict": page_dict}, ensure_ascii=False))
     lang_links = "\n".join('      <li><a href="%s" hreflang="%s" lang="%s"%s>%s</a></li>' % (
         lang_url(l), l, l, ' aria-current="true"' if l == lang and not root else "", esc(bj.LANGS[l]["name"])) for l in bj.LANGS)
+    # JS 가 꺼진 환경용: 헤더 select 대신 쓰는 언어 링크 한 줄(<noscript> 안에서만 보인다)
+    lang_fallback = " · ".join('<a href="%s" hreflang="%s" lang="%s">%s</a>' % (
+        lang_url(l), l, l, esc(bj.LANGS[l]["name"])) for l in bj.LANGS)
     subs = {
         "CSS_INLINE": css_inline(),
+        "LANG_FALLBACK": lang_fallback,
         "LANG": lang, "DIR": bj.LANGS[lang]["dir"], "CANONICAL": esc(canonical), "HREFLANG": hreflang, "OG_LOCALE": og,
         "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT")},
