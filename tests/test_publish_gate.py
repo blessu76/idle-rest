@@ -10,6 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import build_journal as bj  # noqa: E402
+import build_home as bh  # noqa: E402
 import publish_next as pn  # noqa: E402
 
 os.environ["IDLE_PUBLISH_NO_NOTIFY"] = "1"
@@ -111,6 +112,17 @@ class FooterTerms(unittest.TestCase):
         for lang in bj.LANGS:
             if lang != "en":
                 self.assertNotEqual(bj.ui(lang)["terms"], "Terms", lang)
+
+    def test_rendered_footer_uses_translated_terms(self):
+        # journal footer (build_journal.footer) and home footer (build_home.render_page) both render the shared _TERMS label
+        self.assertIn("利用規約", bj.footer("ja"))
+        self.assertNotIn(">Terms<", bj.footer("ja"))
+        root = Path(__file__).resolve().parent.parent
+        tpl = (root / bh.TEMPLATE).read_text(encoding="utf-8")
+        strings = __import__("json").loads((root / bh.STRINGS).read_text(encoding="utf-8"))
+        ko = bh.render_page(tpl, strings, "ko", False, [])
+        self.assertIn('<a href="/ko/terms/">이용약관</a>', ko)
+        self.assertNotIn(">Terms</a>", ko)
 
 
 if __name__ == "__main__":

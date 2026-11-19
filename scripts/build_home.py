@@ -117,6 +117,7 @@ def render_page(tpl, strings, lang, root, posts):
         "LANG_OPTIONS": options, "LANG_LINKS": lang_links, "JOURNAL_HREF": jl,
         **{k + "_HREF": ("" if root else "/" + lang) + "/" + k.lower() + "/" for k in ("ABOUT", "CONTACT")},
         "PRIVACY_HREF": bj.legal_url(lang, "privacy"), "TERMS_HREF": bj.legal_url(lang, "terms"),
+        "TERMS_LABEL": esc(bj.ui(lang)["terms"]),
         "HOW_HREF": "/journal/%s/how-a-song-gets-made/" % ("en" if root else lang), "FAQ_JSONLD": faq_jsonld(d),
         "LEGACY_SCRIPT": bj.lang_redirect("/%s/") if root else "", "PAGE_SCRIPT": page_script,
         "NAV_SCRIPT": NAV_SCRIPT, "IPE_HREF": bj.ipe_href(lang),
