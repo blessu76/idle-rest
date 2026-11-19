@@ -122,6 +122,15 @@ select.lang option { color: #1f2933; background: #fff; }
 .lang-link:hover { color: var(--accent); }
 .menu-btn { display: none; width: 44px; height: 44px; border: 1px solid var(--line-strong); border-radius: 10px; background: transparent; cursor: pointer; place-items: center; }
 .menu-btn svg { width: 20px; height: 20px; }
+/* no-JS language links: <noscript> is only parsed as markup when scripting is off, so the :has() rules
+   below never match with JS on. The header keeps its row and the link list drops to a full-width line under it. */
+.header-inner:has(.lang-fallback) { flex-wrap: wrap; row-gap: 8px; }
+.tools:has(.lang-fallback) { display: contents; }
+.header-inner > .tools > noscript { order: 10; flex: 0 0 100%; }
+.lang-fallback { display: block; padding: 0 0 4px; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: start; overflow-wrap: anywhere; }
+.lang-fallback a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.lang-fallback a:hover { color: var(--accent); }
+@media (max-width: 760px) { .header-inner:has(.lang-fallback) .theme-switch { margin-inline-start: auto; } }
 
 /* ---------- hero ---------- */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); gap: 48px; align-items: center; padding: 44px 0 36px; }

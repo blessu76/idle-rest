@@ -37,6 +37,11 @@ class LangNoscript(unittest.TestCase):
             hreflangs = re.findall(r'hreflang="([^"]+)"', m.group(1))
             self.assertEqual(hreflangs, list(bj.LANGS), "%s: 언어 링크 순서·개수" % path)
 
+    def test_lang_fallback_has_css_rule(self):
+        # no-JS 언어 링크가 헤더 아래 한 줄로 내려가도록 assets/idle.css 에 규칙이 있어야 한다
+        css = (REPO / "assets" / "idle.css").read_text(encoding="utf-8")
+        self.assertIn(".lang-fallback {", css)
+
 
 if __name__ == "__main__":
     unittest.main()
