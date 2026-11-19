@@ -154,6 +154,12 @@ _T = {
 }
 assert set(_T) == set(LANGS) and all(len(v) == len(_K) for v in _T.values())
 UI = {l: dict(zip(_K, v)) for l, v in _T.items()}
+_TERMS = {"en": "Terms", "ko": "이용약관", "ja": "利用規約", "zh": "服务条款", "es": "Términos de uso", "fr": "Conditions d'utilisation",
+          "de": "Nutzungsbedingungen", "pt": "Termos de Uso", "ru": "Условия использования", "ar": "شروط الاستخدام",
+          "hi": "उपयोग की शर्तें", "id": "Ketentuan Penggunaan"}
+assert set(_TERMS) == set(LANGS)
+for _l, _v in _TERMS.items():
+    UI[_l]["terms"] = _v
 UI["en"].update(alt_label="한국어", alt_name="Korean")
 UI["ko"].update(alt_label="EN", alt_name="English")
 
@@ -607,7 +613,7 @@ def footer(lang, default=False):
       <li><a href="{pre}/about/">{esc(t['about'])}</a></li>
       <li><a href="{pre}/contact/">{esc(t['contact'])}</a></li>
       <li><a href="{legal_url(lang, 'privacy', default)}">{esc(t['privacy'])}</a></li>
-      <li><a href="{legal_url(lang, 'terms', default)}">Terms</a></li>
+      <li><a href="{legal_url(lang, 'terms', default)}">{esc(t['terms'])}</a></li>
       <li><a href="{ipe_href(lang)}" class="ltr">ipe.rest</a></li>
     </ul>
     <ul class="social">
