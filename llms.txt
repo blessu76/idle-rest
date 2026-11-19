@@ -89,6 +89,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [No and Not in Ten Songs](https://idle.ipe.rest/journal/en/no-and-not-in-ten-songs/) — The English lyric sheets of dear(you); vol.1 hold 50 negative words in 2,554. "Don't" leads with 13, and 11 of those are the phrase "you don't have to". (en, 2026-11-19)
 - [Lines That Come Back in Ten Songs](https://idle.ipe.rest/journal/en/lines-that-come-back-in-ten-songs/) — In the English lyric sheets of dear(you); vol.1, 630 of 673 lines are distinct. The 43 extra repeats are mostly one- or two-word lines, and song 06 has the most. (en, 2026-11-18)
 - [Subtitle Cues in the Shorts Clips](https://idle.ipe.rest/journal/en/subtitle-cues-in-the-shorts-clips/) — The Shorts clips of dear(you); vol.1 come with subtitle files of about 58 seconds. In the ten English ones, 128 cues cover 521 seconds, and the longest single cue, 10.9 seconds, is in song 05. (en, 2026-11-17)
 - [How Korean Lyric Lines End](https://idle.ipe.rest/journal/en/how-korean-lyric-lines-end/) — Of 679 Korean lines in the ten lyric sheets of dear(you); vol.1, only three end in the polite 요 and 15 in 다. The most common last syllable is 도, with 80 lines. (en, 2026-11-16)
@@ -135,6 +136,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [열 곡 속의 안 · 못 · 없다](https://idle.ipe.rest/journal/ko/no-and-not-in-ten-songs/) — dear(you); vol.1 영어 가사 2,554단어에는 부정어가 50개 있습니다. "don't"가 13개로 가장 많고, 그중 11개가 "you don't have to"입니다. (ko, 2026-11-19)
 - [열 곡에서 다시 돌아오는 줄들](https://idle.ipe.rest/journal/ko/lines-that-come-back-in-ten-songs/) — dear(you); vol.1 영어 가사 673줄 중 서로 다른 줄은 630줄입니다. 다시 나오는 43줄은 대부분 한두 단어짜리이고, 가장 많은 곡은 06번입니다. (ko, 2026-11-18)
 - [쇼츠 클립의 자막 큐를 세어 보면](https://idle.ipe.rest/journal/ko/subtitle-cues-in-the-shorts-clips/) — dear(you); vol.1 쇼츠 클립에는 58초 안팎의 자막 파일이 붙습니다. 영어판 열 개에서 128개의 큐가 521초를 채우고, 가장 긴 큐 하나는 05번의 10.9초입니다. (ko, 2026-11-17)
 - [한국어 가사 줄은 어떤 글자로 끝나나](https://idle.ipe.rest/journal/ko/how-korean-lyric-lines-end/) — dear(you); vol.1 열 곡의 한국어 679줄 중 존댓말 "요"로 끝나는 줄은 단 세 줄, "다"로 끝나는 줄은 15줄입니다. 가장 흔한 끝 글자는 80줄의 "도"입니다. (ko, 2026-11-16)

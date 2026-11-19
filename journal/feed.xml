@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 15:09:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 12:47:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡 속의 안 · 못 · 없다</title>
+      <link>https://idle.ipe.rest/journal/ko/no-and-not-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/no-and-not-in-ten-songs/</guid>
+      <pubDate>Thu, 19 Nov 2026 12:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사 2,554단어에는 부정어가 50개 있습니다. &quot;don&#x27;t&quot;가 13개로 가장 많고, 그중 11개가 &quot;you don&#x27;t have to&quot;입니다.</description>
+    </item>
+    <item>
+      <title>No and Not in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/no-and-not-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/no-and-not-in-ten-songs/</guid>
+      <pubDate>Thu, 19 Nov 2026 12:47:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The English lyric sheets of dear(you); vol.1 hold 50 negative words in 2,554. &quot;Don&#x27;t&quot; leads with 13, and 11 of those are the phrase &quot;you don&#x27;t have to&quot;.</description>
+    </item>
     <item>
       <title>열 곡에서 다시 돌아오는 줄들</title>
       <link>https://idle.ipe.rest/journal/ko/lines-that-come-back-in-ten-songs/</link>
