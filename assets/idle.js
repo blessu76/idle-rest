@@ -44,6 +44,14 @@
       setOpen(false);
     });
   }
+  // language links (<a hreflang="xx" href="/xx/…">: noscript row, header/footer, journal switcher):
+  // clicking one remembers the language as ipe_lang, same as the home <select>, so the root redirect follows it
+  var LANG_CODES = ['en', 'ko', 'ja', 'zh', 'es', 'fr', 'de', 'pt', 'ru', 'ar', 'hi', 'id'];
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[hreflang]');
+    if (!a || LANG_CODES.indexOf(a.getAttribute('hreflang')) < 0) return;
+    try { localStorage.setItem('ipe_lang', a.getAttribute('hreflang')); } catch (err) {}
+  }, true);
   // journal pages: the language <select> holds site paths (same page in that language) -> go there
   var navSel = document.querySelector('select.lang[data-nav]');
   if (navSel) navSel.addEventListener('change', function () {
