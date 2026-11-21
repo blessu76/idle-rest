@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 16:26:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 17:39:00 +0900</lastBuildDate>
+    <item>
+      <title>영어 가사 줄은 어디서 멈출까</title>
+      <link>https://idle.ipe.rest/journal/ko/where-the-english-lyric-lines-stop/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/where-the-english-lyric-lines-stop/</guid>
+      <pubDate>Sat, 21 Nov 2026 17:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지 673줄 중 265줄은 마침표로, 150줄은 쉼표로, 207줄은 아무 부호 없이 끝납니다. 마침표 다음 줄은 한 번도 소문자로 시작하지 않습니다.</description>
+    </item>
+    <item>
+      <title>Where the English Lyric Lines Stop</title>
+      <link>https://idle.ipe.rest/journal/en/where-the-english-lyric-lines-stop/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/where-the-english-lyric-lines-stop/</guid>
+      <pubDate>Sat, 21 Nov 2026 17:39:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>In the English lyric sheets of dear(you); vol.1, 265 of 673 lines end with a period, 150 with a comma and 207 with no mark. A period is never followed by a lowercase line.</description>
+    </item>
     <item>
       <title>창문, 커피, 비는 몇 번 나올까</title>
       <link>https://idle.ipe.rest/journal/ko/window-coffee-and-rain-in-ten-songs/</link>
