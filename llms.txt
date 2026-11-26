@@ -91,6 +91,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [It's or It Is in the English Lyrics](https://idle.ipe.rest/journal/en/it-is-or-its-in-the-english-lyrics/) — The English lyric sheets of dear(you); vol.1 hold 109 contractions in 21 forms, and "it's" alone is 33. "It is", "I am" and "do not" never appear written out. (en, 2026-11-26)
 - [How Many Words Are in a Lyric Line?](https://idle.ipe.rest/journal/en/how-many-words-in-a-lyric-line/) — The 673 lines of the English lyric sheets of dear(you); vol.1 average 3.8 words, and no line runs past nine. Four-word lines are the most common, and the Outro has the shortest lines. (en, 2026-11-25)
 - [Starting a Line With And, But or Because](https://idle.ipe.rest/journal/en/and-but-because-line-openers/) — 70 of the 673 lines in the English lyric sheets of dear(you); vol.1 begin with and, but, because or so. Every song has at least five, and "or" never opens a line. (en, 2026-11-24)
 - [Where the English Lyric Lines Stop](https://idle.ipe.rest/journal/en/where-the-english-lyric-lines-stop/) — In the English lyric sheets of dear(you); vol.1, 265 of 673 lines end with a period, 150 with a comma and 207 with no mark. A period is never followed by a lowercase line. (en, 2026-11-21)
@@ -142,6 +143,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [영어 가사의 it's와 it is](https://idle.ipe.rest/journal/ko/it-is-or-its-in-the-english-lyrics/) — dear(you); vol.1 영어 가사지에는 줄임말이 21가지 109번 나오고, 그중 "it's"만 33번입니다. "it is", "I am", "do not"을 풀어 쓴 곳은 한 번도 없습니다. (ko, 2026-11-26)
 - [가사 한 줄은 몇 낱말일까](https://idle.ipe.rest/journal/ko/how-many-words-in-a-lyric-line/) — dear(you); vol.1 영어 가사지 673줄은 평균 3.8낱말이고, 아홉 낱말을 넘는 줄은 없습니다. 네 낱말 줄이 가장 많고, 줄이 가장 짧은 곳은 Outro입니다. (ko, 2026-11-25)
 - [그리고·하지만·왜냐하면으로 시작하는 줄](https://idle.ipe.rest/journal/ko/and-but-because-line-openers/) — dear(you); vol.1 영어 가사지 673줄 중 70줄이 and, but, because, so로 시작합니다. 모든 곡에 최소 다섯 줄이 있고, or로 시작하는 줄은 없습니다. (ko, 2026-11-24)
 - [영어 가사 줄은 어디서 멈출까](https://idle.ipe.rest/journal/ko/where-the-english-lyric-lines-stop/) — dear(you); vol.1 영어 가사지 673줄 중 265줄은 마침표로, 150줄은 쉼표로, 207줄은 아무 부호 없이 끝납니다. 마침표 다음 줄은 한 번도 소문자로 시작하지 않습니다. (ko, 2026-11-21)

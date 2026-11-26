@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 17:50:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 14:51:00 +0900</lastBuildDate>
+    <item>
+      <title>영어 가사의 it&#x27;s와 it is</title>
+      <link>https://idle.ipe.rest/journal/ko/it-is-or-its-in-the-english-lyrics/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/it-is-or-its-in-the-english-lyrics/</guid>
+      <pubDate>Thu, 26 Nov 2026 14:51:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지에는 줄임말이 21가지 109번 나오고, 그중 &quot;it&#x27;s&quot;만 33번입니다. &quot;it is&quot;, &quot;I am&quot;, &quot;do not&quot;을 풀어 쓴 곳은 한 번도 없습니다.</description>
+    </item>
+    <item>
+      <title>It&#x27;s or It Is in the English Lyrics</title>
+      <link>https://idle.ipe.rest/journal/en/it-is-or-its-in-the-english-lyrics/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/it-is-or-its-in-the-english-lyrics/</guid>
+      <pubDate>Thu, 26 Nov 2026 14:51:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>The English lyric sheets of dear(you); vol.1 hold 109 contractions in 21 forms, and &quot;it&#x27;s&quot; alone is 33. &quot;It is&quot;, &quot;I am&quot; and &quot;do not&quot; never appear written out.</description>
+    </item>
     <item>
       <title>가사 한 줄은 몇 낱말일까</title>
       <link>https://idle.ipe.rest/journal/ko/how-many-words-in-a-lyric-line/</link>
