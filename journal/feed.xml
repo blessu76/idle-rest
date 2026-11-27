@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 26 Nov 2026 14:51:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 12:34:00 +0900</lastBuildDate>
+    <item>
+      <title>열 곡 속의 「enough」</title>
+      <link>https://idle.ipe.rest/journal/ko/enough-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/enough-in-ten-songs/</guid>
+      <pubDate>Fri, 27 Nov 2026 12:34:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>&quot;Enough&quot;는 dear(you); vol.1 영어 가사지의 여덟 곡에 20번 나옵니다. 20번 중 18번이 Chorus, Pre-Chorus, Final Chorus에 있고, &quot;not enough&quot;는 한 번 나옵니다.</description>
+    </item>
+    <item>
+      <title>The Word Enough in Ten Songs</title>
+      <link>https://idle.ipe.rest/journal/en/enough-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/enough-in-ten-songs/</guid>
+      <pubDate>Fri, 27 Nov 2026 12:34:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>&quot;Enough&quot; appears 20 times in the English lyric sheets of dear(you); vol.1, in eight songs. 18 of the 20 sit in a Chorus, Pre-Chorus or Final Chorus, and one says &quot;not enough&quot;.</description>
+    </item>
     <item>
       <title>영어 가사의 it&#x27;s와 it is</title>
       <link>https://idle.ipe.rest/journal/ko/it-is-or-its-in-the-english-lyrics/</link>
