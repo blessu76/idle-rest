@@ -91,6 +91,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — English (en) · originals · Index: https://idle.ipe.rest/journal/en/
 
+- [Where “Here” Lands in Ten Lyric Sheets](https://idle.ipe.rest/journal/en/where-here-lands-in-ten-songs/) — “Here” appears nine times in five English lyric sheets of dear(you); vol.1, pointing to a room, a point in the day or someone’s presence. (en, 2026-11-28)
 - [The Word Enough in Ten Songs](https://idle.ipe.rest/journal/en/enough-in-ten-songs/) — "Enough" appears 20 times in the English lyric sheets of dear(you); vol.1, in eight songs. 18 of the 20 sit in a Chorus, Pre-Chorus or Final Chorus, and one says "not enough". (en, 2026-11-27)
 - [It's or It Is in the English Lyrics](https://idle.ipe.rest/journal/en/it-is-or-its-in-the-english-lyrics/) — The English lyric sheets of dear(you); vol.1 hold 109 contractions in 21 forms, and "it's" alone is 33. "It is", "I am" and "do not" never appear written out. (en, 2026-11-26)
 - [How Many Words Are in a Lyric Line?](https://idle.ipe.rest/journal/en/how-many-words-in-a-lyric-line/) — The 673 lines of the English lyric sheets of dear(you); vol.1 average 3.8 words, and no line runs past nine. Four-word lines are the most common, and the Outro has the shortest lines. (en, 2026-11-25)
@@ -144,6 +145,7 @@ Notes from idle(), the music of ipe(): behind the music, and other quiet updates
 
 ### Journal — 한국어 (ko) · originals · Index: https://idle.ipe.rest/journal/ko/
 
+- [영어 가사지에서 ‘here’가 가리키는 곳](https://idle.ipe.rest/journal/ko/where-here-lands-in-ten-songs/) — dear(you); vol.1 영어 가사지 다섯 곡에 ‘here’가 아홉 번 나옵니다. 곁에 있는 자리, 하루를 지나 도달한 지점, 함께 있는 사람을 따라 읽었습니다. (ko, 2026-11-28)
 - [열 곡 속의 「enough」](https://idle.ipe.rest/journal/ko/enough-in-ten-songs/) — "Enough"는 dear(you); vol.1 영어 가사지의 여덟 곡에 20번 나옵니다. 20번 중 18번이 Chorus, Pre-Chorus, Final Chorus에 있고, "not enough"는 한 번 나옵니다. (ko, 2026-11-27)
 - [영어 가사의 it's와 it is](https://idle.ipe.rest/journal/ko/it-is-or-its-in-the-english-lyrics/) — dear(you); vol.1 영어 가사지에는 줄임말이 21가지 109번 나오고, 그중 "it's"만 33번입니다. "it is", "I am", "do not"을 풀어 쓴 곳은 한 번도 없습니다. (ko, 2026-11-26)
 - [가사 한 줄은 몇 낱말일까](https://idle.ipe.rest/journal/ko/how-many-words-in-a-lyric-line/) — dear(you); vol.1 영어 가사지 673줄은 평균 3.8낱말이고, 아홉 낱말을 넘는 줄은 없습니다. 네 낱말 줄이 가장 많고, 줄이 가장 짧은 곳은 Outro입니다. (ko, 2026-11-25)

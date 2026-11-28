@@ -6,7 +6,23 @@
     <atom:link href="https://idle.ipe.rest/journal/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Notes from idle(), the music of ipe(): behind the music, and other quiet updates.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Nov 2026 12:34:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 17:54:00 +0900</lastBuildDate>
+    <item>
+      <title>영어 가사지에서 ‘here’가 가리키는 곳</title>
+      <link>https://idle.ipe.rest/journal/ko/where-here-lands-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/ko/where-here-lands-in-ten-songs/</guid>
+      <pubDate>Sat, 28 Nov 2026 17:54:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>dear(you); vol.1 영어 가사지 다섯 곡에 ‘here’가 아홉 번 나옵니다. 곁에 있는 자리, 하루를 지나 도달한 지점, 함께 있는 사람을 따라 읽었습니다.</description>
+    </item>
+    <item>
+      <title>Where “Here” Lands in Ten Lyric Sheets</title>
+      <link>https://idle.ipe.rest/journal/en/where-here-lands-in-ten-songs/</link>
+      <guid isPermaLink="true">https://idle.ipe.rest/journal/en/where-here-lands-in-ten-songs/</guid>
+      <pubDate>Sat, 28 Nov 2026 17:54:00 +0900</pubDate>
+      <category>behind-the-music</category>
+      <description>“Here” appears nine times in five English lyric sheets of dear(you); vol.1, pointing to a room, a point in the day or someone’s presence.</description>
+    </item>
     <item>
       <title>열 곡 속의 「enough」</title>
       <link>https://idle.ipe.rest/journal/ko/enough-in-ten-songs/</link>
